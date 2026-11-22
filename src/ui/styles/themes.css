@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================================
+   THEME TOKENS — switch instantly via <html data-theme="wood|minimal|dark">
+   ========================================================================= */
+
+:root,
+[data-theme='wood'] {
+  --field-top: #9bc56b;
+  --field-bottom: #6f9a43;
+  --field-pattern: rgba(255, 255, 255, 0.07);
+  --surface: #fdf3dc;
+  --surface-2: #f4e2bb;
+  --surface-strong: #6b4423;
+  --border: #b98a53;
+  --text: #3b2412;
+  --text-muted: #7a5a3a;
+  --text-on-strong: #fff8e7;
+  --accent: #c2621a;
+  --accent-contrast: #ffffff;
+  --success: #3f8f3a;
+  --danger: #c0392b;
+  --gold: #e8a317;
+  --info: #2b7bb9;
+  --overlay: rgba(43, 25, 10, 0.55);
+  --shadow: 0 6px 0 #8a5a2b, 0 14px 28px rgba(59, 36, 18, 0.28);
+  --shadow-soft: 0 4px 14px rgba(59, 36, 18, 0.22);
+  --radius: 18px;
+  color-scheme: light;
+}
+
+[data-theme='minimal'] {
+  --field-top: #eef4ea;
+  --field-bottom: #dfe9da;
+  --field-pattern: rgba(15, 23, 42, 0.035);
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --surface-strong: #0f172a;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --text-on-strong: #f8fafc;
+  --accent: #059669;
+  --accent-contrast: #ffffff;
+  --success: #059669;
+  --danger: #dc2626;
+  --gold: #d97706;
+  --info: #2563eb;
+  --overlay: rgba(15, 23, 42, 0.35);
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(15, 23, 42, 0.06);
+  --radius: 14px;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --field-top: #10261d;
+  --field-bottom: #0a1712;
+  --field-pattern: rgba(148, 163, 184, 0.05);
+  --surface: #111827;
+  --surface-2: #1f2937;
+  --surface-strong: #020617;
+  --border: #334155;
+  --text: #e5e7eb;
+  --text-muted: #94a3b8;
+  --text-on-strong: #f1f5f9;
+  --accent: #34d399;
+  --accent-contrast: #052e16;
+  --success: #34d399;
+  --danger: #f87171;
+  --gold: #fbbf24;
+  --info: #60a5fa;
+  --overlay: rgba(2, 6, 23, 0.7);
+  --shadow: 0 0 0 1px rgba(148, 163, 184, 0.08), 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 0 0 1px rgba(148, 163, 184, 0.08), 0 6px 16px rgba(0, 0, 0, 0.4);
+  --radius: 14px;
+  color-scheme: dark;
+}
+
+/* =========================================================================
+   BASE
+   ========================================================================= */
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--field-bottom);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Farm field painted in CSS beneath the transparent WebGL canvas. */
+.farm-field {
+  background-color: var(--field-bottom);
+  background-image:
+    repeating-linear-gradient(45deg, var(--field-pattern) 0 2px, transparent 2px 22px),
+    linear-gradient(180deg, var(--field-top), var(--field-bottom));
+  transition: background-color 200ms ease;
+}
+
+.game-canvas-host canvas {
+  display: block;
+  touch-action: none;
+}
+
+/* GPU-composited layers for zero-layout-thrash animations */
+.gpu {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Safe-area aware padding for notched mobile devices */
+.pt-safe {
+  padding-top: max(0.5rem, env(safe-area-inset-top));
+}
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* Rustic wood panel feel only for the wood theme */
+[data-theme='wood'] .panel {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(185, 138, 83, 0.07) 0 3px,
+    transparent 3px 14px
+  );
+  border-width: 2px;
+}
+
+.panel {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  color: var(--text);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: calc(var(--radius) - 4px);
+  font-weight: 700;
+  transition: transform 80ms ease, filter 120ms ease;
+  min-height: 44px;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn:focus-visible,
+.focus-ring:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+.btn-primary:hover {
+  filter: brightness(1.06);
+}
+.btn-ghost {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Critical-speed timer bar (4s) — transform-only animation */
+@keyframes critical-drain {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+.critical-bar {
+  transform-origin: left center;
+  animation: critical-drain 4000ms linear forwards;
+}
+
+@keyframes fever-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+.fever-pulse {
+  animation: fever-pulse 900ms ease-in-out infinite;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+  .critical-bar {
+    animation-duration: 4000ms !important;
+  }
+}

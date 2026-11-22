@@ -1,0 +1,154 @@
+export type VocabTier = 1 | 2 | 3;
+
+export type ThemeName = 'wood' | 'minimal' | 'dark';
+
+export type AccentPreference = 'en-GB' | 'en-US';
+
+export type WateringCanTier = 'basic' | 'copper' | 'silver' | 'gold' | 'diamond';
+
+export type CropStage = 'EMPTY' | 'SEED' | 'SPROUT' | 'MATURE' | 'GOLDEN_RIPE';
+
+export type QuizType =
+  | 'phonetic_meaning'
+  | 'collocation_match'
+  | 'paraphrase_upgrade';
+
+export type MilestoneType =
+  | 'FAST_GROW_WATER'
+  | 'GOLDEN_FERTILIZER'
+  | 'FEVER_TIME';
+
+export interface VocabTipCardData {
+  id: string;
+  title: string;
+  skill: 'Writing Task 2' | 'Speaking Part 3' | 'Writing & Speaking';
+  bandTarget: string;
+  upgradeFrom: string;
+  upgradeTo: string;
+  tip: string;
+}
+
+export interface IeltsTipCard extends VocabTipCardData {
+  sourceVocabId: string;
+}
+
+export interface VocabQuizData {
+  prompt: string;
+  sentence: string;
+  collocationTarget?: string;
+  basicPhrase?: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+}
+
+export interface VocabItem {
+  id: string;
+  tier: VocabTier;
+  band: string;
+  word: string;
+  ipa: string;
+  partOfSpeech: string;
+  meaning: string;
+  example: string;
+  growthDurationMs: number;
+  xpReward: number;
+  quizType: QuizType;
+  quiz: VocabQuizData;
+  tipCard?: VocabTipCardData;
+}
+
+export interface PlotState {
+  index: number;
+  vocabId: string | null;
+  tier: VocabTier | null;
+  plantedAt: number | null;
+  baseDurationMs: number;
+  acceleratedMs: number;
+  quizzed: boolean;
+  isGoldenFertilized: boolean;
+  lastQuizAttemptAt: number | null;
+}
+
+export interface PlotComputedStatus {
+  stage: CropStage;
+  progress: number;
+  remainingMs: number;
+  isRipe: boolean;
+}
+
+export interface RewardResult {
+  isCorrect: boolean;
+  newStreak: number;
+  bestStreak: number;
+  elapsedMs: number;
+  isCriticalSpeed: boolean;
+  xpEarned: number;
+  xpMultiplier: number;
+  growthAccelerationRatio: number;
+  milestonesTriggered: MilestoneType[];
+  fastGrowReductionRatio: number;
+  goldenFertilizerGranted: boolean;
+  feverTimeTriggered: boolean;
+  feverDurationMs: number;
+  bonusTier3SeedGranted: boolean;
+  lexiChestDropped: boolean;
+  newWateringCanTier: WateringCanTier | null;
+}
+
+export interface VocabMasteryRecord {
+  vocabId: string;
+  srsLevel: number;
+  correctCount: number;
+  attemptCount: number;
+  lastPracticedAt: number;
+  nextReviewAt: number;
+  harvestCount: number;
+}
+
+export type FarmToolMode = 'seeds' | 'water' | 'feed' | 'care' | 'fish';
+
+export interface FarmStock {
+  cropFodder: number;    // Harvested crops for animal feed
+  eggs: number;          // From chickens
+  milk: number;          // From cows
+  wool: number;          // From sheep
+  fertilizerBags: number;// From animal manure cleaning
+  fish: number;          // From pond fishing
+}
+
+export interface PlayerProgress {
+  id: 'player';
+  xp: number;
+  level: number;
+  streak: number;
+  bestStreak: number;
+  totalHarvested: number;
+  criticalAnswers: number;
+  wateringCanTier: WateringCanTier;
+  goldenFertilizerCharges: number;
+  feverEndsAt: number;
+  theme: ThemeName;
+  accent: AccentPreference;
+  sfxEnabled: boolean;
+  unlockedTipCardIds: string[];
+  seedInventory: Record<string, number>;
+  stock: FarmStock;
+  updatedAt: number;
+}
+
+export interface ToastNotification {
+  id: string;
+  variant: 'critical' | 'water' | 'golden' | 'fever' | 'chest' | 'harvest' | 'info' | 'animal' | 'fish';
+  title: string;
+  subtitle: string;
+  createdAt: number;
+}
+
+export interface BackupPayload {
+  schemaVersion: number;
+  exportedAt: string;
+  profile: PlayerProgress;
+  plots: PlotState[];
+  mastery: VocabMasteryRecord[];
+}
