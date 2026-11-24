@@ -101,6 +101,7 @@ interface GameState {
   kitchenOpen: boolean;
   questsOpen: boolean;
   mockTestOpen: boolean;
+  fishingOpen: boolean;
   waterAllReadyAt: number;
   toasts: ToastNotification[];
   marketOrders: MarketOrder[];
@@ -120,6 +121,12 @@ interface GameState {
   careAnimal: (animalType: 'sheep' | 'chicken' | 'cow' | 'dog') => void;
   cleanPastureManure: () => void;
   fishAtPond: () => void;
+  catchFishWithResult: (
+    tier: 'normal' | 'silver' | 'gold',
+    bonusCoins: number,
+    bonusSeed: boolean,
+  ) => void;
+  collectWorldTreasure: (kind: 'chest' | 'bug') => void;
   craftItem: (product: 'bread' | 'cheese' | 'sweater' | 'cake' | 'grilledFish') => boolean;
   fulfillOrder: (orderId: string) => boolean;
   claimQuest: (questId: string) => void;
@@ -144,6 +151,7 @@ interface GameState {
   setKitchenOpen: (open: boolean) => void;
   setQuestsOpen: (open: boolean) => void;
   setMockTestOpen: (open: boolean) => void;
+  setFishingOpen: (open: boolean) => void;
   pushToast: (toast: Omit<ToastNotification, 'id' | 'createdAt'>) => void;
   dismissToast: (id: string) => void;
   exportBackup: () => Promise<string>;
@@ -310,6 +318,7 @@ export const useGameStore = create<GameState>()((set, get) => {
     kitchenOpen: false,
     questsOpen: false,
     mockTestOpen: false,
+    fishingOpen: false,
     waterAllReadyAt: 0,
     toasts: [],
     marketOrders: INITIAL_MARKET_ORDERS,
@@ -659,7 +668,12 @@ export const useGameStore = create<GameState>()((set, get) => {
         stock: nextStock,
       });
 
-      EventBus.emit('ui:plot-fx', { plotIndex: 0, kind: 'combo' });
+      EventBus.emit('ui:feed-animals');
+      EventBus.emit('ui:floating-text', {
+        target: 'pasture',
+        text: `🌾 Cho ăn +${xpBonus} XP`,
+        color: '#fde047',
+      });
       AudioEngine.playAnimal('cow');
       get().updateQuestProgress('feed', 1);
       pushToast({
@@ -675,43 +689,60 @@ export const useGameStore = create<GameState>()((set, get) => {
       if (!profile) return;
 
       const nextStock: FarmStock = { ...profile.stock };
+      const bellCoins = profile.upgrades?.luckyBell ? 15 : 0;
       let title = '';
       let sub = '';
+      let xpGain = 25;
+      let floatText = '+25 XP';
 
       switch (type) {
         case 'chicken':
           nextStock.eggs = (nextStock.eggs ?? 0) + 1;
-          title = 'Collected Fresh Egg! 🥚';
-          sub = `Total eggs: ${nextStock.eggs} · +20 XP`;
+          xpGain = 20;
+          title = 'Nhặt Trứng Gà! 🥚';
+          sub = `Kho trứng: ${nextStock.eggs} · +${xpGain} XP${bellCoins ? ` · +${bellCoins} Xu 🔔` : ''}`;
+          floatText = `+1 🥚 +${xpGain} XP`;
           AudioEngine.playAnimal('chicken');
           break;
         case 'cow':
           nextStock.milk = (nextStock.milk ?? 0) + 1;
-          title = 'Milked Cow! 🥛';
-          sub = `Total milk: ${nextStock.milk} · +25 XP`;
+          xpGain = 25;
+          title = 'Vắt Sữa Bò! 🥛';
+          sub = `Kho sữa: ${nextStock.milk} · +${xpGain} XP${bellCoins ? ` · +${bellCoins} Xu 🔔` : ''}`;
+          floatText = `+1 🥛 +${xpGain} XP`;
           AudioEngine.playAnimal('cow');
           break;
         case 'sheep':
           nextStock.wool = (nextStock.wool ?? 0) + 1;
-          title = 'Sheared Soft Wool! 🧶';
-          sub = `Total wool: ${nextStock.wool} · +25 XP`;
+          xpGain = 25;
+          title = 'Cắt Lông Cừu! 🧶';
+          sub = `Kho len: ${nextStock.wool} · +${xpGain} XP${bellCoins ? ` · +${bellCoins} Xu 🔔` : ''}`;
+          floatText = `+1 🧶 +${xpGain} XP`;
           AudioEngine.playAnimal('sheep');
           break;
         case 'dog':
-          title = 'Patted Doggo! 🐶';
-          sub = 'Loyal friend +10 XP';
+          xpGain = 15;
+          title = 'Vuốt ve Chú Cún! 🐶';
+          sub = `Bạn trung thành +${xpGain} XP${bellCoins ? ` · +${bellCoins} Xu 🔔` : ''}`;
+          floatText = `Woof! +${xpGain} XP`;
           AudioEngine.playAnimal('dog');
           break;
       }
 
-      const nextXp = profile.xp + 25;
+      const nextXp = profile.xp + xpGain;
       commitProfile({
         ...profile,
         xp: nextXp,
+        coins: (profile.coins ?? 0) + bellCoins,
         level: ComboEngine.calculateLevel(nextXp).level,
         stock: nextStock,
       });
 
+      EventBus.emit('ui:floating-text', {
+        target: 'pasture',
+        text: bellCoins ? `${floatText} +${bellCoins}🪙` : floatText,
+        color: '#86efac',
+      });
       get().updateQuestProgress('care', 1);
       pushToast({ variant: 'animal', title, subtitle: sub });
     },
@@ -732,53 +763,120 @@ export const useGameStore = create<GameState>()((set, get) => {
       commitProfile({
         ...profile,
         xp: nextXp,
+        level: ComboEngine.calculateLevel(nextXp).level,
         goldenFertilizerCharges: nextCharges,
         stock: nextStock,
       });
 
+      EventBus.emit('ui:floating-text', {
+        target: 'pasture',
+        text: '🧹 +1 Phân Vàng +30 XP',
+        color: '#fde047',
+      });
       AudioEngine.playPlant();
       pushToast({
         variant: 'golden',
-        title: 'Pasture Cleaned! 🧹',
-        subtitle: 'Turned manure into Golden Fertilizer charge! (+30 XP)',
+        title: 'Đã dọn sạch chuồng trại! 🧹',
+        subtitle: 'Thu được +1 Phân bón vàng & +30 XP',
       });
     },
 
-    // Fishing at the pond
+    // Fishing at the pond (quick fallback)
     fishAtPond: () => {
+      get().catchFishWithResult('normal', 5, false);
+    },
+
+    catchFishWithResult: (tier, bonusCoins, bonusSeed) => {
       const { profile, pushToast } = get();
       if (!profile) return;
 
-      const fishCaught = Math.random() < 0.85;
-      if (!fishCaught) {
-        pushToast({
-          variant: 'info',
-          title: 'The fish slipped away! 🎣',
-          subtitle: 'Try casting your line again.',
-        });
-        return;
-      }
-
+      const fishAmount = tier === 'normal' ? 1 : 2;
+      const xpGain = tier === 'gold' ? 85 : tier === 'silver' ? 50 : 25;
       const nextStock: FarmStock = {
         ...profile.stock,
-        fish: (profile.stock.fish ?? 0) + 1,
+        fish: (profile.stock.fish ?? 0) + fishAmount,
       };
 
-      const nextXp = profile.xp + 35;
+      const nextInv = { ...profile.seedInventory };
+      let seedLabel = '';
+      if (bonusSeed) {
+        const seedKey = Math.random() < 0.4 ? 'crop_t3' : 'crop_t2';
+        nextInv[seedKey] = (nextInv[seedKey] ?? 0) + 1;
+        seedLabel = seedKey === 'crop_t3' ? ' · +1 Táo Cổ Thụ 🍎' : ' · +1 Cà Chua 🍅';
+      }
+
+      const nextXp = profile.xp + xpGain;
       commitProfile({
         ...profile,
         xp: nextXp,
+        coins: (profile.coins ?? 0) + bonusCoins,
         level: ComboEngine.calculateLevel(nextXp).level,
         stock: nextStock,
+        seedInventory: nextInv,
       });
 
       AudioEngine.playHarvest();
       get().updateQuestProgress('fish', 1);
+      EventBus.emit('ui:floating-text', {
+        target: 'pond',
+        text: `+${fishAmount} 🐟 +${xpGain} XP +${bonusCoins}🪙`,
+        color: tier === 'gold' ? '#fde047' : '#38bdf8',
+      });
+
+      const title =
+        tier === 'gold'
+          ? '🐟 Tuyệt đỉnh! Câu được Cá Hoàng Gia!'
+          : tier === 'silver'
+            ? '🐠 Câu trúng Cá Chép Vàng!'
+            : '🎣 Câu được Cá Rô Tươi!';
       pushToast({
         variant: 'fish',
-        title: 'Caught a Big Fish! 🐟',
-        subtitle: `Total fish: ${nextStock.fish} · +35 XP`,
+        title,
+        subtitle: `+${fishAmount} Cá · +${xpGain} XP · +${bonusCoins} Xu${seedLabel}`,
       });
+    },
+
+    collectWorldTreasure: (kind) => {
+      const { profile, pushToast } = get();
+      if (!profile) return;
+
+      if (kind === 'chest') {
+        const coinsGain = 25 + Math.floor(Math.random() * 26);
+        const dropTomato = Math.random() < 0.5;
+        const nextInv = { ...profile.seedInventory };
+        if (dropTomato) {
+          nextInv.crop_t2 = (nextInv.crop_t2 ?? 0) + 1;
+        }
+        const nextXp = profile.xp + 25;
+        commitProfile({
+          ...profile,
+          xp: nextXp,
+          level: ComboEngine.calculateLevel(nextXp).level,
+          coins: (profile.coins ?? 0) + coinsGain,
+          goldenFertilizerCharges: profile.goldenFertilizerCharges + (dropTomato ? 0 : 1),
+          seedInventory: nextInv,
+        });
+        AudioEngine.playChest();
+        pushToast({
+          variant: 'golden',
+          title: '🎁 Mở Rương Quà Nông Trại!',
+          subtitle: `+${coinsGain} Xu · +25 XP${dropTomato ? ' · +1 Cà Chua 🍅' : ' · +1 Phân bón vàng ✨'}`,
+        });
+      } else {
+        const nextXp = profile.xp + 30;
+        commitProfile({
+          ...profile,
+          xp: nextXp,
+          level: ComboEngine.calculateLevel(nextXp).level,
+          coins: (profile.coins ?? 0) + 15,
+        });
+        AudioEngine.playCorrect(false);
+        pushToast({
+          variant: 'quest',
+          title: '🐞 Đã bắt gọn Sâu vườn bảo vệ cây!',
+          subtitle: '+30 XP · +15 Xu vàng 🪙',
+        });
+      }
     },
 
     // -------------------------------------------------------------------------
@@ -810,11 +908,18 @@ export const useGameStore = create<GameState>()((set, get) => {
         nextInventory[vocab.id] = (nextInventory[vocab.id] ?? 0) + 1 + (isGolden ? 1 : 0);
       }
 
-      // Add to crop fodder for feeding animals
+      // Add to crop fodder for feeding animals (+1 extra if Windmill Gear upgraded)
+      const gearBonus = profile.upgrades?.windmillGear ? 1 : 0;
       const nextStock: FarmStock = {
         ...profile.stock,
-        cropFodder: (profile.stock.cropFodder ?? 0) + (isGolden ? 3 : 2),
+        cropFodder: (profile.stock.cropFodder ?? 0) + (isGolden ? 3 : 2) + gearBonus,
       };
+
+      EventBus.emit('ui:floating-text', {
+        plotIndex,
+        text: `+${xp} XP 🌾`,
+        color: isGolden ? '#fde047' : '#86efac',
+      });
 
       // Unlock permanent IELTS Tip Card from Tier 2/3 harvests.
       let unlockedIds = profile.unlockedTipCardIds;
@@ -1455,6 +1560,7 @@ export const useGameStore = create<GameState>()((set, get) => {
     setQuestsOpen: (open) => set({ questsOpen: open }),
     setAlmanacOpen: (open) => set({ almanacOpen: open }),
     setMockTestOpen: (open) => set({ mockTestOpen: open }),
+    setFishingOpen: (open) => set({ fishingOpen: open }),
 
     pushToast: (toast) => {
       toastCounter += 1;

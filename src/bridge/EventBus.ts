@@ -23,6 +23,8 @@ export type GameToUiEvents = {
   'game:pond-fish': undefined;
   /** Manure / cleaning interaction */
   'game:clean-pasture': undefined;
+  /** World map random chest or bug tapped */
+  'game:collect-treasure': { kind: 'chest' | 'bug' };
   /** Bakery / Kitchen clicked */
   'game:open-kitchen': undefined;
 };
@@ -40,6 +42,13 @@ export type UiToGameEvents = {
     upgrades: FarmUpgrades;
   };
   'ui:plot-fx': { plotIndex: number; kind: PlotFxKind };
+  'ui:floating-text': {
+    plotIndex?: number;
+    target?: 'pasture' | 'pond' | 'farmer';
+    text: string;
+    color?: string;
+  };
+  'ui:feed-animals': undefined;
   'ui:theme-changed': { theme: ThemeName };
   'ui:tool-mode-changed': { mode: FarmToolMode };
   'ui:weather-changed': { weather: WeatherType };

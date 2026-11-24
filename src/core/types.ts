@@ -162,6 +162,8 @@ export interface FarmUpgrades {
   beehive: boolean;     // +15 bonus XP per harvest
   well: boolean;        // Manual watering cuts 40% wait time instead of 25%
   flowerArch: boolean;  // +15% Coins on Market Orders
+  windmillGear?: boolean; // +1 lương thực mỗi vụ thu hoạch
+  luckyBell?: boolean;    // +15 Xu vàng mỗi lần chăm sóc thú
 }
 
 export interface PlayerProgress {

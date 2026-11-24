@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lexifarm-ielts-v3';
+const CACHE_NAME = 'lexifarm-ielts-v4';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

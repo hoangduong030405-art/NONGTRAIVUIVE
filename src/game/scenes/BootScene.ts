@@ -199,6 +199,7 @@ export class BootScene extends Phaser.Scene {
     this.genBuildings();
     this.genFarmer();
     this.genAnimals();
+    this.genInteractiveProps();
     this.scene.start('FarmScene');
   }
 
@@ -848,6 +849,53 @@ export class BootScene extends Phaser.Scene {
         circle(ctx, bx, by, 6, col, 1.5);
         circle(ctx, bx, by, 2, '#fef08a', 0);
       }
+    });
+  }
+
+  private genInteractiveProps(): void {
+    // 🎁 Lucky Golden Gift Chest
+    this.tex('world-chest', 64, 64, (ctx) => {
+      glow(ctx, 32, 34, 28, '253, 224, 71', 0.45);
+      ellipse(ctx, 32, 54, 20, 5, 'rgba(0,0,0,0.22)', 0);
+      rrect(ctx, 13, 28, 38, 24, 6, '#b45309', 2.8);
+      rrect(ctx, 11, 20, 42, 13, 6, '#d97706', 2.8);
+      // Gold trim bands
+      rrect(ctx, 18, 20, 6, 32, 2, '#fbbf24', 1.8);
+      rrect(ctx, 40, 20, 6, 32, 2, '#fbbf24', 1.8);
+      // Center lock
+      rrect(ctx, 27, 29, 10, 10, 3, '#fde047', 2);
+      circle(ctx, 32, 34, 2, '#78350f', 0);
+      sparkle4(ctx, 12, 14, 6, '#fef08a');
+      sparkle4(ctx, 52, 14, 7, '#fef08a');
+    });
+
+    // 🐛 Garden Pest Bug (cute green beetle/caterpillar to tap & chase away)
+    this.tex('world-bug', 56, 56, (ctx) => {
+      ellipse(ctx, 28, 44, 15, 4, 'rgba(0,0,0,0.18)', 0);
+      ellipse(ctx, 20, 34, 9, 8, '#4ade80', 2.5);
+      ellipse(ctx, 30, 31, 10, 9, '#22c55e', 2.5);
+      circle(ctx, 40, 27, 8, '#16a34a', 2.5);
+      // spots
+      circle(ctx, 18, 32, 2.2, '#fde047', 0);
+      circle(ctx, 29, 28, 2.5, '#fde047', 0);
+      // eyes + antennae
+      circle(ctx, 43, 25, 2, '#ffffff', 1);
+      circle(ctx, 43.5, 25, 1, '#111827', 0);
+      line(ctx, 40, 20, 45, 12, OUTLINE, 2);
+      line(ctx, 37, 20, 34, 12, OUTLINE, 2);
+      circle(ctx, 45, 12, 2, '#f97316', 1.5);
+      circle(ctx, 34, 12, 2, '#f97316', 1.5);
+    });
+
+    // 💩 Organic Pasture Manure Pile (tap to turn into Golden Fertilizer!)
+    this.tex('world-manure', 56, 48, (ctx) => {
+      ellipse(ctx, 28, 41, 18, 5, 'rgba(0,0,0,0.2)', 0);
+      ellipse(ctx, 28, 34, 15, 8, '#78350f', 2.5);
+      ellipse(ctx, 28, 26, 11, 7, '#92400e', 2.5);
+      ellipse(ctx, 28, 19, 6, 5, '#b45309', 2.5);
+      // cute shimmer indicating fertilizer value
+      sparkle4(ctx, 14, 14, 5, '#fde047');
+      sparkle4(ctx, 43, 16, 4.5, '#fde047');
     });
   }
 

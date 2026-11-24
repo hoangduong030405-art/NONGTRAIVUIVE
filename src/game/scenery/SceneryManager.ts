@@ -45,11 +45,23 @@ export class SceneryManager {
   private beehiveSprite!: Phaser.GameObjects.Image;
   private wellSprite!: Phaser.GameObjects.Image;
   private archSprite!: Phaser.GameObjects.Image;
-  private activeUpgrades: FarmUpgrades = { scarecrow: false, beehive: false, well: false, flowerArch: false };
+  private activeUpgrades: FarmUpgrades = {
+    scarecrow: false,
+    beehive: false,
+    well: false,
+    flowerArch: false,
+    windmillGear: false,
+    luckyBell: false,
+  };
 
   private natureContainer!: Phaser.GameObjects.Container;
   private pathContainer!: Phaser.GameObjects.Container;
   private fenceGraphics!: Phaser.GameObjects.Graphics;
+  private rainbowGraphics!: Phaser.GameObjects.Graphics;
+  private weatherTint!: Phaser.GameObjects.Rectangle;
+
+  private pondCenter = { x: 200, y: 400 };
+  private currentPasture = new Phaser.Geom.Rectangle(0, 0, 100, 100);
 
   private butterflies: Array<{ sprite: Phaser.GameObjects.Image; baseX: number; baseY: number; offset: number }> = [];
 
@@ -65,10 +77,23 @@ export class SceneryManager {
     this.buildStaticContainers();
   }
 
+  public getPondCenter(): { x: number; y: number } {
+    return this.pondCenter;
+  }
+
+  public getPastureBounds(): Phaser.Geom.Rectangle {
+    return this.currentPasture;
+  }
+
   private buildStaticContainers(): void {
+    this.rainbowGraphics = this.scene.add.graphics().setDepth(1).setAlpha(0);
     this.pathContainer = this.scene.add.container(0, 0).setDepth(2);
     this.fenceGraphics = this.scene.add.graphics().setDepth(4);
     this.natureContainer = this.scene.add.container(0, 0).setDepth(5);
+    this.weatherTint = this.scene.add
+      .rectangle(0, 0, this.scene.scale.width, this.scene.scale.height, 0x0f172a, 0)
+      .setOrigin(0, 0)
+      .setDepth(32);
 
     // House
     this.houseSprite = this.scene.add.image(-500, -500, 'house').setOrigin(0.5, 0.95).setDepth(15);
@@ -114,13 +139,37 @@ export class SceneryManager {
 
   public setDarkTheme(isDark: boolean): void {
     this.isDarkTheme = isDark;
+    this.syncWindowGlow();
+  }
+
+  private syncWindowGlow(): void {
+    const lit = this.isDarkTheme || this.currentWeather === 'night';
     for (const glow of this.windowGlows) {
-      glow.setAlpha(isDark ? 0.85 : 0);
+      glow.setAlpha(lit ? 0.88 : 0);
     }
   }
 
   public setWeather(weather: 'sunny' | 'rain' | 'rainbow' | 'night'): void {
     this.currentWeather = weather;
+    this.syncWindowGlow();
+    this.scene.tweens.killTweensOf(this.weatherTint);
+    this.scene.tweens.killTweensOf(this.rainbowGraphics);
+
+    if (weather === 'night') {
+      this.weatherTint.setFillStyle(0x0b1120, 1);
+      this.scene.tweens.add({ targets: this.weatherTint, alpha: 0.28, duration: 500 });
+      this.scene.tweens.add({ targets: this.rainbowGraphics, alpha: 0, duration: 400 });
+    } else if (weather === 'rain') {
+      this.weatherTint.setFillStyle(0x1e3a5f, 1);
+      this.scene.tweens.add({ targets: this.weatherTint, alpha: 0.14, duration: 500 });
+      this.scene.tweens.add({ targets: this.rainbowGraphics, alpha: 0, duration: 400 });
+    } else if (weather === 'rainbow') {
+      this.scene.tweens.add({ targets: this.weatherTint, alpha: 0, duration: 500 });
+      this.scene.tweens.add({ targets: this.rainbowGraphics, alpha: 0.34, duration: 700 });
+    } else {
+      this.scene.tweens.add({ targets: this.weatherTint, alpha: 0, duration: 500 });
+      this.scene.tweens.add({ targets: this.rainbowGraphics, alpha: 0, duration: 400 });
+    }
   }
 
   public setUpgrades(upgrades: FarmUpgrades): void {
@@ -129,6 +178,11 @@ export class SceneryManager {
     this.beehiveSprite.setVisible(upgrades.beehive);
     this.wellSprite.setVisible(upgrades.well);
     this.archSprite.setVisible(upgrades.flowerArch);
+    if (upgrades.windmillGear) {
+      this.windmillBlades.setTint(0xfef08a);
+    } else {
+      this.windmillBlades.clearTint();
+    }
   }
 
   public applyLayout(layout: SceneryLayout): void {
@@ -177,13 +231,28 @@ export class SceneryManager {
     }
 
     // 3. Pond
+    this.currentPasture = layout.pastureBounds;
     if (layout.pondPos.visible) {
+      this.pondCenter = { x: layout.pondPos.x, y: layout.pondPos.y };
       this.pondSprite.setVisible(true).setPosition(layout.pondPos.x, layout.pondPos.y).setScale(layout.pondPos.scale);
       this.pondRipple.setPosition(layout.pondPos.x + 10, layout.pondPos.y + 6).setScale(layout.pondPos.scale * 0.9);
     } else {
       this.pondSprite.setVisible(false);
       this.pondRipple.setVisible(false);
     }
+
+    // Resize weather tint & rainbow arc
+    this.weatherTint.setSize(this.scene.scale.width, this.scene.scale.height);
+    this.rainbowGraphics.clear();
+    const rx = this.scene.scale.width * 0.68;
+    const ry = this.scene.scale.height * 0.42;
+    const rainbowColors = [0xef4444, 0xf97316, 0xfacc15, 0x22c55e, 0x38bdf8, 0x6366f1, 0xa855f7];
+    rainbowColors.forEach((col, i) => {
+      this.rainbowGraphics.lineStyle(10, col, 0.85);
+      this.rainbowGraphics.beginPath();
+      this.rainbowGraphics.arc(rx, ry, 240 - i * 10, Math.PI * 1.08, Math.PI * 1.92, false);
+      this.rainbowGraphics.strokePath();
+    });
 
     // Upgrades placement
     this.scarecrowSprite.setPosition(layout.scarecrowPos.x, layout.scarecrowPos.y).setScale(layout.scarecrowPos.scale);
@@ -272,7 +341,7 @@ export class SceneryManager {
   public update(time: number, delta: number): void {
     // 1. Windmill rotation
     if (this.windmillBlades.visible) {
-      this.windmillBlades.rotation += 0.008;
+      this.windmillBlades.rotation += this.activeUpgrades.windmillGear ? 0.022 : 0.008;
     }
 
     // 2. Chimney smoke puffs

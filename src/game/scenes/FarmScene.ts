@@ -68,16 +68,75 @@ export class FarmScene extends Phaser.Scene {
 
   private pointerDown = false;
   private downPlotIndex = -1;
+  private hoverPlotIndex = -1;
   private dragHarvested = false;
   private dragDistance = 0;
   private lastPointerX = 0;
   private lastPointerY = 0;
   private trailAccumulator = 0;
   private elapsed = 0;
+  private nextWorldSpawnAt = 6000;
+  private worldProps: Array<{ sprite: Phaser.GameObjects.Image; kind: 'chest' | 'bug' | 'manure'; expiresAt: number }> = [];
 
   constructor() {
     super({ key: 'FarmScene' });
   }
+
+  private readonly onWeatherChanged = (p: { weather: 'sunny' | 'rain' | 'rainbow' | 'night' }): void => {
+    this.scenery.setWeather(p.weather);
+  };
+
+  private readonly onUpgradesChanged = (p: { upgrades: FarmUpgrades }): void => {
+    this.scenery.setUpgrades(p.upgrades);
+  };
+
+  private readonly onPondFish = (): void => {
+    if (!this.farmer) return;
+    const pond = this.scenery.getPondCenter();
+    this.farmer.walkTo(pond.x + 50, pond.y - 8, () => {
+      this.farmer.playAction('fish', 1200);
+      this.particles.emitWaterBurst(pond.x, pond.y);
+    });
+  };
+
+  private readonly onAnimalInteract = (payload: { animalType: 'sheep' | 'chicken' | 'cow' | 'dog'; action: string }): void => {
+    if (!this.farmer) return;
+    const action = payload.action === 'wool' ? 'shear' : payload.action === 'water' ? 'water' : 'wave';
+    this.farmer.playAction(action, 700);
+  };
+
+  private readonly onFeedAnimals = (): void => {
+    this.animals.forEach((a) => a.triggerHappyDance());
+    const p = this.scenery.getPastureBounds();
+    this.particles.emitHeartBurst(p.centerX, p.centerY);
+  };
+
+  private readonly onFloatingText = (payload: {
+    plotIndex?: number;
+    target?: 'pasture' | 'pond' | 'farmer';
+    text: string;
+    color?: string;
+  }): void => {
+    let x = this.scale.width / 2;
+    let y = this.scale.height / 2;
+    if (typeof payload.plotIndex === 'number' && this.views[payload.plotIndex]) {
+      const v = this.views[payload.plotIndex]!;
+      x = v.container.x;
+      y = v.container.y - 24;
+    } else if (payload.target === 'pasture') {
+      const p = this.scenery.getPastureBounds();
+      x = p.centerX;
+      y = p.centerY - 26;
+    } else if (payload.target === 'pond') {
+      const pond = this.scenery.getPondCenter();
+      x = pond.x;
+      y = pond.y - 30;
+    } else if (payload.target === 'farmer' && this.farmer) {
+      x = this.farmer.x;
+      y = this.farmer.y - 45;
+    }
+    this.spawnFloatingText(x, y, payload.text, payload.color ?? '#fef08a');
+  };
 
   create(): void {
     this.particles = new ParticlePool(this, 240);
@@ -112,29 +171,12 @@ export class FarmScene extends Phaser.Scene {
     EventBus.on('ui:sync', this.onSync);
     EventBus.on('ui:plot-fx', this.onPlotFx);
     EventBus.on('ui:theme-changed', this.onThemeChanged);
-    EventBus.on('ui:weather-changed', (p) => {
-      this.scenery.setWeather(p.weather);
-    });
-    EventBus.on('ui:upgrades-changed', (p) => {
-      this.scenery.setUpgrades(p.upgrades);
-    });
-
-    EventBus.on('game:pond-fish', () => {
-      if (this.farmer) {
-        // Find pond location and move farmer there to fish
-        this.farmer.walkTo(this.originX - 100, this.originY + 120, () => {
-          this.farmer.playAction('fish', 1200);
-          this.particles.emitWaterBurst(this.originX - 100, this.originY + 110);
-        });
-      }
-    });
-
-    EventBus.on('game:animal-interact', (payload) => {
-      if (this.farmer) {
-        const action = payload.action === 'wool' ? 'shear' : payload.action === 'water' ? 'water' : 'wave';
-        this.farmer.playAction(action as any, 700);
-      }
-    });
+    EventBus.on('ui:weather-changed', this.onWeatherChanged);
+    EventBus.on('ui:upgrades-changed', this.onUpgradesChanged);
+    EventBus.on('ui:feed-animals', this.onFeedAnimals);
+    EventBus.on('ui:floating-text', this.onFloatingText);
+    EventBus.on('game:pond-fish', this.onPondFish);
+    EventBus.on('game:animal-interact', this.onAnimalInteract);
 
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.cleanup, this);
     this.events.once(Phaser.Scenes.Events.DESTROY, this.cleanup, this);
@@ -361,14 +403,17 @@ export class FarmScene extends Phaser.Scene {
         break;
       case 'water':
         this.particles.emitWaterBurst(x, y);
+        this.spawnFloatingText(x, y - 24, '💧 Tưới!', '#38bdf8');
         break;
       case 'combo':
         this.particles.emitComboBurst(x, y - this.cell * 0.1, false);
         this.punch(v, 1.15);
+        this.spawnFloatingText(x, y - 30, '⚡ BONUS!', '#facc15');
         break;
       case 'golden':
         this.particles.emitComboBurst(x, y - this.cell * 0.1, true);
         this.punch(v, 1.2);
+        this.spawnFloatingText(x, y - 34, '✨ GOLDEN!', '#fde047');
         break;
       case 'harvest':
         this.particles.emitHarvestBurst(x, y, false);
@@ -446,6 +491,17 @@ export class FarmScene extends Phaser.Scene {
   }
 
   private onPointerMove(pointer: Phaser.Input.Pointer): void {
+    const hoverIdx = this.plotIndexAt(pointer.x, pointer.y);
+    if (hoverIdx !== this.hoverPlotIndex) {
+      if (this.hoverPlotIndex >= 0 && this.views[this.hoverPlotIndex]) {
+        this.views[this.hoverPlotIndex]!.soil.clearTint();
+      }
+      this.hoverPlotIndex = hoverIdx;
+      if (hoverIdx >= 0 && this.views[hoverIdx]) {
+        this.views[hoverIdx]!.soil.setTint(0xfff5d6);
+      }
+    }
+
     if (!this.pointerDown) return;
     const dx = pointer.x - this.lastPointerX;
     const dy = pointer.y - this.lastPointerY;
@@ -490,12 +546,151 @@ export class FarmScene extends Phaser.Scene {
     }
   }
 
+  private spawnFloatingText(x: number, y: number, message: string, color = '#fef08a'): void {
+    const txt = this.add
+      .text(x, y, message, {
+        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
+        fontSize: '15px',
+        fontStyle: 'bold',
+        color,
+        stroke: '#1e1b18',
+        strokeThickness: 4,
+      })
+      .setOrigin(0.5, 0.5)
+      .setDepth(50);
+
+    this.tweens.add({
+      targets: txt,
+      y: y - 42,
+      alpha: 0,
+      duration: 950,
+      ease: 'Cubic.easeOut',
+      onComplete: () => txt.destroy(),
+    });
+  }
+
+  private trySpawnWorldProp(now: number): void {
+    // Expire uncollected props
+    for (let i = this.worldProps.length - 1; i >= 0; i -= 1) {
+      const item = this.worldProps[i];
+      if (item && now > item.expiresAt) {
+        this.worldProps.splice(i, 1);
+        item.sprite.destroy();
+      }
+    }
+
+    if (now < this.nextWorldSpawnAt || this.worldProps.length >= 2) return;
+    this.nextWorldSpawnAt = now + 15_000 + Math.random() * 10_000;
+
+    const roll = Math.random();
+    const kind: 'chest' | 'bug' | 'manure' = roll < 0.36 ? 'chest' : roll < 0.72 ? 'bug' : 'manure';
+    const width = this.scale.width;
+    const height = this.scale.height;
+
+    let sx = width * 0.25;
+    let sy = height * 0.55;
+
+    if (kind === 'manure') {
+      const p = this.scenery.getPastureBounds();
+      if (p.width > 50 && p.height > 40) {
+        sx = p.x + 24 + Math.random() * (p.width - 48);
+        sy = p.y + 20 + Math.random() * (p.height - 40);
+      } else {
+        sx = Math.min(width - 70, this.originX + this.cell * this.cols + 45);
+        sy = Math.min(height - 190, this.originY + this.cell * 1.8);
+      }
+    } else if (kind === 'bug') {
+      const randomPlot = this.views[Math.floor(Math.random() * this.views.length)];
+      if (randomPlot) {
+        sx = randomPlot.container.x + (Math.random() - 0.5) * this.cell * 0.45;
+        sy = randomPlot.container.y + (Math.random() - 0.5) * this.cell * 0.35;
+      }
+    } else {
+      const gridW = this.cell * this.cols;
+      const onLeft = Math.random() < 0.5;
+      sx = onLeft
+        ? Math.max(60, this.originX - 55 - Math.random() * 60)
+        : Math.min(width - 60, this.originX + gridW + 55 + Math.random() * 60);
+      sy = Phaser.Math.Clamp(
+        this.originY + Math.random() * this.cell * this.rows,
+        155,
+        Math.max(180, height - 185),
+      );
+    }
+
+    const textureKey = kind === 'chest' ? 'world-chest' : kind === 'bug' ? 'world-bug' : 'world-manure';
+    const sprite = this.add
+      .image(sx, sy, textureKey)
+      .setDepth(28)
+      .setScale(0.1)
+      .setInteractive({ useHandCursor: true });
+
+    this.tweens.add({
+      targets: sprite,
+      scale: 0.92,
+      duration: 280,
+      ease: 'Back.easeOut',
+      onComplete: () => {
+        if (!sprite.active) return;
+        this.tweens.add({
+          targets: sprite,
+          y: sy - 5,
+          duration: 900,
+          yoyo: true,
+          repeat: -1,
+          ease: 'Sine.easeInOut',
+        });
+      },
+    });
+
+    const record = { sprite, kind, expiresAt: now + 35_000 };
+    this.worldProps.push(record);
+
+    sprite.on(
+      Phaser.Input.Events.POINTER_DOWN,
+      (
+        _pointer: Phaser.Input.Pointer,
+        _lx: number,
+        _ly: number,
+        event: Phaser.Types.Input.EventData,
+      ) => {
+        if (document.querySelector('[role="dialog"]')) return;
+        event.stopPropagation();
+        this.pointerDown = false;
+        const idx = this.worldProps.indexOf(record);
+        if (idx >= 0) this.worldProps.splice(idx, 1);
+
+        const targetX = sprite.x;
+        const targetY = sprite.y;
+        sprite.destroy();
+
+        this.farmer.walkTo(targetX, targetY, () => {
+          this.farmer.playAction(kind === 'manure' ? 'seed' : 'cheer', 600);
+        });
+
+        if (kind === 'chest') {
+          this.particles.emitComboBurst(targetX, targetY, true);
+          this.spawnFloatingText(targetX, targetY - 12, '🎁 Kho báu!', '#fde047');
+          EventBus.emit('game:collect-treasure', { kind: 'chest' });
+        } else if (kind === 'bug') {
+          this.particles.emitHarvestBurst(targetX, targetY, false);
+          this.spawnFloatingText(targetX, targetY - 12, '🐞 +30 XP +15🪙', '#86efac');
+          EventBus.emit('game:collect-treasure', { kind: 'bug' });
+        } else {
+          this.particles.emitPlantBurst(targetX, targetY);
+          EventBus.emit('game:clean-pasture');
+        }
+      },
+    );
+  }
+
   update(time: number, delta: number): void {
     this.elapsed += delta;
     this.particles.update(delta);
     this.scenery.update(time, delta);
     this.farmer.update(time, delta);
     this.animals.forEach((a) => a.update(time, delta));
+    this.trySpawnWorldProp(time);
 
     const now = Date.now();
     const feverActive = now < this.feverEndsAt;
@@ -602,6 +797,16 @@ export class FarmScene extends Phaser.Scene {
     EventBus.off('ui:sync', this.onSync);
     EventBus.off('ui:plot-fx', this.onPlotFx);
     EventBus.off('ui:theme-changed', this.onThemeChanged);
+    EventBus.off('ui:weather-changed', this.onWeatherChanged);
+    EventBus.off('ui:upgrades-changed', this.onUpgradesChanged);
+    EventBus.off('ui:feed-animals', this.onFeedAnimals);
+    EventBus.off('ui:floating-text', this.onFloatingText);
+    EventBus.off('game:pond-fish', this.onPondFish);
+    EventBus.off('game:animal-interact', this.onAnimalInteract);
     this.scale.off(Phaser.Scale.Events.RESIZE, this.onResize, this);
+    for (const item of this.worldProps) {
+      item.sprite.destroy();
+    }
+    this.worldProps = [];
   }
 }

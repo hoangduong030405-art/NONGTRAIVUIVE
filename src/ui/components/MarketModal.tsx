@@ -39,6 +39,20 @@ const FARM_UPGRADES_CATALOG: Array<{
     bonus: 'Tăng +15% Xu vàng khi giao các đơn hàng tại Chợ',
     cost: 220,
   },
+  {
+    key: 'windmillGear',
+    emoji: '⚙️',
+    name: 'Bánh Răng Cối Xay Gió',
+    bonus: 'Cối xay gió quay nhanh hơn & tặng +1 Lương thực mỗi vụ thu hoạch',
+    cost: 240,
+  },
+  {
+    key: 'luckyBell',
+    emoji: '🔔',
+    name: 'Chuông Vàng Chú Cún',
+    bonus: 'Cộng thêm +15 Xu vàng mỗi khi chăm sóc gà, bò, cừu hoặc cún',
+    cost: 260,
+  },
 ];
 
 export function MarketModal() {

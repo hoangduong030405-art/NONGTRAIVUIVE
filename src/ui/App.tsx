@@ -6,6 +6,7 @@ import { createGame } from '../game/main';
 import { AlmanacModal } from './components/AlmanacModal';
 import { ComboToast } from './components/ComboToast';
 import { DailyQuestsModal } from './components/DailyQuestsModal';
+import { FishingModal } from './components/FishingModal';
 import { IeltsQuizModal } from './components/IeltsQuizModal';
 import { KitchenModal } from './components/KitchenModal';
 import { MarketModal } from './components/MarketModal';
@@ -46,7 +47,13 @@ export function App() {
     const isModalOpen = () => {
       const s = useGameStore.getState();
       return Boolean(
-        s.activeQuiz || s.almanacOpen || s.marketOpen || s.kitchenOpen || s.questsOpen || s.mockTestOpen,
+        s.activeQuiz ||
+          s.almanacOpen ||
+          s.marketOpen ||
+          s.kitchenOpen ||
+          s.questsOpen ||
+          s.mockTestOpen ||
+          s.fishingOpen,
       );
     };
 
@@ -62,7 +69,13 @@ export function App() {
       if (!isModalOpen()) useGameStore.getState().careAnimal(animalType);
     };
     const onPondFish = () => {
-      if (!isModalOpen()) useGameStore.getState().fishAtPond();
+      if (!isModalOpen()) useGameStore.getState().setFishingOpen(true);
+    };
+    const onCleanPasture = () => {
+      if (!isModalOpen()) useGameStore.getState().cleanPastureManure();
+    };
+    const onCollectTreasure = ({ kind }: { kind: 'chest' | 'bug' }) => {
+      if (!isModalOpen()) useGameStore.getState().collectWorldTreasure(kind);
     };
 
     const onOpenKitchen = () => {
@@ -74,6 +87,8 @@ export function App() {
     EventBus.on('game:harvest', onHarvest);
     EventBus.on('game:animal-interact', onAnimalInteract);
     EventBus.on('game:pond-fish', onPondFish);
+    EventBus.on('game:clean-pasture', onCleanPasture);
+    EventBus.on('game:collect-treasure', onCollectTreasure);
     EventBus.on('game:open-kitchen', onOpenKitchen);
     return () => {
       EventBus.off('game:ready', onReady);
@@ -81,6 +96,8 @@ export function App() {
       EventBus.off('game:harvest', onHarvest);
       EventBus.off('game:animal-interact', onAnimalInteract);
       EventBus.off('game:pond-fish', onPondFish);
+      EventBus.off('game:clean-pasture', onCleanPasture);
+      EventBus.off('game:collect-treasure', onCollectTreasure);
       EventBus.off('game:open-kitchen', onOpenKitchen);
     };
   }, []);
@@ -111,6 +128,7 @@ export function App() {
           <KitchenModal />
           <DailyQuestsModal />
           <MockTestModal />
+          <FishingModal />
         </>
       )}
       <ComboToast />

@@ -85,6 +85,8 @@ export function createDefaultPlayerProgress(
       beehive: false,
       well: false,
       flowerArch: false,
+      windmillGear: false,
+      luckyBell: false,
     },
     dailyQuests: INITIAL_DAILY_QUESTS,
     activeWeather: 'sunny',

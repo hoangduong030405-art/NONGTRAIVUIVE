@@ -26,7 +26,7 @@ export function SeedDock() {
   const waterAllReadyAt = useGameStore((s) => s.waterAllReadyAt);
   const feedAnimals = useGameStore((s) => s.feedAnimals);
   const cleanPastureManure = useGameStore((s) => s.cleanPastureManure);
-  const fishAtPond = useGameStore((s) => s.fishAtPond);
+  const setFishingOpen = useGameStore((s) => s.setFishingOpen);
 
   const [now, setNow] = useState(() => Date.now());
   const hasGrowing = plots.some((p) => Boolean(p.vocabId));
@@ -132,9 +132,9 @@ export function SeedDock() {
 
             <button
               type="button"
-              onClick={() => fishAtPond()}
+              onClick={() => setFishingOpen(true)}
               className="btn btn-ghost min-h-[32px] px-2 py-1 text-xs font-bold"
-              title="Câu cá ở hồ nước (+35 XP)"
+              title="Mở Mini-Game Câu Cá Bên Hồ (+25~85 XP & Cá & Xu)"
             >
               <Fish size={14} className="text-cyan-500" />
               ({stock.fish})
