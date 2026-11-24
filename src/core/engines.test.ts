@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { ComboEngine } from './ComboEngine';
 import { getActiveStage, stageForLevel, STAGE_ROADMAP } from './curriculum';
 import { FarmEngine } from './FarmEngine';
+import { generateDailyQuests, generateRandomMarketOrder } from './questData';
 
 const base = {
   isCorrect: true,
@@ -83,5 +84,14 @@ describe('5-Stage IELTS Curriculum Progression', () => {
     expect(stageForLevel(9)).toBe(5);
     expect(getActiveStage(1, 'auto')).toBe(1);
     expect(getActiveStage(1, 4)).toBe(4);
+  });
+
+  it('generates varied daily quests and market orders', () => {
+    const quests = generateDailyQuests();
+    expect(quests.length).toBeGreaterThanOrEqual(4);
+    expect(quests.every((q) => !q.completed && !q.claimed && q.currentCount === 0)).toBe(true);
+    const order = generateRandomMarketOrder();
+    expect(order.reqAmount).toBeGreaterThanOrEqual(1);
+    expect(order.rewardCoins).toBeGreaterThan(0);
   });
 });

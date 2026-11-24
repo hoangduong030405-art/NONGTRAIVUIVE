@@ -77,6 +77,8 @@ export function createDefaultPlayerProgress(
       bread: 0,
       cheese: 0,
       sweater: 0,
+      cake: 0,
+      grilledFish: 0,
     },
     upgrades: {
       scarecrow: false,
@@ -88,6 +90,7 @@ export function createDefaultPlayerProgress(
     activeWeather: 'sunny',
     stageOverride: 'auto',
     completedQuestionIds: [],
+    mockTestsCompleted: 0,
     updatedAt: Date.now(),
   };
 }
@@ -130,6 +133,7 @@ export class StorageService {
             activeWeather: storedProfile.activeWeather ?? 'sunny',
             stageOverride: storedProfile.stageOverride ?? 'auto',
             completedQuestionIds: storedProfile.completedQuestionIds ?? [],
+            mockTestsCompleted: storedProfile.mockTestsCompleted ?? 0,
             level: ComboEngine.calculateLevel(storedProfile.xp ?? 0).level,
           }
         : defaultProfile;
@@ -218,14 +222,54 @@ export class StorageService {
     return JSON.stringify(payload, null, 2);
   }
 
+  static async exportSyncCode(): Promise<string> {
+    const [profile, plots, mastery] = await Promise.all([
+      db.profile.get('player'),
+      db.plots.orderBy('index').toArray(),
+      db.mastery.toArray(),
+    ]);
+
+    if (!profile) {
+      throw new Error('Chưa có dữ liệu nông trại để tạo mã đồng bộ.');
+    }
+
+    const payload: BackupPayload = {
+      schemaVersion: 1,
+      exportedAt: new Date().toISOString(),
+      profile,
+      plots,
+      mastery,
+    };
+
+    const json = JSON.stringify(payload);
+    const bytes = new TextEncoder().encode(json);
+    let binary = '';
+    for (let i = 0; i < bytes.length; i += 0x8000) {
+      binary += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+    }
+    return `LEXIFARM:${btoa(binary)}`;
+  }
+
   static async importBackupJson(
-    rawJson: string,
+    rawInput: string,
     vocabList: VocabItem[],
   ): Promise<{
     profile: PlayerProgress;
     plots: PlotState[];
     mastery: Record<string, VocabMasteryRecord>;
   }> {
+    const trimmed = rawInput.trim();
+    let rawJson = trimmed;
+    if (trimmed.startsWith('LEXIFARM:')) {
+      const b64 = trimmed.slice('LEXIFARM:'.length).trim();
+      const binary = atob(b64);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i += 1) {
+        bytes[i] = binary.charCodeAt(i);
+      }
+      rawJson = new TextDecoder().decode(bytes);
+    }
+
     const parsed: unknown = JSON.parse(rawJson);
     if (!parsed || typeof parsed !== 'object') {
       throw new Error('Invalid backup JSON format.');
@@ -242,11 +286,19 @@ export class StorageService {
     }
 
     const validIds = new Set(vocabList.map((v) => v.id));
+    validIds.add('crop_t1');
+    validIds.add('crop_t2');
+    validIds.add('crop_t3');
+    const isKnownId = (id: string): boolean => validIds.has(id) || /^s[1-5]_\d+$/.test(id);
+
     const defaults = createDefaultPlayerProgress(vocabList);
+    const nextXp = candidate.profile.xp ?? defaults.xp;
     const mergedProfile: PlayerProgress = {
       ...defaults,
       ...candidate.profile,
       id: 'player',
+      xp: nextXp,
+      level: ComboEngine.calculateLevel(nextXp).level,
       seedInventory: {
         ...defaults.seedInventory,
         ...(candidate.profile.seedInventory ?? {}),
@@ -255,6 +307,12 @@ export class StorageService {
         ...defaults.stock,
         ...(candidate.profile.stock ?? {}),
       },
+      upgrades: {
+        ...defaults.upgrades,
+        ...(candidate.profile.upgrades ?? {}),
+      },
+      completedQuestionIds: candidate.profile.completedQuestionIds ?? [],
+      mockTestsCompleted: candidate.profile.mockTestsCompleted ?? 0,
       updatedAt: Date.now(),
     };
 
@@ -271,7 +329,7 @@ export class StorageService {
     });
 
     const sanitizedMastery = candidate.mastery.filter(
-      (m) => m && typeof m.vocabId === 'string' && validIds.has(m.vocabId),
+      (m) => m && typeof m.vocabId === 'string' && isKnownId(m.vocabId),
     );
 
     await db.transaction('rw', db.profile, db.plots, db.mastery, async () => {

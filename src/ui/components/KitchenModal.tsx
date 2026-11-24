@@ -2,13 +2,17 @@ import { ChefHat, Flame, Volume2, X } from 'lucide-react';
 import { AudioEngine } from '../../core/AudioEngine';
 import { useGameStore } from '../store/useGameStore';
 
+interface IngredientReq {
+  key: 'cropFodder' | 'eggs' | 'milk' | 'wool' | 'fish';
+  amount: number;
+  label: string;
+}
+
 interface Recipe {
-  id: 'bread' | 'cheese' | 'sweater';
+  id: 'bread' | 'cheese' | 'sweater' | 'cake' | 'grilledFish';
   name: string;
   emoji: string;
-  reqDesc: string;
-  reqStockKey: 'cropFodder' | 'milk' | 'wool';
-  reqAmount: number;
+  ingredients: IngredientReq[];
   ieltsCollocation: string;
   ieltsMeaning: string;
   rewardXp: number;
@@ -19,9 +23,7 @@ const RECIPES: Recipe[] = [
     id: 'bread',
     name: 'Ổ Bánh Mì Lúa Mạch',
     emoji: '🥖',
-    reqDesc: '3 Lương thực hoa màu (Fodder)',
-    reqStockKey: 'cropFodder',
-    reqAmount: 3,
+    ingredients: [{ key: 'cropFodder', amount: 3, label: '3 Lương thực' }],
     ieltsCollocation: 'Staple food & Sustainable agriculture',
     ieltsMeaning: 'Lương thực thiết yếu trong chế độ ăn uống & nền nông nghiệp bền vững.',
     rewardXp: 40,
@@ -30,9 +32,7 @@ const RECIPES: Recipe[] = [
     id: 'cheese',
     name: 'Phô Mai Béo Ngậy',
     emoji: '🧀',
-    reqDesc: '2 Bình Sữa bò tươi (Milk)',
-    reqStockKey: 'milk',
-    reqAmount: 2,
+    ingredients: [{ key: 'milk', amount: 2, label: '2 Sữa bò' }],
     ieltsCollocation: 'Artisanal dairy production',
     ieltsMeaning: 'Quy trình sản xuất bơ sữa truyền thống, thủ công chất lượng cao.',
     rewardXp: 50,
@@ -41,12 +41,34 @@ const RECIPES: Recipe[] = [
     id: 'sweater',
     name: 'Áo Len Dệt Cừu',
     emoji: '🧶',
-    reqDesc: '2 Cuộn Len cừu mềm (Wool)',
-    reqStockKey: 'wool',
-    reqAmount: 2,
+    ingredients: [{ key: 'wool', amount: 2, label: '2 Len cừu' }],
     ieltsCollocation: 'Biodegradable textile materials',
     ieltsMeaning: 'Nguyên liệu dệt may sinh học tự nhiên, thân thiện với hệ sinh thái.',
     rewardXp: 60,
+  },
+  {
+    id: 'cake',
+    name: 'Bánh Kem Trứng Sữa',
+    emoji: '🍰',
+    ingredients: [
+      { key: 'eggs', amount: 2, label: '2 Trứng gà' },
+      { key: 'milk', amount: 1, label: '1 Sữa bò' },
+    ],
+    ieltsCollocation: 'Culinary heritage & local gastronomy',
+    ieltsMeaning: 'Di sản ẩm thực địa phương & nghệ thuật làm bánh truyền thống.',
+    rewardXp: 65,
+  },
+  {
+    id: 'grilledFish',
+    name: 'Cá Nướng Bơ Tỏi',
+    emoji: '🍣',
+    ingredients: [
+      { key: 'fish', amount: 2, label: '2 Cá tươi' },
+      { key: 'cropFodder', amount: 1, label: '1 Lương thực' },
+    ],
+    ieltsCollocation: 'Sustainable aquaculture & dietary protein',
+    ieltsMeaning: 'Nuôi trồng thủy sản bền vững & nguồn đạm dinh dưỡng lành mạnh.',
+    rewardXp: 70,
   },
 ];
 
@@ -58,16 +80,19 @@ export function KitchenModal() {
 
   if (!open || !profile) return null;
 
-  const stock = profile.stock ?? {
-    cropFodder: 0,
-    eggs: 0,
-    milk: 0,
-    wool: 0,
-    fertilizerBags: 0,
-    fish: 0,
-    bread: 0,
-    cheese: 0,
-    sweater: 0,
+  const s = profile.stock;
+  const stock = {
+    cropFodder: s?.cropFodder ?? 0,
+    eggs: s?.eggs ?? 0,
+    milk: s?.milk ?? 0,
+    wool: s?.wool ?? 0,
+    fertilizerBags: s?.fertilizerBags ?? 0,
+    fish: s?.fish ?? 0,
+    bread: s?.bread ?? 0,
+    cheese: s?.cheese ?? 0,
+    sweater: s?.sweater ?? 0,
+    cake: s?.cake ?? 0,
+    grilledFish: s?.grilledFish ?? 0,
   };
 
   const handleSpeak = (text: string) => {
@@ -95,7 +120,7 @@ export function KitchenModal() {
             <div>
               <h2 className="text-lg font-black text-ink">Xưởng Chế Biến & Bếp Nông Trại</h2>
               <p className="text-xs font-semibold text-muted">
-                Ủ bánh mì, nấu phô mai & dệt len thủ công cùng từ vựng IELTS
+                Chế biến 5 đặc sản nông trại & học Collocation IELTS theo chủ đề
               </p>
             </div>
           </div>
@@ -111,20 +136,25 @@ export function KitchenModal() {
         {/* Body */}
         <div className="no-scrollbar flex-1 overflow-y-auto p-5 space-y-4">
           {/* Inventory summary banner */}
-          <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-surface-2 p-3 text-xs font-bold text-ink">
-            <span>🌾 Lương thực: {stock.cropFodder ?? 0}</span>
-            <span>🥛 Sữa bò: {stock.milk ?? 0}</span>
-            <span>🧶 Len cừu: {stock.wool ?? 0}</span>
-            <span className="text-amber-600">🥖 Bánh mì: {stock.bread ?? 0}</span>
-            <span className="text-amber-600">🧀 Phô mai: {stock.cheese ?? 0}</span>
-            <span className="text-amber-600">🧥 Áo len: {stock.sweater ?? 0}</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 rounded-xl bg-surface-2 p-3 text-xs font-bold text-ink">
+            <span>🌾 Lương thực: {stock.cropFodder}</span>
+            <span>🥚 Trứng: {stock.eggs}</span>
+            <span>🥛 Sữa: {stock.milk}</span>
+            <span>🧶 Len: {stock.wool}</span>
+            <span>🐟 Cá: {stock.fish}</span>
+            <span className="text-amber-600">🥖 Bánh mì: {stock.bread}</span>
+            <span className="text-amber-600">🧀 Phô mai: {stock.cheese}</span>
+            <span className="text-amber-600">🧥 Áo len: {stock.sweater}</span>
+            <span className="text-amber-600">🍰 Bánh kem: {stock.cake}</span>
+            <span className="text-amber-600">🍣 Cá nướng: {stock.grilledFish}</span>
           </div>
 
           {/* Recipes list */}
           <div className="grid gap-3">
             {RECIPES.map((recipe) => {
-              const currentStock = stock[recipe.reqStockKey] ?? 0;
-              const canCraft = currentStock >= recipe.reqAmount;
+              const canCraft = recipe.ingredients.every(
+                (ing) => (stock[ing.key] ?? 0) >= ing.amount,
+              );
 
               return (
                 <div
@@ -137,7 +167,19 @@ export function KitchenModal() {
                       <div>
                         <h3 className="font-extrabold text-base text-ink">{recipe.name}</h3>
                         <p className="text-xs font-semibold text-muted">
-                          Yêu cầu: <span className={canCraft ? 'text-emerald-600' : 'text-rose-500'}>{recipe.reqDesc}</span> (Hiện có: {currentStock})
+                          Cần:{' '}
+                          {recipe.ingredients.map((ing, idx) => {
+                            const have = stock[ing.key] ?? 0;
+                            const ok = have >= ing.amount;
+                            return (
+                              <span key={ing.key}>
+                                {idx > 0 && ' + '}
+                                <span className={ok ? 'text-emerald-600' : 'text-rose-500'}>
+                                  {ing.label} ({have}/{ing.amount})
+                                </span>
+                              </span>
+                            );
+                          })}
                         </p>
                       </div>
                     </div>

@@ -9,6 +9,7 @@ import { DailyQuestsModal } from './components/DailyQuestsModal';
 import { IeltsQuizModal } from './components/IeltsQuizModal';
 import { KitchenModal } from './components/KitchenModal';
 import { MarketModal } from './components/MarketModal';
+import { MockTestModal } from './components/MockTestModal';
 import { SeedDock } from './components/SeedDock';
 import { TopHud } from './components/TopHud';
 import { syncGameNow, useGameStore } from './store/useGameStore';
@@ -44,7 +45,9 @@ export function App() {
   useEffect(() => {
     const isModalOpen = () => {
       const s = useGameStore.getState();
-      return Boolean(s.activeQuiz || s.almanacOpen || s.marketOpen || s.kitchenOpen || s.questsOpen);
+      return Boolean(
+        s.activeQuiz || s.almanacOpen || s.marketOpen || s.kitchenOpen || s.questsOpen || s.mockTestOpen,
+      );
     };
 
     const onReady = () => syncGameNow();
@@ -107,6 +110,7 @@ export function App() {
           <MarketModal />
           <KitchenModal />
           <DailyQuestsModal />
+          <MockTestModal />
         </>
       )}
       <ComboToast />

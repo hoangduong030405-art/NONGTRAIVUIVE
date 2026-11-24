@@ -151,18 +151,19 @@ export function MarketModal() {
               {marketOrders.map((order) => {
                 const currentHave = stock[order.reqItem] ?? 0;
                 const canDeliver = currentHave >= order.reqAmount;
-                const itemLabel =
-                  order.reqItem === 'bread'
-                    ? '🥖 Bánh mì'
-                    : order.reqItem === 'milk'
-                    ? '🥛 Bình sữa bò'
-                    : order.reqItem === 'wool'
-                    ? '🧶 Cuộn len cừu'
-                    : order.reqItem === 'fish'
-                    ? '🐟 Cá tươi'
-                    : order.reqItem === 'cheese'
-                    ? '🧀 Miếng phô mai'
-                    : '🌾 Lương thực';
+                const ITEM_LABELS: Record<string, string> = {
+                  bread: '🥖 Bánh mì',
+                  cake: '🍰 Bánh kem trứng sữa',
+                  grilledFish: '🍣 Cá nướng bơ tỏi',
+                  milk: '🥛 Bình sữa bò',
+                  eggs: '🥚 Trứng gà tươi',
+                  wool: '🧶 Cuộn len cừu',
+                  sweater: '🧥 Áo len dệt cừu',
+                  fish: '🐟 Cá tươi',
+                  cheese: '🧀 Miếng phô mai',
+                  cropFodder: '🌾 Lương thực',
+                };
+                const itemLabel = ITEM_LABELS[order.reqItem] ?? '🌾 Nông sản';
 
                 return (
                   <div

@@ -35,7 +35,11 @@ import type {
   VocabTier,
   WeatherType,
 } from '../../core/types';
-import { INITIAL_MARKET_ORDERS } from '../../core/questData';
+import {
+  generateDailyQuests,
+  generateRandomMarketOrder,
+  INITIAL_MARKET_ORDERS,
+} from '../../core/questData';
 
 /** Spaced-repetition review intervals (ms) for SRS levels 0..5. */
 const SRS_INTERVALS_MS = [
@@ -96,6 +100,8 @@ interface GameState {
   marketOpen: boolean;
   kitchenOpen: boolean;
   questsOpen: boolean;
+  mockTestOpen: boolean;
+  waterAllReadyAt: number;
   toasts: ToastNotification[];
   marketOrders: MarketOrder[];
 
@@ -107,18 +113,26 @@ interface GameState {
   setWeather: (weather: WeatherType) => void;
   handlePlotTap: (plotIndex: number) => void;
   harvestPlot: (plotIndex: number, autoHarvested: boolean) => void;
+  harvestAllRipe: () => number;
   waterPlotDirectly: (plotIndex: number) => void;
+  waterAllGrowing: () => number;
   feedAnimals: (cropCount?: number) => void;
   careAnimal: (animalType: 'sheep' | 'chicken' | 'cow' | 'dog') => void;
   cleanPastureManure: () => void;
   fishAtPond: () => void;
-  craftItem: (product: 'bread' | 'cheese' | 'sweater') => boolean;
+  craftItem: (product: 'bread' | 'cheese' | 'sweater' | 'cake' | 'grilledFish') => boolean;
   fulfillOrder: (orderId: string) => boolean;
   claimQuest: (questId: string) => void;
+  refreshDailyQuests: () => void;
   updateQuestProgress: (type: DailyQuest['type'], amount?: number) => void;
   buySeedFromMarket: (vocabId: string, costCoins: number, amount?: number) => boolean;
   buyFarmUpgrade: (upgradeKey: keyof FarmUpgrades, costCoins: number, label: string) => boolean;
   awardPronunciationBonus: (word: string) => void;
+  recordMockTestResults: (
+    results: Array<{ questionId: string; isCorrect: boolean }>,
+    xpBonus: number,
+    coinBonus: number,
+  ) => void;
   markQuizVisible: () => void;
   submitQuizAnswer: (optionIndex: number) => QuizOutcome | null;
   closeQuiz: () => void;
@@ -129,9 +143,11 @@ interface GameState {
   setMarketOpen: (open: boolean) => void;
   setKitchenOpen: (open: boolean) => void;
   setQuestsOpen: (open: boolean) => void;
+  setMockTestOpen: (open: boolean) => void;
   pushToast: (toast: Omit<ToastNotification, 'id' | 'createdAt'>) => void;
   dismissToast: (id: string) => void;
   exportBackup: () => Promise<string>;
+  exportSyncCode: () => Promise<string>;
   importBackup: (rawJson: string) => Promise<void>;
   resetFarm: () => Promise<void>;
 }
@@ -293,6 +309,8 @@ export const useGameStore = create<GameState>()((set, get) => {
     marketOpen: false,
     kitchenOpen: false,
     questsOpen: false,
+    mockTestOpen: false,
+    waterAllReadyAt: 0,
     toasts: [],
     marketOrders: INITIAL_MARKET_ORDERS,
 
@@ -548,6 +566,69 @@ export const useGameStore = create<GameState>()((set, get) => {
         title: 'Watered crop!',
         subtitle: `Growth time reduced by ${Math.round(ratio * 100)}%`,
       });
+    },
+
+    harvestAllRipe: () => {
+      const { plots, profile, pushToast } = get();
+      if (!profile) return 0;
+      const now = Date.now();
+      const speed = speedOf(profile);
+      const ripeIndices: number[] = [];
+      for (const plot of plots) {
+        if (plot.vocabId && FarmEngine.computePlotStatus(plot, now, speed).isRipe) {
+          ripeIndices.push(plot.index);
+        }
+      }
+      if (ripeIndices.length === 0) return 0;
+      for (const idx of ripeIndices) {
+        get().harvestPlot(idx, true);
+      }
+      pushToast({
+        variant: 'harvest',
+        title: `🌾 Thu hoạch nhanh ${ripeIndices.length} ô mùa!`,
+        subtitle: `Kho nông sản đã nhận thêm +${ripeIndices.length * 2}+ lương thực`,
+      });
+      return ripeIndices.length;
+    },
+
+    waterAllGrowing: () => {
+      const { plots, profile, waterAllReadyAt, pushToast } = get();
+      if (!profile) return 0;
+      const now = Date.now();
+      if (now < waterAllReadyAt) {
+        const waitSec = Math.ceil((waterAllReadyAt - now) / 1000);
+        pushToast({
+          variant: 'info',
+          title: `Bình tưới toàn nông trại đang nạp nước`,
+          subtitle: `Vui lòng chờ ${waitSec}s nữa hoặc tưới từng ô`,
+        });
+        return 0;
+      }
+      const speed = speedOf(profile);
+      const ratio = profile.upgrades?.well ? 0.4 : 0.25;
+      const nextPlots = plots.slice();
+      const changed: number[] = [];
+      for (let i = 0; i < nextPlots.length; i += 1) {
+        const p = nextPlots[i];
+        if (!p || !p.vocabId || p.plantedAt === null) continue;
+        if (FarmEngine.computePlotStatus(p, now, speed).isRipe) continue;
+        nextPlots[i] = FarmEngine.applyWaitReduction(p, ratio, now, speed);
+        changed.push(i);
+        fx(i, 'water');
+      }
+      if (changed.length === 0) {
+        pushToast({ variant: 'info', title: 'Chưa có cây đang lớn', subtitle: 'Hãy gieo hạt trước khi tưới toàn nông trại!' });
+        return 0;
+      }
+      set({ waterAllReadyAt: now + 15_000 });
+      commitPlots(nextPlots, changed);
+      AudioEngine.playWater();
+      pushToast({
+        variant: 'water',
+        title: `💧 Đã tưới ${changed.length} ô cây đang lớn!`,
+        subtitle: `Rút ngắn ${Math.round(ratio * 100)}% thời gian chờ`,
+      });
+      return changed.length;
     },
 
     // Feed animals with harvest fodder
@@ -1045,13 +1126,17 @@ export const useGameStore = create<GameState>()((set, get) => {
       if (!profile) return false;
 
       const stock = { ...profile.stock };
+      let titleLabel = '';
+      let xpEarned = 40;
       if (product === 'bread') {
         if ((stock.cropFodder ?? 0) < 3) {
-          pushToast({ variant: 'info', title: 'Thiếu nguyên liệu', subtitle: 'Cần 3 Nông sản (Lương thực) để nướng bánh mì!' });
+          pushToast({ variant: 'info', title: 'Thiếu nguyên liệu', subtitle: 'Cần 3 Lương thực hoa màu để nướng bánh mì!' });
           return false;
         }
         stock.cropFodder -= 3;
         stock.bread = (stock.bread ?? 0) + 1;
+        titleLabel = 'Ổ Bánh Mì 🥖';
+        xpEarned = 40;
       } else if (product === 'cheese') {
         if ((stock.milk ?? 0) < 2) {
           pushToast({ variant: 'info', title: 'Thiếu nguyên liệu', subtitle: 'Cần 2 Bình Sữa bò để ủ Phô mai!' });
@@ -1059,6 +1144,8 @@ export const useGameStore = create<GameState>()((set, get) => {
         }
         stock.milk -= 2;
         stock.cheese = (stock.cheese ?? 0) + 1;
+        titleLabel = 'Miếng Phô Mai 🧀';
+        xpEarned = 50;
       } else if (product === 'sweater') {
         if ((stock.wool ?? 0) < 2) {
           pushToast({ variant: 'info', title: 'Thiếu nguyên liệu', subtitle: 'Cần 2 Cuộn Len cừu để dệt Áo ấm!' });
@@ -1066,9 +1153,30 @@ export const useGameStore = create<GameState>()((set, get) => {
         }
         stock.wool -= 2;
         stock.sweater = (stock.sweater ?? 0) + 1;
+        titleLabel = 'Áo Len Ấm 🧶';
+        xpEarned = 60;
+      } else if (product === 'cake') {
+        if ((stock.eggs ?? 0) < 2 || (stock.milk ?? 0) < 1) {
+          pushToast({ variant: 'info', title: 'Thiếu nguyên liệu', subtitle: 'Cần 2 Trứng gà + 1 Bình Sữa bò để làm Bánh kem!' });
+          return false;
+        }
+        stock.eggs -= 2;
+        stock.milk -= 1;
+        stock.cake = (stock.cake ?? 0) + 1;
+        titleLabel = 'Bánh Kem Trứng Sữa 🍰';
+        xpEarned = 65;
+      } else if (product === 'grilledFish') {
+        if ((stock.fish ?? 0) < 2 || (stock.cropFodder ?? 0) < 1) {
+          pushToast({ variant: 'info', title: 'Thiếu nguyên liệu', subtitle: 'Cần 2 Cá tươi + 1 Lương thực để làm Cá nướng!' });
+          return false;
+        }
+        stock.fish -= 2;
+        stock.cropFodder -= 1;
+        stock.grilledFish = (stock.grilledFish ?? 0) + 1;
+        titleLabel = 'Cá Nướng Bơ Tỏi 🍣';
+        xpEarned = 70;
       }
 
-      const xpEarned = product === 'sweater' ? 60 : product === 'cheese' ? 50 : 40;
       const nextXp = profile.xp + xpEarned;
       commitProfile({
         ...profile,
@@ -1081,7 +1189,7 @@ export const useGameStore = create<GameState>()((set, get) => {
       AudioEngine.playCorrect();
       pushToast({
         variant: 'market',
-        title: `Chế biến thành công: ${product === 'bread' ? 'Ổ Bánh Mì 🥖' : product === 'cheese' ? 'Miếng Phô Mai 🧀' : 'Áo Len Ấm 🧶'}`,
+        title: `Chế biến thành công: ${titleLabel}`,
         subtitle: `+${xpEarned} XP · Sẵn sàng giao hàng cho thị trường`,
       });
       return true;
@@ -1111,20 +1219,9 @@ export const useGameStore = create<GameState>()((set, get) => {
       const nextCoins = (profile.coins ?? 0) + coinsEarned;
       const nextXp = profile.xp + order.rewardXp;
 
-      // Replace or refresh order
+      // Replace fulfilled order with a fresh varied IELTS market order
       const remainingOrders = marketOrders.filter((o) => o.id !== orderId);
-      const newOrders = [
-        ...remainingOrders,
-        {
-          id: `order_${Date.now()}`,
-          customerName: order.customerName,
-          reqItem: order.reqItem,
-          reqAmount: Math.floor(Math.random() * 2) + 1,
-          rewardCoins: order.rewardCoins + Math.floor(Math.random() * 20),
-          rewardXp: order.rewardXp + 10,
-          ieltsTopic: order.ieltsTopic,
-        },
-      ];
+      const newOrders = [...remainingOrders, generateRandomMarketOrder()];
 
       commitProfile({
         ...profile,
@@ -1139,7 +1236,7 @@ export const useGameStore = create<GameState>()((set, get) => {
       pushToast({
         variant: 'market',
         title: `Đã giao đơn cho ${order.customerName}! 🚚`,
-        subtitle: `+${order.rewardCoins} Xu vàng 🪙 · +${order.rewardXp} XP (${order.ieltsTopic})`,
+        subtitle: `+${coinsEarned} Xu vàng 🪙 · +${order.rewardXp} XP (${order.ieltsTopic})`,
       });
       return true;
     },
@@ -1171,6 +1268,22 @@ export const useGameStore = create<GameState>()((set, get) => {
         variant: 'quest',
         title: 'Nhận thưởng nhiệm vụ! 🏆',
         subtitle: `+${quest.rewardCoins} Xu vàng 🪙 · +${quest.rewardXp} XP`,
+      });
+    },
+
+    refreshDailyQuests: () => {
+      const { profile, pushToast } = get();
+      if (!profile) return;
+      const freshQuests = generateDailyQuests();
+      commitProfile({
+        ...profile,
+        dailyQuests: freshQuests,
+      });
+      AudioEngine.playPlant();
+      pushToast({
+        variant: 'quest',
+        title: 'Đã làm mới 5 Nhiệm Vụ Mới! 🎯',
+        subtitle: 'Hoàn thành để kiếm thêm Xu vàng 🪙 và XP',
       });
     },
 
@@ -1282,10 +1395,66 @@ export const useGameStore = create<GameState>()((set, get) => {
       });
     },
 
+    recordMockTestResults: (results, xpBonus, coinBonus) => {
+      const { profile, mastery, pushToast, updateQuestProgress } = get();
+      if (!profile) return;
+
+      const now = Date.now();
+      const nextMastery = { ...mastery };
+      const completedSet = new Set(profile.completedQuestionIds ?? []);
+      let correctCount = 0;
+
+      for (const item of results) {
+        const prev = nextMastery[item.questionId];
+        const prevLevel = prev?.srsLevel ?? 0;
+        const srsLevel = item.isCorrect
+          ? Math.min(MAX_SRS_LEVEL, prevLevel + 1)
+          : Math.max(0, prevLevel - 1);
+        if (item.isCorrect) {
+          correctCount += 1;
+          completedSet.add(item.questionId);
+        }
+        const record: VocabMasteryRecord = {
+          vocabId: item.questionId,
+          srsLevel,
+          correctCount: (prev?.correctCount ?? 0) + (item.isCorrect ? 1 : 0),
+          attemptCount: (prev?.attemptCount ?? 0) + 1,
+          lastPracticedAt: now,
+          nextReviewAt: now + (SRS_INTERVALS_MS[srsLevel] ?? 0),
+          harvestCount: prev?.harvestCount ?? 0,
+        };
+        nextMastery[item.questionId] = record;
+        void StorageService.saveMastery(record);
+      }
+
+      set({ mastery: nextMastery });
+      const nextXp = profile.xp + xpBonus;
+      const nextCoins = (profile.coins ?? 0) + coinBonus;
+      commitProfile({
+        ...profile,
+        xp: nextXp,
+        coins: nextCoins,
+        level: ComboEngine.calculateLevel(nextXp).level,
+        completedQuestionIds: Array.from(completedSet),
+        mockTestsCompleted: (profile.mockTestsCompleted ?? 0) + 1,
+      });
+
+      if (correctCount > 0) {
+        updateQuestProgress('quiz', Math.min(3, correctCount));
+      }
+      AudioEngine.playChest();
+      pushToast({
+        variant: 'golden',
+        title: `🎓 Hoàn thành Thi Thử / Ôn tập (${correctCount}/${results.length})!`,
+        subtitle: `+${xpBonus} XP · +${coinBonus} Xu vàng 🪙`,
+      });
+    },
+
     setMarketOpen: (open) => set({ marketOpen: open }),
     setKitchenOpen: (open) => set({ kitchenOpen: open }),
     setQuestsOpen: (open) => set({ questsOpen: open }),
     setAlmanacOpen: (open) => set({ almanacOpen: open }),
+    setMockTestOpen: (open) => set({ mockTestOpen: open }),
 
     pushToast: (toast) => {
       toastCounter += 1;
@@ -1315,7 +1484,17 @@ export const useGameStore = create<GameState>()((set, get) => {
     },
 
     // -------------------------------------------------------------------------
-    exportBackup: () => StorageService.exportBackupJson(),
+    exportBackup: async () => {
+      const p = get().profile;
+      if (p) await StorageService.saveProfile(p);
+      return StorageService.exportBackupJson();
+    },
+
+    exportSyncCode: async () => {
+      const p = get().profile;
+      if (p) await StorageService.saveProfile(p);
+      return StorageService.exportSyncCode();
+    },
 
     importBackup: async (rawJson) => {
       const { vocabList } = get();

@@ -1,4 +1,4 @@
-import { Award, CheckCircle2, Coins, Gift, Trophy, X } from 'lucide-react';
+import { Award, CheckCircle2, Coins, Gift, RefreshCw, Trophy, X } from 'lucide-react';
 import { useGameStore } from '../store/useGameStore';
 
 export function DailyQuestsModal() {
@@ -6,6 +6,7 @@ export function DailyQuestsModal() {
   const setOpen = useGameStore((s) => s.setQuestsOpen);
   const profile = useGameStore((s) => s.profile);
   const claimQuest = useGameStore((s) => s.claimQuest);
+  const refreshDailyQuests = useGameStore((s) => s.refreshDailyQuests);
 
   if (!open || !profile) return null;
 
@@ -121,7 +122,14 @@ export function DailyQuestsModal() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-line bg-surface-2 px-5 py-3 text-right">
+        <div className="flex items-center justify-between border-t border-line bg-surface-2 px-5 py-3">
+          <button
+            type="button"
+            onClick={() => refreshDailyQuests()}
+            className="btn btn-ghost gap-1.5 px-3 text-xs font-bold text-indigo-600"
+          >
+            <RefreshCw size={14} /> Đổi bộ nhiệm vụ mới
+          </button>
           <button
             type="button"
             onClick={() => setOpen(false)}

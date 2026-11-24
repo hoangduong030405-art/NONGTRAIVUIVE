@@ -131,6 +131,8 @@ export interface FarmStock {
   bread: number;         // Chế biến từ lúa mì / fodder
   cheese: number;        // Chế biến từ sữa
   sweater: number;       // Dệt từ len cừu
+  cake: number;          // Bánh kem từ trứng gà + sữa
+  grilledFish: number;   // Cá nướng bơ tỏi từ cá + lương thực
 }
 
 export interface DailyQuest {
@@ -185,6 +187,7 @@ export interface PlayerProgress {
   activeWeather: WeatherType;
   stageOverride: CurriculumStage | 'auto';
   completedQuestionIds: string[];
+  mockTestsCompleted?: number;
   updatedAt: number;
 }
 

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import {
   Compass,
   Droplets,
@@ -7,21 +8,47 @@ import {
   Wheat,
   Zap,
 } from 'lucide-react';
+import { WATERING_CAN_MULTIPLIERS } from '../../core/ComboEngine';
 import { FARM_CROP_PACKS, getActiveStage, getStageInfo } from '../../core/curriculum';
+import { FarmEngine } from '../../core/FarmEngine';
 import { useGameStore } from '../store/useGameStore';
 
 export function SeedDock() {
   const profile = useGameStore((s) => s.profile);
+  const plots = useGameStore((s) => s.plots);
   const selectedSeedId = useGameStore((s) => s.selectedSeedId);
   const activeToolMode = useGameStore((s) => s.activeToolMode);
   const selectSeed = useGameStore((s) => s.selectSeed);
   const setToolMode = useGameStore((s) => s.setToolMode);
   const setAlmanacOpen = useGameStore((s) => s.setAlmanacOpen);
+  const harvestAllRipe = useGameStore((s) => s.harvestAllRipe);
+  const waterAllGrowing = useGameStore((s) => s.waterAllGrowing);
+  const waterAllReadyAt = useGameStore((s) => s.waterAllReadyAt);
   const feedAnimals = useGameStore((s) => s.feedAnimals);
   const cleanPastureManure = useGameStore((s) => s.cleanPastureManure);
   const fishAtPond = useGameStore((s) => s.fishAtPond);
 
+  const [now, setNow] = useState(() => Date.now());
+  const hasGrowing = plots.some((p) => Boolean(p.vocabId));
+  useEffect(() => {
+    if (!hasGrowing && waterAllReadyAt <= Date.now()) return undefined;
+    const id = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(id);
+  }, [hasGrowing, waterAllReadyAt]);
+
   if (!profile) return null;
+
+  const baseSpeed = WATERING_CAN_MULTIPLIERS[profile.wateringCanTier];
+  const speed = profile.upgrades?.scarecrow ? baseSpeed + 0.15 : baseSpeed;
+  let ripeCount = 0;
+  let growingCount = 0;
+  for (const plot of plots) {
+    if (!plot.vocabId) continue;
+    const st = FarmEngine.computePlotStatus(plot, now, speed);
+    if (st.isRipe) ripeCount += 1;
+    else growingCount += 1;
+  }
+  const waterAllWaitSec = Math.max(0, Math.ceil((waterAllReadyAt - now) / 1000));
 
   const activeStage = getActiveStage(profile.level, profile.stageOverride);
   const stageInfo = getStageInfo(activeStage);
@@ -45,7 +72,7 @@ export function SeedDock() {
       className="pointer-events-none absolute inset-x-0 bottom-0 z-20 pb-safe px-2 md:px-4"
     >
       <div className="panel pointer-events-auto mx-auto flex max-w-4xl flex-col gap-1.5 p-2">
-        {/* Top slim row: 5 compact action tools + Stage auto-push banner */}
+        {/* Top slim row: farm action tools + Stage auto-push banner */}
         <div className="flex flex-wrap items-center justify-between gap-1.5">
           <div className="flex flex-wrap items-center gap-1">
             <button
@@ -64,40 +91,63 @@ export function SeedDock() {
               className={`btn min-h-[32px] px-2.5 py-1 text-xs font-bold ${
                 activeToolMode === 'water' ? 'bg-sky-600 text-white' : 'btn-ghost'
               }`}
-              title="Tưới nước cho cây để rút ngắn 25% thời gian"
+              title="Tưới nước từng ô cây để rút ngắn thời gian"
             >
-              <Droplets size={14} /> Tưới nước
+              <Droplets size={14} /> Tưới
             </button>
+
+            {growingCount > 0 && (
+              <button
+                type="button"
+                onClick={() => waterAllGrowing()}
+                disabled={waterAllWaitSec > 0}
+                className="btn btn-ghost min-h-[32px] px-2 py-1 text-xs font-bold text-sky-600 disabled:opacity-50"
+                title="Tưới nhanh toàn bộ cây đang trồng"
+              >
+                💧 {waterAllWaitSec > 0 ? `${waterAllWaitSec}s` : `Tưới hết (${growingCount})`}
+              </button>
+            )}
+
+            {ripeCount > 0 && (
+              <button
+                type="button"
+                onClick={() => harvestAllRipe()}
+                className="btn min-h-[32px] bg-emerald-600 px-2.5 py-1 text-xs font-bold text-white hover:bg-emerald-700"
+                title="Thu hoạch nhanh toàn bộ ô đã chín"
+              >
+                🌾 Thu hết ({ripeCount})
+              </button>
+            )}
 
             <button
               type="button"
               onClick={() => feedAnimals(1)}
               disabled={stock.cropFodder <= 0}
-              className="btn btn-ghost min-h-[32px] px-2.5 py-1 text-xs font-bold disabled:opacity-40"
+              className="btn btn-ghost min-h-[32px] px-2 py-1 text-xs font-bold disabled:opacity-40"
               title={`Cho thú ăn lương thực (Hiện có ${stock.cropFodder} lương thực)`}
             >
               <Wheat size={14} className="text-amber-500" />
-              Cho ăn ({stock.cropFodder})
+              ({stock.cropFodder})
             </button>
 
             <button
               type="button"
               onClick={() => fishAtPond()}
-              className="btn btn-ghost min-h-[32px] px-2.5 py-1 text-xs font-bold"
+              className="btn btn-ghost min-h-[32px] px-2 py-1 text-xs font-bold"
               title="Câu cá ở hồ nước (+35 XP)"
             >
               <Fish size={14} className="text-cyan-500" />
-              Câu cá ({stock.fish})
+              ({stock.fish})
             </button>
 
             <button
               type="button"
               onClick={() => cleanPastureManure()}
-              className="btn btn-ghost min-h-[32px] px-2.5 py-1 text-xs font-bold"
+              className="btn btn-ghost min-h-[32px] px-2 py-1 text-xs font-bold"
               title="Dọn phân thú tạo phân bón vàng (+30 XP & +1 Phân bón)"
             >
               <Trash2 size={14} className="text-emerald-600" />
-              Dọn phân
+              Dọn
             </button>
           </div>
 

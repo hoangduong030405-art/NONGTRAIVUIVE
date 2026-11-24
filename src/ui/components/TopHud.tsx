@@ -5,6 +5,7 @@ import {
   CloudRain,
   Droplets,
   Flame,
+  GraduationCap,
   Moon,
   ShoppingBag,
   Sparkles,
@@ -57,10 +58,16 @@ export function TopHud() {
   const setMarketOpen = useGameStore((s) => s.setMarketOpen);
   const setKitchenOpen = useGameStore((s) => s.setKitchenOpen);
   const setQuestsOpen = useGameStore((s) => s.setQuestsOpen);
+  const setMockTestOpen = useGameStore((s) => s.setMockTestOpen);
+  const mastery = useGameStore((s) => s.mastery);
   const setWeather = useGameStore((s) => s.setWeather);
   const feverLeft = useFeverRemaining(profile?.feverEndsAt ?? 0);
 
   if (!profile) return null;
+
+  const dueCount = Object.values(mastery).filter(
+    (m) => m.correctCount < m.attemptCount || m.srsLevel === 0 || m.nextReviewAt <= Date.now(),
+  ).length;
 
   const lvl = ComboEngine.calculateLevel(profile.xp);
   const activeStage = getActiveStage(lvl.level, profile.stageOverride);
@@ -162,6 +169,19 @@ export function TopHud() {
             </button>
             <button
               type="button"
+              onClick={() => setMockTestOpen(true)}
+              className="relative btn btn-ghost h-9 w-9 !min-h-0 p-0 text-violet-600"
+              title="Phòng Thi Thử & Ôn Tập SRS"
+            >
+              <GraduationCap size={15} />
+              {dueCount > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 rounded-full bg-danger px-1 text-[9px] font-black text-white">
+                  {dueCount > 9 ? '9+' : dueCount}
+                </span>
+              )}
+            </button>
+            <button
+              type="button"
               onClick={cycleTheme}
               className="btn btn-ghost h-9 w-9 !min-h-0 p-0"
               aria-label={`Theme: ${THEMES[currentThemeIdx]?.label ?? ''}. Tap to switch`}
@@ -241,6 +261,20 @@ export function TopHud() {
                 </button>
               ))}
             </div>
+            <button
+              type="button"
+              onClick={() => setMockTestOpen(true)}
+              className="btn btn-ghost min-h-[34px] gap-1 px-2.5 py-1 text-xs font-bold text-violet-600"
+              title="Phòng Thi Thử IELTS, Ôn Tập SRS & Luyện Nghe Nhanh"
+            >
+              <GraduationCap size={15} />
+              Thi thử
+              {dueCount > 0 && (
+                <span className="rounded-full bg-danger px-1.5 py-0.5 text-[10px] font-black leading-none text-white">
+                  {dueCount}
+                </span>
+              )}
+            </button>
             <button type="button" onClick={() => setAlmanacOpen(true)} className="btn btn-primary min-h-[34px] px-3 py-1 text-xs">
               <BookOpen size={15} />
               Lộ trình

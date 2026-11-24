@@ -3,6 +3,7 @@ import {
   BookOpen,
   CheckCircle2,
   Compass,
+  Copy,
   Download,
   Gift,
   Layers,
@@ -10,6 +11,7 @@ import {
   RotateCcw,
   Search,
   Settings,
+  Smartphone,
   Sparkles,
   Upload,
   Volume2,
@@ -60,6 +62,7 @@ function AlmanacBody({ onClose }: { onClose: () => void }) {
   const setAccent = useGameStore((s) => s.setAccent);
   const toggleSfx = useGameStore((s) => s.toggleSfx);
   const exportBackup = useGameStore((s) => s.exportBackup);
+  const exportSyncCode = useGameStore((s) => s.exportSyncCode);
   const importBackup = useGameStore((s) => s.importBackup);
   const resetFarm = useGameStore((s) => s.resetFarm);
   const pushToast = useGameStore((s) => s.pushToast);
@@ -72,12 +75,28 @@ function AlmanacBody({ onClose }: { onClose: () => void }) {
   const [query, setQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(40);
   const [confirmReset, setConfirmReset] = useState(false);
+  const [syncCodeOutput, setSyncCodeOutput] = useState('');
+  const [syncCodeInput, setSyncCodeInput] = useState('');
   const fileRef = useRef<HTMLInputElement>(null);
 
   const completedSet = useMemo(
     () => new Set(profile?.completedQuestionIds ?? []),
     [profile?.completedQuestionIds],
   );
+
+  const learningStats = useMemo(() => {
+    const records = Object.values(mastery);
+    let attempts = 0;
+    let corrects = 0;
+    let mastered = 0;
+    for (const r of records) {
+      attempts += r.attemptCount;
+      corrects += r.correctCount;
+      if (r.srsLevel >= 3) mastered += 1;
+    }
+    const accuracy = attempts > 0 ? Math.round((corrects / attempts) * 100) : 0;
+    return { attempts, corrects, accuracy, mastered };
+  }, [mastery]);
 
   const stageList: CurriculumQuestion[] = useMemo(
     () => stageQuestions[browseStage] ?? [],
@@ -130,6 +149,52 @@ function AlmanacBody({ onClose }: { onClose: () => void }) {
       pushToast({ variant: 'info', title: 'Import failed', subtitle: err instanceof Error ? err.message : 'Invalid file' });
     } finally {
       if (fileRef.current) fileRef.current.value = '';
+    }
+  };
+
+  const handleCopySyncCode = async () => {
+    try {
+      const code = await exportSyncCode();
+      setSyncCodeOutput(code);
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(code);
+        pushToast({
+          variant: 'info',
+          title: 'Đã sao chép Mã Đồng Bộ! 📋',
+          subtitle: 'Dán mã này sang điện thoại hoặc máy khác để tiếp tục tiến trình',
+        });
+      } else {
+        pushToast({
+          variant: 'info',
+          title: 'Đã tạo Mã Đồng Bộ',
+          subtitle: 'Hãy sao chép đoạn mã hiển thị ở khung bên dưới',
+        });
+      }
+    } catch (err) {
+      pushToast({
+        variant: 'info',
+        title: 'Không thể tạo mã',
+        subtitle: err instanceof Error ? err.message : 'Lỗi đồng bộ',
+      });
+    }
+  };
+
+  const handleImportSyncCode = async () => {
+    if (!syncCodeInput.trim()) return;
+    try {
+      await importBackup(syncCodeInput);
+      setSyncCodeInput('');
+      pushToast({
+        variant: 'golden',
+        title: 'Đồng bộ thành công! 📱',
+        subtitle: 'Toàn bộ Level, Nông trại và Kho câu hỏi đã được khôi phục',
+      });
+    } catch (err) {
+      pushToast({
+        variant: 'info',
+        title: 'Mã đồng bộ không hợp lệ',
+        subtitle: err instanceof Error ? err.message : 'Vui lòng kiểm tra lại đoạn mã',
+      });
     }
   };
 
@@ -473,23 +538,79 @@ function AlmanacBody({ onClose }: { onClose: () => void }) {
               </section>
 
               <section className="rounded-xl border border-line bg-surface p-3 text-sm">
-                <h3 className="mb-2 font-bold">Progress</h3>
-                <dl className="grid grid-cols-2 gap-1 text-muted">
-                  <dt>Total XP</dt>
-                  <dd className="text-right font-bold text-ink">{profile.xp}</dd>
-                  <dt>Best streak</dt>
-                  <dd className="text-right font-bold text-ink">{profile.bestStreak}x</dd>
-                  <dt>Critical answers (≤4s)</dt>
-                  <dd className="text-right font-bold text-ink">{profile.criticalAnswers}</dd>
-                  <dt>Watering can</dt>
+                <h3 className="mb-2 font-bold">📊 Thống kê học tập IELTS</h3>
+                <dl className="grid grid-cols-2 gap-1.5 text-muted">
+                  <dt>Tổng XP / Cấp độ</dt>
+                  <dd className="text-right font-bold text-ink">{profile.xp} XP · Lv.{profile.level}</dd>
+                  <dt>Câu hỏi đã chinh phục</dt>
+                  <dd className="text-right font-bold text-ink">{completedSet.size} / 1.005 câu</dd>
+                  <dt>Tỷ lệ trả lời đúng</dt>
+                  <dd className="text-right font-bold text-ink">
+                    {learningStats.accuracy}% ({learningStats.corrects}/{learningStats.attempts})
+                  </dd>
+                  <dt>Từ vựng nhớ vững (SRS ≥ 3)</dt>
+                  <dd className="text-right font-bold text-ink">{learningStats.mastered} mục</dd>
+                  <dt>Số bài Thi thử hoàn thành</dt>
+                  <dd className="text-right font-bold text-ink">{profile.mockTestsCompleted ?? 0} bài</dd>
+                  <dt>Chuỗi đúng kỷ lục / ≤4s</dt>
+                  <dd className="text-right font-bold text-ink">
+                    {profile.bestStreak}x · {profile.criticalAnswers} câu tốc độ
+                  </dd>
+                  <dt>Bình tưới hiện tại</dt>
                   <dd className="text-right font-bold text-ink">{WATERING_CAN_LABELS[profile.wateringCanTier]}</dd>
                 </dl>
               </section>
 
-              <section className="rounded-xl border border-line bg-surface p-3">
-                <h3 className="mb-1 text-sm font-bold">Offline backup (JSON)</h3>
+              <section className="rounded-xl border border-accent/40 bg-surface p-3">
+                <h3 className="mb-1 flex items-center gap-1.5 text-sm font-bold">
+                  <Smartphone size={16} className="text-accent" /> Đồng bộ giữa các máy (Sync Code)
+                </h3>
                 <p className="mb-2 text-xs text-muted">
-                  Progress is stored locally in IndexedDB on this device. Export a file to move it to another device.
+                  Sao chép mã lưu trữ trên máy này rồi dán vào trình duyệt máy khác (hoặc điện thoại) đang mở web GitHub Pages để chuyển toàn bộ tiến trình tức thì.
+                </p>
+                <div className="flex flex-col gap-2">
+                  <button
+                    type="button"
+                    onClick={() => void handleCopySyncCode()}
+                    className="btn btn-primary w-full text-xs font-bold"
+                  >
+                    <Copy size={14} /> Tạo & Sao chép Mã Đồng Bộ
+                  </button>
+                  {syncCodeOutput && (
+                    <textarea
+                      readOnly
+                      value={syncCodeOutput}
+                      onFocus={(e) => e.currentTarget.select()}
+                      rows={2}
+                      className="w-full rounded-lg border border-line bg-surface-2 p-2 font-mono text-[10px] text-ink outline-none"
+                      aria-label="Mã đồng bộ đã tạo"
+                    />
+                  )}
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={syncCodeInput}
+                      onChange={(e) => setSyncCodeInput(e.target.value)}
+                      placeholder="Dán mã LEXIFARM:... từ máy khác vào đây"
+                      className="min-h-[38px] flex-1 rounded-xl border border-line bg-surface-2 px-3 text-xs outline-none placeholder:text-muted"
+                      aria-label="Nhập mã đồng bộ"
+                    />
+                    <button
+                      type="button"
+                      disabled={!syncCodeInput.trim()}
+                      onClick={() => void handleImportSyncCode()}
+                      className="btn btn-ghost shrink-0 px-3 text-xs font-bold disabled:opacity-40"
+                    >
+                      Khôi phục
+                    </button>
+                  </div>
+                </div>
+              </section>
+
+              <section className="rounded-xl border border-line bg-surface p-3">
+                <h3 className="mb-1 text-sm font-bold">Sao lưu tệp ngoại tuyến (JSON)</h3>
+                <p className="mb-2 text-xs text-muted">
+                  Dữ liệu cũng có thể xuất/nhập bằng tệp `.json` để lưu trữ lâu dài trên máy.
                 </p>
                 <div className="flex gap-2">
                   <button type="button" onClick={() => void handleExport()} className="btn btn-ghost flex-1">
