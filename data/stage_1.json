@@ -1,0 +1,5602 @@
+[
+  {
+    "id": "s1_001",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Sheep",
+    "ipa": "/ʃiːp/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm nguyên âm dài /iː/ (khác với /ɪ/ trong ship)",
+    "example": "The fluffy sheep eats grass.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Sheep\" (/ʃiːp/) chứa âm chuẩn IPA nào?",
+      "sentence": "The fluffy sheep eats grass.",
+      "options": [
+        "âm /iː/ (kéo dài)",
+        "âm /ɪ/ (ngắn)",
+        "âm /e/ (như bed)",
+        "âm /æ/ (như cat)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sheep đọc là /ʃiːp/ với nguyên âm dài /iː/, còn Ship đọc là /ʃɪp/."
+    }
+  },
+  {
+    "id": "s1_002",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Ship",
+    "ipa": "/ʃɪp/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm nguyên âm ngắn /ɪ/ (khác với /iː/ trong sheep)",
+    "example": "A big ship sails across the sea.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Ship\" (/ʃɪp/) chứa âm chuẩn IPA nào?",
+      "sentence": "A big ship sails across the sea.",
+      "options": [
+        "âm /ɪ/ (ngắn)",
+        "âm /iː/ (kéo dài)",
+        "âm /uː/ (như food)",
+        "âm /ɔː/ (như door)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ship đọc là /ʃɪp/ với âm /ɪ/ ngắn, dứt khoát."
+    }
+  },
+  {
+    "id": "s1_003",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Cat",
+    "ipa": "/kæt/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm /æ/ (âm e bẹt miệng mở rộng)",
+    "example": "My cat sleeps on the sofa.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Cat\" (/kæt/) chứa âm chuẩn IPA nào?",
+      "sentence": "My cat sleeps on the sofa.",
+      "options": [
+        "âm /æ/ (e bẹt)",
+        "âm /e/ (e thường)",
+        "âm /ɑː/ (a dài)",
+        "âm /ʌ/ (như cup)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cat /kæt/ dùng nguyên âm /æ/, miệng mở rộng sang hai bên."
+    }
+  },
+  {
+    "id": "s1_004",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Bed",
+    "ipa": "/bed/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm /e/ (âm e ngắn gọn)",
+    "example": "I go to bed at 10 p.m.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Bed\" (/bed/) chứa âm chuẩn IPA nào?",
+      "sentence": "I go to bed at 10 p.m.",
+      "options": [
+        "âm /e/ (e ngắn)",
+        "âm /æ/ (e bẹt)",
+        "âm /iː/ (i dài)",
+        "âm /ɜː/ (ơ dài)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bed /bed/ đọc bằng nguyên âm ngắn /e/."
+    }
+  },
+  {
+    "id": "s1_005",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Car",
+    "ipa": "/kɑːr/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm /ɑː/ (a dài mở cổ họng)",
+    "example": "He drives a blue car to work.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Car\" (/kɑːr/) chứa âm chuẩn IPA nào?",
+      "sentence": "He drives a blue car to work.",
+      "options": [
+        "âm /ɑː/ (a dài)",
+        "âm /ʌ/ (ă/â ngắn)",
+        "âm /æ/ (e bẹt)",
+        "âm /ɔː/ (o dài)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Car đọc với nguyên âm dài /ɑː/."
+    }
+  },
+  {
+    "id": "s1_006",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Cup",
+    "ipa": "/kʌp/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm /ʌ/ (âm ă/â ngắn nhẹ)",
+    "example": "Please pass me a cup of tea.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Cup\" (/kʌp/) chứa âm chuẩn IPA nào?",
+      "sentence": "Please pass me a cup of tea.",
+      "options": [
+        "âm /ʌ/ (ngắn nhẹ)",
+        "âm /uː/ (u dài)",
+        "âm /ɑː/ (a dài)",
+        "âm /ɒ/ (o ngắn)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cup /kʌp/ dùng âm /ʌ/ ngắn ở giữa khoang miệng."
+    }
+  },
+  {
+    "id": "s1_007",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Food",
+    "ipa": "/fuːd/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm /uː/ (u dài tròn môi)",
+    "example": "Fresh farm food tastes delicious.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Food\" (/fuːd/) chứa âm chuẩn IPA nào?",
+      "sentence": "Fresh farm food tastes delicious.",
+      "options": [
+        "âm /uː/ (u dài)",
+        "âm /ʊ/ (u ngắn)",
+        "âm /ʌ/ (như cup)",
+        "âm /əʊ/ (như go)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Food /fuːd/ kéo dài âm /uː/ và chu tròn môi."
+    }
+  },
+  {
+    "id": "s1_008",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Book",
+    "ipa": "/bʊk/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm /ʊ/ (u ngắn thả lỏng môi)",
+    "example": "She reads an English book.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Book\" (/bʊk/) chứa âm chuẩn IPA nào?",
+      "sentence": "She reads an English book.",
+      "options": [
+        "âm /ʊ/ (u ngắn)",
+        "âm /uː/ (u dài)",
+        "âm /ɒ/ (o ngắn)",
+        "âm /ɔː/ (o dài)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Book /bʊk/ dùng âm /ʊ/ ngắn, không kéo dài như food."
+    }
+  },
+  {
+    "id": "s1_009",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Door",
+    "ipa": "/dɔːr/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm /ɔː/ (o dài tròn môi)",
+    "example": "Close the wooden door please.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Door\" (/dɔːr/) chứa âm chuẩn IPA nào?",
+      "sentence": "Close the wooden door please.",
+      "options": [
+        "âm /ɔː/ (o dài)",
+        "âm /ɒ/ (o ngắn)",
+        "âm /aʊ/ (ao)",
+        "âm /əʊ/ (âu)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Door /dɔːr/ đọc bằng nguyên âm dài /ɔː/."
+    }
+  },
+  {
+    "id": "s1_010",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Bird",
+    "ipa": "/bɜːd/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm /ɜː/ (ơ dài cong lưỡi nhẹ)",
+    "example": "A little bird sings in the tree.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Bird\" (/bɜːd/) chứa âm chuẩn IPA nào?",
+      "sentence": "A little bird sings in the tree.",
+      "options": [
+        "âm /ɜː/ (ơ dài)",
+        "âm /ə/ (ơ ngắn)",
+        "âm /ɪ/ (i ngắn)",
+        "âm /e/ (e ngắn)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bird /bɜːd/ có âm /ɜː/ dài (thường đi với ir, ur, er)."
+    }
+  },
+  {
+    "id": "s1_011",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Rain",
+    "ipa": "/reɪn/",
+    "partOfSpeech": "noun",
+    "meaning": "Nguyên âm đôi /eɪ/ (ê-i)",
+    "example": "The rain waters our garden.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Rain\" (/reɪn/) chứa âm chuẩn IPA nào?",
+      "sentence": "The rain waters our garden.",
+      "options": [
+        "nguyên âm đôi /eɪ/",
+        "nguyên âm đôi /aɪ/",
+        "nguyên âm đôi /ɔɪ/",
+        "nguyên âm đơn /æ/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rain /reɪn/ chứa nguyên âm đôi /eɪ/."
+    }
+  },
+  {
+    "id": "s1_012",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Time",
+    "ipa": "/taɪm/",
+    "partOfSpeech": "noun",
+    "meaning": "Nguyên âm đôi /aɪ/ (a-i)",
+    "example": "It is time to harvest apples.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Time\" (/taɪm/) chứa âm chuẩn IPA nào?",
+      "sentence": "It is time to harvest apples.",
+      "options": [
+        "nguyên âm đôi /aɪ/",
+        "nguyên âm đôi /eɪ/",
+        "nguyên âm đôi /aʊ/",
+        "nguyên âm đơn /ɪ/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Time /taɪm/ đọc bằng nguyên âm đôi /aɪ/."
+    }
+  },
+  {
+    "id": "s1_013",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Boy",
+    "ipa": "/bɔɪ/",
+    "partOfSpeech": "noun",
+    "meaning": "Nguyên âm đôi /ɔɪ/ (o-i)",
+    "example": "The young boy helps his dad.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Boy\" (/bɔɪ/) chứa âm chuẩn IPA nào?",
+      "sentence": "The young boy helps his dad.",
+      "options": [
+        "nguyên âm đôi /ɔɪ/",
+        "nguyên âm đôi /aʊ/",
+        "nguyên âm đôi /əʊ/",
+        "nguyên âm đơn /ɔː/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Boy /bɔɪ/ phát âm với nguyên âm đôi /ɔɪ/."
+    }
+  },
+  {
+    "id": "s1_014",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Cow",
+    "ipa": "/kaʊ/",
+    "partOfSpeech": "noun",
+    "meaning": "Nguyên âm đôi /aʊ/ (a-u)",
+    "example": "The spotted cow eats fresh grass.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Cow\" (/kaʊ/) chứa âm chuẩn IPA nào?",
+      "sentence": "The spotted cow eats fresh grass.",
+      "options": [
+        "nguyên âm đôi /aʊ/",
+        "nguyên âm đôi /əʊ/",
+        "nguyên âm đôi /aɪ/",
+        "nguyên âm đơn /ɒ/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cow /kaʊ/ đọc bằng nguyên âm đôi /aʊ/."
+    }
+  },
+  {
+    "id": "s1_015",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Home",
+    "ipa": "/həʊm/",
+    "partOfSpeech": "noun",
+    "meaning": "Nguyên âm đôi /əʊ/ (ơ-u)",
+    "example": "Welcome back home!",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Home\" (/həʊm/) chứa âm chuẩn IPA nào?",
+      "sentence": "Welcome back home!",
+      "options": [
+        "nguyên âm đôi /əʊ/",
+        "nguyên âm đôi /aʊ/",
+        "nguyên âm đôi /eɪ/",
+        "nguyên âm đơn /ɔː/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Home /həʊm/ chứa nguyên âm đôi /əʊ/."
+    }
+  },
+  {
+    "id": "s1_016",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Think",
+    "ipa": "/θɪŋk/",
+    "partOfSpeech": "verb",
+    "meaning": "Phụ âm vô thanh /θ/ (đầu lưỡi chạm nhẹ giữa hai răng)",
+    "example": "I think English is fun.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Think\" (/θɪŋk/) chứa âm chuẩn IPA nào?",
+      "sentence": "I think English is fun.",
+      "options": [
+        "phụ âm vô thanh /θ/",
+        "phụ âm hữu thanh /ð/",
+        "phụ âm /t/",
+        "phụ âm /s/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Th trong Think đọc là /θ/ (không rung dây thanh quản)."
+    }
+  },
+  {
+    "id": "s1_017",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Mother",
+    "ipa": "/ˈmʌð.ər/",
+    "partOfSpeech": "noun",
+    "meaning": "Phụ âm hữu thanh /ð/ (đặt lưỡi giữa hai răng và rung cổ họng)",
+    "example": "My mother cooks dinner.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Mother\" (/ˈmʌð.ər/) chứa âm chuẩn IPA nào?",
+      "sentence": "My mother cooks dinner.",
+      "options": [
+        "phụ âm hữu thanh /ð/",
+        "phụ âm vô thanh /θ/",
+        "phụ âm /d/",
+        "phụ âm /z/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Th trong Mother, Father, This đọc là âm hữu thanh /ð/."
+    }
+  },
+  {
+    "id": "s1_018",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Chair",
+    "ipa": "/tʃeər/",
+    "partOfSpeech": "noun",
+    "meaning": "Phụ âm /tʃ/ (ch bật hơi)",
+    "example": "Sit on the wooden chair.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Chair\" (/tʃeər/) chứa âm chuẩn IPA nào?",
+      "sentence": "Sit on the wooden chair.",
+      "options": [
+        "phụ âm /tʃ/",
+        "phụ âm /ʃ/",
+        "phụ âm /dʒ/",
+        "phụ âm /k/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ch trong Chair đọc là /tʃ/ (như tiếng chờ bật hơi)."
+    }
+  },
+  {
+    "id": "s1_019",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Shop",
+    "ipa": "/ʃɒp/",
+    "partOfSpeech": "noun",
+    "meaning": "Phụ âm /ʃ/ (s nặng chu môi đẩy hơi)",
+    "example": "We buy seeds at the farm shop.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Shop\" (/ʃɒp/) chứa âm chuẩn IPA nào?",
+      "sentence": "We buy seeds at the farm shop.",
+      "options": [
+        "phụ âm /ʃ/",
+        "phụ âm /s/",
+        "phụ âm /tʃ/",
+        "phụ âm /z/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sh trong Shop luôn phát âm là /ʃ/."
+    }
+  },
+  {
+    "id": "s1_020",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "20 Nguyên âm & 24 Phụ âm IPA",
+    "word": "Sing",
+    "ipa": "/sɪŋ/",
+    "partOfSpeech": "verb",
+    "meaning": "Phụ âm mũi cuối /ŋ/ (ng)",
+    "example": "Birds sing every morning.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ \"Sing\" (/sɪŋ/) chứa âm chuẩn IPA nào?",
+      "sentence": "Birds sing every morning.",
+      "options": [
+        "phụ âm mũi /ŋ/",
+        "phụ âm /n/",
+        "phụ âm /g/",
+        "phụ âm /k/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đuôi -ng trong Sing đọc bằng âm mũi /ŋ/, không bật /g/ ở cuối."
+    }
+  },
+  {
+    "id": "s1_021",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Teacher",
+    "ipa": "/ˈtiː.tʃər/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Danh từ 2 âm tiết nhấn âm 1",
+    "example": "My teacher is very kind.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trọng âm của danh từ 2 âm tiết \"Teacher\" rơi vào âm tiết mấy?",
+      "sentence": "My teacher is very kind.",
+      "options": [
+        "Âm tiết thứ 1 (TEA-cher)",
+        "Âm tiết thứ 2 (tea-CHER)",
+        "Nhấn cả 2 âm tiết bằng nhau",
+        "Không có trọng âm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc: Đa số danh từ và tính từ 2 âm tiết nhấn vào âm tiết thứ 1."
+    }
+  },
+  {
+    "id": "s1_022",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Happy",
+    "ipa": "/ˈhæp.i/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Tính từ 2 âm tiết nhấn âm 1",
+    "example": "She feels happy today.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trọng âm của tính từ \"Happy\" rơi vào đâu?",
+      "sentence": "She feels happy today.",
+      "options": [
+        "Âm tiết thứ 1 (HAP-py)",
+        "Âm tiết thứ 2 (hap-PY)",
+        "Nhấn vào chữ y cuối",
+        "Đọc ngang cả 2 âm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tính từ 2 âm tiết (happy, sunny, busy) thường nhấn âm 1."
+    }
+  },
+  {
+    "id": "s1_023",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Begin",
+    "ipa": "/bɪˈɡɪn/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Động từ 2 âm tiết thường nhấn âm 2",
+    "example": "Let us begin the lesson.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Động từ 2 âm tiết \"Begin\" nhấn trọng âm vào đâu?",
+      "sentence": "Let us begin the lesson.",
+      "options": [
+        "Âm tiết thứ 2 (be-GIN)",
+        "Âm tiết thứ 1 (BE-gin)",
+        "Không nhấn âm nào",
+        "Nhấn đều hai âm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc: Đa số động từ 2 âm tiết nhấn vào âm tiết thứ 2 (begin, decide, enjoy)."
+    }
+  },
+  {
+    "id": "s1_024",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Decide",
+    "ipa": "/dɪˈsaɪd/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Động từ 2 âm tiết nhấn âm 2",
+    "example": "We decide to plant tomatoes.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trọng âm của động từ \"Decide\" rơi vào âm tiết nào?",
+      "sentence": "We decide to plant tomatoes.",
+      "options": [
+        "Âm tiết thứ 2 (de-CIDE)",
+        "Âm tiết thứ 1 (DE-cide)",
+        "Âm tiết thứ 3",
+        "Không có trọng âm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Decide là động từ 2 âm tiết nên trọng âm rơi vào âm 2 (/dɪˈsaɪd/)."
+    }
+  },
+  {
+    "id": "s1_025",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Nation",
+    "ipa": "/ˈneɪ.ʃən/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Từ có đuôi -tion nhấn ngay trước nó",
+    "example": "Every nation needs clean water.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Với từ có đuôi \"-tion\" như \"Nation\" hoặc \"Station\", trọng âm nằm ở đâu?",
+      "sentence": "Every nation needs clean water.",
+      "options": [
+        "Ngay trước đuôi -tion (NA-tion)",
+        "Rơi vào chính chữ -tion",
+        "Rơi vào cuối từ",
+        "Không cố định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc vàng: Từ tận cùng bằng -tion/-sion luôn nhấn trọng âm vào âm tiết ngay trước nó."
+    }
+  },
+  {
+    "id": "s1_026",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Computer",
+    "ipa": "/kəmˈpjuː.tər/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Từ 3 âm tiết nhấn âm 2",
+    "example": "I learn English on my computer.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trọng âm của từ 3 âm tiết \"Computer\" nằm ở âm tiết mấy?",
+      "sentence": "I learn English on my computer.",
+      "options": [
+        "Âm tiết thứ 2 (com-PU-ter)",
+        "Âm tiết thứ 1 (COM-pu-ter)",
+        "Âm tiết thứ 3 (com-pu-TER)",
+        "Nhấn âm 1 và 3"
+      ],
+      "correctIndex": 0,
+      "explanation": "Computer đọc là /kəmˈpjuː.tər/ — âm 1 là /ə/ yếu nên nhấn vào âm 2."
+    }
+  },
+  {
+    "id": "s1_027",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Important",
+    "ipa": "/ɪmˈpɔː.tənt/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Tính từ 3 âm tiết nhấn âm 2",
+    "example": "Sleep is important for health.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trọng âm của \"Important\" rơi vào âm tiết nào?",
+      "sentence": "Sleep is important for health.",
+      "options": [
+        "Âm tiết thứ 2 (im-POR-tant)",
+        "Âm tiết thứ 1 (IM-por-tant)",
+        "Âm tiết thứ 3 (im-por-TANT)",
+        "Nhấn cả 3 âm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Important /ɪmˈpɔː.tənt/ có nguyên âm dài /ɔː/ ở âm 2 nên nhấn âm 2."
+    }
+  },
+  {
+    "id": "s1_028",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Beautiful",
+    "ipa": "/ˈbjuː.tɪ.fəl/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Tính từ 3 âm tiết đuôi -ful nhấn âm 1",
+    "example": "What a beautiful garden!",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trọng âm của từ \"Beautiful\" rơi vào âm tiết mấy?",
+      "sentence": "What a beautiful garden!",
+      "options": [
+        "Âm tiết thứ 1 (BEAU-ti-ful)",
+        "Âm tiết thứ 2 (beau-TI-ful)",
+        "Âm tiết thứ 3 (beau-ti-FUL)",
+        "Không nhấn âm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hậu tố -ful không làm đổi trọng âm của từ gốc beauty -> nhấn âm 1."
+    }
+  },
+  {
+    "id": "s1_029",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Books",
+    "ipa": "/bʊks/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Đuôi -s sau âm vô thanh /k/ đọc là /s/",
+    "example": "I have two books on the desk.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Âm cuối \"-s\" trong từ \"Books\" phát âm là gì?",
+      "sentence": "I have two books on the desk.",
+      "options": [
+        "/s/ (vì đứng sau âm vô thanh /k/)",
+        "/z/ (như dogs)",
+        "/ɪz/ (như watches)",
+        "Bị câm không đọc"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc đuôi -s/-es: Sau /p, t, k, f, θ/ đọc là /s/."
+    }
+  },
+  {
+    "id": "s1_030",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Cats",
+    "ipa": "/kæts/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Đuôi -s sau âm vô thanh /t/ đọc là /s/",
+    "example": "Two cats play in the yard.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Âm cuối \"-s\" trong từ \"Cats\" đọc là gì?",
+      "sentence": "Two cats play in the yard.",
+      "options": [
+        "/s/",
+        "/z/",
+        "/ɪz/",
+        "/ʃ/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vì /t/ là âm vô thanh nên \"cats\" đọc đuôi /s/ (/kæts/)."
+    }
+  },
+  {
+    "id": "s1_031",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Dogs",
+    "ipa": "/dɒɡz/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Đuôi -s sau âm hữu thanh /ɡ/ đọc là /z/",
+    "example": "Dogs love running outdoors.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Âm cuối \"-s\" trong từ \"Dogs\" phát âm thế nào?",
+      "sentence": "Dogs love running outdoors.",
+      "options": [
+        "/z/ (vì đứng sau âm hữu thanh /ɡ/)",
+        "/s/ (như cats)",
+        "/ɪz/ (như boxes)",
+        "/t/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau các phụ âm hữu thanh và nguyên âm, đuôi -s đọc là /z/."
+    }
+  },
+  {
+    "id": "s1_032",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Watches",
+    "ipa": "/ˈwɒtʃ.ɪz/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Đuôi -es sau âm /tʃ/ đọc là /ɪz/",
+    "example": "She watches the sheep graze.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Âm cuối \"-es\" trong \"Watches\" đọc là gì?",
+      "sentence": "She watches the sheep graze.",
+      "options": [
+        "/ɪz/",
+        "/s/",
+        "/z/",
+        "/t/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau các âm gió /s, z, ʃ, ʒ, tʃ, dʒ/, đuôi -es được phát âm thành /ɪz/."
+    }
+  },
+  {
+    "id": "s1_033",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Boxes",
+    "ipa": "/ˈbɒk.sɪz/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Đuôi -es sau âm /s/ đọc là /ɪz/",
+    "example": "Pack the apples into boxes.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Đuôi \"-es\" của \"Boxes\" phát âm là âm nào?",
+      "sentence": "Pack the apples into boxes.",
+      "options": [
+        "/ɪz/",
+        "/s/",
+        "/z/",
+        "/d/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Box kết thúc bằng /ks/ (âm /s/), thêm -es đọc là /ˈbɒk.sɪz/."
+    }
+  },
+  {
+    "id": "s1_034",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Wanted",
+    "ipa": "/ˈwɒn.tɪd/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Đuôi -ed sau /t/ hoặc /d/ đọc là /ɪd/",
+    "example": "He wanted to plant carrots.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Âm cuối \"-ed\" trong \"Wanted\" phát âm là gì?",
+      "sentence": "He wanted to plant carrots.",
+      "options": [
+        "/ɪd/ (sau /t/ và /d/)",
+        "/t/ (như walked)",
+        "/d/ (như played)",
+        "Câm hoàn toàn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc -ed: Tận cùng bằng /t/ hoặc /d/ khi thêm -ed luôn đọc là /ɪd/."
+    }
+  },
+  {
+    "id": "s1_035",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Walked",
+    "ipa": "/wɔːkt/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Đuôi -ed sau âm vô thanh /k/ đọc là /t/",
+    "example": "The farmer walked to the pond.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Âm cuối \"-ed\" trong \"Walked\" phát âm thế nào?",
+      "sentence": "The farmer walked to the pond.",
+      "options": [
+        "/t/ (vì sau âm vô thanh /k/)",
+        "/d/",
+        "/ɪd/",
+        "/z/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau các âm vô thanh /k, p, f, s, ʃ, tʃ/, đuôi -ed đọc gọn là /t/."
+    }
+  },
+  {
+    "id": "s1_036",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Played",
+    "ipa": "/pleɪd/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Đuôi -ed sau nguyên âm/hữu thanh đọc là /d/",
+    "example": "The children played happily.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Đuôi \"-ed\" trong \"Played\" đọc là âm nào?",
+      "sentence": "The children played happily.",
+      "options": [
+        "/d/",
+        "/t/",
+        "/ɪd/",
+        "/s/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Play kết thúc bằng nguyên âm đôi /eɪ/ (hữu thanh), nên thêm -ed đọc là /d/."
+    }
+  },
+  {
+    "id": "s1_037",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "An apple",
+    "ipa": "/æn ˈæp.əl/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Nối âm phụ âm + nguyên âm: an_apple",
+    "example": "She eats an apple.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Khi nói tự nhiên cụm \"an apple\", ta nối âm thế nào?",
+      "sentence": "She eats an apple.",
+      "options": [
+        "Nối /n/ với /æ/ thành /əˈnæp.əl/",
+        "Đọc ngắt quãng thật chậm an... apple",
+        "Bỏ chữ n đi đọc là a apple",
+        "Đọc thành am apple"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nguyên tắc nối âm: Phụ âm cuối từ trước (/n/) nối sang nguyên âm đầu từ sau (/æ/)."
+    }
+  },
+  {
+    "id": "s1_038",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Turn off",
+    "ipa": "/tɜːn ɒf/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Nối âm phụ âm /n/ sang nguyên âm /ɒ/",
+    "example": "Turn off the light before sleep.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm \"Turn off\" nối âm tự nhiên thành âm gì?",
+      "sentence": "Turn off the light before sleep.",
+      "options": [
+        "Tur-noff (/tɜːnɒf/)",
+        "Tur-off (mất chữ n)",
+        "Turn-toff",
+        "Không thể nối âm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phụ âm cuối /n/ của \"turn\" nối mượt với /ɒ/ của \"off\"."
+    }
+  },
+  {
+    "id": "s1_039",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Look at",
+    "ipa": "/lʊk æt/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Nối âm phụ âm /k/ sang nguyên âm /æ/",
+    "example": "Look at the rainbow!",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trong câu \"Look at me\", ta nối âm ở đâu?",
+      "sentence": "Look at the rainbow!",
+      "options": [
+        "Nối /k/ sang /æ/ thành \"loo-kat\"",
+        "Nối /t/ sang /l/",
+        "Không nối âm",
+        "Bỏ âm /k/"
+      ],
+      "correctIndex": 0,
+      "explanation": "Look kết thúc bằng /k/, at bắt đầu bằng nguyên âm /æ/ -> đọc nối \"loo-kat\"."
+    }
+  },
+  {
+    "id": "s1_040",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.1: Ngữ âm (Pronunciation)",
+    "topic": "Trọng âm, Âm cuối & Nối âm",
+    "word": "Pick up",
+    "ipa": "/pɪk ʌp/",
+    "partOfSpeech": "pronunciation",
+    "meaning": "Nối âm phụ âm /k/ sang nguyên âm /ʌ/",
+    "example": "Pick up the fallen apples.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cách đọc nối âm chuẩn của \"Pick up\" là gì?",
+      "sentence": "Pick up the fallen apples.",
+      "options": [
+        "Pi-kup (/pɪkʌp/)",
+        "Pi-pup",
+        "Pick-tup",
+        "Đọc tách rời hoàn toàn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phụ âm cuối /k/ của \"pick\" nối sang nguyên âm /ʌ/ của \"up\"."
+    }
+  },
+  {
+    "id": "s1_041",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Noun (Danh từ)",
+    "word": "Noun (Danh từ)",
+    "ipa": "N",
+    "partOfSpeech": "grammar",
+    "meaning": "Từ chỉ người, vật, nơi chốn hoặc sự việc",
+    "example": "The farmer grows carrots.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Noun (Danh từ)\":",
+      "sentence": "The _____ grows carrots.",
+      "options": [
+        "farmer",
+        "happily",
+        "quick",
+        "under"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vị trí sau mạo từ \"The\" cần một Danh từ (farmer = người nông dân)."
+    }
+  },
+  {
+    "id": "s1_042",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Verb (Động từ)",
+    "word": "Verb (Động từ)",
+    "ipa": "V",
+    "partOfSpeech": "grammar",
+    "meaning": "Từ chỉ hành động hoặc trạng thái",
+    "example": "Cows eat fresh grass every day.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Verb (Động từ)\":",
+      "sentence": "Cows _____ fresh grass every day.",
+      "options": [
+        "eat",
+        "green",
+        "slowly",
+        "happy"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau chủ ngữ \"Cows\" cần Động từ chính (eat = ăn)."
+    }
+  },
+  {
+    "id": "s1_043",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Adjective (Tính từ)",
+    "word": "Adjective (Tính từ)",
+    "ipa": "Adj",
+    "partOfSpeech": "grammar",
+    "meaning": "Từ miêu tả tính chất cho danh từ",
+    "example": "We live in a peaceful village.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Adjective (Tính từ)\":",
+      "sentence": "We live in a _____ village.",
+      "options": [
+        "peaceful",
+        "peacefully",
+        "peace",
+        "peaces"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trước danh từ \"village\" cần một Tính từ (peaceful = yên bình)."
+    }
+  },
+  {
+    "id": "s1_044",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Adverb (Trạng từ)",
+    "word": "Adverb (Trạng từ)",
+    "ipa": "Adv",
+    "partOfSpeech": "grammar",
+    "meaning": "Từ bổ nghĩa cho động từ (thường có đuôi -ly)",
+    "example": "The river flows slowly through the valley.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Adverb (Trạng từ)\":",
+      "sentence": "The river flows _____ through the valley.",
+      "options": [
+        "slowly",
+        "slow",
+        "slowness",
+        "slower"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bổ nghĩa cho động từ \"flows\" cần Trạng từ (slowly = một cách chậm rãi)."
+    }
+  },
+  {
+    "id": "s1_045",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Preposition (Giới từ)",
+    "word": "Preposition (Giới từ)",
+    "ipa": "Prep",
+    "partOfSpeech": "grammar",
+    "meaning": "Từ chỉ vị trí, thời gian (in, on, at, under)",
+    "example": "The cat is sleeping under the tree.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Preposition (Giới từ)\":",
+      "sentence": "The cat is sleeping _____ the tree.",
+      "options": [
+        "under",
+        "sleep",
+        "happy",
+        "apple"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cần Giới từ chỉ vị trí \"under\" (dưới gốc cây)."
+    }
+  },
+  {
+    "id": "s1_046",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Pronoun (Đại từ)",
+    "word": "Pronoun (Đại từ)",
+    "ipa": "Pron",
+    "partOfSpeech": "grammar",
+    "meaning": "Từ thay thế cho danh từ (he, she, it, they)",
+    "example": "Tom is a farmer. He loves animals.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Pronoun (Đại từ)\":",
+      "sentence": "Tom is a farmer. _____ loves animals.",
+      "options": [
+        "He",
+        "His",
+        "Him",
+        "Her"
+      ],
+      "correctIndex": 0,
+      "explanation": "Làm chủ ngữ thay cho Tom ta dùng đại từ nhân xưng \"He\"."
+    }
+  },
+  {
+    "id": "s1_047",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Adjective after Be",
+    "word": "Adjective after Be",
+    "ipa": "Be + Adj",
+    "partOfSpeech": "grammar",
+    "meaning": "Sau động từ To-be dùng Tính từ",
+    "example": "Fresh fruit is very good for you.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Adjective after Be\":",
+      "sentence": "Fresh fruit is very _____ for you.",
+      "options": [
+        "good",
+        "well",
+        "goodly",
+        "goodness"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau động từ To-be (\"is\") cần Tính từ \"good\"."
+    }
+  },
+  {
+    "id": "s1_048",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Plural Noun",
+    "word": "Plural Noun",
+    "ipa": "N(s/es)",
+    "partOfSpeech": "grammar",
+    "meaning": "Danh từ số nhiều đứng sau many/two/three",
+    "example": "There are five fish in the pond.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Plural Noun\":",
+      "sentence": "There are five _____ in the pond.",
+      "options": [
+        "fish",
+        "swim",
+        "blue",
+        "quickly"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fish là danh từ đếm được đặc biệt (số nhiều vẫn giữ nguyên là fish)."
+    }
+  },
+  {
+    "id": "s1_049",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Preposition: AT",
+    "word": "Preposition: AT",
+    "ipa": "at + giờ",
+    "partOfSpeech": "grammar",
+    "meaning": "Dùng \"at\" trước giờ giấc cụ thể",
+    "example": "I wake up at 6 o’clock.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Preposition: AT\":",
+      "sentence": "I wake up _____ 6 o’clock.",
+      "options": [
+        "at",
+        "on",
+        "in",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc giới từ thời gian: at + giờ, on + ngày/thứ, in + tháng/năm."
+    }
+  },
+  {
+    "id": "s1_050",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Preposition: ON",
+    "word": "Preposition: ON",
+    "ipa": "on + thứ",
+    "partOfSpeech": "grammar",
+    "meaning": "Dùng \"on\" trước các thứ trong tuần",
+    "example": "We visit the farm on Sunday.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Preposition: ON\":",
+      "sentence": "We visit the farm _____ Sunday.",
+      "options": [
+        "on",
+        "at",
+        "in",
+        "by"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trước thứ (Monday, Sunday) và ngày tháng cụ thể dùng \"on\"."
+    }
+  },
+  {
+    "id": "s1_051",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Preposition: IN",
+    "word": "Preposition: IN",
+    "ipa": "in + tháng/mùa",
+    "partOfSpeech": "grammar",
+    "meaning": "Dùng \"in\" trước tháng, mùa, năm",
+    "example": "Flowers bloom in spring.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Preposition: IN\":",
+      "sentence": "Flowers bloom _____ spring.",
+      "options": [
+        "in",
+        "on",
+        "at",
+        "for"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trước mùa (spring, summer) và tháng/năm dùng giới từ \"in\"."
+    }
+  },
+  {
+    "id": "s1_052",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Possessive Adjective",
+    "word": "Possessive Adjective",
+    "ipa": "my/your/their",
+    "partOfSpeech": "grammar",
+    "meaning": "Tính từ sở hữu đứng trước danh từ",
+    "example": "The cows wag their tails happily.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Possessive Adjective\":",
+      "sentence": "The cows wag _____ tails happily.",
+      "options": [
+        "their",
+        "they",
+        "them",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trước danh từ \"tails\" cần tính từ sở hữu \"their\" (của chúng)."
+    }
+  },
+  {
+    "id": "s1_053",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Simple (Sự thật)",
+    "word": "Present Simple (Sự thật)",
+    "ipa": "S + V(s/es)",
+    "partOfSpeech": "grammar",
+    "meaning": "Diễn tả thói quen, sự thật hiển nhiên",
+    "example": "The sun rises in the east every morning.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Simple (Sự thật)\":",
+      "sentence": "The sun _____ in the east every morning.",
+      "options": [
+        "rises",
+        "rose",
+        "is rising",
+        "will rise"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sự thật hiển nhiên dùng Hiện tại đơn; \"The sun\" số ít nên động từ thêm -s -> rises."
+    }
+  },
+  {
+    "id": "s1_054",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Simple (Thói quen)",
+    "word": "Present Simple (Thói quen)",
+    "ipa": "S + V(s/es)",
+    "partOfSpeech": "grammar",
+    "meaning": "Dùng với always, usually, every day",
+    "example": "She usually drinks milk for breakfast.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Simple (Thói quen)\":",
+      "sentence": "She usually _____ milk for breakfast.",
+      "options": [
+        "drinks",
+        "drank",
+        "drinking",
+        "will drink"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có trạng từ tần suất \"usually\" -> Hiện tại đơn (she drinks)."
+    }
+  },
+  {
+    "id": "s1_055",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Simple (Phủ định)",
+    "word": "Present Simple (Phủ định)",
+    "ipa": "doesn’t + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Phủ định ở Hiện tại đơn dùng don’t / doesn’t",
+    "example": "He doesn’t like rainy weather.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Simple (Phủ định)\":",
+      "sentence": "He _____ like rainy weather.",
+      "options": [
+        "doesn’t",
+        "don’t",
+        "isn’t",
+        "didn’t"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chủ ngữ \"He\" số ít đi với trợ động từ phủ định \"doesn’t + V nguyên mẫu\"."
+    }
+  },
+  {
+    "id": "s1_056",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Simple (To-be)",
+    "word": "Present Simple (To-be)",
+    "ipa": "am/is/are",
+    "partOfSpeech": "grammar",
+    "meaning": "Động từ To-be chia theo chủ ngữ",
+    "example": "Vegetables are very healthy.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Simple (To-be)\":",
+      "sentence": "Vegetables _____ very healthy.",
+      "options": [
+        "are",
+        "is",
+        "am",
+        "be"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chủ ngữ số nhiều \"Vegetables\" đi với \"are\"."
+    }
+  },
+  {
+    "id": "s1_057",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Continuous (Now)",
+    "word": "Present Continuous (Now)",
+    "ipa": "am/is/are + V-ing",
+    "partOfSpeech": "grammar",
+    "meaning": "Hành động đang xảy ra ngay lúc nói",
+    "example": "Look! The farmer is watering the carrots now.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Continuous (Now)\":",
+      "sentence": "Look! The farmer _____ the carrots now.",
+      "options": [
+        "is watering",
+        "waters",
+        "watered",
+        "will water"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có dấu hiệu \"Look!\" và \"now\" -> Hiện tại tiếp diễn (is watering)."
+    }
+  },
+  {
+    "id": "s1_058",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Continuous (At the moment)",
+    "word": "Present Continuous (At the moment)",
+    "ipa": "is/are + V-ing",
+    "partOfSpeech": "grammar",
+    "meaning": "Hành động đang diễn ra tại thời điểm hiện tại",
+    "example": "The chickens are running around the yard at the moment.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Continuous (At the moment)\":",
+      "sentence": "The chickens _____ around the yard at the moment.",
+      "options": [
+        "are running",
+        "run",
+        "ran",
+        "have run"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"at the moment\" là dấu hiệu kinh điển của Hiện tại tiếp diễn."
+    }
+  },
+  {
+    "id": "s1_059",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Continuous (Câu hỏi)",
+    "word": "Present Continuous (Câu hỏi)",
+    "ipa": "Is/Are + S + V-ing?",
+    "partOfSpeech": "grammar",
+    "meaning": "Đảo am/is/are lên trước chủ ngữ",
+    "example": "Are you planting new seeds right now?",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Continuous (Câu hỏi)\":",
+      "sentence": "_____ you planting new seeds right now?",
+      "options": [
+        "Are",
+        "Do",
+        "Did",
+        "Have"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu hỏi Hiện tại tiếp diễn có \"V-ing (planting)\" nên đảo \"Are\"."
+    }
+  },
+  {
+    "id": "s1_060",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Continuous (Phủ định)",
+    "word": "Present Continuous (Phủ định)",
+    "ipa": "is/are not + V-ing",
+    "partOfSpeech": "grammar",
+    "meaning": "Đang không làm gì ở hiện tại",
+    "example": "It is sunny; it is not raining now.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Continuous (Phủ định)\":",
+      "sentence": "It is sunny; it _____ raining now.",
+      "options": [
+        "is not",
+        "does not",
+        "did not",
+        "will not"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đứng trước \"raining\" (V-ing) phải dùng động từ to-be \"is not\"."
+    }
+  },
+  {
+    "id": "s1_061",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Past Simple (Có quy tắc)",
+    "word": "Past Simple (Có quy tắc)",
+    "ipa": "S + V2/ed",
+    "partOfSpeech": "grammar",
+    "meaning": "Hành động đã xảy ra và kết thúc trong quá khứ",
+    "example": "Yesterday, we collected 20 fresh eggs.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Past Simple (Có quy tắc)\":",
+      "sentence": "Yesterday, we _____ 20 fresh eggs.",
+      "options": [
+        "collected",
+        "collect",
+        "are collecting",
+        "will collect"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có \"Yesterday\" -> chia Quá khứ đơn \"collected\"."
+    }
+  },
+  {
+    "id": "s1_062",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Past Simple (Bất quy tắc)",
+    "word": "Past Simple (Bất quy tắc)",
+    "ipa": "go -> went",
+    "partOfSpeech": "grammar",
+    "meaning": "Động từ bất quy tắc ở Quá khứ đơn",
+    "example": "Last Sunday, my family went to the countryside.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Past Simple (Bất quy tắc)\":",
+      "sentence": "Last Sunday, my family _____ to the countryside.",
+      "options": [
+        "went",
+        "go",
+        "goes",
+        "gone"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có \"Last Sunday\" -> Quá khứ của \"go\" là \"went\"."
+    }
+  },
+  {
+    "id": "s1_063",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Past Simple (Phủ định)",
+    "word": "Past Simple (Phủ định)",
+    "ipa": "didn’t + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Sau didn’t động từ trở về nguyên mẫu",
+    "example": "She didn’t go to the market yesterday.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Past Simple (Phủ định)\":",
+      "sentence": "She _____ go to the market yesterday.",
+      "options": [
+        "didn’t",
+        "doesn’t",
+        "wasn’t",
+        "hasn’t"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phủ định Quá khứ đơn với động từ thường \"go\" dùng \"didn’t\"."
+    }
+  },
+  {
+    "id": "s1_064",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Past Simple (Was / Were)",
+    "word": "Past Simple (Was / Were)",
+    "ipa": "was/were",
+    "partOfSpeech": "grammar",
+    "meaning": "Quá khứ của am/is là was, are là were",
+    "example": "The weather was cold two days ago.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Past Simple (Was / Were)\":",
+      "sentence": "The weather _____ cold two days ago.",
+      "options": [
+        "was",
+        "were",
+        "is",
+        "are"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"two days ago\" -> quá khứ; \"The weather\" số ít dùng \"was\"."
+    }
+  },
+  {
+    "id": "s1_065",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Past Continuous (Giờ quá khứ)",
+    "word": "Past Continuous (Giờ quá khứ)",
+    "ipa": "was/were + V-ing",
+    "partOfSpeech": "grammar",
+    "meaning": "Hành động đang diễn ra tại thời điểm cụ thể trong quá khứ",
+    "example": "At 8 a.m. yesterday, I was feeding the cows.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Past Continuous (Giờ quá khứ)\":",
+      "sentence": "At 8 a.m. yesterday, I _____ the cows.",
+      "options": [
+        "was feeding",
+        "fed",
+        "feed",
+        "am feeding"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có giờ cụ thể trong quá khứ (\"At 8 a.m. yesterday\") -> Quá khứ tiếp diễn."
+    }
+  },
+  {
+    "id": "s1_066",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Past Continuous + When",
+    "word": "Past Continuous + When",
+    "ipa": "was/were V-ing when V2",
+    "partOfSpeech": "grammar",
+    "meaning": "Hành động đang diễn ra thì hành động khác xen vào",
+    "example": "While we were working in the garden, it started to rain.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Past Continuous + When\":",
+      "sentence": "While we _____ in the garden, it started to rain.",
+      "options": [
+        "were working",
+        "worked",
+        "work",
+        "are working"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hành động nền kéo dài dùng Quá khứ tiếp diễn (\"were working\")."
+    }
+  },
+  {
+    "id": "s1_067",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Past Continuous (Song song)",
+    "word": "Past Continuous (Song song)",
+    "ipa": "while + was/were V-ing",
+    "partOfSpeech": "grammar",
+    "meaning": "Hai hành động diễn ra song song trong quá khứ",
+    "example": "Mom was baking bread while Dad was painting the fence.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Past Continuous (Song song)\":",
+      "sentence": "Mom was baking bread while Dad _____ the fence.",
+      "options": [
+        "was painting",
+        "paints",
+        "has painted",
+        "will paint"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hai hành động song song trong quá khứ cùng chia Quá khứ tiếp diễn."
+    }
+  },
+  {
+    "id": "s1_068",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Past Continuous (Số nhiều)",
+    "word": "Past Continuous (Số nhiều)",
+    "ipa": "were + V-ing",
+    "partOfSpeech": "grammar",
+    "meaning": "Chủ ngữ số nhiều đi với were + V-ing",
+    "example": "They were fishing at the pond all afternoon.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Past Continuous (Số nhiều)\":",
+      "sentence": "They _____ fishing at the pond all afternoon.",
+      "options": [
+        "were",
+        "was",
+        "are",
+        "did"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chủ ngữ \"They\" + \"fishing\" ở quá khứ dùng \"were\"."
+    }
+  },
+  {
+    "id": "s1_069",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Perfect (For)",
+    "word": "Present Perfect (For)",
+    "ipa": "have/has + V3/ed",
+    "partOfSpeech": "grammar",
+    "meaning": "Hành động bắt đầu trong quá khứ kéo dài tới hiện tại",
+    "example": "We have lived on this farm for ten years.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Perfect (For)\":",
+      "sentence": "We _____ lived on this farm for ten years.",
+      "options": [
+        "have",
+        "are",
+        "did",
+        "were"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có \"for ten years\" + V3 (\"lived\") -> Hiện tại hoàn thành (have lived)."
+    }
+  },
+  {
+    "id": "s1_070",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Perfect (Ever)",
+    "word": "Present Perfect (Ever)",
+    "ipa": "have/has + ever + V3",
+    "partOfSpeech": "grammar",
+    "meaning": "Nói về trải nghiệm từ trước tới nay",
+    "example": "Have you ever seen a rainbow?",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Perfect (Ever)\":",
+      "sentence": "Have you _____ seen a rainbow?",
+      "options": [
+        "ever",
+        "yesterday",
+        "ago",
+        "tomorrow"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"ever\" dùng trong câu hỏi Hiện tại hoàn thành (\"Bạn đã từng...?\")."
+    }
+  },
+  {
+    "id": "s1_071",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Perfect (Just)",
+    "word": "Present Perfect (Just)",
+    "ipa": "have/has + just + V3",
+    "partOfSpeech": "grammar",
+    "meaning": "Hành động vừa mới hoàn tất",
+    "example": "The farmer has just caught a big fish.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Perfect (Just)\":",
+      "sentence": "The farmer has just _____ a big fish.",
+      "options": [
+        "caught",
+        "catch",
+        "catching",
+        "catches"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau \"has just\" phải dùng phân từ 2 (V3 của catch là caught)."
+    }
+  },
+  {
+    "id": "s1_072",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Present Perfect (Since)",
+    "word": "Present Perfect (Since)",
+    "ipa": "since + mốc thời gian",
+    "partOfSpeech": "grammar",
+    "meaning": "Since đi với mốc thời gian, For đi với khoảng thời gian",
+    "example": "She has worked here since 2022.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Present Perfect (Since)\":",
+      "sentence": "She has worked here _____ 2022.",
+      "options": [
+        "since",
+        "for",
+        "at",
+        "in"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"2022\" là một mốc thời gian bắt đầu -> dùng \"since\"."
+    }
+  },
+  {
+    "id": "s1_073",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Future Simple (Tomorrow)",
+    "word": "Future Simple (Tomorrow)",
+    "ipa": "will + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Quyết định hoặc sự việc tương lai",
+    "example": "Tomorrow, we will plant more apple trees.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Future Simple (Tomorrow)\":",
+      "sentence": "Tomorrow, we _____ plant more apple trees.",
+      "options": [
+        "will",
+        "did",
+        "were",
+        "have"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có \"Tomorrow\" -> chia Tương lai đơn \"will + V nguyên mẫu\"."
+    }
+  },
+  {
+    "id": "s1_074",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Future Simple (I think)",
+    "word": "Future Simple (I think)",
+    "ipa": "I think + S + will + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Dự đoán tương lai sau I think / I hope",
+    "example": "I think it will rain this evening.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Future Simple (I think)\":",
+      "sentence": "I think it _____ rain this evening.",
+      "options": [
+        "will",
+        "is",
+        "was",
+        "did"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau \"will\" là động từ nguyên mẫu \"rain\"."
+    }
+  },
+  {
+    "id": "s1_075",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Future Simple (Won’t)",
+    "word": "Future Simple (Won’t)",
+    "ipa": "will not = won’t",
+    "partOfSpeech": "grammar",
+    "meaning": "Dạng phủ định của will là won’t",
+    "example": "Don’t worry, the sheep won’t run away.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Future Simple (Won’t)\":",
+      "sentence": "Don’t worry, the sheep _____ run away.",
+      "options": [
+        "won’t",
+        "don’t",
+        "didn’t",
+        "aren’t"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trấn an / hứa hẹn ở tương lai dùng \"won’t + V nguyên mẫu\"."
+    }
+  },
+  {
+    "id": "s1_076",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Future Simple (Câu hỏi)",
+    "word": "Future Simple (Câu hỏi)",
+    "ipa": "Will + S + V0?",
+    "partOfSpeech": "grammar",
+    "meaning": "Đảo Will lên đầu câu hỏi tương lai",
+    "example": "Will you help me water the garden later?",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Future Simple (Câu hỏi)\":",
+      "sentence": "_____ you help me water the garden later?",
+      "options": [
+        "Will",
+        "Are",
+        "Did",
+        "Does"
+      ],
+      "correctIndex": 0,
+      "explanation": "Lời nhờ vả / hỏi về tương lai (\"later\") dùng \"Will you...?\"."
+    }
+  },
+  {
+    "id": "s1_077",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Trật tự câu S + V + O #1",
+    "word": "Trật tự câu S + V + O #1",
+    "ipa": "Subject + Verb + Object",
+    "partOfSpeech": "grammar",
+    "meaning": "Trật tự câu đơn chuẩn",
+    "example": "Cows drink fresh water.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Sắp xếp thành câu đúng: \"fresh / drink / cows / water\"",
+      "sentence": "Mẫu câu: Subject + Verb + Object",
+      "options": [
+        "Cows drink fresh water.",
+        "Drink cows fresh water.",
+        "Water drink fresh cows.",
+        "Fresh cows water drink."
+      ],
+      "correctIndex": 0,
+      "explanation": "Trật tự câu đơn tiếng Anh chuẩn: Chủ ngữ (Cows) + Động từ (drink) + Tân ngữ (fresh water)."
+    }
+  },
+  {
+    "id": "s1_078",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Trật tự câu S + V + O #2",
+    "word": "Trật tự câu S + V + O #2",
+    "ipa": "S + V + O",
+    "partOfSpeech": "grammar",
+    "meaning": "Chủ ngữ thực hiện hành động lên Tân ngữ",
+    "example": "The baker bakes warm bread.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Sắp xếp từ đúng: \"bakes / bread / the baker / warm\"",
+      "sentence": "Mẫu câu: S + V + O",
+      "options": [
+        "The baker bakes warm bread.",
+        "Warm bread bakes the baker.",
+        "Bakes the baker warm bread.",
+        "The baker warm bread bakes."
+      ],
+      "correctIndex": 0,
+      "explanation": "S (The baker) + V (bakes) + O (warm bread)."
+    }
+  },
+  {
+    "id": "s1_079",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Câu ghép với AND",
+    "word": "Câu ghép với AND",
+    "ipa": "Clause 1, and Clause 2",
+    "partOfSpeech": "grammar",
+    "meaning": "AND nối hai ý bổ sung, cùng chiều",
+    "example": "The sun is shining, and the birds are singing.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Câu ghép với AND\":",
+      "sentence": "The sun is shining, _____ the birds are singing.",
+      "options": [
+        "and",
+        "but",
+        "or",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hai vế đều mang nghĩa tích cực song song -> dùng liên từ \"and\" (và)."
+    }
+  },
+  {
+    "id": "s1_080",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Câu ghép với BUT",
+    "word": "Câu ghép với BUT",
+    "ipa": "Clause 1, but Clause 2",
+    "partOfSpeech": "grammar",
+    "meaning": "BUT nối hai ý tương phản, đối lập",
+    "example": "I want to go fishing, but it is raining heavily.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Câu ghép với BUT\":",
+      "sentence": "I want to go fishing, _____ it is raining heavily.",
+      "options": [
+        "but",
+        "and",
+        "so",
+        "or"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hai vế đối lập (muốn đi câu >< trời mưa to) -> dùng \"but\" (nhưng)."
+    }
+  },
+  {
+    "id": "s1_081",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Câu ghép với SO",
+    "word": "Câu ghép với SO",
+    "ipa": "Cause, so Result",
+    "partOfSpeech": "grammar",
+    "meaning": "SO dùng trước kết quả (vì vậy / cho nên)",
+    "example": "The soil was dry, so I watered the crops.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Câu ghép với SO\":",
+      "sentence": "The soil was dry, _____ I watered the crops.",
+      "options": [
+        "so",
+        "but",
+        "or",
+        "although"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đất khô (nguyên nhân) -> nên tôi tưới cây (kết quả) -> dùng \"so\"."
+    }
+  },
+  {
+    "id": "s1_082",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Câu ghép với OR",
+    "word": "Câu ghép với OR",
+    "ipa": "Option 1, or Option 2",
+    "partOfSpeech": "grammar",
+    "meaning": "OR đưa ra sự lựa chọn (hoặc là)",
+    "example": "Would you like tea or fresh milk?",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Câu ghép với OR\":",
+      "sentence": "Would you like tea _____ fresh milk?",
+      "options": [
+        "or",
+        "so",
+        "but",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đưa ra hai lựa chọn trong câu hỏi dùng \"or\" (hay là)."
+    }
+  },
+  {
+    "id": "s1_083",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Câu ghép với BECAUSE",
+    "word": "Câu ghép với BECAUSE",
+    "ipa": "Result because Cause",
+    "partOfSpeech": "grammar",
+    "meaning": "BECAUSE nêu lý do (bởi vì)",
+    "example": "The plants look green because they get enough water.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Câu ghép với BECAUSE\":",
+      "sentence": "The plants look green _____ they get enough water.",
+      "options": [
+        "because",
+        "so",
+        "but",
+        "or"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vế sau giải thích nguyên nhân cho vế trước -> dùng \"because\"."
+    }
+  },
+  {
+    "id": "s1_084",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Câu hỏi Yes/No",
+    "word": "Câu hỏi Yes/No",
+    "ipa": "Do/Does + S + V0?",
+    "partOfSpeech": "grammar",
+    "meaning": "Câu hỏi với động từ thường ở Hiện tại đơn",
+    "example": "Does your brother like apples?",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Câu hỏi Yes/No\":",
+      "sentence": "_____ your brother like apples?",
+      "options": [
+        "Does",
+        "Is",
+        "Do",
+        "Are"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"like\" là động từ thường, \"your brother\" là số ít -> mượn trợ động từ \"Does\"."
+    }
+  },
+  {
+    "id": "s1_085",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "There is / There are",
+    "word": "There is / There are",
+    "ipa": "There are + N nhiều",
+    "partOfSpeech": "grammar",
+    "meaning": "Diễn tả có nhiều cái gì ở đâu",
+    "example": "There are three cute sheep in the field.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"There is / There are\":",
+      "sentence": "_____ three cute sheep in the field.",
+      "options": [
+        "There are",
+        "There is",
+        "They are",
+        "Have"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"three cute sheep\" là số nhiều nên dùng \"There are\"."
+    }
+  },
+  {
+    "id": "s1_086",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "How many vs How much",
+    "word": "How many vs How much",
+    "ipa": "much + N không đếm được",
+    "partOfSpeech": "grammar",
+    "meaning": "Phân biệt many và much",
+    "example": "How much milk do we have in the kitchen?",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"How many vs How much\":",
+      "sentence": "How _____ milk do we have in the kitchen?",
+      "options": [
+        "much",
+        "many",
+        "a few",
+        "several"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Milk\" là chất lỏng không đếm được -> dùng \"How much\"."
+    }
+  },
+  {
+    "id": "s1_087",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Mạo từ A / An",
+    "word": "Mạo từ A / An",
+    "ipa": "an + nguyên âm (u,e,o,a,i)",
+    "partOfSpeech": "grammar",
+    "meaning": "Dùng \"an\" trước âm nguyên âm",
+    "example": "She picked an orange from the tree.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Mạo từ A / An\":",
+      "sentence": "She picked _____ orange from the tree.",
+      "options": [
+        "an",
+        "a",
+        "many",
+        "two"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Orange\" bắt đầu bằng nguyên âm /ɒ/ nên dùng mạo từ \"an\"."
+    }
+  },
+  {
+    "id": "s1_088",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Câu mệnh lệnh (Imperative)",
+    "word": "Câu mệnh lệnh (Imperative)",
+    "ipa": "V0 + O!",
+    "partOfSpeech": "grammar",
+    "meaning": "Đưa ra lời khuyên / yêu cầu bắt đầu bằng V0",
+    "example": "Wash your hands before baking bread!",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Câu mệnh lệnh (Imperative)\":",
+      "sentence": "_____ your hands before baking bread!",
+      "options": [
+        "Wash",
+        "Washing",
+        "Washed",
+        "To wash"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu mệnh lệnh bắt đầu trực tiếp bằng động từ nguyên mẫu (Wash)."
+    }
+  },
+  {
+    "id": "s1_089",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 1 (Will)",
+    "word": "Điều kiện loại 1 (Will)",
+    "ipa": "If + HTĐ, S + will + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Điều kiện có thật ở hiện tại hoặc tương lai",
+    "example": "If it rains tomorrow, we will stay at home.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 1 (Will)\":",
+      "sentence": "If it rains tomorrow, we _____ stay at home.",
+      "options": [
+        "will",
+        "would",
+        "did",
+        "were"
+      ],
+      "correctIndex": 0,
+      "explanation": "Điều kiện loại 1 (có thể xảy ra ở tương lai): If + HTĐ, S + will + V0."
+    }
+  },
+  {
+    "id": "s1_090",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 1 (Vế If)",
+    "word": "Điều kiện loại 1 (Vế If)",
+    "ipa": "If + HTĐ",
+    "partOfSpeech": "grammar",
+    "meaning": "Mệnh đề If ở loại 1 chia Hiện tại đơn",
+    "example": "If you study hard, you will pass the test.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 1 (Vế If)\":",
+      "sentence": "If you _____ hard, you will pass the test.",
+      "options": [
+        "study",
+        "will study",
+        "studied",
+        "would study"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trong mệnh đề If loại 1 chỉ dùng Hiện tại đơn (\"study\")."
+    }
+  },
+  {
+    "id": "s1_091",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 1 (Đảo vế)",
+    "word": "Điều kiện loại 1 (Đảo vế)",
+    "ipa": "S + will + V0 if + S + V(s/es)",
+    "partOfSpeech": "grammar",
+    "meaning": "Mệnh đề If có thể đứng sau",
+    "example": "The crops will grow fast if the sun shines.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 1 (Đảo vế)\":",
+      "sentence": "The crops will grow fast if the sun _____.",
+      "options": [
+        "shines",
+        "shined",
+        "will shine",
+        "would shine"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vế If loại 1 chia Hiện tại đơn; \"the sun\" số ít -> \"shines\"."
+    }
+  },
+  {
+    "id": "s1_092",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 1 (Phủ định)",
+    "word": "Điều kiện loại 1 (Phủ định)",
+    "ipa": "doesn’t / don’t + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Phủ định ở vế If loại 1",
+    "example": "If she doesn’t water the flowers, they will die.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 1 (Phủ định)\":",
+      "sentence": "If she _____ water the flowers, they will die.",
+      "options": [
+        "doesn’t",
+        "didn’t",
+        "won’t",
+        "isn’t"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hiện tại đơn phủ định với \"she\" + động từ thường \"water\" dùng \"doesn’t\"."
+    }
+  },
+  {
+    "id": "s1_093",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 1 (Can)",
+    "word": "Điều kiện loại 1 (Can)",
+    "ipa": "can / may thay cho will",
+    "partOfSpeech": "grammar",
+    "meaning": "Có thể dùng can/may ở vế kết quả",
+    "example": "If you finish early, you can go fishing.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 1 (Can)\":",
+      "sentence": "If you finish early, you _____ go fishing.",
+      "options": [
+        "can",
+        "could",
+        "would",
+        "had"
+      ],
+      "correctIndex": 0,
+      "explanation": "Loại 1 dùng \"can\" để chỉ sự cho phép hoặc khả năng thực tế."
+    }
+  },
+  {
+    "id": "s1_094",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 1 (Tất yếu)",
+    "word": "Điều kiện loại 1 (Tất yếu)",
+    "ipa": "If + HTĐ, S + will + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Kết quả tất yếu trong tương lai",
+    "example": "If we feed the hens, they will lay eggs.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 1 (Tất yếu)\":",
+      "sentence": "If we feed the hens, they _____ lay eggs.",
+      "options": [
+        "will",
+        "would",
+        "had",
+        "were"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vế kết quả ở tương lai dùng \"will lay\"."
+    }
+  },
+  {
+    "id": "s1_095",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 2 (Were)",
+    "word": "Điều kiện loại 2 (Were)",
+    "ipa": "If + S + V2/ed, S + would + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Giả định không có thật ở hiện tại",
+    "example": "If I were a bird, I would fly high in the sky.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 2 (Were)\":",
+      "sentence": "If I _____ a bird, I would fly high in the sky.",
+      "options": [
+        "were",
+        "am",
+        "will be",
+        "have been"
+      ],
+      "correctIndex": 0,
+      "explanation": "Điều kiện loại 2 (giả định trái thực tế hiện tại): động từ to-be luôn ưu tiên dùng \"were\"."
+    }
+  },
+  {
+    "id": "s1_096",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 2 (Would)",
+    "word": "Điều kiện loại 2 (Would)",
+    "ipa": "S + would + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Dùng would/could + V0 ở vế kết quả loại 2",
+    "example": "If I had a bigger garden, I would plant 100 trees.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 2 (Would)\":",
+      "sentence": "If I had a bigger garden, I _____ plant 100 trees.",
+      "options": [
+        "would",
+        "will",
+        "can",
+        "did"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vì vế If dùng Quá khứ giả định (\"had\"), vế chính phải dùng \"would\"."
+    }
+  },
+  {
+    "id": "s1_097",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 2 (Had)",
+    "word": "Điều kiện loại 2 (Had)",
+    "ipa": "If + S + V2/ed",
+    "partOfSpeech": "grammar",
+    "meaning": "Vế If loại 2 chia quá khứ đơn",
+    "example": "If she had more free time, she would learn cooking.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 2 (Had)\":",
+      "sentence": "If she _____ more free time, she would learn cooking.",
+      "options": [
+        "had",
+        "has",
+        "will have",
+        "having"
+      ],
+      "correctIndex": 0,
+      "explanation": "Điều kiện loại 2 chia quá khứ đơn ở vế If -> \"had\"."
+    }
+  },
+  {
+    "id": "s1_098",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 2 (Lời khuyên)",
+    "word": "Điều kiện loại 2 (Lời khuyên)",
+    "ipa": "If I were you, I would...",
+    "partOfSpeech": "grammar",
+    "meaning": "Mẫu câu khuyên bảo kinh điển",
+    "example": "If I were you, I would wake up earlier.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 2 (Lời khuyên)\":",
+      "sentence": "If I _____ you, I would wake up earlier.",
+      "options": [
+        "were",
+        "am",
+        "will be",
+        "have"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc \"If I were you, I would...\" = Nếu tôi là bạn thì tôi sẽ..."
+    }
+  },
+  {
+    "id": "s1_099",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Điều kiện loại 2 (Could)",
+    "word": "Điều kiện loại 2 (Could)",
+    "ipa": "S + could + V0",
+    "partOfSpeech": "grammar",
+    "meaning": "Could thay would chỉ khả năng giả định",
+    "example": "If we lived near the sea, we could swim every day.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Điều kiện loại 2 (Could)\":",
+      "sentence": "If we lived near the sea, we _____ swim every day.",
+      "options": [
+        "could",
+        "will",
+        "can",
+        "are"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giả định trái hiện tại (\"lived\") -> dùng \"could swim\"."
+    }
+  },
+  {
+    "id": "s1_100",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.2: Ngữ pháp cốt lõi (Core Grammar)",
+    "topic": "Phân biệt Loại 1 & Loại 2",
+    "word": "Phân biệt Loại 1 & Loại 2",
+    "ipa": "will (Loại 1) vs would (Loại 2)",
+    "partOfSpeech": "grammar",
+    "meaning": "Nhìn vế If để chọn will hay would",
+    "example": "If he had enough money, he would buy a tractor.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án đúng hoàn thành cấu trúc \"Phân biệt Loại 1 & Loại 2\":",
+      "sentence": "If he had enough money, he _____ buy a tractor.",
+      "options": [
+        "would",
+        "will",
+        "shall",
+        "does"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhận biết \"had\" (V2) -> đây là Loại 2 -> chọn \"would\"."
+    }
+  },
+  {
+    "id": "s1_101",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Mother",
+    "ipa": "/ˈmʌð.ər/",
+    "partOfSpeech": "noun",
+    "meaning": "Mẹ",
+    "example": "My mother makes delicious soup.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Mother\" (Family & Relationships) là gì?",
+      "sentence": "My mother makes delicious soup.",
+      "options": [
+        "Mẹ",
+        "Chị gái / Em gái",
+        "Thức dậy",
+        "Bữa ăn tối"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Mother\" (/ˈmʌð.ər/) có nghĩa là \"Mẹ\"."
+    }
+  },
+  {
+    "id": "s1_102",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Father",
+    "ipa": "/ˈfɑː.ðər/",
+    "partOfSpeech": "noun",
+    "meaning": "Bố / Cha",
+    "example": "My father works on the farm.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Father\" (Family & Relationships) là gì?",
+      "sentence": "My father works on the farm.",
+      "options": [
+        "Bố / Cha",
+        "Cha hoặc mẹ (phụ huynh)",
+        "Bài tập về nhà",
+        "Phô mai"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Father\" (/ˈfɑː.ðər/) có nghĩa là \"Bố / Cha\"."
+    }
+  },
+  {
+    "id": "s1_103",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Brother",
+    "ipa": "/ˈbrʌð.ər/",
+    "partOfSpeech": "noun",
+    "meaning": "Anh trai / Em trai",
+    "example": "My younger brother likes puppies.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Brother\" (Family & Relationships) là gì?",
+      "sentence": "My younger brother likes puppies.",
+      "options": [
+        "Anh trai / Em trai",
+        "Đi học",
+        "Sữa",
+        "Cà phê"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Brother\" (/ˈbrʌð.ər/) có nghĩa là \"Anh trai / Em trai\"."
+    }
+  },
+  {
+    "id": "s1_104",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Sister",
+    "ipa": "/ˈsɪs.tər/",
+    "partOfSpeech": "noun",
+    "meaning": "Chị gái / Em gái",
+    "example": "My sister helps water the roses.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Sister\" (Family & Relationships) là gì?",
+      "sentence": "My sister helps water the roses.",
+      "options": [
+        "Chị gái / Em gái",
+        "Ngủ",
+        "Cơm / Gạo",
+        "Tàu hỏa"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Sister\" (/ˈsɪs.tər/) có nghĩa là \"Chị gái / Em gái\"."
+    }
+  },
+  {
+    "id": "s1_105",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Grandparents",
+    "ipa": "/ˈɡræn.peə.rənts/",
+    "partOfSpeech": "noun",
+    "meaning": "Ông bà",
+    "example": "We visit our grandparents on weekends.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Grandparents\" (Family & Relationships) là gì?",
+      "sentence": "We visit our grandparents on weekends.",
+      "options": [
+        "Ông bà",
+        "Rau củ",
+        "Xe đạp",
+        "Hành lý"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Grandparents\" (/ˈɡræn.peə.rənts/) có nghĩa là \"Ông bà\"."
+    }
+  },
+  {
+    "id": "s1_106",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Cousin",
+    "ipa": "/ˈkʌz.ən/",
+    "partOfSpeech": "noun",
+    "meaning": "Anh chị em họ",
+    "example": "My cousin lives in another town.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Cousin\" (Family & Relationships) là gì?",
+      "sentence": "My cousin lives in another town.",
+      "options": [
+        "Anh chị em họ",
+        "Nước ép trái cây",
+        "Hộ chiếu",
+        "Phòng khách"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cousin\" (/ˈkʌz.ən/) có nghĩa là \"Anh chị em họ\"."
+    }
+  },
+  {
+    "id": "s1_107",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Neighbour",
+    "ipa": "/ˈneɪ.bər/",
+    "partOfSpeech": "noun",
+    "meaning": "Hàng xóm",
+    "example": "Our friendly neighbour gave us fresh apples.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Neighbour\" (Family & Relationships) là gì?",
+      "sentence": "Our friendly neighbour gave us fresh apples.",
+      "options": [
+        "Hàng xóm",
+        "Sân bay",
+        "Nhà bếp",
+        "Chìa khóa"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Neighbour\" (/ˈneɪ.bər/) có nghĩa là \"Hàng xóm\"."
+    }
+  },
+  {
+    "id": "s1_108",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Friend",
+    "ipa": "/frend/",
+    "partOfSpeech": "noun",
+    "meaning": "Bạn bè",
+    "example": "A true friend always helps you.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Friend\" (Family & Relationships) là gì?",
+      "sentence": "A true friend always helps you.",
+      "options": [
+        "Bạn bè",
+        "Cây cầu",
+        "Đồ nội thất",
+        "Làm vườn"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Friend\" (/frend/) có nghĩa là \"Bạn bè\"."
+    }
+  },
+  {
+    "id": "s1_109",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Parent",
+    "ipa": "/ˈpeə.rənt/",
+    "partOfSpeech": "noun",
+    "meaning": "Cha hoặc mẹ (phụ huynh)",
+    "example": "Every parent wants their child to be happy.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Family & Relationships\":",
+      "sentence": "Every _____ wants their child to be happy.",
+      "options": [
+        "Parent",
+        "Mother",
+        "Father",
+        "Brother"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Parent\" (/ˈpeə.rənt/) nghĩa là: Cha hoặc mẹ (phụ huynh)."
+    }
+  },
+  {
+    "id": "s1_110",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Family & Relationships",
+    "word": "Wedding",
+    "ipa": "/ˈwed.ɪŋ/",
+    "partOfSpeech": "noun",
+    "meaning": "Đám cưới / Lễ cưới",
+    "example": "They invited all relatives to the wedding.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Family & Relationships\":",
+      "sentence": "They invited all relatives to the _____.",
+      "options": [
+        "Wedding",
+        "Mother",
+        "Father",
+        "Brother"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Wedding\" (/ˈwed.ɪŋ/) nghĩa là: Đám cưới / Lễ cưới."
+    }
+  },
+  {
+    "id": "s1_111",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Wake up",
+    "ipa": "/weɪk ʌp/",
+    "partOfSpeech": "verb",
+    "meaning": "Thức dậy",
+    "example": "I wake up at 6 a.m. every morning.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Wake up\" (Daily Routine) là gì?",
+      "sentence": "I wake up at 6 a.m. every morning.",
+      "options": [
+        "Thức dậy",
+        "Tắm vòi sen",
+        "Rau củ",
+        "Xe đạp"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Wake up\" (/weɪk ʌp/) có nghĩa là \"Thức dậy\"."
+    }
+  },
+  {
+    "id": "s1_112",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Brush teeth",
+    "ipa": "/brʌʃ tiːθ/",
+    "partOfSpeech": "phrase",
+    "meaning": "Đánh răng",
+    "example": "Remember to brush teeth before bed.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Brush teeth\" (Daily Routine) là gì?",
+      "sentence": "Remember to brush teeth before bed.",
+      "options": [
+        "Đánh răng",
+        "Quả trứng",
+        "Nước ép trái cây",
+        "Hộ chiếu"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Brush teeth\" (/brʌʃ tiːθ/) có nghĩa là \"Đánh răng\"."
+    }
+  },
+  {
+    "id": "s1_113",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Breakfast",
+    "ipa": "/ˈbrek.fəst/",
+    "partOfSpeech": "noun",
+    "meaning": "Bữa ăn sáng",
+    "example": "Bread and eggs make a great breakfast.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Breakfast\" (Daily Routine) là gì?",
+      "sentence": "Bread and eggs make a great breakfast.",
+      "options": [
+        "Bữa ăn sáng",
+        "Đường (gia vị)",
+        "Sân bay",
+        "Nhà bếp"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Breakfast\" (/ˈbrek.fəst/) có nghĩa là \"Bữa ăn sáng\"."
+    }
+  },
+  {
+    "id": "s1_114",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Go to school",
+    "ipa": "/ɡəʊ tuː skuːl/",
+    "partOfSpeech": "phrase",
+    "meaning": "Đi học",
+    "example": "Children go to school by bicycle.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Go to school\" (Daily Routine) là gì?",
+      "sentence": "Children go to school by bicycle.",
+      "options": [
+        "Đi học",
+        "Xe buýt",
+        "Cây cầu",
+        "Đồ nội thất"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Go to school\" (/ɡəʊ tuː skuːl/) có nghĩa là \"Đi học\"."
+    }
+  },
+  {
+    "id": "s1_115",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Lunch",
+    "ipa": "/lʌntʃ/",
+    "partOfSpeech": "noun",
+    "meaning": "Bữa ăn trưa",
+    "example": "We usually have lunch at 12 o’clock.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Lunch\" (Daily Routine) là gì?",
+      "sentence": "We usually have lunch at 12 o’clock.",
+      "options": [
+        "Bữa ăn trưa",
+        "Bản đồ",
+        "Cửa sổ",
+        "Việc đọc sách"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Lunch\" (/lʌntʃ/) có nghĩa là \"Bữa ăn trưa\"."
+    }
+  },
+  {
+    "id": "s1_116",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Homework",
+    "ipa": "/ˈhəʊm.wɜːk/",
+    "partOfSpeech": "noun",
+    "meaning": "Bài tập về nhà",
+    "example": "I always finish my homework before dinner.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Homework\" (Daily Routine) là gì?",
+      "sentence": "I always finish my homework before dinner.",
+      "options": [
+        "Bài tập về nhà",
+        "Phòng ngủ",
+        "Sàn nhà / Tầng nhà",
+        "Nấu ăn"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Homework\" (/ˈhəʊm.wɜːk/) có nghĩa là \"Bài tập về nhà\"."
+    }
+  },
+  {
+    "id": "s1_117",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Take a shower",
+    "ipa": "/teɪk ə ˈʃaʊ.ər/",
+    "partOfSpeech": "phrase",
+    "meaning": "Tắm vòi sen",
+    "example": "After farming, I take a warm shower.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Take a shower\" (Daily Routine) là gì?",
+      "sentence": "After farming, I take a warm shower.",
+      "options": [
+        "Tắm vòi sen",
+        "Cái bàn",
+        "Vẽ tranh",
+        "Có nắng, trời nắng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Take a shower\" (/teɪk ə ˈʃaʊ.ər/) có nghĩa là \"Tắm vòi sen\"."
+    }
+  },
+  {
+    "id": "s1_118",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Dinner",
+    "ipa": "/ˈdɪn.ər/",
+    "partOfSpeech": "noun",
+    "meaning": "Bữa ăn tối",
+    "example": "The whole family eats dinner together.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Dinner\" (Daily Routine) là gì?",
+      "sentence": "The whole family eats dinner together.",
+      "options": [
+        "Bữa ăn tối",
+        "Bơi lội",
+        "Đạp xe",
+        "Cầu vồng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Dinner\" (/ˈdɪn.ər/) có nghĩa là \"Bữa ăn tối\"."
+    }
+  },
+  {
+    "id": "s1_119",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Sleep",
+    "ipa": "/sliːp/",
+    "partOfSpeech": "verb",
+    "meaning": "Ngủ",
+    "example": "Adults need to sleep 7–8 hours a night.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Daily Routine\":",
+      "sentence": "Adults need to _____ 7–8 hours a night.",
+      "options": [
+        "Sleep",
+        "Wake up",
+        "Brush teeth",
+        "Breakfast"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Sleep\" (/sliːp/) nghĩa là: Ngủ."
+    }
+  },
+  {
+    "id": "s1_120",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Daily Routine",
+    "word": "Early",
+    "ipa": "/ˈɜː.li/",
+    "partOfSpeech": "adverb/adj",
+    "meaning": "Sớm",
+    "example": "The farmer gets up early every day.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Daily Routine\":",
+      "sentence": "The farmer gets up _____ every day.",
+      "options": [
+        "Early",
+        "Wake up",
+        "Brush teeth",
+        "Breakfast"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Early\" (/ˈɜː.li/) nghĩa là: Sớm."
+    }
+  },
+  {
+    "id": "s1_121",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Milk",
+    "ipa": "/mɪlk/",
+    "partOfSpeech": "noun",
+    "meaning": "Sữa",
+    "example": "Drinking milk makes your bones strong.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Milk\" (Food & Drink) là gì?",
+      "sentence": "Drinking milk makes your bones strong.",
+      "options": [
+        "Sữa",
+        "Ngon miệng",
+        "Bản đồ",
+        "Cửa sổ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Milk\" (/mɪlk/) có nghĩa là \"Sữa\"."
+    }
+  },
+  {
+    "id": "s1_122",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Egg",
+    "ipa": "/eɡ/",
+    "partOfSpeech": "noun",
+    "meaning": "Quả trứng",
+    "example": "The hen laid a fresh brown egg.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Egg\" (Food & Drink) là gì?",
+      "sentence": "The hen laid a fresh brown egg.",
+      "options": [
+        "Quả trứng",
+        "Vé (xe, tàu, máy bay)",
+        "Phòng ngủ",
+        "Sàn nhà / Tầng nhà"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Egg\" (/eɡ/) có nghĩa là \"Quả trứng\"."
+    }
+  },
+  {
+    "id": "s1_123",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Cheese",
+    "ipa": "/tʃiːz/",
+    "partOfSpeech": "noun",
+    "meaning": "Phô mai",
+    "example": "This sandwich has fresh cheese inside.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Cheese\" (Food & Drink) là gì?",
+      "sentence": "This sandwich has fresh cheese inside.",
+      "options": [
+        "Phô mai",
+        "Chuyến đi / Hành trình",
+        "Cái bàn",
+        "Vẽ tranh"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cheese\" (/tʃiːz/) có nghĩa là \"Phô mai\"."
+    }
+  },
+  {
+    "id": "s1_124",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Vegetable",
+    "ipa": "/ˈvedʒ.tə.bəl/",
+    "partOfSpeech": "noun",
+    "meaning": "Rau củ",
+    "example": "Eating green vegetables is good for health.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Vegetable\" (Food & Drink) là gì?",
+      "sentence": "Eating green vegetables is good for health.",
+      "options": [
+        "Rau củ",
+        "Mái nhà",
+        "Bơi lội",
+        "Đạp xe"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Vegetable\" (/ˈvedʒ.tə.bəl/) có nghĩa là \"Rau củ\"."
+    }
+  },
+  {
+    "id": "s1_125",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Fruit",
+    "ipa": "/fruːt/",
+    "partOfSpeech": "noun",
+    "meaning": "Trái cây / Hoa quả",
+    "example": "Apples and oranges are sweet fruit.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Fruit\" (Food & Drink) là gì?",
+      "sentence": "Apples and oranges are sweet fruit.",
+      "options": [
+        "Trái cây / Hoa quả",
+        "Căn hộ chung cư",
+        "Nhiếp ảnh / Chụp ảnh",
+        "Nhiều mây"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Fruit\" (/fruːt/) có nghĩa là \"Trái cây / Hoa quả\"."
+    }
+  },
+  {
+    "id": "s1_126",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Rice",
+    "ipa": "/raɪs/",
+    "partOfSpeech": "noun",
+    "meaning": "Cơm / Gạo",
+    "example": "Vietnamese people eat rice almost every day.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Rice\" (Food & Drink) là gì?",
+      "sentence": "Vietnamese people eat rice almost every day.",
+      "options": [
+        "Cơm / Gạo",
+        "Âm nhạc",
+        "Có mưa, trời mưa",
+        "Lạnh lẽo"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Rice\" (/raɪs/) có nghĩa là \"Cơm / Gạo\"."
+    }
+  },
+  {
+    "id": "s1_127",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Sugar",
+    "ipa": "/ˈʃʊɡ.ər/",
+    "partOfSpeech": "noun",
+    "meaning": "Đường (gia vị)",
+    "example": "Too much sugar is bad for your teeth.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Sugar\" (Food & Drink) là gì?",
+      "sentence": "Too much sugar is bad for your teeth.",
+      "options": [
+        "Đường (gia vị)",
+        "Chơi cờ vua",
+        "Cơn bão",
+        "Đắt đỏ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Sugar\" (/ˈʃʊɡ.ər/) có nghĩa là \"Đường (gia vị)\"."
+    }
+  },
+  {
+    "id": "s1_128",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Coffee",
+    "ipa": "/ˈkɒf.i/",
+    "partOfSpeech": "noun",
+    "meaning": "Cà phê",
+    "example": "He drinks a hot cup of coffee.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Coffee\" (Food & Drink) là gì?",
+      "sentence": "He drinks a hot cup of coffee.",
+      "options": [
+        "Cà phê",
+        "Tuyết / Tuyết rơi",
+        "Giá cả",
+        "Cái giỏ (đựng đồ)"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Coffee\" (/ˈkɒf.i/) có nghĩa là \"Cà phê\"."
+    }
+  },
+  {
+    "id": "s1_129",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Juice",
+    "ipa": "/dʒuːs/",
+    "partOfSpeech": "noun",
+    "meaning": "Nước ép trái cây",
+    "example": "Orange juice is rich in vitamin C.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Food & Drink\":",
+      "sentence": "Orange _____ is rich in vitamin C.",
+      "options": [
+        "Juice",
+        "Milk",
+        "Egg",
+        "Cheese"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Juice\" (/dʒuːs/) nghĩa là: Nước ép trái cây."
+    }
+  },
+  {
+    "id": "s1_130",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Food & Drink",
+    "word": "Delicious",
+    "ipa": "/dɪˈlɪʃ.əs/",
+    "partOfSpeech": "adjective",
+    "meaning": "Ngon miệng",
+    "example": "Grandma’s homemade bread is delicious.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Food & Drink\":",
+      "sentence": "Grandma’s homemade bread is _____.",
+      "options": [
+        "Delicious",
+        "Milk",
+        "Egg",
+        "Cheese"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Delicious\" (/dɪˈlɪʃ.əs/) nghĩa là: Ngon miệng."
+    }
+  },
+  {
+    "id": "s1_131",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Bicycle",
+    "ipa": "/ˈbaɪ.sɪ.kəl/",
+    "partOfSpeech": "noun",
+    "meaning": "Xe đạp",
+    "example": "Riding a bicycle helps protect the air.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Bicycle\" (Travel & Transport) là gì?",
+      "sentence": "Riding a bicycle helps protect the air.",
+      "options": [
+        "Xe đạp",
+        "Phòng khách",
+        "Căn hộ chung cư",
+        "Nhiếp ảnh / Chụp ảnh"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Bicycle\" (/ˈbaɪ.sɪ.kəl/) có nghĩa là \"Xe đạp\"."
+    }
+  },
+  {
+    "id": "s1_132",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Bus",
+    "ipa": "/bʌs/",
+    "partOfSpeech": "noun",
+    "meaning": "Xe buýt",
+    "example": "Many students go to college by bus.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Bus\" (Travel & Transport) là gì?",
+      "sentence": "Many students go to college by bus.",
+      "options": [
+        "Xe buýt",
+        "Chìa khóa",
+        "Âm nhạc",
+        "Có mưa, trời mưa"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Bus\" (/bʌs/) có nghĩa là \"Xe buýt\"."
+    }
+  },
+  {
+    "id": "s1_133",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Train",
+    "ipa": "/treɪn/",
+    "partOfSpeech": "noun",
+    "meaning": "Tàu hỏa",
+    "example": "The morning train arrives on time.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Train\" (Travel & Transport) là gì?",
+      "sentence": "The morning train arrives on time.",
+      "options": [
+        "Tàu hỏa",
+        "Làm vườn",
+        "Chơi cờ vua",
+        "Cơn bão"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Train\" (/treɪn/) có nghĩa là \"Tàu hỏa\"."
+    }
+  },
+  {
+    "id": "s1_134",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Airport",
+    "ipa": "/ˈeə.pɔːt/",
+    "partOfSpeech": "noun",
+    "meaning": "Sân bay",
+    "example": "We arrived at the airport two hours early.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Airport\" (Travel & Transport) là gì?",
+      "sentence": "We arrived at the airport two hours early.",
+      "options": [
+        "Sân bay",
+        "Câu cá",
+        "Tuyết / Tuyết rơi",
+        "Giá cả"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Airport\" (/ˈeə.pɔːt/) có nghĩa là \"Sân bay\"."
+    }
+  },
+  {
+    "id": "s1_135",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Ticket",
+    "ipa": "/ˈtɪk.ɪt/",
+    "partOfSpeech": "noun",
+    "meaning": "Vé (xe, tàu, máy bay)",
+    "example": "Don’t forget to buy a train ticket.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Ticket\" (Travel & Transport) là gì?",
+      "sentence": "Don’t forget to buy a train ticket.",
+      "options": [
+        "Vé (xe, tàu, máy bay)",
+        "Có gió to",
+        "Nhiệt độ",
+        "Giảm giá / Chiết khấu"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Ticket\" (/ˈtɪk.ɪt/) có nghĩa là \"Vé (xe, tàu, máy bay)\"."
+    }
+  },
+  {
+    "id": "s1_136",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Passport",
+    "ipa": "/ˈpɑːs.pɔːt/",
+    "partOfSpeech": "noun",
+    "meaning": "Hộ chiếu",
+    "example": "You need a passport to travel abroad.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Passport\" (Travel & Transport) là gì?",
+      "sentence": "You need a passport to travel abroad.",
+      "options": [
+        "Hộ chiếu",
+        "Ấm áp",
+        "Khách hàng",
+        "Bệnh viện"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Passport\" (/ˈpɑːs.pɔːt/) có nghĩa là \"Hộ chiếu\"."
+    }
+  },
+  {
+    "id": "s1_137",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Map",
+    "ipa": "/mæp/",
+    "partOfSpeech": "noun",
+    "meaning": "Bản đồ",
+    "example": "Check the map so we don’t get lost.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Map\" (Travel & Transport) là gì?",
+      "sentence": "Check the map so we don’t get lost.",
+      "options": [
+        "Bản đồ",
+        "Rẻ (giá thấp)",
+        "Trả tiền / Thanh toán",
+        "Khỏe mạnh, mạnh mẽ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Map\" (/mæp/) có nghĩa là \"Bản đồ\"."
+    }
+  },
+  {
+    "id": "s1_138",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Luggage",
+    "ipa": "/ˈlʌɡ.ɪdʒ/",
+    "partOfSpeech": "noun",
+    "meaning": "Hành lý",
+    "example": "Please keep your luggage beside you.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Luggage\" (Travel & Transport) là gì?",
+      "sentence": "Please keep your luggage beside you.",
+      "options": [
+        "Hành lý",
+        "Hóa đơn / Biên lai",
+        "Đau đầu",
+        "Kỹ sư"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Luggage\" (/ˈlʌɡ.ɪdʒ/) có nghĩa là \"Hành lý\"."
+    }
+  },
+  {
+    "id": "s1_139",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Bridge",
+    "ipa": "/brɪdʒ/",
+    "partOfSpeech": "noun",
+    "meaning": "Cây cầu",
+    "example": "The stone bridge crosses a wide river.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Travel & Transport\":",
+      "sentence": "The stone _____ crosses a wide river.",
+      "options": [
+        "Bridge",
+        "Bicycle",
+        "Bus",
+        "Train"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Bridge\" (/brɪdʒ/) nghĩa là: Cây cầu."
+    }
+  },
+  {
+    "id": "s1_140",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Travel & Transport",
+    "word": "Journey",
+    "ipa": "/ˈdʒɜː.ni/",
+    "partOfSpeech": "noun",
+    "meaning": "Chuyến đi / Hành trình",
+    "example": "Have a safe and pleasant journey!",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Travel & Transport\":",
+      "sentence": "Have a safe and pleasant _____!",
+      "options": [
+        "Journey",
+        "Bicycle",
+        "Bus",
+        "Train"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Journey\" (/ˈdʒɜː.ni/) nghĩa là: Chuyến đi / Hành trình."
+    }
+  },
+  {
+    "id": "s1_141",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Kitchen",
+    "ipa": "/ˈkɪtʃ.ən/",
+    "partOfSpeech": "noun",
+    "meaning": "Nhà bếp",
+    "example": "We bake bread in the kitchen.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Kitchen\" (Housing) là gì?",
+      "sentence": "We bake bread in the kitchen.",
+      "options": [
+        "Nhà bếp",
+        "Nấu ăn",
+        "Có gió to",
+        "Nhiệt độ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Kitchen\" (/ˈkɪtʃ.ən/) có nghĩa là \"Nhà bếp\"."
+    }
+  },
+  {
+    "id": "s1_142",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Bedroom",
+    "ipa": "/ˈbed.ruːm/",
+    "partOfSpeech": "noun",
+    "meaning": "Phòng ngủ",
+    "example": "My bedroom has a window facing the garden.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Bedroom\" (Housing) là gì?",
+      "sentence": "My bedroom has a window facing the garden.",
+      "options": [
+        "Phòng ngủ",
+        "Có nắng, trời nắng",
+        "Ấm áp",
+        "Khách hàng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Bedroom\" (/ˈbed.ruːm/) có nghĩa là \"Phòng ngủ\"."
+    }
+  },
+  {
+    "id": "s1_143",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Living room",
+    "ipa": "/ˈlɪv.ɪŋ ruːm/",
+    "partOfSpeech": "noun",
+    "meaning": "Phòng khách",
+    "example": "Guests sit together in the living room.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Living room\" (Housing) là gì?",
+      "sentence": "Guests sit together in the living room.",
+      "options": [
+        "Phòng khách",
+        "Cầu vồng",
+        "Rẻ (giá thấp)",
+        "Trả tiền / Thanh toán"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Living room\" (/ˈlɪv.ɪŋ ruːm/) có nghĩa là \"Phòng khách\"."
+    }
+  },
+  {
+    "id": "s1_144",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Window",
+    "ipa": "/ˈwɪn.dəʊ/",
+    "partOfSpeech": "noun",
+    "meaning": "Cửa sổ",
+    "example": "Open the window to let fresh air in.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Window\" (Housing) là gì?",
+      "sentence": "Open the window to let fresh air in.",
+      "options": [
+        "Cửa sổ",
+        "Chợ / Thị trường",
+        "Hóa đơn / Biên lai",
+        "Đau đầu"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Window\" (/ˈwɪn.dəʊ/) có nghĩa là \"Cửa sổ\"."
+    }
+  },
+  {
+    "id": "s1_145",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Roof",
+    "ipa": "/ruːf/",
+    "partOfSpeech": "noun",
+    "meaning": "Mái nhà",
+    "example": "The farmhouse has a bright red roof.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Roof\" (Housing) là gì?",
+      "sentence": "The farmhouse has a bright red roof.",
+      "options": [
+        "Mái nhà",
+        "Tiền bạc",
+        "Thuốc (chữa bệnh)",
+        "Mỉm cười / Nụ cười"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Roof\" (/ruːf/) có nghĩa là \"Mái nhà\"."
+    }
+  },
+  {
+    "id": "s1_146",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Furniture",
+    "ipa": "/ˈfɜː.nɪ.tʃər/",
+    "partOfSpeech": "noun",
+    "meaning": "Đồ nội thất",
+    "example": "Wooden furniture makes the room cozy.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Furniture\" (Housing) là gì?",
+      "sentence": "Wooden furniture makes the room cozy.",
+      "options": [
+        "Đồ nội thất",
+        "Bác sĩ",
+        "Mệt mỏi",
+        "Đầu bếp"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Furniture\" (/ˈfɜː.nɪ.tʃər/) có nghĩa là \"Đồ nội thất\"."
+    }
+  },
+  {
+    "id": "s1_147",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Table",
+    "ipa": "/ˈteɪ.bəl/",
+    "partOfSpeech": "noun",
+    "meaning": "Cái bàn",
+    "example": "Put the basket of fruit on the table.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Table\" (Housing) là gì?",
+      "sentence": "Put the basket of fruit on the table.",
+      "options": [
+        "Cái bàn",
+        "Cơn sốt",
+        "Y tá / Điều dưỡng",
+        "Nhà khoa học"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Table\" (/ˈteɪ.bəl/) có nghĩa là \"Cái bàn\"."
+    }
+  },
+  {
+    "id": "s1_148",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Key",
+    "ipa": "/kiː/",
+    "partOfSpeech": "noun",
+    "meaning": "Chìa khóa",
+    "example": "Where did I put my house key?",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Key\" (Housing) là gì?",
+      "sentence": "Where did I put my house key?",
+      "options": [
+        "Chìa khóa",
+        "Giáo viên",
+        "Họa sĩ / Nghệ sĩ",
+        "Ông bà"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Key\" (/kiː/) có nghĩa là \"Chìa khóa\"."
+    }
+  },
+  {
+    "id": "s1_149",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Floor",
+    "ipa": "/flɔːr/",
+    "partOfSpeech": "noun",
+    "meaning": "Sàn nhà / Tầng nhà",
+    "example": "Sweep the wooden floor every morning.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Housing\":",
+      "sentence": "Sweep the wooden _____ every morning.",
+      "options": [
+        "Floor",
+        "Kitchen",
+        "Bedroom",
+        "Living room"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Floor\" (/flɔːr/) nghĩa là: Sàn nhà / Tầng nhà."
+    }
+  },
+  {
+    "id": "s1_150",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Housing",
+    "word": "Apartment",
+    "ipa": "/əˈpɑːt.mənt/",
+    "partOfSpeech": "noun",
+    "meaning": "Căn hộ chung cư",
+    "example": "She rents a small apartment in the city.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Housing\":",
+      "sentence": "She rents a small _____ in the city.",
+      "options": [
+        "Apartment",
+        "Kitchen",
+        "Bedroom",
+        "Living room"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Apartment\" (/əˈpɑːt.mənt/) nghĩa là: Căn hộ chung cư."
+    }
+  },
+  {
+    "id": "s1_151",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Reading",
+    "ipa": "/ˈriː.dɪŋ/",
+    "partOfSpeech": "noun",
+    "meaning": "Việc đọc sách",
+    "example": "Reading books widens our knowledge.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Reading\" (Hobbies) là gì?",
+      "sentence": "Reading books widens our knowledge.",
+      "options": [
+        "Việc đọc sách",
+        "Lạnh lẽo",
+        "Tiền bạc",
+        "Thuốc (chữa bệnh)"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Reading\" (/ˈriː.dɪŋ/) có nghĩa là \"Việc đọc sách\"."
+    }
+  },
+  {
+    "id": "s1_152",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Swimming",
+    "ipa": "/ˈswɪm.ɪŋ/",
+    "partOfSpeech": "noun",
+    "meaning": "Bơi lội",
+    "example": "Swimming in summer is very refreshing.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Swimming\" (Hobbies) là gì?",
+      "sentence": "Swimming in summer is very refreshing.",
+      "options": [
+        "Bơi lội",
+        "Đắt đỏ",
+        "Bác sĩ",
+        "Mệt mỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Swimming\" (/ˈswɪm.ɪŋ/) có nghĩa là \"Bơi lội\"."
+    }
+  },
+  {
+    "id": "s1_153",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Gardening",
+    "ipa": "/ˈɡɑː.dən.ɪŋ/",
+    "partOfSpeech": "noun",
+    "meaning": "Làm vườn",
+    "example": "Gardening helps me relax after work.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Gardening\" (Hobbies) là gì?",
+      "sentence": "Gardening helps me relax after work.",
+      "options": [
+        "Làm vườn",
+        "Cái giỏ (đựng đồ)",
+        "Cơn sốt",
+        "Y tá / Điều dưỡng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Gardening\" (/ˈɡɑː.dən.ɪŋ/) có nghĩa là \"Làm vườn\"."
+    }
+  },
+  {
+    "id": "s1_154",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Painting",
+    "ipa": "/ˈpeɪn.tɪŋ/",
+    "partOfSpeech": "noun",
+    "meaning": "Vẽ tranh",
+    "example": "She enjoys painting green hills and sheep.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Painting\" (Hobbies) là gì?",
+      "sentence": "She enjoys painting green hills and sheep.",
+      "options": [
+        "Vẽ tranh",
+        "Tập thể dục",
+        "Giáo viên",
+        "Họa sĩ / Nghệ sĩ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Painting\" (/ˈpeɪn.tɪŋ/) có nghĩa là \"Vẽ tranh\"."
+    }
+  },
+  {
+    "id": "s1_155",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Music",
+    "ipa": "/ˈmjuː.zɪk/",
+    "partOfSpeech": "noun",
+    "meaning": "Âm nhạc",
+    "example": "Listening to soft music calms the mind.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Music\" (Hobbies) là gì?",
+      "sentence": "Listening to soft music calms the mind.",
+      "options": [
+        "Âm nhạc",
+        "Sạch sẽ / Dọn dẹp",
+        "Tài xế / Người lái xe",
+        "Anh trai / Em trai"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Music\" (/ˈmjuː.zɪk/) có nghĩa là \"Âm nhạc\"."
+    }
+  },
+  {
+    "id": "s1_156",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Cooking",
+    "ipa": "/ˈkʊk.ɪŋ/",
+    "partOfSpeech": "noun",
+    "meaning": "Nấu ăn",
+    "example": "Cooking fresh meals at home saves money.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Cooking\" (Hobbies) là gì?",
+      "sentence": "Cooking fresh meals at home saves money.",
+      "options": [
+        "Nấu ăn",
+        "Thợ làm bánh",
+        "Mẹ",
+        "Bạn bè"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cooking\" (/ˈkʊk.ɪŋ/) có nghĩa là \"Nấu ăn\"."
+    }
+  },
+  {
+    "id": "s1_157",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Photography",
+    "ipa": "/fəˈtɒɡ.rə.fi/",
+    "partOfSpeech": "noun",
+    "meaning": "Nhiếp ảnh / Chụp ảnh",
+    "example": "He loves nature photography.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Photography\" (Hobbies) là gì?",
+      "sentence": "He loves nature photography.",
+      "options": [
+        "Nhiếp ảnh / Chụp ảnh",
+        "Cảnh sát",
+        "Anh chị em họ",
+        "Bữa ăn sáng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Photography\" (/fəˈtɒɡ.rə.fi/) có nghĩa là \"Nhiếp ảnh / Chụp ảnh\"."
+    }
+  },
+  {
+    "id": "s1_158",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Fishing",
+    "ipa": "/ˈfɪʃ.ɪŋ/",
+    "partOfSpeech": "noun",
+    "meaning": "Câu cá",
+    "example": "We go fishing at the blue pond on Sundays.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Fishing\" (Hobbies) là gì?",
+      "sentence": "We go fishing at the blue pond on Sundays.",
+      "options": [
+        "Câu cá",
+        "Chị gái / Em gái",
+        "Thức dậy",
+        "Bữa ăn tối"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Fishing\" (/ˈfɪʃ.ɪŋ/) có nghĩa là \"Câu cá\"."
+    }
+  },
+  {
+    "id": "s1_159",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Cycling",
+    "ipa": "/ˈsaɪ.klɪŋ/",
+    "partOfSpeech": "noun",
+    "meaning": "Đạp xe",
+    "example": "Cycling along country roads is great exercise.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Hobbies\":",
+      "sentence": "_____ along country roads is great exercise.",
+      "options": [
+        "Cycling",
+        "Reading",
+        "Swimming",
+        "Gardening"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cycling\" (/ˈsaɪ.klɪŋ/) nghĩa là: Đạp xe."
+    }
+  },
+  {
+    "id": "s1_160",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Hobbies",
+    "word": "Playing chess",
+    "ipa": "/ˈpleɪ.ɪŋ tʃes/",
+    "partOfSpeech": "phrase",
+    "meaning": "Chơi cờ vua",
+    "example": "Playing chess trains logical thinking.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Hobbies\":",
+      "sentence": "_____ trains logical thinking.",
+      "options": [
+        "Playing chess",
+        "Reading",
+        "Swimming",
+        "Gardening"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Playing chess\" (/ˈpleɪ.ɪŋ tʃes/) nghĩa là: Chơi cờ vua."
+    }
+  },
+  {
+    "id": "s1_161",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Sunny",
+    "ipa": "/ˈsʌn.i/",
+    "partOfSpeech": "adjective",
+    "meaning": "Có nắng, trời nắng",
+    "example": "Today is bright and sunny.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Sunny\" (Weather) là gì?",
+      "sentence": "Today is bright and sunny.",
+      "options": [
+        "Có nắng, trời nắng",
+        "Bệnh viện",
+        "Sạch sẽ / Dọn dẹp",
+        "Tài xế / Người lái xe"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Sunny\" (/ˈsʌn.i/) có nghĩa là \"Có nắng, trời nắng\"."
+    }
+  },
+  {
+    "id": "s1_162",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Rainy",
+    "ipa": "/ˈreɪ.ni/",
+    "partOfSpeech": "adjective",
+    "meaning": "Có mưa, trời mưa",
+    "example": "Take an umbrella on rainy days.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Rainy\" (Weather) là gì?",
+      "sentence": "Take an umbrella on rainy days.",
+      "options": [
+        "Có mưa, trời mưa",
+        "Khỏe mạnh, mạnh mẽ",
+        "Thợ làm bánh",
+        "Mẹ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Rainy\" (/ˈreɪ.ni/) có nghĩa là \"Có mưa, trời mưa\"."
+    }
+  },
+  {
+    "id": "s1_163",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Windy",
+    "ipa": "/ˈwɪn.di/",
+    "partOfSpeech": "adjective",
+    "meaning": "Có gió to",
+    "example": "The windmill spins fast on windy days.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Windy\" (Weather) là gì?",
+      "sentence": "The windmill spins fast on windy days.",
+      "options": [
+        "Có gió to",
+        "Kỹ sư",
+        "Cảnh sát",
+        "Anh chị em họ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Windy\" (/ˈwɪn.di/) có nghĩa là \"Có gió to\"."
+    }
+  },
+  {
+    "id": "s1_164",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Cloudy",
+    "ipa": "/ˈklaʊ.di/",
+    "partOfSpeech": "adjective",
+    "meaning": "Nhiều mây",
+    "example": "The sky looks grey and cloudy.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Cloudy\" (Weather) là gì?",
+      "sentence": "The sky looks grey and cloudy.",
+      "options": [
+        "Nhiều mây",
+        "Phi công",
+        "Chị gái / Em gái",
+        "Thức dậy"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cloudy\" (/ˈklaʊ.di/) có nghĩa là \"Nhiều mây\"."
+    }
+  },
+  {
+    "id": "s1_165",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Snow",
+    "ipa": "/snəʊ/",
+    "partOfSpeech": "noun/verb",
+    "meaning": "Tuyết / Tuyết rơi",
+    "example": "Soft white snow covers the mountains.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Snow\" (Weather) là gì?",
+      "sentence": "Soft white snow covers the mountains.",
+      "options": [
+        "Tuyết / Tuyết rơi",
+        "Bố / Cha",
+        "Cha hoặc mẹ (phụ huynh)",
+        "Bài tập về nhà"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Snow\" (/snəʊ/) có nghĩa là \"Tuyết / Tuyết rơi\"."
+    }
+  },
+  {
+    "id": "s1_166",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Rainbow",
+    "ipa": "/ˈreɪn.bəʊ/",
+    "partOfSpeech": "noun",
+    "meaning": "Cầu vồng",
+    "example": "A colourful rainbow appeared after the rain.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Rainbow\" (Weather) là gì?",
+      "sentence": "A colourful rainbow appeared after the rain.",
+      "options": [
+        "Cầu vồng",
+        "Hàng xóm",
+        "Đi học",
+        "Sữa"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Rainbow\" (/ˈreɪn.bəʊ/) có nghĩa là \"Cầu vồng\"."
+    }
+  },
+  {
+    "id": "s1_167",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Storm",
+    "ipa": "/stɔːm/",
+    "partOfSpeech": "noun",
+    "meaning": "Cơn bão",
+    "example": "Stay indoors during a heavy storm.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Storm\" (Weather) là gì?",
+      "sentence": "Stay indoors during a heavy storm.",
+      "options": [
+        "Cơn bão",
+        "Đánh răng",
+        "Ngủ",
+        "Cơm / Gạo"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Storm\" (/stɔːm/) có nghĩa là \"Cơn bão\"."
+    }
+  },
+  {
+    "id": "s1_168",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Warm",
+    "ipa": "/wɔːm/",
+    "partOfSpeech": "adjective",
+    "meaning": "Ấm áp",
+    "example": "Spring brings warm breezes to the farm.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Warm\" (Weather) là gì?",
+      "sentence": "Spring brings warm breezes to the farm.",
+      "options": [
+        "Ấm áp",
+        "Tắm vòi sen",
+        "Rau củ",
+        "Xe đạp"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Warm\" (/wɔːm/) có nghĩa là \"Ấm áp\"."
+    }
+  },
+  {
+    "id": "s1_169",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Cold",
+    "ipa": "/kəʊld/",
+    "partOfSpeech": "adjective",
+    "meaning": "Lạnh lẽo",
+    "example": "Wear a wool sweater on cold nights.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Weather\":",
+      "sentence": "Wear a wool sweater on _____ nights.",
+      "options": [
+        "Cold",
+        "Sunny",
+        "Rainy",
+        "Windy"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cold\" (/kəʊld/) nghĩa là: Lạnh lẽo."
+    }
+  },
+  {
+    "id": "s1_170",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Weather",
+    "word": "Temperature",
+    "ipa": "/ˈtem.prə.tʃər/",
+    "partOfSpeech": "noun",
+    "meaning": "Nhiệt độ",
+    "example": "The temperature rises to 30 degrees at noon.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Weather\":",
+      "sentence": "The _____ rises to 30 degrees at noon.",
+      "options": [
+        "Temperature",
+        "Sunny",
+        "Rainy",
+        "Windy"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Temperature\" (/ˈtem.prə.tʃər/) nghĩa là: Nhiệt độ."
+    }
+  },
+  {
+    "id": "s1_171",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Market",
+    "ipa": "/ˈmɑː.kɪt/",
+    "partOfSpeech": "noun",
+    "meaning": "Chợ / Thị trường",
+    "example": "Farmers sell fresh vegetables at the market.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Market\" (Shopping) là gì?",
+      "sentence": "Farmers sell fresh vegetables at the market.",
+      "options": [
+        "Chợ / Thị trường",
+        "Đầu bếp",
+        "Bố / Cha",
+        "Cha hoặc mẹ (phụ huynh)"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Market\" (/ˈmɑː.kɪt/) có nghĩa là \"Chợ / Thị trường\"."
+    }
+  },
+  {
+    "id": "s1_172",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Price",
+    "ipa": "/praɪs/",
+    "partOfSpeech": "noun",
+    "meaning": "Giá cả",
+    "example": "The price of organic eggs is fair.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Price\" (Shopping) là gì?",
+      "sentence": "The price of organic eggs is fair.",
+      "options": [
+        "Giá cả",
+        "Nhà khoa học",
+        "Hàng xóm",
+        "Đi học"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Price\" (/praɪs/) có nghĩa là \"Giá cả\"."
+    }
+  },
+  {
+    "id": "s1_173",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Cheap",
+    "ipa": "/tʃiːp/",
+    "partOfSpeech": "adjective",
+    "meaning": "Rẻ (giá thấp)",
+    "example": "Local seasonal fruit is usually cheap.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Cheap\" (Shopping) là gì?",
+      "sentence": "Local seasonal fruit is usually cheap.",
+      "options": [
+        "Rẻ (giá thấp)",
+        "Ông bà",
+        "Đánh răng",
+        "Ngủ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cheap\" (/tʃiːp/) có nghĩa là \"Rẻ (giá thấp)\"."
+    }
+  },
+  {
+    "id": "s1_174",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Expensive",
+    "ipa": "/ɪkˈspen.sɪv/",
+    "partOfSpeech": "adjective",
+    "meaning": "Đắt đỏ",
+    "example": "Imported cheese can be quite expensive.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Expensive\" (Shopping) là gì?",
+      "sentence": "Imported cheese can be quite expensive.",
+      "options": [
+        "Đắt đỏ",
+        "Đám cưới / Lễ cưới",
+        "Tắm vòi sen",
+        "Rau củ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Expensive\" (/ɪkˈspen.sɪv/) có nghĩa là \"Đắt đỏ\"."
+    }
+  },
+  {
+    "id": "s1_175",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Customer",
+    "ipa": "/ˈkʌs.tə.mər/",
+    "partOfSpeech": "noun",
+    "meaning": "Khách hàng",
+    "example": "Every customer loves polite service.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Customer\" (Shopping) là gì?",
+      "sentence": "Every customer loves polite service.",
+      "options": [
+        "Khách hàng",
+        "Bữa ăn trưa",
+        "Quả trứng",
+        "Nước ép trái cây"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Customer\" (/ˈkʌs.tə.mər/) có nghĩa là \"Khách hàng\"."
+    }
+  },
+  {
+    "id": "s1_176",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Money",
+    "ipa": "/ˈmʌn.i/",
+    "partOfSpeech": "noun",
+    "meaning": "Tiền bạc",
+    "example": "Save money by cooking your own lunch.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Money\" (Shopping) là gì?",
+      "sentence": "Save money by cooking your own lunch.",
+      "options": [
+        "Tiền bạc",
+        "Sớm",
+        "Đường (gia vị)",
+        "Sân bay"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Money\" (/ˈmʌn.i/) có nghĩa là \"Tiền bạc\"."
+    }
+  },
+  {
+    "id": "s1_177",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Discount",
+    "ipa": "/ˈdɪs.kaʊnt/",
+    "partOfSpeech": "noun",
+    "meaning": "Giảm giá / Chiết khấu",
+    "example": "Students get a 10% discount at the bookshop.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Discount\" (Shopping) là gì?",
+      "sentence": "Students get a 10% discount at the bookshop.",
+      "options": [
+        "Giảm giá / Chiết khấu",
+        "Trái cây / Hoa quả",
+        "Xe buýt",
+        "Cây cầu"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Discount\" (/ˈdɪs.kaʊnt/) có nghĩa là \"Giảm giá / Chiết khấu\"."
+    }
+  },
+  {
+    "id": "s1_178",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Receipt",
+    "ipa": "/rɪˈsiːt/",
+    "partOfSpeech": "noun",
+    "meaning": "Hóa đơn / Biên lai",
+    "example": "Always keep the receipt after paying.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Receipt\" (Shopping) là gì?",
+      "sentence": "Always keep the receipt after paying.",
+      "options": [
+        "Hóa đơn / Biên lai",
+        "Ngon miệng",
+        "Bản đồ",
+        "Cửa sổ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Receipt\" (/rɪˈsiːt/) có nghĩa là \"Hóa đơn / Biên lai\"."
+    }
+  },
+  {
+    "id": "s1_179",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Basket",
+    "ipa": "/ˈbɑːs.kɪt/",
+    "partOfSpeech": "noun",
+    "meaning": "Cái giỏ (đựng đồ)",
+    "example": "Put the ripe tomatoes into your basket.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Shopping\":",
+      "sentence": "Put the ripe tomatoes into your _____.",
+      "options": [
+        "Basket",
+        "Market",
+        "Price",
+        "Cheap"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Basket\" (/ˈbɑːs.kɪt/) nghĩa là: Cái giỏ (đựng đồ)."
+    }
+  },
+  {
+    "id": "s1_180",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Shopping",
+    "word": "Pay",
+    "ipa": "/peɪ/",
+    "partOfSpeech": "verb",
+    "meaning": "Trả tiền / Thanh toán",
+    "example": "You can pay by cash or card.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Shopping\":",
+      "sentence": "You can _____ by cash or card.",
+      "options": [
+        "Pay",
+        "Market",
+        "Price",
+        "Cheap"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Pay\" (/peɪ/) nghĩa là: Trả tiền / Thanh toán."
+    }
+  },
+  {
+    "id": "s1_181",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Doctor",
+    "ipa": "/ˈdɒk.tər/",
+    "partOfSpeech": "noun",
+    "meaning": "Bác sĩ",
+    "example": "See a doctor if you have a fever.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Doctor\" (Health) là gì?",
+      "sentence": "See a doctor if you have a fever.",
+      "options": [
+        "Bác sĩ",
+        "Bạn bè",
+        "Bữa ăn trưa",
+        "Quả trứng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Doctor\" (/ˈdɒk.tər/) có nghĩa là \"Bác sĩ\"."
+    }
+  },
+  {
+    "id": "s1_182",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Hospital",
+    "ipa": "/ˈhɒs.pɪ.təl/",
+    "partOfSpeech": "noun",
+    "meaning": "Bệnh viện",
+    "example": "A new hospital opened near our town.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Hospital\" (Health) là gì?",
+      "sentence": "A new hospital opened near our town.",
+      "options": [
+        "Bệnh viện",
+        "Bữa ăn sáng",
+        "Sớm",
+        "Đường (gia vị)"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Hospital\" (/ˈhɒs.pɪ.təl/) có nghĩa là \"Bệnh viện\"."
+    }
+  },
+  {
+    "id": "s1_183",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Medicine",
+    "ipa": "/ˈmed.ɪ.sən/",
+    "partOfSpeech": "noun",
+    "meaning": "Thuốc (chữa bệnh)",
+    "example": "Take this medicine twice a day after meals.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Medicine\" (Health) là gì?",
+      "sentence": "Take this medicine twice a day after meals.",
+      "options": [
+        "Thuốc (chữa bệnh)",
+        "Bữa ăn tối",
+        "Trái cây / Hoa quả",
+        "Xe buýt"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Medicine\" (/ˈmed.ɪ.sən/) có nghĩa là \"Thuốc (chữa bệnh)\"."
+    }
+  },
+  {
+    "id": "s1_184",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Exercise",
+    "ipa": "/ˈek.sə.saɪz/",
+    "partOfSpeech": "noun/verb",
+    "meaning": "Tập thể dục",
+    "example": "Daily exercise keeps your heart strong.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Exercise\" (Health) là gì?",
+      "sentence": "Daily exercise keeps your heart strong.",
+      "options": [
+        "Tập thể dục",
+        "Phô mai",
+        "Ngon miệng",
+        "Bản đồ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Exercise\" (/ˈek.sə.saɪz/) có nghĩa là \"Tập thể dục\"."
+    }
+  },
+  {
+    "id": "s1_185",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Headache",
+    "ipa": "/ˈhed.eɪk/",
+    "partOfSpeech": "noun",
+    "meaning": "Đau đầu",
+    "example": "Drink water and rest if you have a headache.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Headache\" (Health) là gì?",
+      "sentence": "Drink water and rest if you have a headache.",
+      "options": [
+        "Đau đầu",
+        "Cà phê",
+        "Vé (xe, tàu, máy bay)",
+        "Phòng ngủ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Headache\" (/ˈhed.eɪk/) có nghĩa là \"Đau đầu\"."
+    }
+  },
+  {
+    "id": "s1_186",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Fever",
+    "ipa": "/ˈfiː.vər/",
+    "partOfSpeech": "noun",
+    "meaning": "Cơn sốt",
+    "example": "She stayed in bed because of a high fever.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Fever\" (Health) là gì?",
+      "sentence": "She stayed in bed because of a high fever.",
+      "options": [
+        "Cơn sốt",
+        "Tàu hỏa",
+        "Chuyến đi / Hành trình",
+        "Cái bàn"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Fever\" (/ˈfiː.vər/) có nghĩa là \"Cơn sốt\"."
+    }
+  },
+  {
+    "id": "s1_187",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Strong",
+    "ipa": "/strɒŋ/",
+    "partOfSpeech": "adjective",
+    "meaning": "Khỏe mạnh, mạnh mẽ",
+    "example": "Regular walking makes your legs strong.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Strong\" (Health) là gì?",
+      "sentence": "Regular walking makes your legs strong.",
+      "options": [
+        "Khỏe mạnh, mạnh mẽ",
+        "Hành lý",
+        "Mái nhà",
+        "Bơi lội"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Strong\" (/strɒŋ/) có nghĩa là \"Khỏe mạnh, mạnh mẽ\"."
+    }
+  },
+  {
+    "id": "s1_188",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Tired",
+    "ipa": "/ˈtaɪəd/",
+    "partOfSpeech": "adjective",
+    "meaning": "Mệt mỏi",
+    "example": "Go to sleep early when you feel tired.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Tired\" (Health) là gì?",
+      "sentence": "Go to sleep early when you feel tired.",
+      "options": [
+        "Mệt mỏi",
+        "Phòng khách",
+        "Căn hộ chung cư",
+        "Nhiếp ảnh / Chụp ảnh"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Tired\" (/ˈtaɪəd/) có nghĩa là \"Mệt mỏi\"."
+    }
+  },
+  {
+    "id": "s1_189",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Clean",
+    "ipa": "/kliːn/",
+    "partOfSpeech": "adjective/verb",
+    "meaning": "Sạch sẽ / Dọn dẹp",
+    "example": "Wash fruit with clean water before eating.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Health\":",
+      "sentence": "Wash fruit with _____ water before eating.",
+      "options": [
+        "Clean",
+        "Doctor",
+        "Hospital",
+        "Medicine"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Clean\" (/kliːn/) nghĩa là: Sạch sẽ / Dọn dẹp."
+    }
+  },
+  {
+    "id": "s1_190",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Health",
+    "word": "Smile",
+    "ipa": "/smaɪl/",
+    "partOfSpeech": "verb/noun",
+    "meaning": "Mỉm cười / Nụ cười",
+    "example": "A warm smile reduces daily stress.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Health\":",
+      "sentence": "A warm _____ reduces daily stress.",
+      "options": [
+        "Smile",
+        "Doctor",
+        "Hospital",
+        "Medicine"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Smile\" (/smaɪl/) nghĩa là: Mỉm cười / Nụ cười."
+    }
+  },
+  {
+    "id": "s1_191",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Teacher",
+    "ipa": "/ˈtiː.tʃər/",
+    "partOfSpeech": "noun",
+    "meaning": "Giáo viên",
+    "example": "Our English teacher explains grammar clearly.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Teacher\" (Jobs) là gì?",
+      "sentence": "Our English teacher explains grammar clearly.",
+      "options": [
+        "Giáo viên",
+        "Sữa",
+        "Cà phê",
+        "Vé (xe, tàu, máy bay)"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Teacher\" (/ˈtiː.tʃər/) có nghĩa là \"Giáo viên\"."
+    }
+  },
+  {
+    "id": "s1_192",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Engineer",
+    "ipa": "/ˌen.dʒɪˈnɪər/",
+    "partOfSpeech": "noun",
+    "meaning": "Kỹ sư",
+    "example": "The engineer designed a smart water system.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Engineer\" (Jobs) là gì?",
+      "sentence": "The engineer designed a smart water system.",
+      "options": [
+        "Kỹ sư",
+        "Cơm / Gạo",
+        "Tàu hỏa",
+        "Chuyến đi / Hành trình"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Engineer\" (/ˌen.dʒɪˈnɪər/) có nghĩa là \"Kỹ sư\"."
+    }
+  },
+  {
+    "id": "s1_193",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Nurse",
+    "ipa": "/nɜːs/",
+    "partOfSpeech": "noun",
+    "meaning": "Y tá / Điều dưỡng",
+    "example": "The kind nurse cares for every patient.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Nurse\" (Jobs) là gì?",
+      "sentence": "The kind nurse cares for every patient.",
+      "options": [
+        "Y tá / Điều dưỡng",
+        "Xe đạp",
+        "Hành lý",
+        "Mái nhà"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Nurse\" (/nɜːs/) có nghĩa là \"Y tá / Điều dưỡng\"."
+    }
+  },
+  {
+    "id": "s1_194",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Baker",
+    "ipa": "/ˈbeɪ.kər/",
+    "partOfSpeech": "noun",
+    "meaning": "Thợ làm bánh",
+    "example": "The baker bakes fresh bread at 5 a.m.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Baker\" (Jobs) là gì?",
+      "sentence": "The baker bakes fresh bread at 5 a.m.",
+      "options": [
+        "Thợ làm bánh",
+        "Hộ chiếu",
+        "Phòng khách",
+        "Căn hộ chung cư"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Baker\" (/ˈbeɪ.kər/) có nghĩa là \"Thợ làm bánh\"."
+    }
+  },
+  {
+    "id": "s1_195",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Chef",
+    "ipa": "/ʃef/",
+    "partOfSpeech": "noun",
+    "meaning": "Đầu bếp",
+    "example": "A skilled chef uses fresh farm ingredients.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Chef\" (Jobs) là gì?",
+      "sentence": "A skilled chef uses fresh farm ingredients.",
+      "options": [
+        "Đầu bếp",
+        "Nhà bếp",
+        "Chìa khóa",
+        "Âm nhạc"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Chef\" (/ʃef/) có nghĩa là \"Đầu bếp\"."
+    }
+  },
+  {
+    "id": "s1_196",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Driver",
+    "ipa": "/ˈdraɪ.vər/",
+    "partOfSpeech": "noun",
+    "meaning": "Tài xế / Người lái xe",
+    "example": "The bus driver greets students warmly.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Driver\" (Jobs) là gì?",
+      "sentence": "The bus driver greets students warmly.",
+      "options": [
+        "Tài xế / Người lái xe",
+        "Đồ nội thất",
+        "Làm vườn",
+        "Chơi cờ vua"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Driver\" (/ˈdraɪ.vər/) có nghĩa là \"Tài xế / Người lái xe\"."
+    }
+  },
+  {
+    "id": "s1_197",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Pilot",
+    "ipa": "/ˈpaɪ.lət/",
+    "partOfSpeech": "noun",
+    "meaning": "Phi công",
+    "example": "The pilot flew safely across the ocean.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Pilot\" (Jobs) là gì?",
+      "sentence": "The pilot flew safely across the ocean.",
+      "options": [
+        "Phi công",
+        "Việc đọc sách",
+        "Câu cá",
+        "Tuyết / Tuyết rơi"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Pilot\" (/ˈpaɪ.lət/) có nghĩa là \"Phi công\"."
+    }
+  },
+  {
+    "id": "s1_198",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Artist",
+    "ipa": "/ˈɑː.tɪst/",
+    "partOfSpeech": "noun",
+    "meaning": "Họa sĩ / Nghệ sĩ",
+    "example": "The artist painted a sunny meadow.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ \"Artist\" (Jobs) là gì?",
+      "sentence": "The artist painted a sunny meadow.",
+      "options": [
+        "Họa sĩ / Nghệ sĩ",
+        "Nấu ăn",
+        "Có gió to",
+        "Nhiệt độ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Artist\" (/ˈɑː.tɪst/) có nghĩa là \"Họa sĩ / Nghệ sĩ\"."
+    }
+  },
+  {
+    "id": "s1_199",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Police officer",
+    "ipa": "/pəˈliːs ˌɒf.ɪ.sər/",
+    "partOfSpeech": "noun",
+    "meaning": "Cảnh sát",
+    "example": "A police officer helps keep the street safe.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Jobs\":",
+      "sentence": "A _____ helps keep the street safe.",
+      "options": [
+        "Police officer",
+        "Teacher",
+        "Engineer",
+        "Nurse"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Police officer\" (/pəˈliːs ˌɒf.ɪ.sər/) nghĩa là: Cảnh sát."
+    }
+  },
+  {
+    "id": "s1_200",
+    "stage": 1,
+    "tier": 1,
+    "band": "GĐ 1 · Band 3.0–4.5",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "module": "Module 1.3: Từ vựng nền tảng (A1–A2)",
+    "topic": "Jobs",
+    "word": "Scientist",
+    "ipa": "/ˈsaɪən.tɪst/",
+    "partOfSpeech": "noun",
+    "meaning": "Nhà khoa học",
+    "example": "Scientists study how plants grow faster.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe và chọn đúng từ tiếng Anh thuộc chủ đề \"Jobs\":",
+      "sentence": "Scientists study how plants grow faster.",
+      "options": [
+        "Scientist",
+        "Teacher",
+        "Engineer",
+        "Nurse"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Scientist\" (/ˈsaɪən.tɪst/) nghĩa là: Nhà khoa học."
+    }
+  }
+]
