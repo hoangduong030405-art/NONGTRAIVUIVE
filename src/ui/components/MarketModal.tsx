@@ -50,6 +50,7 @@ export function MarketModal() {
   const buySeedFromMarket = useGameStore((s) => s.buySeedFromMarket);
   const buyFarmUpgrade = useGameStore((s) => s.buyFarmUpgrade);
   const vocabList = useGameStore((s) => s.vocabList);
+  const vocabMap = useGameStore((s) => s.vocabMap);
 
   const [activeTab, setActiveTab] = useState<'orders' | 'seeds' | 'upgrades'>('orders');
 
@@ -67,7 +68,10 @@ export function MarketModal() {
     sweater: 0,
   };
 
-  const rareSeeds = vocabList.filter((v) => v.tier >= 2);
+  const cropPacks = [vocabMap['crop_t2'], vocabMap['crop_t3']].filter(
+    (v): v is NonNullable<typeof v> => Boolean(v),
+  );
+  const rareSeeds = cropPacks.length > 0 ? cropPacks : vocabList.filter((v) => v.tier >= 2);
 
   return (
     <div
@@ -127,7 +131,7 @@ export function MarketModal() {
               activeTab === 'seeds' ? 'btn-primary' : 'btn-ghost'
             }`}
           >
-            <Sprout size={14} /> Giống cây (6.5–8.0+)
+            <Sprout size={14} /> Gói Hạt Giống
           </button>
           <button
             type="button"
@@ -226,14 +230,16 @@ export function MarketModal() {
                           <h3 className="mt-1 font-black text-sm text-ink">{seed.word}</h3>
                           <p className="font-mono text-xs text-muted">{seed.ipa}</p>
                         </div>
-                        <button
-                          type="button"
-                          onClick={() => AudioEngine.speakWord(seed.word, profile.accent)}
-                          className="btn btn-ghost h-8 w-8 !min-h-0 p-0 text-muted"
-                          title="Phát âm"
-                        >
-                          <Volume2 size={16} />
-                        </button>
+                        {/^[A-Za-z][A-Za-z0-9\s\-'()]+$/.test(seed.word.trim()) && (
+                          <button
+                            type="button"
+                            onClick={() => AudioEngine.speakWord(seed.word, profile.accent)}
+                            className="btn btn-ghost h-8 w-8 !min-h-0 p-0 text-muted"
+                            title="Phát âm"
+                          >
+                            <Volume2 size={16} />
+                          </button>
+                        )}
                       </div>
                       <p className="mt-2 text-xs text-muted line-clamp-2">{seed.meaning}</p>
                     </div>

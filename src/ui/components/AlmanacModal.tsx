@@ -1,29 +1,34 @@
 import { useMemo, useRef, useState } from 'react';
 import {
   BookOpen,
+  CheckCircle2,
+  Compass,
   Download,
   Gift,
+  Layers,
   Lock,
   RotateCcw,
   Search,
   Settings,
+  Sparkles,
   Upload,
   Volume2,
   VolumeX,
   X,
-  Layers,
 } from 'lucide-react';
 import { AudioEngine } from '../../core/AudioEngine';
 import { WATERING_CAN_LABELS } from '../../core/ComboEngine';
-import type { VocabTier } from '../../core/types';
+import { getActiveStage, STAGE_ROADMAP, stageForLevel } from '../../core/curriculum';
+import type { CurriculumQuestion, CurriculumStage } from '../../core/types';
 import { useGameStore } from '../store/useGameStore';
 
-type Tab = 'vocab' | 'tips' | 'settings';
+type Tab = 'roadmap' | 'vocab' | 'tips' | 'settings';
 
 const TABS: Array<{ id: Tab; label: string; Icon: typeof BookOpen }> = [
-  { id: 'vocab', label: 'Vocabulary', Icon: BookOpen },
+  { id: 'roadmap', label: 'Lộ trình 5 GĐ', Icon: Compass },
+  { id: 'vocab', label: 'Kho câu hỏi', Icon: BookOpen },
   { id: 'tips', label: 'Tip Cards', Icon: Layers },
-  { id: 'settings', label: 'Settings', Icon: Settings },
+  { id: 'settings', label: 'Cài đặt', Icon: Settings },
 ];
 
 function MasteryDots({ level }: { level: number }) {
@@ -44,8 +49,11 @@ export function AlmanacModal() {
 }
 
 function AlmanacBody({ onClose }: { onClose: () => void }) {
-  const vocabList = useGameStore((s) => s.vocabList);
   const vocabMap = useGameStore((s) => s.vocabMap);
+  const stageQuestions = useGameStore((s) => s.stageQuestions);
+  const loadingStage = useGameStore((s) => s.loadingStage);
+  const ensureStageLoaded = useGameStore((s) => s.ensureStageLoaded);
+  const setStageOverride = useGameStore((s) => s.setStageOverride);
   const mastery = useGameStore((s) => s.mastery);
   const profile = useGameStore((s) => s.profile);
   const allTipCards = useGameStore((s) => s.allTipCards);
@@ -56,23 +64,46 @@ function AlmanacBody({ onClose }: { onClose: () => void }) {
   const resetFarm = useGameStore((s) => s.resetFarm);
   const pushToast = useGameStore((s) => s.pushToast);
 
-  const [tab, setTab] = useState<Tab>('vocab');
+  const activeStage = getActiveStage(profile?.level ?? 1, profile?.stageOverride);
+  const autoStage = stageForLevel(profile?.level ?? 1);
+
+  const [tab, setTab] = useState<Tab>('roadmap');
+  const [browseStage, setBrowseStage] = useState<CurriculumStage>(activeStage);
   const [query, setQuery] = useState('');
-  const [tierFilter, setTierFilter] = useState<VocabTier | 0>(0);
+  const [visibleCount, setVisibleCount] = useState(40);
   const [confirmReset, setConfirmReset] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
+  const completedSet = useMemo(
+    () => new Set(profile?.completedQuestionIds ?? []),
+    [profile?.completedQuestionIds],
+  );
+
+  const stageList: CurriculumQuestion[] = useMemo(
+    () => stageQuestions[browseStage] ?? [],
+    [stageQuestions, browseStage],
+  );
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return vocabList.filter(
+    return stageList.filter(
       (v) =>
-        (tierFilter === 0 || v.tier === tierFilter) &&
-        (!q || v.word.toLowerCase().includes(q) || v.meaning.toLowerCase().includes(q)),
+        !q ||
+        v.word.toLowerCase().includes(q) ||
+        v.meaning.toLowerCase().includes(q) ||
+        v.topic.toLowerCase().includes(q) ||
+        v.module.toLowerCase().includes(q),
     );
-  }, [vocabList, query, tierFilter]);
+  }, [stageList, query]);
 
   if (!profile) return null;
   const unlocked = new Set(profile.unlockedTipCardIds);
+
+  const switchBrowseStage = (s: CurriculumStage) => {
+    setBrowseStage(s);
+    setVisibleCount(40);
+    void ensureStageLoaded(s);
+  };
 
   const handleExport = async () => {
     try {
@@ -105,15 +136,15 @@ function AlmanacBody({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-40 flex items-end justify-center md:items-center md:p-6" role="dialog" aria-modal="true" aria-labelledby="almanac-title">
       <div className="absolute inset-0 animate-pop-in" style={{ background: 'var(--overlay)' }} onClick={onClose} />
-      <div className="panel gpu relative flex h-[90dvh] w-full animate-pop-in flex-col overflow-hidden rounded-b-none md:h-[80vh] md:max-w-4xl md:rounded-b-[var(--radius)]">
+      <div className="panel gpu relative flex h-[90dvh] w-full animate-pop-in flex-col overflow-hidden rounded-b-none md:h-[84vh] md:max-w-4xl md:rounded-b-[var(--radius)]">
         {/* Header */}
         <div className="flex items-center gap-3 border-b border-line px-4 py-3">
           <BookOpen size={22} className="text-accent" />
           <h2 id="almanac-title" className="font-display text-xl font-bold">
-            Vocabulary Almanac
+            Sổ tay & Lộ trình IELTS
           </h2>
           <span className="hidden text-xs font-semibold text-muted sm:inline">
-            {unlocked.size}/{allTipCards.length} tip cards · {profile.totalHarvested} harvests
+            {completedSet.size}/1.005 câu đã làm · {unlocked.size}/{allTipCards.length} tip cards
           </span>
           <button
             type="button"
@@ -133,7 +164,10 @@ function AlmanacBody({ onClose }: { onClose: () => void }) {
               type="button"
               role="tab"
               aria-selected={tab === id}
-              onClick={() => setTab(id)}
+              onClick={() => {
+                setTab(id);
+                if (id === 'vocab') void ensureStageLoaded(browseStage);
+              }}
               className={`focus-ring pb-safe flex min-h-[52px] flex-1 flex-col items-center justify-center gap-0.5 text-xs font-bold md:flex-row md:gap-2 md:pb-0 md:text-sm ${
                 tab === id ? 'text-accent md:border-b-2 md:border-accent' : 'text-muted'
               }`}
@@ -145,70 +179,230 @@ function AlmanacBody({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="scrollbar-thin flex-1 overflow-y-auto p-4">
+          {tab === 'roadmap' && (
+            <div className="flex flex-col gap-3">
+              {/* Auto mode header */}
+              <div className="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-line bg-surface-2 p-3">
+                <div className="min-w-0">
+                  <p className="flex items-center gap-1.5 text-sm font-extrabold">
+                    <Sparkles size={16} className="text-amber-500" />
+                    Hệ thống tự động đẩy câu hỏi theo Level (Hiện tại: Lv.{profile.level})
+                  </p>
+                  <p className="mt-0.5 text-xs text-muted">
+                    Mỗi Giai đoạn gồm ~200 câu hỏi từ dễ đến khó (Band 3.0 → 8.0+). Bạn có thể để Tự động tăng theo Level hoặc chọn thủ công một Giai đoạn bên dưới.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => void setStageOverride('auto')}
+                  className={`btn shrink-0 px-3 text-xs font-bold ${
+                    !profile.stageOverride || profile.stageOverride === 'auto' ? 'btn-primary' : 'btn-ghost'
+                  }`}
+                >
+                  {!profile.stageOverride || profile.stageOverride === 'auto'
+                    ? `✓ Đang bật Tự động (GĐ ${autoStage})`
+                    : `Bật lại Tự động (GĐ ${autoStage})`}
+                </button>
+              </div>
+
+              {/* 5 Stage Cards */}
+              <div className="grid gap-3">
+                {STAGE_ROADMAP.map((stageItem) => {
+                  const isCurrentActive = activeStage === stageItem.stage;
+                  const isUnlockedByLevel = profile.level >= stageItem.minLevel;
+                  const prefix = `s${stageItem.stage}_`;
+                  const doneInStage = (profile.completedQuestionIds ?? []).filter((id) =>
+                    id.startsWith(prefix),
+                  ).length;
+                  const pct = Math.min(100, Math.round((doneInStage / stageItem.questionTarget) * 100));
+
+                  return (
+                    <div
+                      key={stageItem.stage}
+                      className={`rounded-2xl border-2 p-4 transition-colors ${
+                        isCurrentActive
+                          ? 'border-accent bg-surface shadow-sm'
+                          : 'border-line bg-surface'
+                      }`}
+                    >
+                      <div className="flex flex-wrap items-start justify-between gap-2">
+                        <div>
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            <span className="rounded-lg bg-accent/15 px-2 py-0.5 text-xs font-extrabold text-accent">
+                              {stageItem.band}
+                            </span>
+                            <span className="rounded-lg bg-surface-2 px-2 py-0.5 text-[11px] font-bold text-muted">
+                              Lv.{stageItem.minLevel}
+                              {stageItem.maxLevel ? `–${stageItem.maxLevel}` : '+'}
+                            </span>
+                            {isCurrentActive && (
+                              <span className="rounded-lg bg-success px-2 py-0.5 text-[11px] font-bold text-white">
+                                Đang đẩy câu hỏi
+                              </span>
+                            )}
+                            {!isUnlockedByLevel && (
+                              <span className="inline-flex items-center gap-1 rounded-lg bg-surface-2 px-2 py-0.5 text-[11px] font-semibold text-muted">
+                                <Lock size={11} /> Mở khóa tự động ở Lv.{stageItem.minLevel}
+                              </span>
+                            )}
+                          </div>
+                          <h3 className="mt-1.5 font-display text-base font-extrabold md:text-lg">
+                            {stageItem.title}
+                          </h3>
+                          <p className="text-xs text-muted">{stageItem.goal}</p>
+                        </div>
+
+                        <div className="flex gap-1.5">
+                          <button
+                            type="button"
+                            onClick={() => void setStageOverride(stageItem.stage)}
+                            className={`btn px-3 text-xs font-bold min-h-[34px] ${
+                              profile.stageOverride === stageItem.stage ? 'btn-primary' : 'btn-ghost'
+                            }`}
+                          >
+                            {profile.stageOverride === stageItem.stage ? 'Đang chọn ✓' : 'Chọn GĐ này'}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              switchBrowseStage(stageItem.stage);
+                              setTab('vocab');
+                            }}
+                            className="btn btn-ghost px-3 text-xs font-bold min-h-[34px]"
+                          >
+                            Xem {stageItem.questionTarget} câu
+                          </button>
+                        </div>
+                      </div>
+
+                      <ul className="mt-2.5 grid gap-1 text-xs text-ink/90 sm:grid-cols-1">
+                        {stageItem.modules.map((mod) => (
+                          <li key={mod} className="flex items-start gap-1.5">
+                            <span className="text-accent">•</span>
+                            <span>{mod}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Completion progress */}
+                      <div className="mt-3">
+                        <div className="mb-1 flex items-center justify-between text-[11px] font-bold text-muted">
+                          <span>Tiến độ hoàn thành</span>
+                          <span>
+                            {doneInStage}/{stageItem.questionTarget} câu ({pct}%)
+                          </span>
+                        </div>
+                        <div className="h-2 overflow-hidden rounded-full bg-surface-2">
+                          <div
+                            className="h-full rounded-full bg-success transition-all"
+                            style={{ width: `${pct}%` }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {tab === 'vocab' && (
             <div className="flex flex-col gap-3">
-              <div className="flex flex-col gap-2 sm:flex-row">
+              <div className="flex flex-wrap gap-1.5">
+                {STAGE_ROADMAP.map((s) => (
+                  <button
+                    key={s.stage}
+                    type="button"
+                    onClick={() => switchBrowseStage(s.stage)}
+                    className={`btn px-3 text-xs font-bold min-h-[36px] ${
+                      browseStage === s.stage ? 'btn-primary' : 'btn-ghost'
+                    }`}
+                  >
+                    GĐ {s.stage} ({s.questionTarget})
+                  </button>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
                 <label className="flex flex-1 items-center gap-2 rounded-xl border border-line bg-surface-2 px-3">
                   <Search size={16} className="text-muted" />
                   <input
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search words or meanings…"
+                    onChange={(e) => {
+                      setQuery(e.target.value);
+                      setVisibleCount(40);
+                    }}
+                    placeholder="Tìm từ vựng, chủ đề hoặc nghĩa tiếng Việt…"
                     className="min-h-[44px] w-full bg-transparent text-sm outline-none placeholder:text-muted"
-                    aria-label="Search vocabulary"
+                    aria-label="Tìm câu hỏi"
                   />
                 </label>
-                <div className="flex gap-1">
-                  {([0, 1, 2, 3] as const).map((t) => (
-                    <button
-                      key={t}
-                      type="button"
-                      onClick={() => setTierFilter(t)}
-                      className={`btn flex-1 px-3 text-xs sm:flex-none ${tierFilter === t ? 'btn-primary' : 'btn-ghost'}`}
-                    >
-                      {t === 0 ? 'All' : `Tier ${t}`}
-                    </button>
-                  ))}
-                </div>
+                <span className="text-xs font-semibold text-muted">
+                  Tìm thấy {filtered.length} câu hỏi
+                </span>
               </div>
 
-              <ul className="grid gap-2 md:grid-cols-2">
-                {filtered.map((v) => {
-                  const m = mastery[v.id];
-                  return (
-                    <li key={v.id} className="rounded-xl border border-line bg-surface p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="min-w-0 flex-1">
-                          <p className="font-bold leading-tight">{v.word}</p>
-                          <p className="font-mono text-xs text-muted">
-                            {v.ipa} · {v.partOfSpeech}
-                          </p>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => AudioEngine.speakWord(v.word, profile.accent)}
-                          className="focus-ring flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-2"
-                          aria-label={`Pronounce ${v.word}`}
-                        >
-                          <Volume2 size={16} />
-                        </button>
-                      </div>
-                      <p className="mt-1 text-sm">{v.meaning}</p>
-                      <p className="mt-1 text-xs italic text-muted">{v.example}</p>
-                      <div className="mt-2 flex items-center justify-between text-[11px] font-semibold text-muted">
-                        <span>
-                          T{v.tier} · {v.band}
-                        </span>
-                        <span className="flex items-center gap-2">
-                          {m ? `${m.correctCount}/${m.attemptCount} correct` : 'Not practised'}
-                          <MasteryDots level={m?.srsLevel ?? 0} />
-                        </span>
-                      </div>
-                    </li>
-                  );
-                })}
-                {filtered.length === 0 && <li className="text-sm text-muted">No matching words.</li>}
-              </ul>
+              {loadingStage === browseStage && stageList.length === 0 ? (
+                <p className="py-8 text-center text-sm text-muted">
+                  Đang tải bộ câu hỏi Giai đoạn {browseStage}…
+                </p>
+              ) : (
+                <>
+                  <ul className="grid gap-2 md:grid-cols-2">
+                    {filtered.slice(0, visibleCount).map((v) => {
+                      const m = mastery[v.id];
+                      const done = completedSet.has(v.id);
+                      const isEnglish = /^[A-Za-z][A-Za-z0-9\s\-'()]+$/.test(v.word.trim());
+                      return (
+                        <li key={v.id} className="rounded-xl border border-line bg-surface p-3">
+                          <div className="flex items-start gap-2">
+                            <div className="min-w-0 flex-1">
+                              <p className="flex items-center gap-1.5 font-bold leading-tight">
+                                <span>{v.word}</span>
+                                {done && <CheckCircle2 size={14} className="shrink-0 text-success" />}
+                              </p>
+                              <p className="font-mono text-xs text-muted">
+                                {v.ipa} · {v.partOfSpeech}
+                              </p>
+                            </div>
+                            {isEnglish && (
+                              <button
+                                type="button"
+                                onClick={() => AudioEngine.speakWord(v.word, profile.accent)}
+                                className="focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-2"
+                                aria-label={`Pronounce ${v.word}`}
+                              >
+                                <Volume2 size={15} />
+                              </button>
+                            )}
+                          </div>
+                          <p className="mt-1 text-sm">{v.meaning}</p>
+                          <p className="mt-1 text-xs italic text-muted">{v.example}</p>
+                          <div className="mt-2 flex items-center justify-between gap-2 text-[11px] font-semibold text-muted">
+                            <span className="truncate">{v.topic}</span>
+                            <span className="flex shrink-0 items-center gap-2">
+                              {m ? `${m.correctCount}/${m.attemptCount}` : 'Chưa làm'}
+                              <MasteryDots level={m?.srsLevel ?? 0} />
+                            </span>
+                          </div>
+                        </li>
+                      );
+                    })}
+                    {filtered.length === 0 && (
+                      <li className="text-sm text-muted">Không có câu hỏi phù hợp.</li>
+                    )}
+                  </ul>
+                  {filtered.length > visibleCount && (
+                    <button
+                      type="button"
+                      onClick={() => setVisibleCount((n) => n + 50)}
+                      className="btn btn-ghost mx-auto px-6 text-xs font-bold"
+                    >
+                      Hiển thị thêm ({filtered.length - visibleCount} câu nữa)
+                    </button>
+                  )}
+                </>
+              )}
             </div>
           )}
 

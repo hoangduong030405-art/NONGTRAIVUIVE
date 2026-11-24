@@ -6,11 +6,19 @@ import {
   WATERING_CAN_LABELS,
   WATERING_CAN_MULTIPLIERS,
 } from '../../core/ComboEngine';
+import {
+  FARM_CROP_PACKS,
+  getActiveStage,
+  getStageInfo,
+  stageForLevel,
+} from '../../core/curriculum';
 import { FarmEngine } from '../../core/FarmEngine';
 import { StorageService } from '../../core/StorageService';
 import { LEXI_CHEST_TIPS } from '../../core/tipCards';
 import type {
   AccentPreference,
+  CurriculumQuestion,
+  CurriculumStage,
   DailyQuest,
   FarmStock,
   FarmToolMode,
@@ -51,6 +59,7 @@ const THEME_META_COLOR: Record<ThemeName, string> = {
 export interface ActiveQuiz {
   plotIndex: number;
   vocabId: string;
+  questionId: string;
   /** performance.now() timestamp when the quiz became visible. */
   openedAt: number;
   isFirstAttempt: boolean;
@@ -70,6 +79,9 @@ interface GameState {
   vocabList: VocabItem[];
   vocabMap: Record<string, VocabItem>;
   vocabMeta: Record<string, VocabMetaSnapshot>;
+  stageQuestions: Partial<Record<CurriculumStage, CurriculumQuestion[]>>;
+  questionMap: Record<string, CurriculumQuestion>;
+  loadingStage: CurriculumStage | null;
   allTipCards: IeltsTipCard[];
 
   profile: PlayerProgress | null;
@@ -88,6 +100,8 @@ interface GameState {
   marketOrders: MarketOrder[];
 
   init: () => Promise<void>;
+  ensureStageLoaded: (stage: CurriculumStage) => Promise<CurriculumQuestion[]>;
+  setStageOverride: (override: CurriculumStage | 'auto') => Promise<void>;
   selectSeed: (vocabId: string | null) => void;
   setToolMode: (mode: FarmToolMode) => void;
   setWeather: (weather: WeatherType) => void;
@@ -124,6 +138,7 @@ interface GameState {
 
 let toastCounter = 0;
 const toastTimers = new Map<string, ReturnType<typeof setTimeout>>();
+const stageFetchPromises = new Map<CurriculumStage, Promise<CurriculumQuestion[]>>();
 
 function applyThemeToDocument(theme: ThemeName): void {
   document.documentElement.dataset.theme = theme;
@@ -138,6 +153,42 @@ function isTier1(tier: VocabTier | null | undefined): boolean {
 function pickRandom<T>(items: readonly T[]): T | undefined {
   if (items.length === 0) return undefined;
   return items[Math.floor(Math.random() * items.length)];
+}
+
+async function fetchStageBank(stage: CurriculumStage): Promise<CurriculumQuestion[]> {
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}data/stage_${stage}.json`);
+    if (!res.ok) return [];
+    const data = (await res.json()) as CurriculumQuestion[];
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
+function buildCanonicalCropItems(fallbackVocab: VocabItem[]): VocabItem[] {
+  const defaultQuiz = fallbackVocab[0]?.quiz ?? {
+    prompt: 'Chọn nghĩa đúng của từ sau:',
+    sentence: 'I eat an apple every day.',
+    options: ['Quả táo', 'Quả cam', 'Quả chuối', 'Quả nho'],
+    correctIndex: 0,
+    explanation: 'Apple có nghĩa là Quả táo.',
+  };
+
+  return FARM_CROP_PACKS.map((pack) => ({
+    id: `crop_t${pack.tier}`,
+    tier: pack.tier,
+    band: pack.tier === 3 ? 'Cây Cổ Thụ' : pack.tier === 2 ? 'Cây Trung Cấp' : 'Cây Cấp Tốc',
+    word: pack.name,
+    ipa: pack.tier === 1 ? 'Cấp tốc' : pack.tier === 2 ? 'Trung cấp' : 'Cổ thụ',
+    partOfSpeech: 'nông sản',
+    meaning: pack.xpBoostLabel,
+    example: `Gieo ${pack.name} để hệ thống tự đẩy câu hỏi theo giai đoạn.`,
+    growthDurationMs: pack.durationSec * 1000,
+    xpReward: pack.tier === 3 ? 65 : pack.tier === 2 ? 40 : 22,
+    quizType: 'simple_translation',
+    quiz: defaultQuiz,
+  }));
 }
 
 export const useGameStore = create<GameState>()((set, get) => {
@@ -167,9 +218,26 @@ export const useGameStore = create<GameState>()((set, get) => {
     EventBus.emit('ui:plot-fx', { plotIndex, kind });
   };
 
-  const commitProfile = (profile: PlayerProgress): void => {
-    set({ profile });
-    void StorageService.saveProfile(profile);
+  const commitProfile = (nextProfile: PlayerProgress): void => {
+    const prevProfile = get().profile;
+    set({ profile: nextProfile });
+    void StorageService.saveProfile(nextProfile);
+    if (prevProfile) {
+      const oldStage = stageForLevel(prevProfile.level);
+      const newStage = stageForLevel(nextProfile.level);
+      if (newStage > oldStage) {
+        const info = getStageInfo(newStage);
+        void get().ensureStageLoaded(newStage);
+        get().pushToast({
+          variant: 'golden',
+          title: `🎉 Chúc mừng lên ${info.title}!`,
+          subtitle:
+            nextProfile.stageOverride === 'auto'
+              ? `${info.band} · Câu hỏi ngẫu nhiên mới đã được kích hoạt!`
+              : `Đạt Lv.${nextProfile.level} (${info.band}) · Vào Sổ tay để chuyển giai đoạn`,
+        });
+      }
+    }
   };
 
   const commitPlots = (plots: PlotState[], changed: readonly number[]): void => {
@@ -181,12 +249,36 @@ export const useGameStore = create<GameState>()((set, get) => {
     emitSync();
   };
 
+  const pickQuestionForStage = (stage: CurriculumStage): CurriculumQuestion | undefined => {
+    const { stageQuestions, profile, vocabList } = get();
+    const pool = stageQuestions[stage] ?? [];
+    if (pool.length > 0) {
+      const completed = new Set(profile?.completedQuestionIds ?? []);
+      const unseen = pool.filter((q) => !completed.has(q.id));
+      return pickRandom(unseen.length > 0 ? unseen : pool);
+    }
+    const targetTier: VocabTier = stage <= 1 ? 1 : stage <= 3 ? 2 : 3;
+    const fallbackPool = vocabList.filter((v) => v.tier === targetTier);
+    const fallback = pickRandom(fallbackPool.length > 0 ? fallbackPool : vocabList);
+    return fallback
+      ? {
+          ...fallback,
+          stage,
+          module: `Giai đoạn ${stage}`,
+          topic: fallback.partOfSpeech,
+        }
+      : undefined;
+  };
+
   return {
     status: 'loading',
     errorMessage: null,
     vocabList: [],
     vocabMap: {},
     vocabMeta: {},
+    stageQuestions: {},
+    questionMap: {},
+    loadingStage: null,
     allTipCards: [],
 
     profile: null,
@@ -220,21 +312,35 @@ export const useGameStore = create<GameState>()((set, get) => {
           vocabMeta[v.id] = { id: v.id, word: v.word, tier: v.tier };
           if (v.tipCard) vocabTips.push({ ...v.tipCard, sourceVocabId: v.id });
         }
+        for (const crop of buildCanonicalCropItems(vocabList)) {
+          vocabMap[crop.id] = crop;
+          vocabMeta[crop.id] = { id: crop.id, word: crop.word, tier: crop.tier };
+        }
 
         const { profile, plots, mastery } = await StorageService.loadState(vocabList);
         applyThemeToDocument(profile.theme);
         AudioEngine.setEnabled(profile.sfxEnabled);
+
+        const activeStage = getActiveStage(profile.level, profile.stageOverride);
+        const initialStageBank = await fetchStageBank(activeStage);
+        const initialQuestionMap: Record<string, CurriculumQuestion> = {};
+        for (const q of initialStageBank) {
+          initialQuestionMap[q.id] = q;
+        }
 
         set({
           status: 'ready',
           vocabList,
           vocabMap,
           vocabMeta,
+          stageQuestions: initialStageBank.length > 0 ? { [activeStage]: initialStageBank } : {},
+          questionMap: initialQuestionMap,
+          loadingStage: null,
           allTipCards: [...vocabTips, ...LEXI_CHEST_TIPS],
           profile,
           plots,
           mastery,
-          selectedSeedId: vocabList.find((v) => v.tier === 1)?.id ?? null,
+          selectedSeedId: vocabMap['crop_t1']?.id ?? vocabList.find((v) => v.tier === 1)?.id ?? null,
         });
         EventBus.emit('ui:theme-changed', { theme: profile.theme });
         emitSync();
@@ -246,6 +352,59 @@ export const useGameStore = create<GameState>()((set, get) => {
       }
     },
 
+    ensureStageLoaded: async (stage) => {
+      const existing = get().stageQuestions[stage];
+      if (existing && existing.length > 0) return existing;
+
+      const inflight = stageFetchPromises.get(stage);
+      if (inflight) return inflight;
+
+      const promise = (async (): Promise<CurriculumQuestion[]> => {
+        set({ loadingStage: stage });
+        try {
+          const questions = await fetchStageBank(stage);
+          if (questions.length > 0) {
+            set((state) => {
+              const nextMap: Record<string, CurriculumQuestion> = { ...state.questionMap };
+              for (const q of questions) {
+                nextMap[q.id] = q;
+              }
+              return {
+                stageQuestions: { ...state.stageQuestions, [stage]: questions },
+                questionMap: nextMap,
+                loadingStage: state.loadingStage === stage ? null : state.loadingStage,
+              };
+            });
+          } else {
+            set((state) => ({
+              loadingStage: state.loadingStage === stage ? null : state.loadingStage,
+            }));
+          }
+          return questions;
+        } finally {
+          stageFetchPromises.delete(stage);
+        }
+      })();
+
+      stageFetchPromises.set(stage, promise);
+      return promise;
+    },
+
+    setStageOverride: async (override) => {
+      const { profile, pushToast } = get();
+      if (!profile) return;
+      const nextProfile: PlayerProgress = { ...profile, stageOverride: override };
+      commitProfile(nextProfile);
+      const activeStage = getActiveStage(nextProfile.level, override);
+      await get().ensureStageLoaded(activeStage);
+      const info = getStageInfo(activeStage);
+      pushToast({
+        variant: 'info',
+        title: override === 'auto' ? `Tự động theo Level (${info.title})` : `Đã chọn ${info.title}`,
+        subtitle: `${info.band} · Câu hỏi ngẫu nhiên được đẩy theo giai đoạn này`,
+      });
+    },
+
     selectSeed: (vocabId) => set({ selectedSeedId: vocabId, activeToolMode: 'seeds' }),
 
     setToolMode: (mode) => {
@@ -255,34 +414,44 @@ export const useGameStore = create<GameState>()((set, get) => {
 
     // -------------------------------------------------------------------------
     handlePlotTap: (plotIndex) => {
-      const { plots, profile, selectedSeedId, vocabMap, activeQuiz, pushToast } = get();
+      const { plots, profile, selectedSeedId, vocabMap, questionMap, activeQuiz, pushToast } = get();
       if (!profile || activeQuiz) return;
       const plot = plots[plotIndex];
       if (!plot) return;
 
-      // EMPTY PLOT → plant selected seed
+      // EMPTY PLOT → plant selected crop pack & auto-push random question by level
       if (!plot.vocabId) {
         const { activeToolMode } = get();
         if (activeToolMode === 'water') {
-          pushToast({ variant: 'info', title: 'Empty plot', subtitle: 'Plant a seed first before watering.' });
+          pushToast({ variant: 'info', title: 'Ô đất trống', subtitle: 'Hãy gieo hạt trước khi tưới nước.' });
           return;
         }
 
         const vocab = selectedSeedId ? vocabMap[selectedSeedId] : undefined;
         if (!vocab) {
-          pushToast({ variant: 'info', title: 'Choose a seed', subtitle: 'Pick an IELTS seed from the dock first.' });
+          pushToast({ variant: 'info', title: 'Chọn loại cây', subtitle: 'Hãy chọn loại hạt giống bên dưới để gieo.' });
           fx(plotIndex, 'error');
           return;
         }
         const stock = profile.seedInventory[vocab.id] ?? 0;
         if (!isTier1(vocab.tier) && stock <= 0) {
-          pushToast({ variant: 'info', title: 'Out of seeds', subtitle: `Harvest more "${vocab.word}" or earn Fever rewards.` });
+          pushToast({ variant: 'info', title: 'Hết hạt giống', subtitle: `Thu hoạch thêm "${vocab.word}" hoặc mua thêm ở Chợ.` });
           fx(plotIndex, 'error');
           return;
         }
 
+        const activeStage = getActiveStage(profile.level, profile.stageOverride);
+        const picked = pickQuestionForStage(activeStage);
+        if (!get().stageQuestions[activeStage]?.length) {
+          void get().ensureStageLoaded(activeStage);
+        }
+        const questionId = picked?.id ?? vocab.id;
+
         const useGolden = profile.goldenFertilizerCharges > 0;
-        const planted = FarmEngine.plantSeed(plot, vocab, Date.now(), useGolden);
+        const planted: PlotState = {
+          ...FarmEngine.plantSeed(plot, vocab, Date.now(), useGolden),
+          assignedQuestionId: questionId,
+        };
         const nextPlots = plots.slice();
         nextPlots[plotIndex] = planted;
 
@@ -299,12 +468,13 @@ export const useGameStore = create<GameState>()((set, get) => {
         commitPlots(nextPlots, [plotIndex]);
         fx(plotIndex, useGolden ? 'golden' : 'plant');
         AudioEngine.playPlant();
-        
-        // Auto-open quiz immediately upon planting so the player doesn't have to click again!
+
+        // Auto-open random quiz from player's current stage immediately upon planting!
         set({
           activeQuiz: {
             plotIndex,
             vocabId: vocab.id,
+            questionId,
             openedAt: performance.now(),
             isFirstAttempt: true,
           },
@@ -327,12 +497,22 @@ export const useGameStore = create<GameState>()((set, get) => {
         return;
       }
 
-      // GROWING & not yet quizzed → open IELTS quiz to fertilize
+      // GROWING & not yet quizzed → open auto-pushed IELTS quiz to fertilize
       if (!plot.quizzed) {
+        const activeStage = getActiveStage(profile.level, profile.stageOverride);
+        let assignedId = plot.assignedQuestionId ?? null;
+        if (!assignedId || (!questionMap[assignedId] && !vocabMap[assignedId])) {
+          const picked = pickQuestionForStage(activeStage);
+          assignedId = picked?.id ?? plot.vocabId;
+          const nextPlots = plots.slice();
+          nextPlots[plotIndex] = { ...plot, assignedQuestionId: assignedId };
+          commitPlots(nextPlots, [plotIndex]);
+        }
         set({
           activeQuiz: {
             plotIndex,
             vocabId: plot.vocabId,
+            questionId: assignedId,
             openedAt: performance.now(),
             isFirstAttempt: plot.lastQuizAttemptAt === null,
           },
@@ -614,20 +794,30 @@ export const useGameStore = create<GameState>()((set, get) => {
 
     // -------------------------------------------------------------------------
     submitQuizAnswer: (optionIndex) => {
-      const { activeQuiz, quizOutcome, plots, profile, vocabMap, mastery, allTipCards, pushToast } =
-        get();
+      const {
+        activeQuiz,
+        quizOutcome,
+        plots,
+        profile,
+        vocabMap,
+        questionMap,
+        mastery,
+        allTipCards,
+        pushToast,
+      } = get();
       if (!activeQuiz || quizOutcome || !profile) return null;
-      const vocab = vocabMap[activeQuiz.vocabId];
+      const question = questionMap[activeQuiz.questionId] ?? vocabMap[activeQuiz.vocabId];
+      const plotVocab = vocabMap[activeQuiz.vocabId];
       const plot = plots[activeQuiz.plotIndex];
-      if (!vocab || !plot || plot.vocabId !== vocab.id) return null;
+      if (!question || !plot || plot.vocabId !== activeQuiz.vocabId) return null;
 
       const now = Date.now();
-      const isCorrect = optionIndex === vocab.quiz.correctIndex;
+      const isCorrect = optionIndex === question.quiz.correctIndex;
       const reward = ComboEngine.evaluateQuizResult({
         isCorrect,
         elapsedMs: performance.now() - activeQuiz.openedAt,
-        tier: vocab.tier,
-        baseXp: vocab.xpReward,
+        tier: plotVocab?.tier ?? question.tier,
+        baseXp: Math.max(question.xpReward, plotVocab?.xpReward ?? question.xpReward),
         currentStreak: profile.streak,
         bestStreak: profile.bestStreak,
         currentToolTier: profile.wateringCanTier,
@@ -636,11 +826,11 @@ export const useGameStore = create<GameState>()((set, get) => {
       });
 
       // --- SRS mastery -------------------------------------------------------
-      const prev = mastery[vocab.id];
+      const prev = mastery[question.id];
       const prevLevel = prev?.srsLevel ?? 0;
       const srsLevel = isCorrect ? Math.min(MAX_SRS_LEVEL, prevLevel + 1) : Math.max(0, prevLevel - 1);
       const record: VocabMasteryRecord = {
-        vocabId: vocab.id,
+        vocabId: question.id,
         srsLevel,
         correctCount: (prev?.correctCount ?? 0) + (isCorrect ? 1 : 0),
         attemptCount: (prev?.attemptCount ?? 0) + 1,
@@ -648,7 +838,7 @@ export const useGameStore = create<GameState>()((set, get) => {
         nextReviewAt: now + (SRS_INTERVALS_MS[srsLevel] ?? 0),
         harvestCount: prev?.harvestCount ?? 0,
       };
-      set({ mastery: { ...mastery, [vocab.id]: record } });
+      set({ mastery: { ...mastery, [question.id]: record } });
       void StorageService.saveMastery(record);
 
       const speed = speedOf(profile);
@@ -682,6 +872,11 @@ export const useGameStore = create<GameState>()((set, get) => {
           }
         }
 
+        const prevCompleted = profile.completedQuestionIds ?? [];
+        const completedQuestionIds = prevCompleted.includes(question.id)
+          ? prevCompleted
+          : [...prevCompleted, question.id];
+
         let nextProfile: PlayerProgress = {
           ...profile,
           xp: profile.xp + reward.xpEarned,
@@ -689,6 +884,7 @@ export const useGameStore = create<GameState>()((set, get) => {
           streak: reward.newStreak,
           bestStreak: reward.bestStreak,
           criticalAnswers: profile.criticalAnswers + (reward.isCriticalSpeed ? 1 : 0),
+          completedQuestionIds,
         };
 
         if (reward.goldenFertilizerGranted) {
@@ -700,8 +896,7 @@ export const useGameStore = create<GameState>()((set, get) => {
 
         let bonusSeedWord: string | null = null;
         if (reward.feverTimeTriggered) {
-          const tier3 = get().vocabList.filter((v) => v.tier === 3);
-          const bonus = pickRandom(tier3);
+          const bonus = vocabMap['crop_t3'] ?? pickRandom(get().vocabList.filter((v) => v.tier === 3));
           const inv = { ...nextProfile.seedInventory };
           if (bonus && reward.bonusTier3SeedGranted) {
             inv[bonus.id] = (inv[bonus.id] ?? 0) + 1;
@@ -1128,6 +1323,7 @@ export const useGameStore = create<GameState>()((set, get) => {
       applyThemeToDocument(profile.theme);
       AudioEngine.setEnabled(profile.sfxEnabled);
       set({ profile, plots, mastery, activeQuiz: null, quizOutcome: null });
+      void get().ensureStageLoaded(getActiveStage(profile.level, profile.stageOverride));
       EventBus.emit('ui:theme-changed', { theme: profile.theme });
       emitSync();
     },

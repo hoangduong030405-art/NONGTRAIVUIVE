@@ -1,4 +1,5 @@
 import Dexie, { type Table } from 'dexie';
+import { ComboEngine } from './ComboEngine';
 import { FarmEngine } from './FarmEngine';
 import { INITIAL_DAILY_QUESTS } from './questData';
 import type {
@@ -29,10 +30,13 @@ export const db = new LexiFarmDatabase();
 export function createDefaultSeedInventory(
   vocabList: VocabItem[],
 ): Record<string, number> {
-  const inventory: Record<string, number> = {};
+  const inventory: Record<string, number> = {
+    crop_t1: 99,
+    crop_t2: 8,
+    crop_t3: 5,
+  };
   for (const item of vocabList) {
     if (item.tier === 1) {
-      // Tier 1 seeds are infinite; store sentinel -1 or generous display
       inventory[item.id] = 99;
     } else if (item.tier === 2) {
       inventory[item.id] = 4;
@@ -82,6 +86,8 @@ export function createDefaultPlayerProgress(
     },
     dailyQuests: INITIAL_DAILY_QUESTS,
     activeWeather: 'sunny',
+    stageOverride: 'auto',
+    completedQuestionIds: [],
     updatedAt: Date.now(),
   };
 }
@@ -122,6 +128,9 @@ export class StorageService {
               : defaultProfile.dailyQuests,
             coins: storedProfile.coins ?? defaultProfile.coins,
             activeWeather: storedProfile.activeWeather ?? 'sunny',
+            stageOverride: storedProfile.stageOverride ?? 'auto',
+            completedQuestionIds: storedProfile.completedQuestionIds ?? [],
+            level: ComboEngine.calculateLevel(storedProfile.xp ?? 0).level,
           }
         : defaultProfile;
 

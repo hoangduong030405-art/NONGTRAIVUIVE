@@ -15,6 +15,7 @@ import {
   Zap,
 } from 'lucide-react';
 import { ComboEngine, WATERING_CAN_LABELS } from '../../core/ComboEngine';
+import { getActiveStage, getStageInfo } from '../../core/curriculum';
 import type { ThemeName, WeatherType } from '../../core/types';
 import { useGameStore } from '../store/useGameStore';
 
@@ -62,6 +63,8 @@ export function TopHud() {
   if (!profile) return null;
 
   const lvl = ComboEngine.calculateLevel(profile.xp);
+  const activeStage = getActiveStage(lvl.level, profile.stageOverride);
+  const stageInfo = getStageInfo(activeStage);
   const milestone = nextMilestone(profile.streak);
   const gaugeRatio = Math.min(1, profile.streak / milestone.target);
   const feverActive = feverLeft > 0;
@@ -80,26 +83,36 @@ export function TopHud() {
   };
 
   return (
-    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 pt-safe px-2 md:px-6">
-      <div className="panel pointer-events-auto mx-auto flex max-w-6xl flex-col gap-2 px-3 py-2 md:flex-row md:items-center md:gap-4 md:px-4">
-        {/* Row 1: Level + XP */}
-        <div className="flex min-w-0 flex-1 items-center gap-3">
+    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 pt-safe px-2 md:px-4">
+      <div className="panel pointer-events-auto mx-auto flex max-w-6xl flex-col gap-1.5 px-3 py-2">
+        {/* Row 1: Level + Stage + XP + Desktop/Mobile actions */}
+        <div className="flex min-w-0 items-center gap-3">
           <div
-            className="flex h-11 w-11 shrink-0 flex-col items-center justify-center rounded-xl bg-surface-strong text-on-strong"
+            className="flex h-10 w-10 shrink-0 flex-col items-center justify-center rounded-xl bg-surface-strong text-on-strong"
             aria-label={`Level ${lvl.level}`}
           >
             <span className="text-[9px] font-bold uppercase leading-none opacity-80">Lv</span>
-            <span className="text-lg font-extrabold leading-none">{lvl.level}</span>
+            <span className="text-base font-extrabold leading-none">{lvl.level}</span>
           </div>
-          <div className="min-w-0 flex-1">
+          <div className="min-w-[160px] flex-1">
             <div className="flex items-baseline justify-between gap-2">
-              <span className="truncate font-display text-sm font-bold md:text-base">LexiFarm IELTS</span>
+              <div className="flex min-w-0 items-center gap-1.5">
+                <span className="truncate font-display text-sm font-bold md:text-base">LexiFarm IELTS</span>
+                <button
+                  type="button"
+                  onClick={() => setAlmanacOpen(true)}
+                  className="shrink-0 rounded-md bg-accent/15 px-1.5 py-0.5 text-[10px] font-extrabold text-accent hover:bg-accent/25"
+                  title={`${stageInfo.title} · ${stageInfo.band} (Nhấn để mở Lộ trình)`}
+                >
+                  GĐ {activeStage} · {stageInfo.band.replace('Band ', '')}
+                </button>
+              </div>
               <span className="shrink-0 font-mono text-[11px] text-muted">
                 {lvl.currentLevelXp}/{lvl.nextLevelXp} XP
               </span>
             </div>
             <div
-              className="mt-1 h-2.5 overflow-hidden rounded-full bg-surface-2"
+              className="mt-1 h-2 overflow-hidden rounded-full bg-surface-2"
               role="progressbar"
               aria-valuemin={0}
               aria-valuemax={lvl.nextLevelXp}
@@ -118,74 +131,140 @@ export function TopHud() {
             <button
               type="button"
               onClick={cycleWeather}
-              className="btn btn-ghost h-10 w-10 !min-h-0 p-0 text-amber-500"
+              className="btn btn-ghost h-9 w-9 !min-h-0 p-0 text-amber-500"
               title="Đổi thời tiết (Nắng / Mưa / Cầu vồng / Đêm)"
             >
-              {profile.activeWeather === 'rain' ? <CloudRain size={16} /> : <Sun size={16} />}
+              {profile.activeWeather === 'rain' ? <CloudRain size={15} /> : <Sun size={15} />}
             </button>
             <button
               type="button"
               onClick={() => setMarketOpen(true)}
-              className="btn btn-ghost h-10 w-10 !min-h-0 p-0 text-emerald-600"
+              className="btn btn-ghost h-9 w-9 !min-h-0 p-0 text-emerald-600"
               title="Chợ nông sản"
             >
-              <ShoppingBag size={16} />
+              <ShoppingBag size={15} />
             </button>
             <button
               type="button"
               onClick={() => setKitchenOpen(true)}
-              className="btn btn-ghost h-10 w-10 !min-h-0 p-0 text-amber-600"
+              className="btn btn-ghost h-9 w-9 !min-h-0 p-0 text-amber-600"
               title="Xưởng Bếp"
             >
-              <ChefHat size={16} />
+              <ChefHat size={15} />
             </button>
             <button
               type="button"
               onClick={() => setQuestsOpen(true)}
-              className="btn btn-ghost h-10 w-10 !min-h-0 p-0 text-indigo-600"
+              className="btn btn-ghost h-9 w-9 !min-h-0 p-0 text-indigo-600"
               title="Nhiệm vụ"
             >
-              <Trophy size={16} />
+              <Trophy size={15} />
             </button>
             <button
               type="button"
               onClick={cycleTheme}
-              className="btn btn-ghost h-10 w-10 !min-h-0 p-0"
+              className="btn btn-ghost h-9 w-9 !min-h-0 p-0"
               aria-label={`Theme: ${THEMES[currentThemeIdx]?.label ?? ''}. Tap to switch`}
             >
               {(() => {
                 const Icon = THEMES[currentThemeIdx]?.Icon ?? Trees;
-                return <Icon size={16} />;
+                return <Icon size={15} />;
               })()}
             </button>
             <button
               type="button"
               onClick={() => setAlmanacOpen(true)}
-              className="btn btn-primary h-10 w-10 !min-h-0 p-0"
+              className="btn btn-primary h-9 w-9 !min-h-0 p-0"
               aria-label="Open Vocabulary Almanac"
             >
-              <BookOpen size={16} />
+              <BookOpen size={15} />
+            </button>
+          </div>
+
+          {/* Desktop quick actions */}
+          <div className="hidden shrink-0 items-center gap-1.5 md:flex">
+            <button
+              type="button"
+              onClick={cycleWeather}
+              className="btn btn-ghost min-h-[34px] gap-1 px-2.5 py-1 text-xs font-bold text-amber-500"
+              title="Đổi thời tiết (Nắng ☀️, Mưa 🌧️ tự tưới nước, Cầu vồng 🌈, Đêm 🌙)"
+            >
+              {profile.activeWeather === 'rain' ? <CloudRain size={15} /> : profile.activeWeather === 'night' ? <Moon size={15} /> : <Sun size={15} />}
+              <span className="capitalize">{profile.activeWeather ?? 'sunny'}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setQuestsOpen(true)}
+              className="btn btn-ghost min-h-[34px] gap-1 px-2.5 py-1 text-xs font-bold text-indigo-600"
+              title="Nhiệm vụ hàng ngày & Thành tựu"
+            >
+              <Trophy size={15} />
+              Nhiệm vụ
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setKitchenOpen(true)}
+              className="btn btn-ghost min-h-[34px] gap-1 px-2.5 py-1 text-xs font-bold text-amber-600"
+              title="Xưởng Bếp & Chế biến nông sản"
+            >
+              <ChefHat size={15} />
+              Xưởng Bếp
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setMarketOpen(true)}
+              className="btn btn-ghost min-h-[34px] gap-1 px-2.5 py-1 text-xs font-bold text-emerald-600"
+              title="Chợ nông sản & Mua hạt giống"
+            >
+              <ShoppingBag size={15} />
+              Chợ ({profile.coins ?? 0} Xu)
+            </button>
+
+            <div className="flex rounded-xl bg-surface-2 p-0.5" role="radiogroup" aria-label="Theme">
+              {THEMES.map(({ id, label, Icon }) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="radio"
+                  aria-checked={profile.theme === id}
+                  aria-label={label}
+                  title={label}
+                  onClick={() => setTheme(id)}
+                  className={`focus-ring flex h-8 w-8 items-center justify-center rounded-lg transition-colors ${
+                    profile.theme === id ? 'bg-accent text-accent-contrast' : 'text-muted hover:text-ink'
+                  }`}
+                >
+                  <Icon size={15} />
+                </button>
+              ))}
+            </div>
+            <button type="button" onClick={() => setAlmanacOpen(true)} className="btn btn-primary min-h-[34px] px-3 py-1 text-xs">
+              <BookOpen size={15} />
+              Lộ trình
             </button>
           </div>
         </div>
 
         {/* Row 2: Streak gauge + status chips */}
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex flex-wrap items-center gap-2 border-t border-line/40 pt-1.5 text-xs">
           <div
-            className={`flex min-w-0 flex-1 items-center gap-2 rounded-xl px-2.5 py-1.5 md:w-56 md:flex-none ${
+            className={`flex min-w-[150px] flex-1 items-center gap-2 rounded-lg px-2.5 py-1 md:w-52 md:flex-none ${
               feverActive ? 'fever-pulse bg-danger text-white' : 'bg-surface-2'
             }`}
             title={feverActive ? 'IELTS Fever Time' : `Next: ${milestone.label} at ${milestone.target}x`}
           >
-            <Flame size={18} className={profile.streak > 0 ? 'text-gold' : 'text-muted'} />
+            <Flame size={15} className={profile.streak > 0 ? 'text-gold' : 'text-muted'} />
             <div className="min-w-0 flex-1">
-              <div className="flex items-baseline justify-between gap-1 text-xs font-bold">
+              <div className="flex items-baseline justify-between gap-1 text-[11px] font-bold">
                 <span>{profile.streak}x Streak</span>
                 <span className={`truncate text-[10px] font-semibold ${feverActive ? '' : 'text-muted'}`}>
                   {feverActive ? `FEVER ${feverLeft}s` : `→ ${milestone.target}x`}
                 </span>
               </div>
-              <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-black/10">
+              <div className="mt-0.5 h-1 overflow-hidden rounded-full bg-black/10">
                 <div
                   className="h-full origin-left rounded-full bg-gold transition-transform duration-300"
                   style={{ transform: `scaleX(${feverActive ? feverLeft / 60 : gaugeRatio})` }}
@@ -195,22 +274,21 @@ export function TopHud() {
           </div>
 
           <span
-            className="flex shrink-0 items-center gap-1 rounded-lg bg-surface-2 px-2 py-1.5 text-xs font-bold"
+            className="flex shrink-0 items-center gap-1 rounded-lg bg-surface-2 px-2 py-1 text-[11px] font-bold"
             title={WATERING_CAN_LABELS[profile.wateringCanTier]}
           >
-            <Droplets size={14} className="text-info" />
+            <Droplets size={13} className="text-info" />
             <span className="capitalize">{profile.wateringCanTier}</span>
           </span>
           <span
-            className="flex shrink-0 items-center gap-1 rounded-lg bg-surface-2 px-2 py-1.5 text-xs font-bold"
+            className="flex shrink-0 items-center gap-1 rounded-lg bg-surface-2 px-2 py-1 text-[11px] font-bold"
             title="Golden Fertilizer charges (applied to next planting)"
           >
-            <Sparkles size={14} className="text-gold" />
+            <Sparkles size={13} className="text-gold" />
             {profile.goldenFertilizerCharges}
           </span>
-          {/* Farm Stock counts: Eggs, Milk, Wool, Fish */}
           <span
-            className="flex shrink-0 items-center gap-1.5 rounded-lg bg-surface-2 px-2 py-1.5 text-xs font-bold"
+            className="flex shrink-0 items-center gap-2 rounded-lg bg-surface-2 px-2.5 py-1 text-[11px] font-bold"
             title={`Kho nông sản: ${profile.stock?.cropFodder ?? 0} Lương thực, ${profile.stock?.eggs ?? 0} Trứng, ${profile.stock?.milk ?? 0} Sữa, ${profile.stock?.wool ?? 0} Lông cừu, ${profile.stock?.fish ?? 0} Cá`}
           >
             <span title="Lương thực">🌾 {profile.stock?.cropFodder ?? 0}</span>
@@ -220,82 +298,12 @@ export function TopHud() {
             <span title="Cá bắt được">🐟 {profile.stock?.fish ?? 0}</span>
           </span>
           <span
-            className="hidden shrink-0 items-center gap-1 rounded-lg bg-surface-2 px-2 py-1.5 text-xs font-bold lg:flex"
+            className="hidden shrink-0 items-center gap-1 rounded-lg bg-surface-2 px-2 py-1 text-[11px] font-bold sm:flex"
             title="Best streak"
           >
-            <Zap size={14} className="text-accent" />
-            {profile.bestStreak}
+            <Zap size={13} className="text-accent" />
+            Best: {profile.bestStreak}x
           </span>
-        </div>
-
-        {/* Desktop: theme switcher + almanac */}
-        <div className="hidden items-center gap-2 md:flex">
-          {/* Weather button */}
-          <button
-            type="button"
-            onClick={cycleWeather}
-            className="btn btn-ghost px-2.5 py-1 text-xs font-bold gap-1 text-amber-500"
-            title="Đổi thời tiết (Nắng ☀️, Mưa 🌧️ tự tưới nước, Cầu vồng 🌈, Đêm 🌙)"
-          >
-            {profile.activeWeather === 'rain' ? <CloudRain size={16} /> : profile.activeWeather === 'night' ? <Moon size={16} /> : <Sun size={16} />}
-            <span className="capitalize">{profile.activeWeather ?? 'sunny'}</span>
-          </button>
-
-          {/* Quests button */}
-          <button
-            type="button"
-            onClick={() => setQuestsOpen(true)}
-            className="btn btn-ghost px-2.5 py-1 text-xs font-bold gap-1 text-indigo-600"
-            title="Nhiệm vụ hàng ngày & Thành tựu"
-          >
-            <Trophy size={16} />
-            Nhiệm vụ
-          </button>
-
-          {/* Kitchen Bakery button */}
-          <button
-            type="button"
-            onClick={() => setKitchenOpen(true)}
-            className="btn btn-ghost px-2.5 py-1 text-xs font-bold gap-1 text-amber-600"
-            title="Xưởng Bếp & Chế biến nông sản"
-          >
-            <ChefHat size={16} />
-            Xưởng Bếp
-          </button>
-
-          {/* Market button */}
-          <button
-            type="button"
-            onClick={() => setMarketOpen(true)}
-            className="btn btn-ghost px-2.5 py-1 text-xs font-bold gap-1 text-emerald-600"
-            title="Chợ nông sản & Mua hạt giống"
-          >
-            <ShoppingBag size={16} />
-            Chợ ({profile.coins ?? 0} Xu)
-          </button>
-
-          <div className="flex rounded-xl bg-surface-2 p-1" role="radiogroup" aria-label="Theme">
-            {THEMES.map(({ id, label, Icon }) => (
-              <button
-                key={id}
-                type="button"
-                role="radio"
-                aria-checked={profile.theme === id}
-                aria-label={label}
-                title={label}
-                onClick={() => setTheme(id)}
-                className={`focus-ring flex h-9 w-9 items-center justify-center rounded-lg transition-colors ${
-                  profile.theme === id ? 'bg-accent text-accent-contrast' : 'text-muted hover:text-ink'
-                }`}
-              >
-                <Icon size={16} />
-              </button>
-            ))}
-          </div>
-          <button type="button" onClick={() => setAlmanacOpen(true)} className="btn btn-primary px-3 text-xs">
-            <BookOpen size={16} />
-            Almanac
-          </button>
         </div>
       </div>
     </header>

@@ -18,13 +18,23 @@ import {
 } from 'lucide-react';
 import { AudioEngine } from '../../core/AudioEngine';
 import { WATERING_CAN_LABELS } from '../../core/ComboEngine';
-import type { VocabItem } from '../../core/types';
+import type { CurriculumQuestion, CurriculumStage, VocabItem } from '../../core/types';
 import { useGameStore, type QuizOutcome } from '../store/useGameStore';
 
+type QuizEntry = VocabItem | CurriculumQuestion;
+
+const STAGE_STYLE: Record<CurriculumStage, { label: string; cls: string }> = {
+  1: { label: 'GĐ 1 · Nền tảng', cls: 'bg-emerald-600 text-white' },
+  2: { label: 'GĐ 2 · Format IELTS', cls: 'bg-sky-600 text-white' },
+  3: { label: 'GĐ 3 · Bứt phá', cls: 'bg-indigo-600 text-white' },
+  4: { label: 'GĐ 4 · Chuyên sâu', cls: 'bg-purple-600 text-white' },
+  5: { label: 'GĐ 5 · Chạm đỉnh', cls: 'bg-amber-500 text-black' },
+};
+
 const TIER_STYLE: Record<number, { label: string; cls: string }> = {
-  1: { label: 'Tier 1 · Basic Seed', cls: 'bg-success text-white' },
-  2: { label: 'Tier 2 · Collocation Sapling', cls: 'bg-info text-white' },
-  3: { label: 'Tier 3 · Ancient Paraphrase Tree', cls: 'bg-gold text-black' },
+  1: { label: '🥕 Cà Rốt · Nhanh', cls: 'bg-success text-white' },
+  2: { label: '🍅 Cà Chua · +50% XP', cls: 'bg-info text-white' },
+  3: { label: '🍎 Táo Cổ Thụ · +100% XP', cls: 'bg-gold text-black' },
 };
 
 /** Fisher–Yates shuffle of option indices (correct answer is index 0 in seed data). */
@@ -39,6 +49,22 @@ function shuffledOrder(length: number): number[] {
   return order;
 }
 
+function getQuestionStage(vocab: QuizEntry): CurriculumStage | undefined {
+  return 'stage' in vocab ? vocab.stage : undefined;
+}
+
+function getQuestionModule(vocab: QuizEntry): string | undefined {
+  return 'module' in vocab ? vocab.module : undefined;
+}
+
+function getQuestionTopic(vocab: QuizEntry): string | undefined {
+  return 'topic' in vocab ? vocab.topic : undefined;
+}
+
+function isPureEnglishWord(word: string): boolean {
+  return /^[A-Za-z][A-Za-z0-9\s\-'()]+$/.test(word.trim());
+}
+
 /** Renders the IELTS context sentence, filling `_____` or `[basic phrase]`. */
 function ContextSentence({
   vocab,
@@ -46,14 +72,14 @@ function ContextSentence({
   slotRef,
   dragOver,
 }: {
-  vocab: VocabItem;
+  vocab: QuizEntry;
   filled: string | null;
   slotRef?: React.RefObject<HTMLSpanElement>;
   dragOver?: boolean;
 }) {
   const s = vocab.quiz.sentence;
 
-  if (vocab.quizType === 'paraphrase_upgrade') {
+  if (vocab.quizType === 'paraphrase_upgrade' && /\[.+?\]/.test(s)) {
     const parts = s.split(/\[(.+?)\]/);
     return (
       <p className="text-base leading-relaxed md:text-lg">
@@ -74,6 +100,19 @@ function ContextSentence({
           ),
         )}
       </p>
+    );
+  }
+
+  if (!s.includes('_____')) {
+    return (
+      <div className="space-y-1.5">
+        <p className="text-base leading-relaxed md:text-lg">{s}</p>
+        {vocab.quizType === 'simple_translation' && filled && (
+          <p className="inline-block rounded-lg bg-success px-2.5 py-0.5 text-sm font-bold text-white">
+            ⇒ {filled}
+          </p>
+        )}
+      </div>
     );
   }
 
@@ -101,19 +140,23 @@ function ContextSentence({
 export function IeltsQuizModal() {
   const activeQuiz = useGameStore((s) => s.activeQuiz);
   const outcome = useGameStore((s) => s.quizOutcome);
-  const vocab = useGameStore((s) => (s.activeQuiz ? s.vocabMap[s.activeQuiz.vocabId] : undefined));
+  const question = useGameStore((s) =>
+    s.activeQuiz ? (s.questionMap[s.activeQuiz.questionId] ?? s.vocabMap[s.activeQuiz.vocabId]) : undefined,
+  );
+  const cropItem = useGameStore((s) => (s.activeQuiz ? s.vocabMap[s.activeQuiz.vocabId] : undefined));
   const accent = useGameStore((s) => s.profile?.accent ?? 'en-GB');
   const submitQuizAnswer = useGameStore((s) => s.submitQuizAnswer);
   const closeQuiz = useGameStore((s) => s.closeQuiz);
   const markQuizVisible = useGameStore((s) => s.markQuizVisible);
   const awardPronunciationBonus = useGameStore((s) => s.awardPronunciationBonus);
 
-  if (!activeQuiz || !vocab) return null;
+  if (!activeQuiz || !question) return null;
 
   return (
     <QuizBody
-      key={`${activeQuiz.plotIndex}-${vocab.id}`}
-      vocab={vocab}
+      key={`${activeQuiz.plotIndex}-${question.id}`}
+      vocab={question}
+      cropTier={cropItem?.tier ?? question.tier}
       outcome={outcome}
       isFirstAttempt={activeQuiz.isFirstAttempt}
       accent={accent}
@@ -127,6 +170,7 @@ export function IeltsQuizModal() {
 
 function QuizBody({
   vocab,
+  cropTier,
   outcome,
   isFirstAttempt,
   accent,
@@ -135,7 +179,8 @@ function QuizBody({
   onVisible,
   onPronounceSuccess,
 }: {
-  vocab: VocabItem;
+  vocab: QuizEntry;
+  cropTier: number;
   outcome: QuizOutcome | null;
   isFirstAttempt: boolean;
   accent: 'en-GB' | 'en-US';
@@ -158,11 +203,22 @@ function QuizBody({
   const answered = outcome !== null;
   const correctIdx = vocab.quiz.correctIndex;
   const correctText = vocab.quiz.options[correctIdx] ?? '';
-  const isCollocation = vocab.quizType === 'collocation_match';
+  const hasBlank = vocab.quiz.sentence.includes('_____');
+  const isCollocation = vocab.quizType === 'collocation_match' && hasBlank;
   const isListening = vocab.quizType === 'listening_challenge';
-  const revealWord = answered || vocab.quizType === 'phonetic_meaning';
+  const revealWord =
+    answered || vocab.quizType === 'phonetic_meaning' || vocab.quizType === 'simple_translation';
+  const hideMeaningBeforeAnswer =
+    vocab.quizType === 'simple_translation' || vocab.quizType === 'phonetic_meaning';
+  const showMeaning = answered || !hideMeaningBeforeAnswer;
+  const englishSpeakable = isPureEnglishWord(vocab.word);
+  const hasLongOptions = vocab.quiz.options.some((o) => o.length > 48);
   const speechSupported = useMemo(() => AudioEngine.isSpeechRecognitionSupported(), []);
-  const tier = TIER_STYLE[vocab.tier] ?? TIER_STYLE[1]!;
+  const tier = TIER_STYLE[cropTier] ?? TIER_STYLE[1]!;
+  const stage = getQuestionStage(vocab);
+  const stageStyle = stage ? STAGE_STYLE[stage] : null;
+  const qModule = getQuestionModule(vocab);
+  const qTopic = getQuestionTopic(vocab);
 
   // Start the 4s critical-speed clock only once the modal is actually painted.
   useEffect(() => {
@@ -330,11 +386,16 @@ function QuizBody({
         )}
 
         {/* Header */}
-        <div className="flex items-center gap-2 border-b border-line px-4 py-3">
+        <div className="flex flex-wrap items-center gap-2 border-b border-line px-4 py-3">
+          {stageStyle && (
+            <span className={`rounded-lg px-2 py-1 text-[11px] font-bold ${stageStyle.cls}`}>
+              {stageStyle.label}
+            </span>
+          )}
           <span className={`rounded-lg px-2 py-1 text-[11px] font-bold ${tier.cls}`}>{tier.label}</span>
           <span className="text-xs font-semibold text-muted">{vocab.band}</span>
           {!isFirstAttempt && !answered && (
-            <span className="text-[11px] font-semibold text-muted">· retry (no chest)</span>
+            <span className="text-[11px] font-semibold text-muted">· Thử lại (không rương)</span>
           )}
           <button
             type="button"
@@ -346,18 +407,30 @@ function QuizBody({
           </button>
         </div>
 
+        {(qModule || qTopic) && (
+          <div className="flex flex-wrap items-center gap-1.5 border-b border-line/50 bg-surface-2/60 px-4 py-1.5 text-[11px] font-semibold text-muted">
+            {qModule && <span className="text-accent">{qModule}</span>}
+            {qModule && qTopic && <span>·</span>}
+            {qTopic && <span>Chủ đề: {qTopic}</span>}
+          </div>
+        )}
+
         {/* Body: 2 columns on ≥768px, stacked on mobile */}
         <div className="scrollbar-thin grid flex-1 gap-4 overflow-y-auto p-4 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-6 md:p-6">
           {/* LEFT: Word / IPA / Audio */}
           <section className="flex flex-col gap-3">
             <div className="rounded-2xl bg-surface-strong p-4 text-on-strong">
               <p className="text-[11px] font-bold uppercase tracking-wider opacity-70">{vocab.partOfSpeech}</p>
-              <h2 id="quiz-title" className="mt-1 font-display text-2xl font-bold leading-tight md:text-3xl">
+              <h2 id="quiz-title" className="mt-1 font-display text-xl font-bold leading-tight md:text-2xl">
                 {revealWord ? vocab.word : '• • • ?'}
               </h2>
               <div className="mt-2 flex items-center gap-2">
-                <span className="font-mono text-sm opacity-90">{revealWord ? vocab.ipa : '/ ? /'}</span>
-                {(revealWord || isListening) && (
+                <span className="font-mono text-sm opacity-90">
+                  {revealWord && !(vocab.quizType === 'phonetic_meaning' && !answered && vocab.ipa.includes('/'))
+                    ? vocab.ipa
+                    : '/ ? /'}
+                </span>
+                {((revealWord && englishSpeakable) || isListening) && (
                   <button
                     type="button"
                     onClick={speak}
@@ -367,12 +440,12 @@ function QuizBody({
                     aria-label={`Pronounce ${vocab.word} (${accent === 'en-GB' ? 'UK' : 'US'})`}
                   >
                     {isListening ? <Headphones size={16} /> : <Volume2 size={16} />}
-                    {isListening ? 'Play Audio' : accent === 'en-GB' ? 'UK' : 'US'}
+                    {isListening ? 'Nghe Audio' : accent === 'en-GB' ? 'UK' : 'US'}
                   </button>
                 )}
               </div>
             </div>
-            {revealWord && speechSupported && (
+            {revealWord && speechSupported && englishSpeakable && (
               <button
                 type="button"
                 onClick={startSpeakingPractice}
@@ -396,12 +469,12 @@ function QuizBody({
               </button>
             )}
             <p className="text-sm text-muted">
-              <span className="font-bold text-ink">Meaning: </span>
-              {vocab.meaning}
+              <span className="font-bold text-ink">Nghĩa / Trọng tâm: </span>
+              {showMeaning ? vocab.meaning : '••• (Hãy chọn đáp án bên phải)'}
             </p>
             {answered && (
               <p className="text-sm text-muted">
-                <span className="font-bold text-ink">Example: </span>
+                <span className="font-bold text-ink">Ví dụ: </span>
                 <em>{vocab.example}</em>
               </p>
             )}
@@ -455,14 +528,14 @@ function QuizBody({
                 />
               </div>
             ) : (
-              <div className="grid gap-2 sm:grid-cols-2">
+              <div className={`grid gap-2 ${hasLongOptions ? 'grid-cols-1' : 'sm:grid-cols-2'}`}>
                 {order.map((originalIdx, displayIdx) => (
                   <button
                     key={originalIdx}
                     type="button"
                     disabled={answered}
                     onClick={() => submit(originalIdx)}
-                    className={`btn justify-start border-2 px-3 py-2 text-left text-sm ${optionState(originalIdx)}`}
+                    className={`btn h-auto min-h-[44px] justify-start border-2 px-3 py-2.5 text-left text-sm ${optionState(originalIdx)}`}
                   >
                     <span className="font-mono text-[10px] opacity-60">{displayIdx + 1}</span>
                     <span className="flex-1">{vocab.quiz.options[originalIdx]}</span>
@@ -537,22 +610,32 @@ function QuizBody({
               </div>
             )}
 
-            {/* Tip: always visible on desktop, collapsible accordion on mobile */}
-            <div className="hidden md:block">{tipBlock}</div>
-            <div className="md:hidden">
-              <button
-                type="button"
-                onClick={() => setTipOpen((o) => !o)}
-                aria-expanded={tipOpen}
-                className="focus-ring flex min-h-[44px] w-full items-center justify-between rounded-xl bg-surface-2 px-3 text-sm font-bold"
-              >
-                <span className="flex items-center gap-2">
-                  <BookMarked size={16} /> IELTS Writing / Speaking Tip
-                </span>
-                <ChevronDown size={18} className={`transition-transform ${tipOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {tipOpen && <div className="mt-2">{tipBlock}</div>}
+            {/* Tip / Post-answer Example: hide example before answering to avoid spoiling the word */}
+            <div className="hidden md:block">
+              {answered || vocab.tipCard ? (
+                tipBlock
+              ) : (
+                <div className="rounded-xl border border-line bg-surface-2/70 p-3 text-xs text-muted">
+                  ⚡ Trả lời nhanh ≤ 4 giây để kích hoạt <strong>Critical Bonus (+50% XP)</strong> · Phím tắt <kbd className="rounded bg-surface px-1.5 py-0.5 font-mono text-[10px]">1–4</kbd>
+                </div>
+              )}
             </div>
+            {(answered || vocab.tipCard) && (
+              <div className="md:hidden">
+                <button
+                  type="button"
+                  onClick={() => setTipOpen((o) => !o)}
+                  aria-expanded={tipOpen}
+                  className="focus-ring flex min-h-[44px] w-full items-center justify-between rounded-xl bg-surface-2 px-3 text-sm font-bold"
+                >
+                  <span className="flex items-center gap-2">
+                    <BookMarked size={16} /> IELTS Tip & Ví dụ
+                  </span>
+                  <ChevronDown size={18} className={`transition-transform ${tipOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {tipOpen && <div className="mt-2">{tipBlock}</div>}
+              </div>
+            )}
           </section>
         </div>
 

@@ -1,0 +1,5602 @@
+[
+  {
+    "id": "s2_001",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Curriculum",
+    "ipa": "/kəˈrɪk.jə.ləm/",
+    "partOfSpeech": "noun",
+    "meaning": "Chương trình giảng dạy",
+    "example": "Schools updated their science curriculum.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Curriculum\" (Education):",
+      "sentence": "Schools updated their science curriculum.",
+      "options": [
+        "Chương trình giảng dạy",
+        "Tốt nghiệp",
+        "Mang tính học thuật",
+        "Nạn phá rừng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Curriculum\" (/kəˈrɪk.jə.ləm/) = Chương trình giảng dạy."
+    }
+  },
+  {
+    "id": "s2_002",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Scholarship",
+    "ipa": "/ˈskɒl.ə.ʃɪp/",
+    "partOfSpeech": "noun",
+    "meaning": "Học bổng",
+    "example": "She won a full university scholarship.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Scholarship\" (Education):",
+      "sentence": "She won a full university scholarship.",
+      "options": [
+        "Học bổng",
+        "Khuyến khích, động viên",
+        "Tái chế",
+        "Hệ sinh thái"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Scholarship\" (/ˈskɒl.ə.ʃɪp/) = Học bổng."
+    }
+  },
+  {
+    "id": "s2_003",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Assignment",
+    "ipa": "/əˈsaɪn.mənt/",
+    "partOfSpeech": "noun",
+    "meaning": "Bài tập lớn / Nhiệm vụ được giao",
+    "example": "Submit your history assignment by Friday.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Assignment\" (Education):",
+      "sentence": "Submit your history assignment by Friday.",
+      "options": [
+        "Bài tập lớn / Nhiệm vụ được giao",
+        "Hướng nghiệp / Dạy nghề",
+        "Bảo tồn / Tiết kiệm",
+        "Bền vững (lâu dài)"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Assignment\" (/əˈsaɪn.mənt/) = Bài tập lớn / Nhiệm vụ được giao."
+    }
+  },
+  {
+    "id": "s2_004",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Graduate",
+    "ipa": "/ˈɡrædʒ.u.eɪt/",
+    "partOfSpeech": "verb",
+    "meaning": "Tốt nghiệp",
+    "example": "He will graduate from college next June.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Education\" và chọn đúng từ:",
+      "sentence": "He will _____ from college next June.",
+      "options": [
+        "Graduate",
+        "Concentrate",
+        "Knowledge",
+        "Tuition fee"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Graduate\" (/ˈɡrædʒ.u.eɪt/) nghĩa là: Tốt nghiệp."
+    }
+  },
+  {
+    "id": "s2_005",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Concentrate",
+    "ipa": "/ˈkɒn.sən.treɪt/",
+    "partOfSpeech": "verb",
+    "meaning": "Tập trung chú ý",
+    "example": "Quiet libraries help students concentrate.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Concentrate\" (Education):",
+      "sentence": "Quiet libraries help students concentrate.",
+      "options": [
+        "Tập trung chú ý",
+        "Rác thải / Lãng phí",
+        "Kết nối",
+        "Kỹ thuật số"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Concentrate\" (/ˈkɒn.sən.treɪt/) = Tập trung chú ý."
+    }
+  },
+  {
+    "id": "s2_006",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Knowledge",
+    "ipa": "/ˈnɒl.ɪdʒ/",
+    "partOfSpeech": "noun",
+    "meaning": "Kiến thức / Hiểu biết",
+    "example": "Practical projects build real-world knowledge.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Knowledge\" (Education):",
+      "sentence": "Practical projects build real-world knowledge.",
+      "options": [
+        "Kiến thức / Hiểu biết",
+        "Thiết bị điện tử",
+        "An ninh mạng",
+        "Báo giấy"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Knowledge\" (/ˈnɒl.ɪdʒ/) = Kiến thức / Hiểu biết."
+    }
+  },
+  {
+    "id": "s2_007",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Tuition fee",
+    "ipa": "/tjuːˈɪʃ.ən fiː/",
+    "partOfSpeech": "noun",
+    "meaning": "Học phí",
+    "example": "Online degrees often have lower tuition fees.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Tuition fee\" (Education):",
+      "sentence": "Online degrees often have lower tuition fees.",
+      "options": [
+        "Học phí",
+        "Dữ liệu",
+        "Cơ sở dữ liệu",
+        "Đáng tin cậy"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Tuition fee\" (/tjuːˈɪʃ.ən fiː/) = Học phí."
+    }
+  },
+  {
+    "id": "s2_008",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Discipline",
+    "ipa": "/ˈdɪs.ə.plɪn/",
+    "partOfSpeech": "noun",
+    "meaning": "Kỷ luật / Môn học",
+    "example": "Self-discipline is vital for daily study.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Education\" và chọn đúng từ:",
+      "sentence": "Self-_____ is vital for daily study.",
+      "options": [
+        "Discipline",
+        "Encourage",
+        "Certificate",
+        "Academic"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Discipline\" (/ˈdɪs.ə.plɪn/) nghĩa là: Kỷ luật / Môn học."
+    }
+  },
+  {
+    "id": "s2_009",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Encourage",
+    "ipa": "/ɪnˈkʌr.ɪdʒ/",
+    "partOfSpeech": "verb",
+    "meaning": "Khuyến khích, động viên",
+    "example": "Teachers encourage learners to ask questions.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Encourage\" (Education):",
+      "sentence": "Teachers encourage learners to ask questions.",
+      "options": [
+        "Khuyến khích, động viên",
+        "Phát sóng / Chương trình phát thanh",
+        "Xuất bản / Đăng tải",
+        "Lễ hội"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Encourage\" (/ɪnˈkʌr.ɪdʒ/) = Khuyến khích, động viên."
+    }
+  },
+  {
+    "id": "s2_010",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Certificate",
+    "ipa": "/səˈtɪf.ɪ.kət/",
+    "partOfSpeech": "noun",
+    "meaning": "Chứng chỉ / Bằng cấp",
+    "example": "You receive a certificate after completing the course.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Certificate\" (Education):",
+      "sentence": "You receive a certificate after completing the course.",
+      "options": [
+        "Chứng chỉ / Bằng cấp",
+        "Tiêu đề bài báo",
+        "Tin giả, tin sai sự thật",
+        "Ăn mừng / Tổ chức kỷ niệm"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Certificate\" (/səˈtɪf.ɪ.kət/) = Chứng chỉ / Bằng cấp."
+    }
+  },
+  {
+    "id": "s2_011",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Academic",
+    "ipa": "/ˌæk.əˈdem.ɪk/",
+    "partOfSpeech": "adjective",
+    "meaning": "Mang tính học thuật",
+    "example": "Academic writing avoids casual slang.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Academic\" (Education):",
+      "sentence": "Academic writing avoids casual slang.",
+      "options": [
+        "Mang tính học thuật",
+        "Sự kiểm duyệt thông tin",
+        "Ẩm thực",
+        "Kiến trúc"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Academic\" (/ˌæk.əˈdem.ɪk/) = Mang tính học thuật."
+    }
+  },
+  {
+    "id": "s2_012",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Lecture",
+    "ipa": "/ˈlek.tʃər/",
+    "partOfSpeech": "noun",
+    "meaning": "Bài giảng đại học",
+    "example": "Over 100 students attended the biology lecture.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Education\" và chọn đúng từ:",
+      "sentence": "Over 100 students attended the biology _____.",
+      "options": [
+        "Lecture",
+        "Research",
+        "Vocational",
+        "Curriculum"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Lecture\" (/ˈlek.tʃər/) nghĩa là: Bài giảng đại học."
+    }
+  },
+  {
+    "id": "s2_013",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Research",
+    "ipa": "/rɪˈsɜːtʃ/",
+    "partOfSpeech": "noun/verb",
+    "meaning": "Nghiên cứu",
+    "example": "Scientific research requires careful data collection.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Research\" (Education):",
+      "sentence": "Scientific research requires careful data collection.",
+      "options": [
+        "Nghiên cứu",
+        "Đài tưởng niệm / Di tích",
+        "Chương trình giảng dạy",
+        "Kỷ luật / Môn học"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Research\" (/rɪˈsɜːtʃ/) = Nghiên cứu."
+    }
+  },
+  {
+    "id": "s2_014",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Education",
+    "word": "Vocational",
+    "ipa": "/vəʊˈkeɪ.ʃən.əl/",
+    "partOfSpeech": "adjective",
+    "meaning": "Hướng nghiệp / Dạy nghề",
+    "example": "Vocational courses teach practical job skills.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Vocational\" (Education):",
+      "sentence": "Vocational courses teach practical job skills.",
+      "options": [
+        "Hướng nghiệp / Dạy nghề",
+        "Nghi lễ trang trọng",
+        "Kiến thức / Hiểu biết",
+        "Nghiên cứu"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Vocational\" (/vəʊˈkeɪ.ʃən.əl/) = Hướng nghiệp / Dạy nghề."
+    }
+  },
+  {
+    "id": "s2_015",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Pollution",
+    "ipa": "/pəˈluː.ʃən/",
+    "partOfSpeech": "noun",
+    "meaning": "Sự ô nhiễm",
+    "example": "Public buses help cut air pollution.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Pollution\" (Environment):",
+      "sentence": "Public buses help cut air pollution.",
+      "options": [
+        "Sự ô nhiễm",
+        "Bảo tồn / Tiết kiệm",
+        "Bền vững (lâu dài)",
+        "Nhân tạo"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Pollution\" (/pəˈluː.ʃən/) = Sự ô nhiễm."
+    }
+  },
+  {
+    "id": "s2_016",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Recycle",
+    "ipa": "/ˌriːˈsaɪ.kəl/",
+    "partOfSpeech": "verb",
+    "meaning": "Tái chế",
+    "example": "Remember to recycle glass bottles and paper.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Recycle\" (Environment):",
+      "sentence": "Remember to recycle glass bottles and paper.",
+      "options": [
+        "Tái chế",
+        "Môi trường sống tự nhiên",
+        "Nâng cấp",
+        "Thiết bị công nghệ nhỏ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Recycle\" (/ˌriːˈsaɪ.kəl/) = Tái chế."
+    }
+  },
+  {
+    "id": "s2_017",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Renewable",
+    "ipa": "/rɪˈnjuː.ə.bəl/",
+    "partOfSpeech": "adjective",
+    "meaning": "Có thể tái tạo (năng lượng sạch)",
+    "example": "Wind and solar are renewable energy sources.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Renewable\" (Environment):",
+      "sentence": "Wind and solar are renewable energy sources.",
+      "options": [
+        "Có thể tái tạo (năng lượng sạch)",
+        "Kết nối",
+        "Kỹ thuật số",
+        "Quảng cáo"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Renewable\" (/rɪˈnjuː.ə.bəl/) = Có thể tái tạo (năng lượng sạch)."
+    }
+  },
+  {
+    "id": "s2_018",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Deforestation",
+    "ipa": "/diːˌfɒr.ɪˈsteɪ.ʃən/",
+    "partOfSpeech": "noun",
+    "meaning": "Nạn phá rừng",
+    "example": "Deforestation destroys wildlife habitats.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Environment\" và chọn đúng từ:",
+      "sentence": "_____ destroys wildlife habitats.",
+      "options": [
+        "Deforestation",
+        "Wildlife",
+        "Climate",
+        "Conserve"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Deforestation\" (/diːˌfɒr.ɪˈsteɪ.ʃən/) nghĩa là: Nạn phá rừng."
+    }
+  },
+  {
+    "id": "s2_019",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Wildlife",
+    "ipa": "/ˈwaɪld.laɪf/",
+    "partOfSpeech": "noun",
+    "meaning": "Động vật hoang dã",
+    "example": "National parks protect endangered wildlife.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Wildlife\" (Environment):",
+      "sentence": "National parks protect endangered wildlife.",
+      "options": [
+        "Động vật hoang dã",
+        "Cơ sở dữ liệu",
+        "Đáng tin cậy",
+        "Đăng ký theo dõi kênh"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Wildlife\" (/ˈwaɪld.laɪf/) = Động vật hoang dã."
+    }
+  },
+  {
+    "id": "s2_020",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Climate",
+    "ipa": "/ˈklaɪ.mət/",
+    "partOfSpeech": "noun",
+    "meaning": "Khí hậu",
+    "example": "Warming oceans affect the global climate.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Climate\" (Environment):",
+      "sentence": "Warming oceans affect the global climate.",
+      "options": [
+        "Khí hậu",
+        "Nhà báo / Phóng viên",
+        "Phim tài liệu",
+        "Phong tục tập quán"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Climate\" (/ˈklaɪ.mət/) = Khí hậu."
+    }
+  },
+  {
+    "id": "s2_021",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Conserve",
+    "ipa": "/kənˈsɜːv/",
+    "partOfSpeech": "verb",
+    "meaning": "Bảo tồn / Tiết kiệm",
+    "example": "We must conserve clean drinking water.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Conserve\" (Environment):",
+      "sentence": "We must conserve clean drinking water.",
+      "options": [
+        "Bảo tồn / Tiết kiệm",
+        "Xuất bản / Đăng tải",
+        "Lễ hội",
+        "Ngôn ngữ"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Conserve\" (/kənˈsɜːv/) = Bảo tồn / Tiết kiệm."
+    }
+  },
+  {
+    "id": "s2_022",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Emission",
+    "ipa": "/ɪˈmɪʃ.ən/",
+    "partOfSpeech": "noun",
+    "meaning": "Khí thải",
+    "example": "Electric cars produce zero exhaust emissions.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Environment\" và chọn đúng từ:",
+      "sentence": "Electric cars produce zero exhaust emissions.",
+      "options": [
+        "Emission",
+        "Ecosystem",
+        "Waste",
+        "Solar panel"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Emission\" (/ɪˈmɪʃ.ən/) nghĩa là: Khí thải."
+    }
+  },
+  {
+    "id": "s2_023",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Ecosystem",
+    "ipa": "/ˈiː.kəʊˌsɪs.təm/",
+    "partOfSpeech": "noun",
+    "meaning": "Hệ sinh thái",
+    "example": "Bees play a key role in our ecosystem.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Ecosystem\" (Environment):",
+      "sentence": "Bees play a key role in our ecosystem.",
+      "options": [
+        "Hệ sinh thái",
+        "Ẩm thực",
+        "Kiến trúc",
+        "Tập trung chú ý"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Ecosystem\" (/ˈiː.kəʊˌsɪs.təm/) = Hệ sinh thái."
+    }
+  },
+  {
+    "id": "s2_024",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Waste",
+    "ipa": "/weɪst/",
+    "partOfSpeech": "noun/verb",
+    "meaning": "Rác thải / Lãng phí",
+    "example": "Composting turns food waste into fertilizer.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Waste\" (Environment):",
+      "sentence": "Composting turns food waste into fertilizer.",
+      "options": [
+        "Rác thải / Lãng phí",
+        "Tôn trọng",
+        "Bài tập lớn / Nhiệm vụ được giao",
+        "Chứng chỉ / Bằng cấp"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Waste\" (/weɪst/) = Rác thải / Lãng phí."
+    }
+  },
+  {
+    "id": "s2_025",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Solar panel",
+    "ipa": "/ˈsəʊ.lər ˈpæn.əl/",
+    "partOfSpeech": "noun",
+    "meaning": "Tấm pin mặt trời",
+    "example": "Solar panels power the farm water pump.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Solar panel\" (Environment):",
+      "sentence": "Solar panels power the farm water pump.",
+      "options": [
+        "Tấm pin mặt trời",
+        "Chương trình giảng dạy",
+        "Kỷ luật / Môn học",
+        "Sự ô nhiễm"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Solar panel\" (/ˈsəʊ.lər ˈpæn.əl/) = Tấm pin mặt trời."
+    }
+  },
+  {
+    "id": "s2_026",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Habitat",
+    "ipa": "/ˈhæb.ɪ.tæt/",
+    "partOfSpeech": "noun",
+    "meaning": "Môi trường sống tự nhiên",
+    "example": "Wetlands are a vital habitat for waterbirds.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Environment\" và chọn đúng từ:",
+      "sentence": "Wetlands are a vital _____ for waterbirds.",
+      "options": [
+        "Habitat",
+        "Drought",
+        "Sustainable",
+        "Pollution"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Habitat\" (/ˈhæb.ɪ.tæt/) nghĩa là: Môi trường sống tự nhiên."
+    }
+  },
+  {
+    "id": "s2_027",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Drought",
+    "ipa": "/draʊt/",
+    "partOfSpeech": "noun",
+    "meaning": "Hạn hán kéo dài",
+    "example": "Long droughts hurt local crop production.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Drought\" (Environment):",
+      "sentence": "Long droughts hurt local crop production.",
+      "options": [
+        "Hạn hán kéo dài",
+        "Mang tính học thuật",
+        "Nạn phá rừng",
+        "Tấm pin mặt trời"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Drought\" (/draʊt/) = Hạn hán kéo dài."
+    }
+  },
+  {
+    "id": "s2_028",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Environment",
+    "word": "Sustainable",
+    "ipa": "/səˈsteɪ.nə.bəl/",
+    "partOfSpeech": "adjective",
+    "meaning": "Bền vững (lâu dài)",
+    "example": "Organic farming is a sustainable practice.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Sustainable\" (Environment):",
+      "sentence": "Organic farming is a sustainable practice.",
+      "options": [
+        "Bền vững (lâu dài)",
+        "Tái chế",
+        "Hệ sinh thái",
+        "Phần mềm"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Sustainable\" (/səˈsteɪ.nə.bəl/) = Bền vững (lâu dài)."
+    }
+  },
+  {
+    "id": "s2_029",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Device",
+    "ipa": "/dɪˈvaɪs/",
+    "partOfSpeech": "noun",
+    "meaning": "Thiết bị điện tử",
+    "example": "Smartphones are the most common digital device.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Device\" (Technology):",
+      "sentence": "Smartphones are the most common digital device.",
+      "options": [
+        "Thiết bị điện tử",
+        "Kỹ thuật số",
+        "Quảng cáo",
+        "Ảnh hưởng / Tác động"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Device\" (/dɪˈvaɪs/) = Thiết bị điện tử."
+    }
+  },
+  {
+    "id": "s2_030",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Software",
+    "ipa": "/ˈsɒft.weər/",
+    "partOfSpeech": "noun",
+    "meaning": "Phần mềm",
+    "example": "Educational software makes vocabulary fun.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Software\" (Technology):",
+      "sentence": "Educational software makes vocabulary fun.",
+      "options": [
+        "Phần mềm",
+        "Báo giấy",
+        "Mạng xã hội",
+        "Truyền thống"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Software\" (/ˈsɒft.weər/) = Phần mềm."
+    }
+  },
+  {
+    "id": "s2_031",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Connect",
+    "ipa": "/kəˈnekt/",
+    "partOfSpeech": "verb",
+    "meaning": "Kết nối",
+    "example": "High-speed internet connects remote villages.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Connect\" (Technology):",
+      "sentence": "High-speed internet connects remote villages.",
+      "options": [
+        "Kết nối",
+        "Đáng tin cậy",
+        "Đăng ký theo dõi kênh",
+        "Đa dạng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Connect\" (/kəˈnekt/) = Kết nối."
+    }
+  },
+  {
+    "id": "s2_032",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Convenient",
+    "ipa": "/kənˈviː.ni.ənt/",
+    "partOfSpeech": "adjective",
+    "meaning": "Tiện lợi / Thuận tiện",
+    "example": "Online banking is fast and convenient.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Technology\" và chọn đúng từ:",
+      "sentence": "Online banking is fast and _____.",
+      "options": [
+        "Convenient",
+        "Upgrade",
+        "Data",
+        "Artificial"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Convenient\" (/kənˈviː.ni.ənt/) nghĩa là: Tiện lợi / Thuận tiện."
+    }
+  },
+  {
+    "id": "s2_033",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Upgrade",
+    "ipa": "/ʌpˈɡreɪd/",
+    "partOfSpeech": "verb",
+    "meaning": "Nâng cấp",
+    "example": "The school plans to upgrade its computers.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Upgrade\" (Technology):",
+      "sentence": "The school plans to upgrade its computers.",
+      "options": [
+        "Nâng cấp",
+        "Lễ hội",
+        "Ngôn ngữ",
+        "Học bổng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Upgrade\" (/ʌpˈɡreɪd/) = Nâng cấp."
+    }
+  },
+  {
+    "id": "s2_034",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Data",
+    "ipa": "/ˈdeɪ.tə/",
+    "partOfSpeech": "noun",
+    "meaning": "Dữ liệu",
+    "example": "Scientists collect weather data daily.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Data\" (Technology):",
+      "sentence": "Scientists collect weather data daily.",
+      "options": [
+        "Dữ liệu",
+        "Ăn mừng / Tổ chức kỷ niệm",
+        "Thế hệ",
+        "Học phí"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Data\" (/ˈdeɪ.tə/) = Dữ liệu."
+    }
+  },
+  {
+    "id": "s2_035",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Artificial",
+    "ipa": "/ˌɑː.tɪˈfɪʃ.əl/",
+    "partOfSpeech": "adjective",
+    "meaning": "Nhân tạo",
+    "example": "Artificial intelligence helps translate languages.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Artificial\" (Technology):",
+      "sentence": "Artificial intelligence helps translate languages.",
+      "options": [
+        "Nhân tạo",
+        "Kiến trúc",
+        "Tập trung chú ý",
+        "Bài giảng đại học"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Artificial\" (/ˌɑː.tɪˈfɪʃ.əl/) = Nhân tạo."
+    }
+  },
+  {
+    "id": "s2_036",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Cybersecurity",
+    "ipa": "/ˌsaɪ.bə.sɪˈkjʊə.rə.ti/",
+    "partOfSpeech": "noun",
+    "meaning": "An ninh mạng",
+    "example": "Strong passwords improve cybersecurity.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Technology\" và chọn đúng từ:",
+      "sentence": "Strong passwords improve _____.",
+      "options": [
+        "Cybersecurity",
+        "Automate",
+        "Digital",
+        "Innovation"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cybersecurity\" (/ˌsaɪ.bə.sɪˈkjʊə.rə.ti/) nghĩa là: An ninh mạng."
+    }
+  },
+  {
+    "id": "s2_037",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Automate",
+    "ipa": "/ˈɔː.tə.meɪt/",
+    "partOfSpeech": "verb",
+    "meaning": "Tự động hóa",
+    "example": "Machines automate repetitive factory tasks.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Automate\" (Technology):",
+      "sentence": "Machines automate repetitive factory tasks.",
+      "options": [
+        "Tự động hóa",
+        "Kỷ luật / Môn học",
+        "Sự ô nhiễm",
+        "Khí thải"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Automate\" (/ˈɔː.tə.meɪt/) = Tự động hóa."
+    }
+  },
+  {
+    "id": "s2_038",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Digital",
+    "ipa": "/ˈdɪdʒ.ɪ.təl/",
+    "partOfSpeech": "adjective",
+    "meaning": "Kỹ thuật số",
+    "example": "Many readers prefer digital textbooks.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Digital\" (Technology):",
+      "sentence": "Many readers prefer digital textbooks.",
+      "options": [
+        "Kỹ thuật số",
+        "Nghiên cứu",
+        "Khí hậu",
+        "Hạn hán kéo dài"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Digital\" (/ˈdɪdʒ.ɪ.təl/) = Kỹ thuật số."
+    }
+  },
+  {
+    "id": "s2_039",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Innovation",
+    "ipa": "/ˌɪn.əˈveɪ.ʃən/",
+    "partOfSpeech": "noun",
+    "meaning": "Sự đổi mới sáng tạo",
+    "example": "Smart irrigation is a great farming innovation.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Innovation\" (Technology):",
+      "sentence": "Smart irrigation is a great farming innovation.",
+      "options": [
+        "Sự đổi mới sáng tạo",
+        "Nạn phá rừng",
+        "Tấm pin mặt trời",
+        "Tiện lợi / Thuận tiện"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Innovation\" (/ˌɪn.əˈveɪ.ʃən/) = Sự đổi mới sáng tạo."
+    }
+  },
+  {
+    "id": "s2_040",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Gadget",
+    "ipa": "/ˈɡædʒ.ɪt/",
+    "partOfSpeech": "noun",
+    "meaning": "Thiết bị công nghệ nhỏ",
+    "example": "He loves testing every new kitchen gadget.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Technology\" và chọn đúng từ:",
+      "sentence": "He loves testing every new kitchen _____.",
+      "options": [
+        "Gadget",
+        "Database",
+        "Wireless",
+        "Device"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Gadget\" (/ˈɡædʒ.ɪt/) nghĩa là: Thiết bị công nghệ nhỏ."
+    }
+  },
+  {
+    "id": "s2_041",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Database",
+    "ipa": "/ˈdeɪ.tə.beɪs/",
+    "partOfSpeech": "noun",
+    "meaning": "Cơ sở dữ liệu",
+    "example": "The library stores all books in a database.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Database\" (Technology):",
+      "sentence": "The library stores all books in a database.",
+      "options": [
+        "Cơ sở dữ liệu",
+        "Bền vững (lâu dài)",
+        "Nhân tạo",
+        "Không dây"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Database\" (/ˈdeɪ.tə.beɪs/) = Cơ sở dữ liệu."
+    }
+  },
+  {
+    "id": "s2_042",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Technology",
+    "word": "Wireless",
+    "ipa": "/ˈwaɪə.ləs/",
+    "partOfSpeech": "adjective",
+    "meaning": "Không dây",
+    "example": "Wireless sensors check soil moisture automatically.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Wireless\" (Technology):",
+      "sentence": "Wireless sensors check soil moisture automatically.",
+      "options": [
+        "Không dây",
+        "Nâng cấp",
+        "Thiết bị công nghệ nhỏ",
+        "Khán giả / Người xem"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Wireless\" (/ˈwaɪə.ləs/) = Không dây."
+    }
+  },
+  {
+    "id": "s2_043",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Newspaper",
+    "ipa": "/ˈnjuːzˌpeɪ.pər/",
+    "partOfSpeech": "noun",
+    "meaning": "Báo giấy",
+    "example": "He reads the local newspaper over breakfast.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Newspaper\" (Media):",
+      "sentence": "He reads the local newspaper over breakfast.",
+      "options": [
+        "Báo giấy",
+        "Đăng ký theo dõi kênh",
+        "Đa dạng",
+        "Nghi lễ trang trọng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Newspaper\" (/ˈnjuːzˌpeɪ.pər/) = Báo giấy."
+    }
+  },
+  {
+    "id": "s2_044",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Broadcast",
+    "ipa": "/ˈbrɔːd.kɑːst/",
+    "partOfSpeech": "verb/noun",
+    "meaning": "Phát sóng / Chương trình phát thanh",
+    "example": "The station will broadcast the live match.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Broadcast\" (Media):",
+      "sentence": "The station will broadcast the live match.",
+      "options": [
+        "Phát sóng / Chương trình phát thanh",
+        "Phong tục tập quán",
+        "Bản sắc / Danh tính",
+        "Tốt nghiệp"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Broadcast\" (/ˈbrɔːd.kɑːst/) = Phát sóng / Chương trình phát thanh."
+    }
+  },
+  {
+    "id": "s2_045",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Advertisement",
+    "ipa": "/ədˈvɜː.tɪs.mənt/",
+    "partOfSpeech": "noun",
+    "meaning": "Quảng cáo",
+    "example": "The colourful advertisement attracted many buyers.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Advertisement\" (Media):",
+      "sentence": "The colourful advertisement attracted many buyers.",
+      "options": [
+        "Quảng cáo",
+        "Ngôn ngữ",
+        "Học bổng",
+        "Khuyến khích, động viên"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Advertisement\" (/ədˈvɜː.tɪs.mənt/) = Quảng cáo."
+    }
+  },
+  {
+    "id": "s2_046",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Journalist",
+    "ipa": "/ˈdʒɜː.nə.lɪst/",
+    "partOfSpeech": "noun",
+    "meaning": "Nhà báo / Phóng viên",
+    "example": "A journalist interviewed the organic farmer.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Media\" và chọn đúng từ:",
+      "sentence": "A _____ interviewed the organic farmer.",
+      "options": [
+        "Journalist",
+        "Audience",
+        "Reliable",
+        "Headline"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Journalist\" (/ˈdʒɜː.nə.lɪst/) nghĩa là: Nhà báo / Phóng viên."
+    }
+  },
+  {
+    "id": "s2_047",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Audience",
+    "ipa": "/ˈɔː.di.əns/",
+    "partOfSpeech": "noun",
+    "meaning": "Khán giả / Người xem",
+    "example": "The documentary reached a young audience.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Audience\" (Media):",
+      "sentence": "The documentary reached a young audience.",
+      "options": [
+        "Khán giả / Người xem",
+        "Tập trung chú ý",
+        "Bài giảng đại học",
+        "Động vật hoang dã"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Audience\" (/ˈɔː.di.əns/) = Khán giả / Người xem."
+    }
+  },
+  {
+    "id": "s2_048",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Reliable",
+    "ipa": "/rɪˈlaɪ.ə.bəl/",
+    "partOfSpeech": "adjective",
+    "meaning": "Đáng tin cậy",
+    "example": "Check reliable sources before sharing news.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Reliable\" (Media):",
+      "sentence": "Check reliable sources before sharing news.",
+      "options": [
+        "Đáng tin cậy",
+        "Chứng chỉ / Bằng cấp",
+        "Có thể tái tạo (năng lượng sạch)",
+        "Rác thải / Lãng phí"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Reliable\" (/rɪˈlaɪ.ə.bəl/) = Đáng tin cậy."
+    }
+  },
+  {
+    "id": "s2_049",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Headline",
+    "ipa": "/ˈhed.laɪn/",
+    "partOfSpeech": "noun",
+    "meaning": "Tiêu đề bài báo",
+    "example": "The front-page headline caught my eye.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Headline\" (Media):",
+      "sentence": "The front-page headline caught my eye.",
+      "options": [
+        "Tiêu đề bài báo",
+        "Sự ô nhiễm",
+        "Khí thải",
+        "Thiết bị điện tử"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Headline\" (/ˈhed.laɪn/) = Tiêu đề bài báo."
+    }
+  },
+  {
+    "id": "s2_050",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Social media",
+    "ipa": "/ˈsəʊ.ʃəl ˈmiː.di.ə/",
+    "partOfSpeech": "noun",
+    "meaning": "Mạng xã hội",
+    "example": "Social media spreads information instantly.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Media\" và chọn đúng từ:",
+      "sentence": "_____ spreads information instantly.",
+      "options": [
+        "Social media",
+        "Publish",
+        "Influence",
+        "Documentary"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Social media\" (/ˈsəʊ.ʃəl ˈmiː.di.ə/) nghĩa là: Mạng xã hội."
+    }
+  },
+  {
+    "id": "s2_051",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Publish",
+    "ipa": "/ˈpʌb.lɪʃ/",
+    "partOfSpeech": "verb",
+    "meaning": "Xuất bản / Đăng tải",
+    "example": "They publish a weekly farm newsletter.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Publish\" (Media):",
+      "sentence": "They publish a weekly farm newsletter.",
+      "options": [
+        "Xuất bản / Đăng tải",
+        "Tấm pin mặt trời",
+        "Tiện lợi / Thuận tiện",
+        "Sự đổi mới sáng tạo"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Publish\" (/ˈpʌb.lɪʃ/) = Xuất bản / Đăng tải."
+    }
+  },
+  {
+    "id": "s2_052",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Influence",
+    "ipa": "/ˈɪn.flu.əns/",
+    "partOfSpeech": "verb/noun",
+    "meaning": "Ảnh hưởng / Tác động",
+    "example": "Media reviews strongly influence shoppers.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Influence\" (Media):",
+      "sentence": "Media reviews strongly influence shoppers.",
+      "options": [
+        "Ảnh hưởng / Tác động",
+        "Phần mềm",
+        "Tự động hóa",
+        "Phát sóng / Chương trình phát thanh"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Influence\" (/ˈɪn.flu.əns/) = Ảnh hưởng / Tác động."
+    }
+  },
+  {
+    "id": "s2_053",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Documentary",
+    "ipa": "/ˌdɒk.jəˈmen.tər.i/",
+    "partOfSpeech": "noun",
+    "meaning": "Phim tài liệu",
+    "example": "We watched a documentary on ocean wildlife.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Documentary\" (Media):",
+      "sentence": "We watched a documentary on ocean wildlife.",
+      "options": [
+        "Phim tài liệu",
+        "Nhân tạo",
+        "Không dây",
+        "Tiêu đề bài báo"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Documentary\" (/ˌdɒk.jəˈmen.tər.i/) = Phim tài liệu."
+    }
+  },
+  {
+    "id": "s2_054",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Censorship",
+    "ipa": "/ˈsen.sə.ʃɪp/",
+    "partOfSpeech": "noun",
+    "meaning": "Sự kiểm duyệt thông tin",
+    "example": "Media censorship is debated in many countries.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Media\" và chọn đúng từ:",
+      "sentence": "Media _____ is debated in many countries.",
+      "options": [
+        "Censorship",
+        "Subscribe",
+        "Fake news",
+        "Newspaper"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Censorship\" (/ˈsen.sə.ʃɪp/) nghĩa là: Sự kiểm duyệt thông tin."
+    }
+  },
+  {
+    "id": "s2_055",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Subscribe",
+    "ipa": "/səbˈskraɪb/",
+    "partOfSpeech": "verb",
+    "meaning": "Đăng ký theo dõi kênh",
+    "example": "Thousands subscribe to educational channels.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Subscribe\" (Media):",
+      "sentence": "Thousands subscribe to educational channels.",
+      "options": [
+        "Đăng ký theo dõi kênh",
+        "Quảng cáo",
+        "Ảnh hưởng / Tác động",
+        "Di sản"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Subscribe\" (/səbˈskraɪb/) = Đăng ký theo dõi kênh."
+    }
+  },
+  {
+    "id": "s2_056",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Media",
+    "word": "Fake news",
+    "ipa": "/feɪk njuːz/",
+    "partOfSpeech": "noun",
+    "meaning": "Tin giả, tin sai sự thật",
+    "example": "Fact-checking helps stop fake news online.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Fake news\" (Media):",
+      "sentence": "Fact-checking helps stop fake news online.",
+      "options": [
+        "Tin giả, tin sai sự thật",
+        "Mạng xã hội",
+        "Truyền thống",
+        "Đài tưởng niệm / Di tích"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Fake news\" (/feɪk njuːz/) = Tin giả, tin sai sự thật."
+    }
+  },
+  {
+    "id": "s2_057",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Tradition",
+    "ipa": "/trəˈdɪʃ.ən/",
+    "partOfSpeech": "noun",
+    "meaning": "Truyền thống",
+    "example": "Making square cakes at Tet is a beloved tradition.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Tradition\" (Culture):",
+      "sentence": "Making square cakes at Tet is a beloved tradition.",
+      "options": [
+        "Truyền thống",
+        "Học bổng",
+        "Khuyến khích, động viên",
+        "Tái chế"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Tradition\" (/trəˈdɪʃ.ən/) = Truyền thống."
+    }
+  },
+  {
+    "id": "s2_058",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Festival",
+    "ipa": "/ˈfes.tɪ.vəl/",
+    "partOfSpeech": "noun",
+    "meaning": "Lễ hội",
+    "example": "The harvest festival features folk music.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Festival\" (Culture):",
+      "sentence": "The harvest festival features folk music.",
+      "options": [
+        "Lễ hội",
+        "Học phí",
+        "Hướng nghiệp / Dạy nghề",
+        "Bảo tồn / Tiết kiệm"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Festival\" (/ˈfes.tɪ.vəl/) = Lễ hội."
+    }
+  },
+  {
+    "id": "s2_059",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Heritage",
+    "ipa": "/ˈher.ɪ.tɪdʒ/",
+    "partOfSpeech": "noun",
+    "meaning": "Di sản",
+    "example": "Ancient temples are part of national heritage.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Heritage\" (Culture):",
+      "sentence": "Ancient temples are part of national heritage.",
+      "options": [
+        "Di sản",
+        "Bài giảng đại học",
+        "Động vật hoang dã",
+        "Môi trường sống tự nhiên"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Heritage\" (/ˈher.ɪ.tɪdʒ/) = Di sản."
+    }
+  },
+  {
+    "id": "s2_060",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Custom",
+    "ipa": "/ˈkʌs.təm/",
+    "partOfSpeech": "noun",
+    "meaning": "Phong tục tập quán",
+    "example": "Removing shoes indoors is a polite custom.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Culture\" và chọn đúng từ:",
+      "sentence": "Removing shoes indoors is a polite _____.",
+      "options": [
+        "Custom",
+        "Cuisine",
+        "Diverse",
+        "Celebrate"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Custom\" (/ˈkʌs.təm/) nghĩa là: Phong tục tập quán."
+    }
+  },
+  {
+    "id": "s2_061",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Cuisine",
+    "ipa": "/kwɪˈziːn/",
+    "partOfSpeech": "noun",
+    "meaning": "Ẩm thực",
+    "example": "Vietnamese cuisine uses plenty of fresh herbs.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Cuisine\" (Culture):",
+      "sentence": "Vietnamese cuisine uses plenty of fresh herbs.",
+      "options": [
+        "Ẩm thực",
+        "Khí thải",
+        "Thiết bị điện tử",
+        "An ninh mạng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Cuisine\" (/kwɪˈziːn/) = Ẩm thực."
+    }
+  },
+  {
+    "id": "s2_062",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Diverse",
+    "ipa": "/daɪˈvɜːs/",
+    "partOfSpeech": "adjective",
+    "meaning": "Đa dạng",
+    "example": "Modern cities have diverse communities.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Diverse\" (Culture):",
+      "sentence": "Modern cities have diverse communities.",
+      "options": [
+        "Đa dạng",
+        "Hạn hán kéo dài",
+        "Dữ liệu",
+        "Cơ sở dữ liệu"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Diverse\" (/daɪˈvɜːs/) = Đa dạng."
+    }
+  },
+  {
+    "id": "s2_063",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Celebrate",
+    "ipa": "/ˈsel.ə.breɪt/",
+    "partOfSpeech": "verb",
+    "meaning": "Ăn mừng / Tổ chức kỷ niệm",
+    "example": "Villagers celebrate a successful harvest.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Celebrate\" (Culture):",
+      "sentence": "Villagers celebrate a successful harvest.",
+      "options": [
+        "Ăn mừng / Tổ chức kỷ niệm",
+        "Tiện lợi / Thuận tiện",
+        "Sự đổi mới sáng tạo",
+        "Nhà báo / Phóng viên"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Celebrate\" (/ˈsel.ə.breɪt/) = Ăn mừng / Tổ chức kỷ niệm."
+    }
+  },
+  {
+    "id": "s2_064",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Monument",
+    "ipa": "/ˈmɒn.jə.mənt/",
+    "partOfSpeech": "noun",
+    "meaning": "Đài tưởng niệm / Di tích",
+    "example": "Tourists photographed the historic monument.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Culture\" và chọn đúng từ:",
+      "sentence": "Tourists photographed the historic _____.",
+      "options": [
+        "Monument",
+        "Language",
+        "Respect",
+        "Identity"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Monument\" (/ˈmɒn.jə.mənt/) nghĩa là: Đài tưởng niệm / Di tích."
+    }
+  },
+  {
+    "id": "s2_065",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Language",
+    "ipa": "/ˈlæŋ.ɡwɪdʒ/",
+    "partOfSpeech": "noun",
+    "meaning": "Ngôn ngữ",
+    "example": "Learning a second language opens new doors.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Language\" (Culture):",
+      "sentence": "Learning a second language opens new doors.",
+      "options": [
+        "Ngôn ngữ",
+        "Không dây",
+        "Tiêu đề bài báo",
+        "Tin giả, tin sai sự thật"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Language\" (/ˈlæŋ.ɡwɪdʒ/) = Ngôn ngữ."
+    }
+  },
+  {
+    "id": "s2_066",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Respect",
+    "ipa": "/rɪˈspekt/",
+    "partOfSpeech": "verb/noun",
+    "meaning": "Tôn trọng",
+    "example": "Visitors should respect local traditions.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Respect\" (Culture):",
+      "sentence": "Visitors should respect local traditions.",
+      "options": [
+        "Tôn trọng",
+        "Khán giả / Người xem",
+        "Sự kiểm duyệt thông tin",
+        "Ẩm thực"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Respect\" (/rɪˈspekt/) = Tôn trọng."
+    }
+  },
+  {
+    "id": "s2_067",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Identity",
+    "ipa": "/aɪˈden.tə.ti/",
+    "partOfSpeech": "noun",
+    "meaning": "Bản sắc / Danh tính",
+    "example": "Folk music preserves cultural identity.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Identity\" (Culture):",
+      "sentence": "Folk music preserves cultural identity.",
+      "options": [
+        "Bản sắc / Danh tính",
+        "Ảnh hưởng / Tác động",
+        "Di sản",
+        "Tôn trọng"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Identity\" (/aɪˈden.tə.ti/) = Bản sắc / Danh tính."
+    }
+  },
+  {
+    "id": "s2_068",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Architecture",
+    "ipa": "/ˈɑː.kɪ.tek.tʃər/",
+    "partOfSpeech": "noun",
+    "meaning": "Kiến trúc",
+    "example": "Old town architecture attracts photographers.",
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe từ vựng chủ đề \"Culture\" và chọn đúng từ:",
+      "sentence": "Old town _____ attracts photographers.",
+      "options": [
+        "Architecture",
+        "Ceremony",
+        "Generation",
+        "Tradition"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Architecture\" (/ˈɑː.kɪ.tek.tʃər/) nghĩa là: Kiến trúc."
+    }
+  },
+  {
+    "id": "s2_069",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Ceremony",
+    "ipa": "/ˈser.ɪ.mə.ni/",
+    "partOfSpeech": "noun",
+    "meaning": "Nghi lễ trang trọng",
+    "example": "The graduation ceremony lasted two hours.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Ceremony\" (Culture):",
+      "sentence": "The graduation ceremony lasted two hours.",
+      "options": [
+        "Nghi lễ trang trọng",
+        "Đa dạng",
+        "Kiến thức / Hiểu biết",
+        "Nghiên cứu"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Ceremony\" (/ˈser.ɪ.mə.ni/) = Nghi lễ trang trọng."
+    }
+  },
+  {
+    "id": "s2_070",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Culture",
+    "word": "Generation",
+    "ipa": "/ˌdʒen.əˈreɪ.ʃən/",
+    "partOfSpeech": "noun",
+    "meaning": "Thế hệ",
+    "example": "Recipes pass down from generation to generation.",
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt chuẩn của từ B1 \"Generation\" (Culture):",
+      "sentence": "Recipes pass down from generation to generation.",
+      "options": [
+        "Thế hệ",
+        "Bản sắc / Danh tính",
+        "Tốt nghiệp",
+        "Mang tính học thuật"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Generation\" (/ˌdʒen.əˈreɪ.ʃən/) = Thế hệ."
+    }
+  },
+  {
+    "id": "s2_071",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: WHO (Chủ ngữ người)",
+    "word": "MĐQH: WHO (Chủ ngữ người)",
+    "ipa": "who + V",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Chỉ người làm chủ ngữ",
+    "example": "The farmer who planted these apples is my uncle.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: WHO (Chủ ngữ người)):",
+      "sentence": "The farmer _____ planted these apples is my uncle.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "what"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chỉ người (\"The farmer\") làm chủ ngữ -> dùng \"who\"."
+    }
+  },
+  {
+    "id": "s2_072",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: WHICH (Chỉ vật)",
+    "word": "MĐQH: WHICH (Chỉ vật)",
+    "ipa": "which",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Chỉ vật hoặc sự việc",
+    "example": "This is the tractor which helps us plough the field.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: WHICH (Chỉ vật)):",
+      "sentence": "This is the tractor _____ helps us plough the field.",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "whom"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chỉ đồ vật (\"the tractor\") -> dùng \"which\"."
+    }
+  },
+  {
+    "id": "s2_073",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: WHERE (Nơi chốn)",
+    "word": "MĐQH: WHERE (Nơi chốn)",
+    "ipa": "where + S + V",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Trạng từ quan hệ chỉ địa điểm",
+    "example": "That is the green valley where the sheep graze.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: WHERE (Nơi chốn)):",
+      "sentence": "That is the green valley _____ the sheep graze.",
+      "options": [
+        "where",
+        "which",
+        "who",
+        "whose"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chỉ địa điểm nơi diễn ra hành động (\"ở đó\") -> dùng \"where\"."
+    }
+  },
+  {
+    "id": "s2_074",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: WHOSE (Sở hữu)",
+    "word": "MĐQH: WHOSE (Sở hữu)",
+    "ipa": "whose + N",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Chỉ sự sở hữu",
+    "example": "I met a student whose sister studies at Oxford.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: WHOSE (Sở hữu)):",
+      "sentence": "I met a student _____ sister studies at Oxford.",
+      "options": [
+        "whose",
+        "who",
+        "which",
+        "whom"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đứng trước danh từ \"sister\" chỉ sở hữu -> dùng \"whose\"."
+    }
+  },
+  {
+    "id": "s2_075",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: THAT (Xác định)",
+    "word": "MĐQH: THAT (Xác định)",
+    "ipa": "All + N + that",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Ưu tiên that sau all, every, the only",
+    "example": "All the crops that we grew last month are ripe.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: THAT (Xác định)):",
+      "sentence": "All the crops _____ we grew last month are ripe.",
+      "options": [
+        "that",
+        "what",
+        "where",
+        "whose"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau \"All the...\" ưu tiên dùng đại từ quan hệ \"that\"."
+    }
+  },
+  {
+    "id": "s2_076",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: WHEN (Thời gian)",
+    "word": "MĐQH: WHEN (Thời gian)",
+    "ipa": "when + S + V",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Trạng từ quan hệ chỉ thời điểm",
+    "example": "Autumn is the season when leaves turn golden.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: WHEN (Thời gian)):",
+      "sentence": "Autumn is the season _____ leaves turn golden.",
+      "options": [
+        "when",
+        "where",
+        "which",
+        "who"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"season\" là danh từ chỉ thời gian -> dùng \"when\"."
+    }
+  },
+  {
+    "id": "s2_077",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: WHOM (Sau giới từ)",
+    "word": "MĐQH: WHOM (Sau giới từ)",
+    "ipa": "giới từ + whom",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Chỉ người sau giới từ",
+    "example": "The professor to whom I spoke was very helpful.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: WHOM (Sau giới từ)):",
+      "sentence": "The professor to _____ I spoke was very helpful.",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "whose"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ngay sau giới từ (\"to\") chỉ người bắt buộc dùng \"whom\"."
+    }
+  },
+  {
+    "id": "s2_078",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH không xác định",
+    "word": "MĐQH không xác định",
+    "ipa": ", which + V",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Có dấu phẩy KHÔNG dùng \"that\"",
+    "example": "Our farm has a clean pond, which attracts butterflies.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH không xác định):",
+      "sentence": "Our farm has a clean pond, _____ attracts butterflies.",
+      "options": [
+        "which",
+        "that",
+        "what",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau dấu phẩy tuyệt đối KHÔNG dùng \"that\"."
+    }
+  },
+  {
+    "id": "s2_079",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: Chỉ người vs vật",
+    "word": "MĐQH: Chỉ người vs vật",
+    "ipa": "who vs which",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Lựa chọn đại từ đúng theo danh từ đứng trước",
+    "example": "Students who read daily improve their vocabulary fast.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: Chỉ người vs vật):",
+      "sentence": "Students _____ read daily improve their vocabulary fast.",
+      "options": [
+        "who",
+        "which",
+        "where",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Students\" là người làm chủ ngữ cho \"read\" -> dùng \"who\"."
+    }
+  },
+  {
+    "id": "s2_080",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "MĐQH: Nơi chốn làm S",
+    "word": "MĐQH: Nơi chốn làm S",
+    "ipa": "which + V (làm chủ ngữ)",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Nếu thiếu chủ ngữ cho nơi chốn vẫn dùng which!",
+    "example": "Hanoi is a historic city which attracts millions of visitors.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (MĐQH: Nơi chốn làm S):",
+      "sentence": "Hanoi is a historic city _____ attracts millions of visitors.",
+      "options": [
+        "which",
+        "where",
+        "when",
+        "whom"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chỗ trống đứng ngay trước động từ \"attracts\" (thiếu chủ ngữ) -> dùng \"which\", KHÔNG dùng \"where\"!"
+    }
+  },
+  {
+    "id": "s2_081",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Bị động Hiện tại đơn (Ít)",
+    "word": "Bị động Hiện tại đơn (Ít)",
+    "ipa": "is + V3/ed",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Chủ ngữ số ít không tự làm được hành động",
+    "example": "Fresh cheese is made from cow milk here.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Bị động Hiện tại đơn (Ít)):",
+      "sentence": "Fresh cheese _____ made from cow milk here.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "has"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Fresh cheese\" số ít ở hiện tại + \"made\" (V3) -> \"is\"."
+    }
+  },
+  {
+    "id": "s2_082",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Bị động Hiện tại đơn (Nhiều)",
+    "word": "Bị động Hiện tại đơn (Nhiều)",
+    "ipa": "are + V3/ed",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Bị động với chủ ngữ số nhiều",
+    "example": "Thousands of trees are planted every spring.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Bị động Hiện tại đơn (Nhiều)):",
+      "sentence": "Thousands of trees _____ planted every spring.",
+      "options": [
+        "are",
+        "is",
+        "was",
+        "does"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cây được trồng + số nhiều -> \"are planted\"."
+    }
+  },
+  {
+    "id": "s2_083",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Bị động Quá khứ đơn (Ít)",
+    "word": "Bị động Quá khứ đơn (Ít)",
+    "ipa": "was + V3/ed",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Bị động có mốc thời gian quá khứ",
+    "example": "This wooden barn was built in 1995.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Bị động Quá khứ đơn (Ít)):",
+      "sentence": "This wooden barn _____ built in 1995.",
+      "options": [
+        "was",
+        "were",
+        "is",
+        "has been"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có mốc quá khứ \"in 1995\" + số ít -> \"was built\"."
+    }
+  },
+  {
+    "id": "s2_084",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Bị động Quá khứ đơn (Nhiều)",
+    "word": "Bị động Quá khứ đơn (Nhiều)",
+    "ipa": "were + V3/ed",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Bị động quá khứ số nhiều",
+    "example": "Two ancient coins were discovered under the garden.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Bị động Quá khứ đơn (Nhiều)):",
+      "sentence": "Two ancient coins _____ discovered under the garden.",
+      "options": [
+        "were",
+        "was",
+        "are",
+        "have"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Two ancient coins\" số nhiều trong quá khứ -> \"were discovered\"."
+    }
+  },
+  {
+    "id": "s2_085",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Bị động Động từ khuyết thiếu",
+    "word": "Bị động Động từ khuyết thiếu",
+    "ipa": "should/can/must + be + V3",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Bị động với modal verbs",
+    "example": "Plastic bottles should be recycled properly.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Bị động Động từ khuyết thiếu):",
+      "sentence": "Plastic bottles should _____ recycled properly.",
+      "options": [
+        "be",
+        "been",
+        "being",
+        "is"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau \"should\" ở thể bị động luôn dùng \"be + V3\"."
+    }
+  },
+  {
+    "id": "s2_086",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Bị động Tương lai đơn",
+    "word": "Bị động Tương lai đơn",
+    "ipa": "will be + V3/ed",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Sự việc sẽ được thực hiện trong tương lai",
+    "example": "A new library will be built near our village next year.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Bị động Tương lai đơn):",
+      "sentence": "A new library _____ built near our village next year.",
+      "options": [
+        "will be",
+        "will",
+        "is",
+        "was"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"next year\" + bị động (\"được xây\") -> \"will be built\"."
+    }
+  },
+  {
+    "id": "s2_087",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Bị động Hiện tại hoàn thành",
+    "word": "Bị động Hiện tại hoàn thành",
+    "ipa": "has/have been + V3",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Đã được làm tính tới nay",
+    "example": "The local road has been repaired recently.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Bị động Hiện tại hoàn thành):",
+      "sentence": "The local road has _____ repaired recently.",
+      "options": [
+        "been",
+        "be",
+        "being",
+        "was"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau \"has\" trong bị động dùng \"been + V3\"."
+    }
+  },
+  {
+    "id": "s2_088",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Bị động Tiếp diễn",
+    "word": "Bị động Tiếp diễn",
+    "ipa": "is being + V3",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Đang được thực hiện ngay lúc này",
+    "example": "Look! The roof is being painted right now.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Bị động Tiếp diễn):",
+      "sentence": "Look! The roof is _____ painted right now.",
+      "options": [
+        "being",
+        "been",
+        "be",
+        "to be"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hiện tại tiếp diễn bị động: is/are + being + V3."
+    }
+  },
+  {
+    "id": "s2_089",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Tác nhân Bị động: BY",
+    "word": "Tác nhân Bị động: BY",
+    "ipa": "by + người/vật",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Giới từ chỉ người thực hiện hành động",
+    "example": "The essay was graded by an experienced teacher.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Tác nhân Bị động: BY):",
+      "sentence": "The essay was graded _____ an experienced teacher.",
+      "options": [
+        "by",
+        "with",
+        "from",
+        "of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dùng \"by\" trước tác nhân thực hiện hành động."
+    }
+  },
+  {
+    "id": "s2_090",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Công cụ Bị động: WITH",
+    "word": "Công cụ Bị động: WITH",
+    "ipa": "with + dụng cụ",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Dùng WITH trước công cụ/vật liệu",
+    "example": "The fence was painted with a wide brush.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Công cụ Bị động: WITH):",
+      "sentence": "The fence was painted _____ a wide brush.",
+      "options": [
+        "with",
+        "by",
+        "for",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "Với dụng cụ/phương tiện (\"a wide brush\"), dùng giới từ \"with\" (không dùng \"by\")."
+    }
+  },
+  {
+    "id": "s2_091",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh hơn (Tính từ ngắn)",
+    "word": "So sánh hơn (Tính từ ngắn)",
+    "ipa": "adj-er + than",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Tính từ 1 âm tiết thêm -er",
+    "example": "This apple is sweeter than that lemon.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh hơn (Tính từ ngắn)):",
+      "sentence": "This apple is _____ than that lemon.",
+      "options": [
+        "sweeter",
+        "more sweet",
+        "sweetest",
+        "the sweeter"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Sweet\" 1 âm tiết -> thêm \"-er\": sweeter than."
+    }
+  },
+  {
+    "id": "s2_092",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh hơn (Tính từ dài)",
+    "word": "So sánh hơn (Tính từ dài)",
+    "ipa": "more + adj + than",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Tính từ >= 2 âm tiết dùng more",
+    "example": "Online learning is more flexible than traditional classes.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh hơn (Tính từ dài)):",
+      "sentence": "Online learning is _____ flexible than traditional classes.",
+      "options": [
+        "more",
+        "most",
+        "much",
+        "very"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Flexible\" là tính từ dài có \"than\" -> \"more flexible than\"."
+    }
+  },
+  {
+    "id": "s2_093",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh hơn: GOOD",
+    "word": "So sánh hơn: GOOD",
+    "ipa": "good -> better",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Bất quy tắc của good/well",
+    "example": "Fresh farm food is better than fast food.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh hơn: GOOD):",
+      "sentence": "Fresh farm food is _____ than fast food.",
+      "options": [
+        "better",
+        "gooder",
+        "more good",
+        "best"
+      ],
+      "correctIndex": 0,
+      "explanation": "Good -> better (tốt hơn) -> the best (tốt nhất)."
+    }
+  },
+  {
+    "id": "s2_094",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh hơn: BAD",
+    "word": "So sánh hơn: BAD",
+    "ipa": "bad -> worse",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Bất quy tắc của bad",
+    "example": "Air pollution is getting worse than before.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh hơn: BAD):",
+      "sentence": "Air pollution is getting _____ than before.",
+      "options": [
+        "worse",
+        "badder",
+        "more bad",
+        "worst"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bad -> worse (tệ hơn) -> the worst (tệ nhất)."
+    }
+  },
+  {
+    "id": "s2_095",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh hơn: FAR",
+    "word": "So sánh hơn: FAR",
+    "ipa": "far -> farther/further",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Xa hơn / sâu rộng hơn",
+    "example": "Further research is needed on further climate data.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh hơn: FAR):",
+      "sentence": "Further research is needed on _____ climate data.",
+      "options": [
+        "further",
+        "farer",
+        "more far",
+        "farthest"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dùng \"further\" mang nghĩa \"sâu hơn, bổ sung thêm\" trong học thuật."
+    }
+  },
+  {
+    "id": "s2_096",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh nhất (Ngắn)",
+    "word": "So sánh nhất (Ngắn)",
+    "ipa": "the + adj-est",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Tính từ ngắn thêm -est",
+    "example": "Summer is the hottest season of the year.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh nhất (Ngắn)):",
+      "sentence": "Summer is the _____ season of the year.",
+      "options": [
+        "hottest",
+        "hotter",
+        "most hot",
+        "hot"
+      ],
+      "correctIndex": 0,
+      "explanation": "So sánh nhất của \"hot\" là \"the hottest\" (gấp đôi phụ âm t)."
+    }
+  },
+  {
+    "id": "s2_097",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh nhất (Dài)",
+    "word": "So sánh nhất (Dài)",
+    "ipa": "the most + adj",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Tính từ dài dùng the most",
+    "example": "Biodiversity is one of the most important topics.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh nhất (Dài)):",
+      "sentence": "Biodiversity is one of the _____ important topics.",
+      "options": [
+        "most",
+        "more",
+        "much",
+        "very"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"one of the _____ important\" -> so sánh nhất dùng \"most\"."
+    }
+  },
+  {
+    "id": "s2_098",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh bằng",
+    "word": "So sánh bằng",
+    "ipa": "as + adj/adv + as",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Ngang bằng nhau",
+    "example": "Electric buses are as quiet as bicycles.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh bằng):",
+      "sentence": "Electric buses are _____ quiet as bicycles.",
+      "options": [
+        "as",
+        "so",
+        "more",
+        "than"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc so sánh bằng khẳng định: as + adj + as."
+    }
+  },
+  {
+    "id": "s2_099",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh không bằng",
+    "word": "So sánh không bằng",
+    "ipa": "not as/so + adj + as",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Không bằng cái kia",
+    "example": "This winter is not as cold as last winter.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh không bằng):",
+      "sentence": "This winter is not _____ cold as last winter.",
+      "options": [
+        "as",
+        "more",
+        "than",
+        "most"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu phủ định \"not as/so ... as\"."
+    }
+  },
+  {
+    "id": "s2_100",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So sánh kép (Càng... càng)",
+    "word": "So sánh kép (Càng... càng)",
+    "ipa": "The + more..., the + more...",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Tỷ lệ thuận hai vế",
+    "example": "The more you practise, the better your English becomes.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So sánh kép (Càng... càng)):",
+      "sentence": "The more you practise, the _____ your English becomes.",
+      "options": [
+        "better",
+        "good",
+        "best",
+        "well"
+      ],
+      "correctIndex": 0,
+      "explanation": "So sánh kép: The + so sánh hơn..., the + so sánh hơn (better)."
+    }
+  },
+  {
+    "id": "s2_101",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Nhấn mạnh So sánh hơn",
+    "word": "Nhấn mạnh So sánh hơn",
+    "ipa": "much / far + adj-er",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Không dùng very trước so sánh hơn",
+    "example": "Solar energy is much cleaner than coal.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Nhấn mạnh So sánh hơn):",
+      "sentence": "Solar energy is _____ cleaner than coal.",
+      "options": [
+        "much",
+        "very",
+        "more",
+        "too"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dùng \"much\" hoặc \"far\" để nhấn mạnh so sánh hơn."
+    }
+  },
+  {
+    "id": "s2_102",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Tính từ đuôi -y",
+    "word": "Tính từ đuôi -y",
+    "ipa": "happy -> happier",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Tính từ 2 âm tiết tận cùng bằng -y đổi thành -ier",
+    "example": "The country life feels healthier than city life.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Tính từ đuôi -y):",
+      "sentence": "The country life feels _____ than city life.",
+      "options": [
+        "healthier",
+        "more healthy",
+        "healthiest",
+        "most healthy"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tính từ 2 âm tiết tận cùng \"-y\" (healthy, busy, easy) chuyển thành \"-ier\"."
+    }
+  },
+  {
+    "id": "s2_103",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Gerund làm Chủ ngữ",
+    "word": "Gerund làm Chủ ngữ",
+    "ipa": "V-ing + V(ít)",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Động từ làm chủ ngữ chia động từ số ít",
+    "example": "Planting trees helps reduce carbon dioxide.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Gerund làm Chủ ngữ):",
+      "sentence": "Planting trees _____ reduce carbon dioxide.",
+      "options": [
+        "helps",
+        "help",
+        "helping",
+        "are"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Planting trees\" là cụm V-ing làm chủ ngữ -> động từ số ít \"helps\"."
+    }
+  },
+  {
+    "id": "s2_104",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Modal Verb: MUST vs HAVE TO",
+    "word": "Modal Verb: MUST vs HAVE TO",
+    "ipa": "must + V0",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Bắt buộc hoặc cần thiết",
+    "example": "Students must submit the essay before 5 p.m.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Modal Verb: MUST vs HAVE TO):",
+      "sentence": "Students _____ submit the essay before 5 p.m.",
+      "options": [
+        "must",
+        "must to",
+        "musting",
+        "had"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau động từ khuyết thiếu (must, should, can) luôn là V nguyên mẫu không \"to\"."
+    }
+  },
+  {
+    "id": "s2_105",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Used to + V0",
+    "word": "Used to + V0",
+    "ipa": "used to + V0",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Thói quen trong quá khứ nay không còn nữa",
+    "example": "My grandfather used to walk five miles to school.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Used to + V0):",
+      "sentence": "My grandfather _____ walk five miles to school.",
+      "options": [
+        "used to",
+        "use to",
+        "is used to",
+        "was used to"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"used to + V0\" diễn tả thói quen quá khứ."
+    }
+  },
+  {
+    "id": "s2_106",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Be used to + V-ing",
+    "word": "Be used to + V-ing",
+    "ipa": "be used to + V-ing",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Quen với việc gì ở hiện tại",
+    "example": "Farmers are used to waking up at dawn.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Be used to + V-ing):",
+      "sentence": "Farmers are used to _____ up at dawn.",
+      "options": [
+        "waking",
+        "wake",
+        "woke",
+        "woken"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau \"be used to\" (quen với) là V-ing hoặc Danh từ!"
+    }
+  },
+  {
+    "id": "s2_107",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Enough + Noun / Adj + Enough",
+    "word": "Enough + Noun / Adj + Enough",
+    "ipa": "adj + enough",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Đủ để làm gì",
+    "example": "The soil is rich enough to grow ancient trees.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Enough + Noun / Adj + Enough):",
+      "sentence": "The soil is rich _____ to grow ancient trees.",
+      "options": [
+        "enough",
+        "too",
+        "very",
+        "so"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tính từ đứng TRƯỚC enough (\"rich enough\"); Danh từ đứng SAU enough (\"enough water\")."
+    }
+  },
+  {
+    "id": "s2_108",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Too... to...",
+    "word": "Too... to...",
+    "ipa": "too + adj + to V0",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Quá đến nỗi không thể",
+    "example": "The river was too deep to cross on foot.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Too... to...):",
+      "sentence": "The river was _____ deep to cross on foot.",
+      "options": [
+        "too",
+        "enough",
+        "so",
+        "such"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc \"too + adj + to V0\" = quá... đến nỗi không thể làm gì."
+    }
+  },
+  {
+    "id": "s2_109",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "So... that vs Such... that",
+    "word": "So... that vs Such... that",
+    "ipa": "such + (a/an) + adj + N + that",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Quá đến nỗi mà (dùng với cụm danh từ)",
+    "example": "It was such a sunny day that everyone went outside.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (So... that vs Such... that):",
+      "sentence": "It was _____ a sunny day that everyone went outside.",
+      "options": [
+        "such",
+        "so",
+        "very",
+        "too"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trước cụm danh từ (\"a sunny day\") dùng \"such\", trước tính từ đứng riêng dùng \"so\"."
+    }
+  },
+  {
+    "id": "s2_110",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.1: Từ vựng & Ngữ pháp trung cấp (B1)",
+    "topic": "Quantifier: A number of vs The number of",
+    "word": "Quantifier: A number of vs The number of",
+    "ipa": "The number of + N nhiều + V(ít)",
+    "partOfSpeech": "grammar B1",
+    "meaning": "Phân biệt số lượng với một số",
+    "example": "The number of organic farms is increasing steadily.",
+    "quizType": "collocation_match",
+    "quiz": {
+      "prompt": "Chọn đáp án chuẩn ngữ pháp B1 (Quantifier: A number of vs The number of):",
+      "sentence": "The number of organic farms _____ increasing steadily.",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "have"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"The number of...\" (Con số lượng...) luôn chia động từ số ít (\"is\")!"
+    }
+  },
+  {
+    "id": "s2_111",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Số -teen vs -ty",
+    "word": "Listening: Số -teen vs -ty",
+    "ipa": "15 vs 50",
+    "partOfSpeech": "skill B1",
+    "meaning": "Phân biệt trọng âm số đuôi -teen và -ty",
+    "example": "\"Fifty\" nhấn âm 1 (/ˈfɪf.ti/), \"Fifteen\" nhấn âm 2 (/ˌfɪfˈtiːn/)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trong Listening Part 1, số \"FIF-ty\" (50) khác \"fif-TEEN\" (15) ở điểm nào?",
+      "sentence": "Chiến thuật: Phân biệt trọng âm số đuôi -teen và -ty",
+      "options": [
+        "\"Fifty\" nhấn âm 1 (/ˈfɪf.ti/), \"Fifteen\" nhấn âm 2 (/ˌfɪfˈtiːn/)",
+        "Hai từ đọc giống hệt nhau hoàn toàn",
+        "\"Fifty\" kéo dài âm cuối hơn",
+        "\"Fifteen\" luôn đọc nhỏ hơn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mẹo Part 1: Số tròn chục (-ty) nhấn âm 1; số mười mấy (-teen) nhấn mạnh âm -TEEN."
+    }
+  },
+  {
+    "id": "s2_112",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Số 13 vs 30",
+    "word": "Listening: Số 13 vs 30",
+    "ipa": "13 vs 30",
+    "partOfSpeech": "skill B1",
+    "meaning": "Nghe âm đầu và trọng âm để phân biệt 13/30",
+    "example": "13",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nghe: \"The bus departs at platform thir-TEEN.\" Số sân ga là?",
+      "sentence": "Chiến thuật: Nghe âm đầu và trọng âm để phân biệt 13/30",
+      "options": [
+        "13",
+        "30",
+        "33",
+        "3"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trọng âm rơi vào âm 2 \"-TEEN\" và âm /n/ cuối -> số 13."
+    }
+  },
+  {
+    "id": "s2_113",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Đánh vần (Double)",
+    "word": "Listening: Đánh vần (Double)",
+    "ipa": "double L / double S",
+    "partOfSpeech": "skill B1",
+    "meaning": "Cách đọc hai chữ cái giống nhau liên tiếp",
+    "example": "MILLER",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Khi giám khảo đọc \"M-I-double L-E-R\", bạn viết tên gì?",
+      "sentence": "Chiến thuật: Cách đọc hai chữ cái giống nhau liên tiếp",
+      "options": [
+        "MILLER",
+        "MIL2ER",
+        "MILER",
+        "MILLLER"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Double + chữ cái\" nghĩa là viết 2 lần chữ cái đó liên tiếp."
+    }
+  },
+  {
+    "id": "s2_114",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Chữ cái hay nhầm G vs J",
+    "word": "Listening: Chữ cái hay nhầm G vs J",
+    "ipa": "G /dʒiː/ vs J /dʒeɪ/",
+    "partOfSpeech": "skill B1",
+    "meaning": "Phân biệt âm /iː/ và /eɪ/ khi đánh vần tên",
+    "example": "J",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Người nói đọc tên viết tắt \"J-A-N-E\" với âm đầu /dʒeɪ/. Chữ đầu là?",
+      "sentence": "Chiến thuật: Phân biệt âm /iː/ và /eɪ/ khi đánh vần tên",
+      "options": [
+        "J",
+        "G",
+        "Z",
+        "Y"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chữ J đọc là /dʒeɪ/ (vần ây), chữ G đọc là /dʒiː/ (vần i)."
+    }
+  },
+  {
+    "id": "s2_115",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Số 0 (Oh vs Zero)",
+    "word": "Listening: Số 0 (Oh vs Zero)",
+    "ipa": "oh = 0",
+    "partOfSpeech": "skill B1",
+    "meaning": "Trong số điện thoại Anh-Anh, số 0 thường đọc là \"oh\"",
+    "example": "074",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu nghe số phòng là \"oh-seven-four\", bạn ghi con số nào?",
+      "sentence": "Chiến thuật: Trong số điện thoại Anh-Anh, số 0 thường đọc là \"oh\"",
+      "options": [
+        "074",
+        "O74",
+        "874",
+        "704"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trong Listening Part 1 (số điện thoại, mã phòng), \"oh\" luôn tương ứng với số 0."
+    }
+  },
+  {
+    "id": "s2_116",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Số lặp (Double/Triple)",
+    "word": "Listening: Số lặp (Double/Triple)",
+    "ipa": "double five = 55",
+    "partOfSpeech": "skill B1",
+    "meaning": "Cách đọc hai hoặc ba số giống nhau",
+    "example": "99222",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nghe số điện thoại kết thúc bằng \"double nine, triple two\". 5 số cuối là?",
+      "sentence": "Chiến thuật: Cách đọc hai hoặc ba số giống nhau",
+      "options": [
+        "99222",
+        "29922",
+        "99922",
+        "92922"
+      ],
+      "correctIndex": 0,
+      "explanation": "Double nine = 99; triple two = 222."
+    }
+  },
+  {
+    "id": "s2_117",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Ngày tháng (Ordinals)",
+    "word": "Listening: Ngày tháng (Ordinals)",
+    "ipa": "22nd May",
+    "partOfSpeech": "skill B1",
+    "meaning": "Ngày trong tháng dùng số thứ tự",
+    "example": "22 May",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Khi nghe \"the twenty-second of May\", bạn viết ngày nào?",
+      "sentence": "Chiến thuật: Ngày trong tháng dùng số thứ tự",
+      "options": [
+        "22 May",
+        "20 May",
+        "2 May",
+        "12 May"
+      ],
+      "correctIndex": 0,
+      "explanation": "Twenty-second = ngày 22 (trên phiếu chỉ cần viết \"22 May\")."
+    }
+  },
+  {
+    "id": "s2_118",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Tháng hay viết sai",
+    "word": "Listening: Tháng hay viết sai",
+    "ipa": "February / Wednesday",
+    "partOfSpeech": "skill B1",
+    "meaning": "Chính tả tên tháng và thứ trong tiếng Anh",
+    "example": "February",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cách viết chính tả ĐÚNG của \"Tháng Hai\" trong phiếu thi IELTS là?",
+      "sentence": "Chiến thuật: Chính tả tên tháng và thứ trong tiếng Anh",
+      "options": [
+        "February",
+        "Febuary",
+        "Febrary",
+        "Februery"
+      ],
+      "correctIndex": 0,
+      "explanation": "Luôn nhớ chữ \"r\" đầu tiên trong Feb-r-uary (rất hay mất điểm vì thiếu r!)."
+    }
+  },
+  {
+    "id": "s2_119",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Thứ tư trong tuần",
+    "word": "Listening: Thứ tư trong tuần",
+    "ipa": "Wednesday",
+    "partOfSpeech": "skill B1",
+    "meaning": "Chính tả thứ Tư hay bị thiếu chữ d",
+    "example": "Wednesday",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Đáp án nào viết ĐÚNG chính tả \"Thứ Tư\" để được tính điểm Listening?",
+      "sentence": "Chiến thuật: Chính tả thứ Tư hay bị thiếu chữ d",
+      "options": [
+        "Wednesday",
+        "Wendsday",
+        "Wednsday",
+        "Wenesday"
+      ],
+      "correctIndex": 0,
+      "explanation": "Viết đúng: Wed-nes-day (chữ d ở giữa bị câm khi đọc nhưng bắt buộc khi viết)."
+    }
+  },
+  {
+    "id": "s2_120",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Bẫy tự sửa thông tin",
+    "word": "Listening: Bẫy tự sửa thông tin",
+    "ipa": "Correction trap",
+    "partOfSpeech": "skill B1",
+    "meaning": "Người nói nói nhầm rồi đính chính lại",
+    "example": "9:45",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nghe: \"The class starts at 9:30... oh wait, sorry, it moved to 9:45.\" Đáp án đúng?",
+      "sentence": "Chiến thuật: Người nói nói nhầm rồi đính chính lại",
+      "options": [
+        "9:45",
+        "9:30",
+        "9:15",
+        "10:00"
+      ],
+      "correctIndex": 0,
+      "explanation": "Luôn nghe hết câu để tránh bẫy tự sửa (\"oh wait, sorry, actually\")."
+    }
+  },
+  {
+    "id": "s2_121",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Bẫy phủ định ý kiến cũ",
+    "word": "Listening: Bẫy phủ định ý kiến cũ",
+    "ipa": "used to be / no longer",
+    "partOfSpeech": "skill B1",
+    "meaning": "Thông tin cũ không còn đúng ở hiện tại",
+    "example": "£15",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nghe: \"Tickets used to cost £12, but this summer they are £15.\" Giá hiện tại?",
+      "sentence": "Chiến thuật: Thông tin cũ không còn đúng ở hiện tại",
+      "options": [
+        "£15",
+        "£12",
+        "£27",
+        "£3"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"used to\" chỉ giá cũ trước đây; câu hỏi hiện tại đáp án là £15."
+    }
+  },
+  {
+    "id": "s2_122",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Địa chỉ & Mã bưu điện",
+    "word": "Listening: Địa chỉ & Mã bưu điện",
+    "ipa": "Postcode",
+    "partOfSpeech": "skill B1",
+    "meaning": "Mã bưu điện Anh gồm cả chữ cái và chữ số",
+    "example": "BH4 2KL",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nghe: \"14 Oak Street, postcode B-H-4 2-K-L\". Đâu là postcode chuẩn?",
+      "sentence": "Chiến thuật: Mã bưu điện Anh gồm cả chữ cái và chữ số",
+      "options": [
+        "BH4 2KL",
+        "14 Oak",
+        "B4H KL2",
+        "Oak 14"
+      ],
+      "correctIndex": 0,
+      "explanation": "Postcode chuẩn luôn kết hợp chữ cái và số (vd: BH4 2KL)."
+    }
+  },
+  {
+    "id": "s2_123",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Tên đường đồng âm",
+    "word": "Listening: Tên đường đồng âm",
+    "ipa": "Road vs Street vs Avenue",
+    "partOfSpeech": "skill B1",
+    "meaning": "Ghi đúng loại đường được đọc",
+    "example": "Sai hoặc thiếu, nên viết đủ \"25 Green Avenue\"",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu địa chỉ là \"25 Green Avenue\" và bạn chỉ viết \"25 Green\", có đúng không?",
+      "sentence": "Chiến thuật: Ghi đúng loại đường được đọc",
+      "options": [
+        "Sai hoặc thiếu, nên viết đủ \"25 Green Avenue\"",
+        "Đúng hoàn toàn vì chỉ cần số nhà",
+        "Phải đổi Avenue thành Street",
+        "Chỉ cần viết \"Green\""
+      ],
+      "correctIndex": 0,
+      "explanation": "Với địa chỉ trong Form Completion, luôn viết đầy đủ loại đường (Street/Road/Avenue)."
+    }
+  },
+  {
+    "id": "s2_124",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Giờ kém (Quarter to)",
+    "word": "Listening: Giờ kém (Quarter to)",
+    "ipa": "15 phút trước giờ tới",
+    "partOfSpeech": "skill B1",
+    "meaning": "Quarter to = kém 15 phút",
+    "example": "7:45",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "\"A quarter to eight\" tương ứng với giờ số nào?",
+      "sentence": "Chiến thuật: Quarter to = kém 15 phút",
+      "options": [
+        "7:45",
+        "8:15",
+        "8:45",
+        "7:15"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quarter to eight = 8 giờ kém 15 = 7:45."
+    }
+  },
+  {
+    "id": "s2_125",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Giờ hơn (Quarter past)",
+    "word": "Listening: Giờ hơn (Quarter past)",
+    "ipa": "15 phút sau giờ chẵn",
+    "partOfSpeech": "skill B1",
+    "meaning": "Quarter past = hơn 15 phút",
+    "example": "7:15",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "\"A quarter past seven\" là mấy giờ?",
+      "sentence": "Chiến thuật: Quarter past = hơn 15 phút",
+      "options": [
+        "7:15",
+        "6:45",
+        "7:45",
+        "7:30"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quarter past seven = 7 giờ hơn 15 = 7:15."
+    }
+  },
+  {
+    "id": "s2_126",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Nửa giờ (Half past)",
+    "word": "Listening: Nửa giờ (Half past)",
+    "ipa": "30 phút",
+    "partOfSpeech": "skill B1",
+    "meaning": "Half past 6 = 6:30",
+    "example": "6:30",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trong tiếng Anh Anh, \"half six\" hay \"half past six\" nghĩa là mấy giờ?",
+      "sentence": "Chiến thuật: Half past 6 = 6:30",
+      "options": [
+        "6:30",
+        "5:30",
+        "6:15",
+        "3:00"
+      ],
+      "correctIndex": 0,
+      "explanation": "Half past six = 6 giờ 30 phút."
+    }
+  },
+  {
+    "id": "s2_127",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Fortnight",
+    "word": "Listening: Fortnight",
+    "ipa": "2 weeks",
+    "partOfSpeech": "skill B1",
+    "meaning": "Fortnight = 14 ngày = 2 tuần",
+    "example": "2 tuần (14 ngày)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu người nói nhắc tới \"a fortnight\", khoảng thời gian đó là bao lâu?",
+      "sentence": "Chiến thuật: Fortnight = 14 ngày = 2 tuần",
+      "options": [
+        "2 tuần (14 ngày)",
+        "4 ngày",
+        "40 ngày",
+        "2 tháng"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mẹo Part 1: \"Fortnight\" luôn bằng 2 tuần (two weeks)."
+    }
+  },
+  {
+    "id": "s2_128",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Đơn vị tiền & thời gian",
+    "word": "Listening: Đơn vị tiền & thời gian",
+    "ipa": "per week vs per month",
+    "partOfSpeech": "skill B1",
+    "meaning": "Nghe kỹ đơn vị thời gian đi kèm giá tiền",
+    "example": "Đơn vị tính là mỗi tuần (£120/week)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nghe: \"The rent is £120 a week, not a month.\" Bạn cần ghi chú gì?",
+      "sentence": "Chiến thuật: Nghe kỹ đơn vị thời gian đi kèm giá tiền",
+      "options": [
+        "Đơn vị tính là mỗi tuần (£120/week)",
+        "Giá là £120 một năm",
+        "Tiền thuê miễn phí",
+        "Đơn vị là mỗi ngày"
+      ],
+      "correctIndex": 0,
+      "explanation": "IELTS rất hay bẫy đơn vị tính (per week vs per month)."
+    }
+  },
+  {
+    "id": "s2_129",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Tiền tệ (Pence vs Pounds)",
+    "word": "Listening: Tiền tệ (Pence vs Pounds)",
+    "ipa": "100p = £1",
+    "partOfSpeech": "skill B1",
+    "meaning": "Phân biệt đơn vị xu và bảng Anh",
+    "example": "90p (hoặc £0.90)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nghe: \"The snack costs ninety pence.\" Ký hiệu chuẩn là?",
+      "sentence": "Chiến thuật: Phân biệt đơn vị xu và bảng Anh",
+      "options": [
+        "90p (hoặc £0.90)",
+        "£90",
+        "9p",
+        "£900"
+      ],
+      "correctIndex": 0,
+      "explanation": "90 pence = 90p = 0.90 bảng Anh (không phải £90!)."
+    }
+  },
+  {
+    "id": "s2_130",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Đoán loại từ trước khi nghe",
+    "word": "Listening: Đoán loại từ trước khi nghe",
+    "ipa": "Prediction",
+    "partOfSpeech": "skill B1",
+    "meaning": "Đọc câu hỏi trước khi băng chạy để đoán Noun/Number/Verb",
+    "example": "Đọc lướt câu hỏi, gạch chân từ khóa và đoán loại từ cần điền",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trước khi đoạn ghi âm Part 1 bắt đầu, bạn có 30 giây làm gì hiệu quả nhất?",
+      "sentence": "Chiến thuật: Đọc câu hỏi trước khi băng chạy để đoán Noun/Number/Verb",
+      "options": [
+        "Đọc lướt câu hỏi, gạch chân từ khóa và đoán loại từ cần điền",
+        "Ngồi nhắm mắt thư giãn không nhìn đề",
+        "Đọc câu hỏi của Part 4 trước",
+        "Viết bừa đáp án sẵn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đoán trước loại từ (tên người, số, ngày, danh từ số ít/nhiều) giúp bạn bắt đáp án chính xác gấp đôi."
+    }
+  },
+  {
+    "id": "s2_131",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Chú ý phát âm nối từ",
+    "word": "Listening: Chú ý phát âm nối từ",
+    "ipa": "Connected Speech",
+    "partOfSpeech": "skill B1",
+    "meaning": "Từ trong băng đọc nhanh có thể nối âm",
+    "example": "Do hiện tượng nối âm giữa phụ âm cuối và nguyên âm đầu",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu băng nói \"an_orange_apple\", sao bạn dễ nghe nhầm?",
+      "sentence": "Chiến thuật: Từ trong băng đọc nhanh có thể nối âm",
+      "options": [
+        "Do hiện tượng nối âm giữa phụ âm cuối và nguyên âm đầu",
+        "Do máy hỏng mất chữ",
+        "Do từ điển ghi sai",
+        "Do người nói đọc tiếng Pháp"
+      ],
+      "correctIndex": 0,
+      "explanation": "Luyện nối âm ở Giai đoạn 1 giúp bạn nghe rõ các cụm từ trong IELTS Listening."
+    }
+  },
+  {
+    "id": "s2_132",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Từ đồng nghĩa câu hỏi",
+    "word": "Listening: Từ đồng nghĩa câu hỏi",
+    "ipa": "Paraphrase in Listening",
+    "partOfSpeech": "skill B1",
+    "meaning": "Câu hỏi trên giấy khác từ trong băng đọc",
+    "example": "no admission charge / free of charge",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Đề ghi \"free entry\", băng có thể nói thành cụm nào?",
+      "sentence": "Chiến thuật: Câu hỏi trên giấy khác từ trong băng đọc",
+      "options": [
+        "no admission charge / free of charge",
+        "very expensive tickets",
+        "closed on Mondays",
+        "half-price parking"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đừng chờ nghe đúng 100% chữ trên giấy; hãy săn các cụm đồng nghĩa như \"no charge\"."
+    }
+  },
+  {
+    "id": "s2_133",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Kỹ thuật Skimming",
+    "word": "Reading: Kỹ thuật Skimming",
+    "ipa": "Đọc lướt ý chính",
+    "partOfSpeech": "skill B1",
+    "meaning": "Đọc câu đầu & câu cuối đoạn nắm đại ý",
+    "example": "Đọc nhanh nắm ý chính tổng thể của đoạn văn",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Kỹ thuật SKIMMING trong IELTS Reading dùng để làm gì?",
+      "sentence": "Chiến thuật: Đọc câu đầu & câu cuối đoạn nắm đại ý",
+      "options": [
+        "Đọc nhanh nắm ý chính tổng thể của đoạn văn",
+        "Tra từ điển từng chữ một",
+        "Đếm số dấu phẩy trong bài",
+        "Học thuộc lòng đoạn văn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Skimming = đọc lướt nắm ý chính, không dừng lại ở từ mới khó."
+    }
+  },
+  {
+    "id": "s2_134",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Kỹ thuật Scanning",
+    "word": "Reading: Kỹ thuật Scanning",
+    "ipa": "Quét mắt tìm chi tiết",
+    "partOfSpeech": "skill B1",
+    "meaning": "Tìm nhanh tên riêng, con số, năm tháng",
+    "example": "Khi tìm nhanh một con số, tên riêng hoặc năm cụ thể",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Bạn nên dùng kỹ thuật SCANNING khi nào?",
+      "sentence": "Chiến thuật: Tìm nhanh tên riêng, con số, năm tháng",
+      "options": [
+        "Khi tìm nhanh một con số, tên riêng hoặc năm cụ thể",
+        "Khi đoán cảm xúc ẩn ý tác giả",
+        "Khi dịch toàn bộ bài sang tiếng Việt",
+        "Khi viết mở bài Writing"
+      ],
+      "correctIndex": 0,
+      "explanation": "Scanning giúp mắt lướt tìm tọa độ chứa từ khóa trong vài giây."
+    }
+  },
+  {
+    "id": "s2_135",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Tìm Từ khóa (Keywords)",
+    "word": "Reading: Tìm Từ khóa (Keywords)",
+    "ipa": "Names, Dates, Numbers",
+    "partOfSpeech": "skill B1",
+    "meaning": "Chọn từ khóa không thể paraphrase làm mốc định vị",
+    "example": "Tên riêng viết hoa, năm tháng, số liệu %",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Loại từ khóa nào dễ tìm nhất khi Scanning bài đọc?",
+      "sentence": "Chiến thuật: Chọn từ khóa không thể paraphrase làm mốc định vị",
+      "options": [
+        "Tên riêng viết hoa, năm tháng, số liệu %",
+        "Các giới từ in, on, at",
+        "Các động từ is, are, was",
+        "Các từ chung chung như thing, people"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tên riêng và con số không thể bị viết lại bằng từ đồng nghĩa nên cực dễ định vị!"
+    }
+  },
+  {
+    "id": "s2_136",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Giới hạn 1 từ",
+    "word": "Reading: Giới hạn 1 từ",
+    "ipa": "ONE WORD ONLY",
+    "partOfSpeech": "skill B1",
+    "meaning": "Chỉ được điền đúng 1 từ (không viết thêm a/the)",
+    "example": "knife",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Đề yêu cầu \"ONE WORD ONLY\" và đoạn văn có \"a sharp knife\". Bạn điền gì?",
+      "sentence": "Chiến thuật: Chỉ được điền đúng 1 từ (không viết thêm a/the)",
+      "options": [
+        "knife",
+        "a knife",
+        "sharp knife",
+        "sharply knife"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chỉ được điền 1 từ duy nhất (\"knife\"); viết \"a knife\" (2 từ) sẽ mất điểm!"
+    }
+  },
+  {
+    "id": "s2_137",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Giới hạn 2 từ + số",
+    "word": "Reading: Giới hạn 2 từ + số",
+    "ipa": "NO MORE THAN TWO WORDS AND/OR A NUMBER",
+    "partOfSpeech": "skill B1",
+    "meaning": "Kiểm tra đếm từ hợp lệ",
+    "example": "25 green apples",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu đề ghi \"NO MORE THAN TWO WORDS AND/OR A NUMBER\", đáp án nào hợp lệ?",
+      "sentence": "Chiến thuật: Kiểm tra đếm từ hợp lệ",
+      "options": [
+        "25 green apples",
+        "twenty-five fresh green apples",
+        "a basket of apples",
+        "three big red cars"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"25 green apples\" gồm 1 số + 2 từ -> hợp lệ!"
+    }
+  },
+  {
+    "id": "s2_138",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Giữ nguyên từ trong bài",
+    "word": "Reading: Giữ nguyên từ trong bài",
+    "ipa": "Exact word from text",
+    "partOfSpeech": "skill B1",
+    "meaning": "Không tự chế từ khác khi làm Sentence Completion",
+    "example": "Không, chép nguyên văn từ trích từ bài đọc sao cho khớp ngữ pháp",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Khi làm Sentence Completion, bạn có được tự đổi sang từ đồng nghĩa ngoài bài không?",
+      "sentence": "Chiến thuật: Không tự chế từ khác khi làm Sentence Completion",
+      "options": [
+        "Không, chép nguyên văn từ trích từ bài đọc sao cho khớp ngữ pháp",
+        "Có, phải tự đổi hết",
+        "Được tự bịa thêm ý",
+        "Viết chữ in hoa hết"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dạng hoàn thành câu luôn lấy nguyên từ xuất hiện trong bài đọc."
+    }
+  },
+  {
+    "id": "s2_139",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Từ gạch nối (Hyphenated)",
+    "word": "Reading: Từ gạch nối (Hyphenated)",
+    "ipa": "well-known = 1 word",
+    "partOfSpeech": "skill B1",
+    "meaning": "Từ có dấu gạch nối tính là 1 từ trong IELTS",
+    "example": "1 từ (từ có dấu gạch nối tính là 1 từ)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trong quy tắc đếm từ IELTS, cụm \"up-to-date\" được tính là mấy từ?",
+      "sentence": "Chiến thuật: Từ có dấu gạch nối tính là 1 từ trong IELTS",
+      "options": [
+        "1 từ (từ có dấu gạch nối tính là 1 từ)",
+        "3 từ",
+        "4 từ",
+        "Không được tính"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mọi từ ghép nối bằng dấu gạch ngang (up-to-date, long-term) được tính là 1 từ."
+    }
+  },
+  {
+    "id": "s2_140",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Dấu hiệu liệt kê",
+    "word": "Reading: Dấu hiệu liệt kê",
+    "ipa": "First, Second, Also, Furthermore",
+    "partOfSpeech": "skill B1",
+    "meaning": "Nắm cấu trúc liệt kê ý trong đoạn ngắn",
+    "example": "Liệt kê nhiều nguyên nhân / giải pháp / bước nối tiếp nhau",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Khi đoạn văn viết \"First... Secondly... Finally...\", người viết đang làm gì?",
+      "sentence": "Chiến thuật: Nắm cấu trúc liệt kê ý trong đoạn ngắn",
+      "options": [
+        "Liệt kê nhiều nguyên nhân / giải pháp / bước nối tiếp nhau",
+        "Phản bác hoàn toàn ý ở đầu đoạn",
+        "Kể chuyện cổ tích",
+        "Bỏ qua chủ đề chính"
+      ],
+      "correctIndex": 0,
+      "explanation": "Các từ báo hiệu liệt kê giúp bạn tìm đủ danh sách đáp án cho Note Completion."
+    }
+  },
+  {
+    "id": "s2_141",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Từ nối đối lập",
+    "word": "Reading: Từ nối đối lập",
+    "ipa": "However / Yet / Although",
+    "partOfSpeech": "skill B1",
+    "meaning": "Dấu hiệu bước ngoặt ý trong đoạn văn",
+    "example": "Đưa ra thông tin tương phản với câu trước",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Khi thấy từ \"However\" trong bài Reading, câu đó thường mang chức năng gì?",
+      "sentence": "Chiến thuật: Dấu hiệu bước ngoặt ý trong đoạn văn",
+      "options": [
+        "Đưa ra thông tin tương phản với câu trước",
+        "Lặp lại y hệt câu trước",
+        "Kết thúc toàn bộ đề thi",
+        "Báo hiệu ví dụ minh họa"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"However / Yet / Nevertheless\" thường chứa thông tin bẫy đối lập rất quan trọng."
+    }
+  },
+  {
+    "id": "s2_142",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Giải thích thuật ngữ",
+    "word": "Reading: Giải thích thuật ngữ",
+    "ipa": "means / refers to / i.e.",
+    "partOfSpeech": "skill B1",
+    "meaning": "Bài đọc thường định nghĩa từ khó ngay sau dấu phẩy hoặc ngoặc",
+    "example": "beekeeping (nghề nuôi ong)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu gặp từ lạ \"apiculture, or beekeeping,...\", nghĩa của \"apiculture\" là?",
+      "sentence": "Chiến thuật: Bài đọc thường định nghĩa từ khó ngay sau dấu phẩy hoặc ngoặc",
+      "options": [
+        "beekeeping (nghề nuôi ong)",
+        "trồng táo",
+        "đánh bắt cá",
+        "nấu phô mai"
+      ],
+      "correctIndex": 0,
+      "explanation": "IELTS Reading thường giải thích từ chuyên ngành ngay sau dấu phẩy, gạch ngang hoặc \"or\"."
+    }
+  },
+  {
+    "id": "s2_143",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Đại từ thay thế (It/They)",
+    "word": "Reading: Đại từ thay thế (It/They)",
+    "ipa": "Referencing check",
+    "partOfSpeech": "skill B1",
+    "meaning": "Xem lại câu trước để biết \"They\" hoặc \"This\" chỉ ai",
+    "example": "Honeybees (Ong mật)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Câu 1: \"Honeybees pollinate fruit trees.\" Câu 2: \"They also make honey.\" \"They\" là ai?",
+      "sentence": "Chiến thuật: Xem lại câu trước để biết \"They\" hoặc \"This\" chỉ ai",
+      "options": [
+        "Honeybees (Ong mật)",
+        "Fruit trees (Cây ăn quả)",
+        "Honey (Mật ong)",
+        "Farmers"
+      ],
+      "correctIndex": 0,
+      "explanation": "Luôn dò ngược lại danh từ số nhiều hợp nghĩa ở câu trước khi gặp \"They/These\"."
+    }
+  },
+  {
+    "id": "s2_144",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Trật tự câu hỏi Điền từ",
+    "word": "Reading: Trật tự câu hỏi Điền từ",
+    "ipa": "In order in passage",
+    "partOfSpeech": "skill B1",
+    "meaning": "Các câu hỏi điền từ và T/F/NG thường theo đúng thứ tự từ trên xuống dưới",
+    "example": "Nằm giữa câu 2 và câu 4 (cuối đoạn B, đoạn C hoặc đầu D)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu câu 2 nằm ở đoạn B và câu 4 nằm ở đoạn D, câu 3 thường ở đâu?",
+      "sentence": "Chiến thuật: Các câu hỏi điền từ và T/F/NG thường theo đúng thứ tự từ trên xuống dưới",
+      "options": [
+        "Nằm giữa câu 2 và câu 4 (cuối đoạn B, đoạn C hoặc đầu D)",
+        "Nằm ở đoạn A đầu bài",
+        "Nằm ở cuối trang giấy câu 40",
+        "Không có trong bài"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dạng Sentence Completion & T/F/NG hầu như luôn xuất hiện theo thứ tự từ trên xuống dưới bài đọc."
+    }
+  },
+  {
+    "id": "s2_145",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Multiple Choice ngắn",
+    "word": "Reading: Multiple Choice ngắn",
+    "ipa": "Eliminate wrong options",
+    "partOfSpeech": "skill B1",
+    "meaning": "Loại trừ đáp án có thông tin sai lệch trước",
+    "example": "Tìm đoạn chứa thông tin trong bài rồi đối chiếu loại trừ từng đáp án sai",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Bước thông minh nhất khi làm Trắc nghiệm 4 đáp án A/B/C/D trong Reading là?",
+      "sentence": "Chiến thuật: Loại trừ đáp án có thông tin sai lệch trước",
+      "options": [
+        "Tìm đoạn chứa thông tin trong bài rồi đối chiếu loại trừ từng đáp án sai",
+        "Chọn ngay đáp án C cho nhanh",
+        "Chọn đáp án dài nhất mà không cần đọc bài",
+        "Chỉ đọc tiêu đề bài đọc"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đọc hiểu chính xác đoạn chứa thông tin và loại từng đáp án sai/chưa nhắc đến giúp tránh bẫy."
+    }
+  },
+  {
+    "id": "s2_146",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Thời gian cho Passage 1",
+    "word": "Reading: Thời gian cho Passage 1",
+    "ipa": "15–17 phút",
+    "partOfSpeech": "skill B1",
+    "meaning": "Passage 1 là phần dễ nhất nên làm nhanh tiết kiệm giờ cho Passage 3",
+    "example": "Khoảng 15–17 phút (để dành 23–25 phút cho Passage 3 khó hơn)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Tổng 60 phút Reading cho 3 bài đọc. Bạn nên dành bao nhiêu phút cho Passage 1?",
+      "sentence": "Chiến thuật: Passage 1 là phần dễ nhất nên làm nhanh tiết kiệm giờ cho Passage 3",
+      "options": [
+        "Khoảng 15–17 phút (để dành 23–25 phút cho Passage 3 khó hơn)",
+        "40 phút cho riêng Passage 1",
+        "5 phút làm hết cả 3 bài",
+        "Không cần chia thời gian"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chiến thuật chuẩn Band 5.5+: 15–17 phút (P1) -> 20 phút (P2) -> 23–25 phút (P3)."
+    }
+  },
+  {
+    "id": "s2_147",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Chuyển đáp án ngay",
+    "word": "Reading: Chuyển đáp án ngay",
+    "ipa": "No extra transfer time!",
+    "partOfSpeech": "skill B1",
+    "meaning": "IELTS Reading KHÔNG có 10 phút chuyển đáp án cuối giờ như Listening giấy",
+    "example": "Reading KHÔNG có thêm 10 phút chép đáp án vào Answer Sheet ở cuối giờ",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Điểm khác biệt sống còn giữa Reading và Listening (thi giấy) về thời gian là?",
+      "sentence": "Chiến thuật: IELTS Reading KHÔNG có 10 phút chuyển đáp án cuối giờ như Listening giấy",
+      "options": [
+        "Reading KHÔNG có thêm 10 phút chép đáp án vào Answer Sheet ở cuối giờ",
+        "Reading có thêm 30 phút nghỉ giải lao",
+        "Listening không có thời gian chép đáp án",
+        "Hai kỹ năng giống hệt nhau"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trong Reading, hãy điền đáp án thẳng vào phiếu trả lời (hoặc ô máy tính) ngay khi làm xong từng đoạn!"
+    }
+  },
+  {
+    "id": "s2_148",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Không bỏ trống ô",
+    "word": "Listening: Không bỏ trống ô",
+    "ipa": "No penalty for guessing",
+    "partOfSpeech": "skill B1",
+    "meaning": "IELTS không trừ điểm câu trả lời sai",
+    "example": "Đoán một đáp án hợp lý nhất chứ tuyệt đối không để trống",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu bạn lỡ mất một câu Listening và không chắc đáp án, nên làm gì?",
+      "sentence": "Chiến thuật: IELTS không trừ điểm câu trả lời sai",
+      "options": [
+        "Đoán một đáp án hợp lý nhất chứ tuyệt đối không để trống",
+        "Để trống trắng xóa ô đó",
+        "Viết cả 4 đáp án A,B,C,D vào 1 ô",
+        "Gạch chéo toàn bộ bài"
+      ],
+      "correctIndex": 0,
+      "explanation": "IELTS không trừ điểm câu sai — đoán hợp lý luôn cho bạn cơ hội có thêm điểm!"
+    }
+  },
+  {
+    "id": "s2_149",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Từ chỉ hướng (Map)",
+    "word": "Listening: Từ chỉ hướng (Map)",
+    "ipa": "turn left / opposite / next to",
+    "partOfSpeech": "skill B1",
+    "meaning": "Ngôn ngữ chỉ đường cho Part 2 Map Labelling",
+    "example": "Nằm ngay đối diện tiệm bánh (bên kia đường)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm \"directly opposite the bakery\" nghĩa là nằm ở đâu so với tiệm bánh?",
+      "sentence": "Chiến thuật: Ngôn ngữ chỉ đường cho Part 2 Map Labelling",
+      "options": [
+        "Nằm ngay đối diện tiệm bánh (bên kia đường)",
+        "Nằm phía sau tiệm bánh",
+        "Nằm bên trong tiệm bánh",
+        "Cách tiệm bánh 10 km"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Opposite\" = đối diện qua lối đi/con đường; \"adjacent to / next to\" = ngay bên cạnh."
+    }
+  },
+  {
+    "id": "s2_150",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Phương hướng la bàn",
+    "word": "Listening: Phương hướng la bàn",
+    "ipa": "North / South / East / West",
+    "partOfSpeech": "skill B1",
+    "meaning": "4 hướng Bắc - Nam - Đông - Tây trên bản đồ Part 2",
+    "example": "Góc trên bên phải (Đông Bắc)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trên bản đồ chuẩn, \"North-East corner\" nằm ở góc nào?",
+      "sentence": "Chiến thuật: 4 hướng Bắc - Nam - Đông - Tây trên bản đồ Part 2",
+      "options": [
+        "Góc trên bên phải (Đông Bắc)",
+        "Góc dưới bên trái (Tây Nam)",
+        "Ngay chính giữa bản đồ",
+        "Góc dưới bên phải (Đông Nam)"
+      ],
+      "correctIndex": 0,
+      "explanation": "North = trên (Bắc), South = dưới (Nam), West = trái (Tây), East = phải (Đông)."
+    }
+  },
+  {
+    "id": "s2_151",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Phân biệt Cause vs Effect",
+    "word": "Reading: Phân biệt Cause vs Effect",
+    "ipa": "lead to / result from",
+    "partOfSpeech": "skill B1",
+    "meaning": "Hiểu chiều nguyên nhân - kết quả khi đọc bài",
+    "example": "Deforestation (nạn phá rừng)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Câu \"Deforestation leads to soil erosion.\" Cái nào là NGUYÊN NHÂN?",
+      "sentence": "Chiến thuật: Hiểu chiều nguyên nhân - kết quả khi đọc bài",
+      "options": [
+        "Deforestation (nạn phá rừng)",
+        "Soil erosion (xói mòn đất)",
+        "Cả hai đều là kết quả",
+        "Không có nguyên nhân"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"A leads to B\" = A gây ra B (A là nguyên nhân, B là hậu quả)."
+    }
+  },
+  {
+    "id": "s2_152",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Kiểm tra chính tả",
+    "word": "Reading: Kiểm tra chính tả",
+    "ipa": "Spelling accuracy",
+    "partOfSpeech": "skill B1",
+    "meaning": "Sai một chữ cái trong câu điền từ là mất điểm cả câu",
+    "example": "0 điểm câu đó (vì sai chính tả)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu từ đúng trong bài là \"environment\" nhưng bạn ghi \"enviroment\", kết quả là?",
+      "sentence": "Chiến thuật: Sai một chữ cái trong câu điền từ là mất điểm cả câu",
+      "options": [
+        "0 điểm câu đó (vì sai chính tả)",
+        "Được nửa điểm",
+        "Giám khảo tự sửa giúp",
+        "Vẫn tính đủ điểm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cả Listening và Reading điền từ đều yêu cầu chính tả chính xác 100%."
+    }
+  },
+  {
+    "id": "s2_153",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Listening: Kiểm tra số nhiều -s",
+    "word": "Listening: Kiểm tra số nhiều -s",
+    "ipa": "Grammar clue for plural",
+    "partOfSpeech": "skill B1",
+    "meaning": "Dựa vào động từ số nhiều hoặc từ \"many/several\" để nghe âm -s",
+    "example": "Có thể cần số nhiều (clothes, gloves, socks) hoặc danh từ không đếm được",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Câu hỏi: \"Bring warm _____ and sturdy boots.\" Có khả năng cần đuôi số nhiều không?",
+      "sentence": "Chiến thuật: Dựa vào động từ số nhiều hoặc từ \"many/several\" để nghe âm -s",
+      "options": [
+        "Có thể cần số nhiều (clothes, gloves, socks) hoặc danh từ không đếm được",
+        "Chắc chắn phải viết động từ",
+        "Chắc chắn phải viết số 100",
+        "Không bao giờ dùng số nhiều"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ngữ pháp quanh chỗ trống gợi ý rất rõ có cần thêm -s/-es hay không!"
+    }
+  },
+  {
+    "id": "s2_154",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Đoán nghĩa qua tiền tố un-/in-",
+    "word": "Reading: Đoán nghĩa qua tiền tố un-/in-",
+    "ipa": "un- / dis- = phủ định",
+    "partOfSpeech": "skill B1",
+    "meaning": "Tiền tố phủ định giúp đoán nhanh nghĩa từ mới",
+    "example": "Không đáng tin cậy",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Biết \"reliable\" là đáng tin cậy, vậy \"unreliable\" nghĩa là gì?",
+      "sentence": "Chiến thuật: Tiền tố phủ định giúp đoán nhanh nghĩa từ mới",
+      "options": [
+        "Không đáng tin cậy",
+        "Rất đáng tin cậy",
+        "Đáng tin cậy gấp đôi",
+        "Tin cậy tạm thời"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tiền tố un-, in-, im-, dis- thường đảo ngược nghĩa từ gốc thành phủ định."
+    }
+  },
+  {
+    "id": "s2_155",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.2: Listening & Reading cơ bản",
+    "topic": "Reading: Đọc kỹ Yêu cầu Đề bài",
+    "word": "Reading: Đọc kỹ Yêu cầu Đề bài",
+    "ipa": "Read instructions first",
+    "partOfSpeech": "skill B1",
+    "meaning": "Kiểm tra xem đề hỏi TRUE/FALSE hay YES/NO",
+    "example": "Có thể bị mất điểm do sai định dạng yêu cầu của đề",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu đề yêu cầu viết \"YES / NO / NOT GIVEN\" mà bạn viết \"TRUE / FALSE\", chuyện gì xảy ra?",
+      "sentence": "Chiến thuật: Kiểm tra xem đề hỏi TRUE/FALSE hay YES/NO",
+      "options": [
+        "Có thể bị mất điểm do sai định dạng yêu cầu của đề",
+        "Luôn được cộng thêm điểm",
+        "Không ảnh hưởng gì",
+        "Đề tự đổi câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Luôn kiểm tra kỹ đề hỏi TRUE/FALSE (thông tin thực tế) hay YES/NO (quan điểm tác giả)."
+    }
+  },
+  {
+    "id": "s2_156",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Topic Sentence",
+    "word": "Writing: Topic Sentence",
+    "ipa": "Câu chủ đề đoạn văn",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Đứng đầu đoạn, nêu ý chính duy nhất của đoạn đó",
+    "example": "Nêu ý chính bao trùm toàn bộ đoạn văn",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Vai trò của Topic Sentence trong đoạn văn Writing là gì?",
+      "sentence": "Trọng tâm: Đứng đầu đoạn, nêu ý chính duy nhất của đoạn đó",
+      "options": [
+        "Nêu ý chính bao trùm toàn bộ đoạn văn",
+        "Đưa số liệu thống kê chi tiết cuối đoạn",
+        "Chào hỏi giám khảo",
+        "Tóm tắt lại mở bài"
+      ],
+      "correctIndex": 0,
+      "explanation": "Một đoạn thân bài chuẩn gồm: Topic Sentence -> Supporting Idea -> Example."
+    }
+  },
+  {
+    "id": "s2_157",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Độ dài đoạn văn chuẩn",
+    "word": "Writing: Độ dài đoạn văn chuẩn",
+    "ipa": "5–7 câu mạch lạc",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Cân đối số câu trong mỗi đoạn thân bài",
+    "example": "5–7 câu (Topic Sentence + Supporting + Example)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Một đoạn thân bài Writing Task 2 nhập môn nên dài khoảng bao nhiêu câu?",
+      "sentence": "Trọng tâm: Cân đối số câu trong mỗi đoạn thân bài",
+      "options": [
+        "5–7 câu (Topic Sentence + Supporting + Example)",
+        "1 câu thật dài",
+        "30 câu kể lể",
+        "Chỉ ghi 3 gạch đầu dòng"
+      ],
+      "correctIndex": 0,
+      "explanation": "5–7 câu giúp triển khai trọn vẹn 1–2 ý mà vẫn rõ ràng, mạch lạc."
+    }
+  },
+  {
+    "id": "s2_158",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Thứ tự mạch đoạn văn",
+    "word": "Writing: Thứ tự mạch đoạn văn",
+    "ipa": "Topic -> Explain -> Example",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Luồng phát triển ý tự nhiên",
+    "example": "Topic Sentence -> Supporting Idea -> Example",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Thứ tự nào chuẩn mực nhất cho một đoạn văn phân tích ý?",
+      "sentence": "Trọng tâm: Luồng phát triển ý tự nhiên",
+      "options": [
+        "Topic Sentence -> Supporting Idea -> Example",
+        "Example -> Đề bài -> Topic Sentence",
+        "Kết luận -> Ví dụ -> Bỏ giải thích",
+        "Chỉ toàn ví dụ không có câu chủ đề"
+      ],
+      "correctIndex": 0,
+      "explanation": "Viết câu chủ đề trước, giải thích tại sao (Supporting Idea) rồi mới chứng minh bằng Example."
+    }
+  },
+  {
+    "id": "s2_159",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Mở đầu Ví dụ",
+    "word": "Writing: Mở đầu Ví dụ",
+    "ipa": "For example, / For instance,",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Từ nối đưa ví dụ minh họa ý tưởng",
+    "example": "For example, / For instance,",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm từ nào chuẩn mực nhất để mở đầu một câu ví dụ trong Writing?",
+      "sentence": "Trọng tâm: Từ nối đưa ví dụ minh họa ý tưởng",
+      "options": [
+        "For example, / For instance,",
+        "In the end, / Finally,",
+        "By contrast, / However,",
+        "First of all, / Initially,"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dùng \"For example,\" hoặc \"For instance,\" ngay trước một ví dụ cụ thể."
+    }
+  },
+  {
+    "id": "s2_160",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Mở đầu Giải thích",
+    "word": "Writing: Mở đầu Giải thích",
+    "ipa": "This is because...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Giải thích nguyên nhân cho câu chủ đề",
+    "example": "This is largely because...",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Để giải thích lý do cho Topic Sentence vừa nêu, câu sau nên bắt đầu bằng?",
+      "sentence": "Trọng tâm: Giải thích nguyên nhân cho câu chủ đề",
+      "options": [
+        "This is largely because...",
+        "On the other hand,",
+        "To sum up,",
+        "For example, apples"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"This is (largely) because...\" giúp nối mượt từ câu chủ đề sang phần giải thích."
+    }
+  },
+  {
+    "id": "s2_161",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Nêu Kết quả",
+    "word": "Writing: Nêu Kết quả",
+    "ipa": "As a result, / Therefore,",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Nối sang hệ quả của hành động",
+    "example": "As a result, / Therefore,",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ nối nào đặt đầu câu để chỉ KẾT QUẢ?",
+      "sentence": "Trọng tâm: Nối sang hệ quả của hành động",
+      "options": [
+        "As a result, / Therefore,",
+        "Although, / Despite,",
+        "For instance, / Such as,",
+        "First, / Next,"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"As a result,\" và \"Therefore,\" báo hiệu hệ quả hợp lý của ý vừa trình bày."
+    }
+  },
+  {
+    "id": "s2_162",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Tránh viết tắt",
+    "word": "Writing: Tránh viết tắt",
+    "ipa": "do not (tránh don’t)",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Văn phong học thuật không dùng dạng rút gọn",
+    "example": "Viết đầy đủ: do not, cannot, it is",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Trong IELTS Writing Task 1 & 2, viết dạng phủ định thế nào đúng chuẩn?",
+      "sentence": "Trọng tâm: Văn phong học thuật không dùng dạng rút gọn",
+      "options": [
+        "Viết đầy đủ: do not, cannot, it is",
+        "Viết tắt càng nhiều càng tốt: don’t, can’t",
+        "Dùng tiếng lóng teen",
+        "Dùng icon cảm xúc"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trong Writing học thuật luôn viết đầy đủ \"do not, cannot, will not\"."
+    }
+  },
+  {
+    "id": "s2_163",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Tránh gạch đầu dòng",
+    "word": "Writing: Tránh gạch đầu dòng",
+    "ipa": "Full paragraphs only",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Bài luận IELTS luôn viết thành đoạn văn hoàn chỉnh",
+    "example": "Không, phải viết thành các đoạn văn hoàn chỉnh liên kết với nhau",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Bạn có được dùng gạch đầu dòng (-) liệt kê ý trong Writing Task 2 không?",
+      "sentence": "Trọng tâm: Bài luận IELTS luôn viết thành đoạn văn hoàn chỉnh",
+      "options": [
+        "Không, phải viết thành các đoạn văn hoàn chỉnh liên kết với nhau",
+        "Có, viết gạch đầu dòng càng nhiều càng tốt",
+        "Chỉ viết gạch đầu dòng ở kết bài",
+        "Được vẽ sơ đồ thay chữ"
+      ],
+      "correctIndex": 0,
+      "explanation": "IELTS Writing chấm điểm Cohesion & Coherence qua đoạn văn liên kết, không chấp nhận gạch đầu dòng."
+    }
+  },
+  {
+    "id": "s2_164",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Động từ TĂNG",
+    "word": "Task 1: Động từ TĂNG",
+    "ipa": "increase / rise / grow",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "3 động từ cơ bản tả xu hướng tăng",
+    "example": "increase, rise, grow",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nhóm động từ nào đều mang nghĩa TĂNG LÊN trong Task 1?",
+      "sentence": "Trọng tâm: 3 động từ cơ bản tả xu hướng tăng",
+      "options": [
+        "increase, rise, grow",
+        "decrease, fall, drop",
+        "remain stable, stay unchanged",
+        "fluctuate, vary"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhớ 3 động từ tăng cơ bản: increase, rise, grow (quá khứ: increased, rose, grew)."
+    }
+  },
+  {
+    "id": "s2_165",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Động từ GIẢM",
+    "word": "Task 1: Động từ GIẢM",
+    "ipa": "decrease / fall / drop",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "3 động từ cơ bản tả xu hướng giảm",
+    "example": "decrease, fall, drop",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nhóm động từ nào diễn tả số liệu GIẢM XUỐNG?",
+      "sentence": "Trọng tâm: 3 động từ cơ bản tả xu hướng giảm",
+      "options": [
+        "decrease, fall, drop",
+        "climb, rise, jump",
+        "stay flat, level off",
+        "double, triple"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhớ 3 động từ giảm cơ bản: decrease, fall, drop (quá khứ: decreased, fell, dropped)."
+    }
+  },
+  {
+    "id": "s2_166",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Đi ngang (Ổn định)",
+    "word": "Task 1: Đi ngang (Ổn định)",
+    "ipa": "remain stable",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Số liệu giữ nguyên không đổi",
+    "example": "remained stable",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm từ nào mô tả đường biểu đồ đi ngang từ 2010 đến 2020?",
+      "sentence": "Trọng tâm: Số liệu giữ nguyên không đổi",
+      "options": [
+        "remained stable",
+        "rose sharply",
+        "dropped dramatically",
+        "fluctuated wildly"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Remain stable / remain unchanged\" dùng khi số liệu đi ngang ổn định."
+    }
+  },
+  {
+    "id": "s2_167",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Dao động (Fluctuate)",
+    "word": "Task 1: Dao động (Fluctuate)",
+    "ipa": "fluctuate",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Số liệu lên xuống thất thường",
+    "example": "fluctuated",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu doanh thu tháng 1 tăng, tháng 2 giảm, tháng 3 lại tăng rồi giảm, dùng động từ nào?",
+      "sentence": "Trọng tâm: Số liệu lên xuống thất thường",
+      "options": [
+        "fluctuated",
+        "stayed unchanged",
+        "reached zero",
+        "tripled"
+      ],
+      "correctIndex": 0,
+      "explanation": "Lên xuống liên tục thất thường -> \"fluctuated\"."
+    }
+  },
+  {
+    "id": "s2_168",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Đạt đỉnh (Peak)",
+    "word": "Task 1: Đạt đỉnh (Peak)",
+    "ipa": "reach a peak of...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Điểm cao nhất trên biểu đồ",
+    "example": "Sales reached a peak of 500 in 2020.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Để tả doanh số đạt mức cao nhất tại 500 vào năm 2020, viết thế nào?",
+      "sentence": "Trọng tâm: Điểm cao nhất trên biểu đồ",
+      "options": [
+        "Sales reached a peak of 500 in 2020.",
+        "Sales bottomed at 500 in 2020.",
+        "Sales fluctuated 500 in 2020.",
+        "Sales remained 500 forever."
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc chuẩn: reach a peak of + số liệu + in + năm."
+    }
+  },
+  {
+    "id": "s2_169",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Chạm đáy (Lowest point)",
+    "word": "Task 1: Chạm đáy (Lowest point)",
+    "ipa": "hit a low of...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Điểm thấp nhất trên biểu đồ",
+    "example": "hit a low of 5°C in January",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Để tả nhiệt độ xuống điểm thấp nhất 5°C vào tháng Giêng, chọn cụm nào?",
+      "sentence": "Trọng tâm: Điểm thấp nhất trên biểu đồ",
+      "options": [
+        "hit a low of 5°C in January",
+        "reached a peak of 5°C",
+        "doubled to 5°C",
+        "stayed stable forever"
+      ],
+      "correctIndex": 0,
+      "explanation": "Điểm thấp nhất trên biểu đồ dùng \"hit a low of...\" hoặc \"fell to a low of...\"."
+    }
+  },
+  {
+    "id": "s2_170",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Đổi sang Cụm Danh từ",
+    "word": "Task 1: Đổi sang Cụm Danh từ",
+    "ipa": "a slight increase",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Đổi \"increased slightly\" thành danh từ",
+    "example": "saw a slight increase",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cách đổi \"increased slightly\" sang dạng Danh từ tương đương là?",
+      "sentence": "Trọng tâm: Đổi \"increased slightly\" thành danh từ",
+      "options": [
+        "saw a slight increase",
+        "saw a slightly increase",
+        "had an increase slight",
+        "made a slight increasing"
+      ],
+      "correctIndex": 0,
+      "explanation": "Công thức vàng Task 1: V + Adv <-> see/experience + a/an + Adj + N."
+    }
+  },
+  {
+    "id": "s2_171",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Trạng từ chỉ tốc độ nhanh",
+    "word": "Task 1: Trạng từ chỉ tốc độ nhanh",
+    "ipa": "sharply / dramatically",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Mức độ thay đổi mạnh, nhanh",
+    "example": "rose sharply / dramatically",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Để diễn tả giá dầu TĂNG MẠNH, ghép \"rose\" với trạng từ nào?",
+      "sentence": "Trọng tâm: Mức độ thay đổi mạnh, nhanh",
+      "options": [
+        "rose sharply / dramatically",
+        "rose slightly",
+        "rose slowly",
+        "rose steadily"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tăng/giảm mạnh dùng: sharply, dramatically, significantly; nhẹ dùng: slightly, gradually."
+    }
+  },
+  {
+    "id": "s2_172",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Trạng từ chỉ tốc độ đều",
+    "word": "Task 1: Trạng từ chỉ tốc độ đều",
+    "ipa": "steadily / gradually",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Tăng hoặc giảm đều đặn từ từ",
+    "example": "grew steadily",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm nào diễn tả dân số tăng đều đặn qua từng năm?",
+      "sentence": "Trọng tâm: Tăng hoặc giảm đều đặn từ từ",
+      "options": [
+        "grew steadily",
+        "plummeted wildly",
+        "crashed suddenly",
+        "stopped immediately"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Steadily\" / \"Gradually\" = một cách đều đặn, từ từ."
+    }
+  },
+  {
+    "id": "s2_173",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Giới từ TO vs BY",
+    "word": "Task 1: Giới từ TO vs BY",
+    "ipa": "increase to 50 vs by 20",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Phân biệt tăng TỚI mốc 50 hay tăng THÊM 20",
+    "example": "by",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Số học sinh tăng từ 30 lên 50. Chọn giới từ đúng: \"rose _____ 20\".",
+      "sentence": "Trọng tâm: Phân biệt tăng TỚI mốc 50 hay tăng THÊM 20",
+      "options": [
+        "by",
+        "to",
+        "at",
+        "from"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"rise TO + mốc mới (50)\" còn \"rise BY + phần chênh lệch (20)\"."
+    }
+  },
+  {
+    "id": "s2_174",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Giới từ OF với Danh từ",
+    "word": "Task 1: Giới từ OF với Danh từ",
+    "ipa": "an increase of 20%",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Sau danh từ increase/decrease dùng giới từ OF cho phần chênh lệch",
+    "example": "of",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Điền giới từ đúng: \"There was a slight increase _____ 10% in sales.\"",
+      "sentence": "Trọng tâm: Sau danh từ increase/decrease dùng giới từ OF cho phần chênh lệch",
+      "options": [
+        "of",
+        "to",
+        "with",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau Danh từ (an increase / a drop) + phần chênh lệch luôn dùng \"of\" (an increase of 10%)."
+    }
+  },
+  {
+    "id": "s2_175",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Chia thì Quá khứ cho năm cũ",
+    "word": "Task 1: Chia thì Quá khứ cho năm cũ",
+    "ipa": "1990–2010 -> Past Simple",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Biểu đồ các năm đã qua luôn dùng Quá khứ đơn",
+    "example": "Quá khứ đơn (rose, fell, remained)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu biểu đồ đường thể hiện số liệu từ năm 2000 đến 2015, bạn chia thì nào?",
+      "sentence": "Trọng tâm: Biểu đồ các năm đã qua luôn dùng Quá khứ đơn",
+      "options": [
+        "Quá khứ đơn (rose, fell, remained)",
+        "Hiện tại tiếp diễn",
+        "Tương lai đơn",
+        "Hiện tại hoàn thành"
+      ],
+      "correctIndex": 0,
+      "explanation": "Số liệu của các năm đã kết thúc trong quá khứ bắt buộc chia Quá khứ đơn."
+    }
+  },
+  {
+    "id": "s2_176",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Không nêu ý kiến cá nhân",
+    "word": "Task 1: Không nêu ý kiến cá nhân",
+    "ipa": "Objective facts only",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Task 1 chỉ mô tả số liệu, không đoán nguyên nhân ngoài biểu đồ",
+    "example": "\"I think sales fell because people had no money.\"",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Câu nào KHÔNG NÊN viết trong IELTS Writing Task 1?",
+      "sentence": "Trọng tâm: Task 1 chỉ mô tả số liệu, không đoán nguyên nhân ngoài biểu đồ",
+      "options": [
+        "\"I think sales fell because people had no money.\"",
+        "\"Sales dropped from 80 to 50 in 2018.\"",
+        "\"Overall, car ownership increased over the period.\"",
+        "\"The figure for milk was higher than juice.\""
+      ],
+      "correctIndex": 0,
+      "explanation": "Task 1 chỉ mô tả khách quan những gì thấy trên hình; KHÔNG viết \"I think\" hay tự đoán nguyên nhân."
+    }
+  },
+  {
+    "id": "s2_177",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Task 1: Paraphrase câu mở đầu",
+    "word": "Task 1: Paraphrase câu mở đầu",
+    "ipa": "The chart illustrates...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Đổi \"The graph shows\" thành động từ hay hơn",
+    "example": "illustrates / compares",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Động từ nào hay dùng thay thế chữ \"shows\" trong câu mở bài Task 1?",
+      "sentence": "Trọng tâm: Đổi \"The graph shows\" thành động từ hay hơn",
+      "options": [
+        "illustrates / compares",
+        "tells / talks",
+        "guesses / thinks",
+        "draws / paints"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mở bài Task 1 hay dùng: \"The chart illustrates / compares + what + where + when.\""
+    }
+  },
+  {
+    "id": "s2_178",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Độ dài lý tưởng",
+    "word": "Speaking Part 1: Độ dài lý tưởng",
+    "ipa": "3–4 câu tự nhiên",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Trả lời trực tiếp + Lý do + Ví dụ",
+    "example": "Trả lời Yes/No trực tiếp + 1 lý do + 1 ví dụ ngắn (3–4 câu)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Khi giám khảo hỏi \"Do you like gardening?\", cách trả lời Part 1 nào ghi điểm?",
+      "sentence": "Trọng tâm: Trả lời trực tiếp + Lý do + Ví dụ",
+      "options": [
+        "Trả lời Yes/No trực tiếp + 1 lý do + 1 ví dụ ngắn (3–4 câu)",
+        "Chỉ nói mỗi chữ \"Yes.\" rồi im lặng",
+        "Đọc bài văn dài 5 phút",
+        "Hỏi ngược lại giám khảo"
+      ],
+      "correctIndex": 0,
+      "explanation": "Part 1 cần tự nhiên, trôi chảy trong khoảng 3–4 câu (Trả lời thẳng -> Lý do -> Ví dụ)."
+    }
+  },
+  {
+    "id": "s2_179",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Tránh lặp \"I like\"",
+    "word": "Speaking Part 1: Tránh lặp \"I like\"",
+    "ipa": "I’m keen on / fond of",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Cụm từ tự nhiên thay cho \"I like\"",
+    "example": "I’m quite keen on cooking.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm nào tự nhiên thay cho \"I like cooking\" để nâng Band Speaking?",
+      "sentence": "Trọng tâm: Cụm từ tự nhiên thay cho \"I like\"",
+      "options": [
+        "I’m quite keen on cooking.",
+        "I have a big liking of cooking.",
+        "Cooking is liked by myself.",
+        "I am very love cooking."
+      ],
+      "correctIndex": 0,
+      "explanation": "\"I’m keen on / fond of / really into + V-ing\" rất tự nhiên trong Speaking."
+    }
+  },
+  {
+    "id": "s2_180",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Trả lời không thích",
+    "word": "Speaking Part 1: Trả lời không thích",
+    "ipa": "I’m not really into...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Cách nói không thích lịch sự, tự nhiên",
+    "example": "To be honest, I’m not really into math.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Thay vì nói cộc lốc \"I hate math\", cách nói nào tự nhiên hơn?",
+      "sentence": "Trọng tâm: Cách nói không thích lịch sự, tự nhiên",
+      "options": [
+        "To be honest, I’m not really into math.",
+        "Math is very stupid for me.",
+        "No, never ask me math.",
+        "I dislike hate math."
+      ],
+      "correctIndex": 0,
+      "explanation": "\"To be honest, I’m not really into...\" rất lịch sự và tự nhiên."
+    }
+  },
+  {
+    "id": "s2_181",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Mở đầu lý do",
+    "word": "Speaking Part 1: Mở đầu lý do",
+    "ipa": "Mainly because...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Từ nối đưa lý do tự nhiên khi nói",
+    "example": "Mainly because... / The main reason is that...",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm nào nối mượt từ câu trả lời trực tiếp sang phần giải thích lý do?",
+      "sentence": "Trọng tâm: Từ nối đưa lý do tự nhiên khi nói",
+      "options": [
+        "Mainly because... / The main reason is that...",
+        "Nevertheless, on the contrary...",
+        "As illustrated in the table...",
+        "To conclude my essay..."
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Mainly because...\" giúp câu trả lời trôi chảy và có cấu trúc."
+    }
+  },
+  {
+    "id": "s2_182",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Đưa ví dụ ngắn",
+    "word": "Speaking Part 1: Đưa ví dụ ngắn",
+    "ipa": "For instance, last weekend...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Thêm ví dụ thực tế cá nhân hóa câu trả lời",
+    "example": "\"For instance, I play badminton with my friends every Sunday.\"",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Ví dụ tốt nhất cho câu hỏi \"Do you like sports?\" là?",
+      "sentence": "Trọng tâm: Thêm ví dụ thực tế cá nhân hóa câu trả lời",
+      "options": [
+        "\"For instance, I play badminton with my friends every Sunday.\"",
+        "\"Sports are important for the global economy.\"",
+        "\"According to UNESCO, 50% of people play sports.\"",
+        "\"Yes, sports.\""
+      ],
+      "correctIndex": 0,
+      "explanation": "Part 1 hỏi về bản thân bạn — ví dụ gắn với thói quen thực tế của bạn nghe thật và mượt nhất!"
+    }
+  },
+  {
+    "id": "s2_183",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Chủ đề Work/Study",
+    "word": "Speaking Part 1: Chủ đề Work/Study",
+    "ipa": "I’m currently working as...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Giới thiệu công việc hoặc ngành học",
+    "example": "\"I’m currently a second-year student majoring in...\"",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Câu mở đầu hay khi được hỏi \"Do you work or are you a student?\" là?",
+      "sentence": "Trọng tâm: Giới thiệu công việc hoặc ngành học",
+      "options": [
+        "\"I’m currently a second-year student majoring in...\"",
+        "\"Student.\"",
+        "\"I study because my mom wants.\"",
+        "\"I am studying book.\""
+      ],
+      "correctIndex": 0,
+      "explanation": "Dùng \"I’m currently...\" + \"majoring in...\" (chuyên ngành) hoặc \"working as...\" rất chuyên nghiệp."
+    }
+  },
+  {
+    "id": "s2_184",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Chủ đề Hometown",
+    "word": "Speaking Part 1: Chủ đề Hometown",
+    "ipa": "located in the north/south of...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Miêu tả vị trí quê hương",
+    "example": "It’s a peaceful town located in the north of Vietnam.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm nào miêu tả vị trí địa lý quê hương tự nhiên?",
+      "sentence": "Trọng tâm: Miêu tả vị trí quê hương",
+      "options": [
+        "It’s a peaceful town located in the north of Vietnam.",
+        "It stays at the map of Vietnam.",
+        "My hometown is very village.",
+        "There is a hometown in me."
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Located in the north/south of...\" là cụm miêu tả địa lý chuẩn mực."
+    }
+  },
+  {
+    "id": "s2_185",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Nói về tần suất",
+    "word": "Speaking Part 1: Nói về tần suất",
+    "ipa": "from time to time / twice a week",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Tránh lặp mỗi từ \"sometimes\"",
+    "example": "from time to time / every now and then",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm từ tự nhiên thay thế cho \"sometimes\" khi nói thói quen là?",
+      "sentence": "Trọng tâm: Tránh lặp mỗi từ \"sometimes\"",
+      "options": [
+        "from time to time / every now and then",
+        "many times yesterday",
+        "always never",
+        "one time forever"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"From time to time\" = thỉnh thoảng, làm từ vựng Speaking phong phú hơn hẳn."
+    }
+  },
+  {
+    "id": "s2_186",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Từ nối bổ sung",
+    "word": "Speaking Part 1: Từ nối bổ sung",
+    "ipa": "On top of that, / Besides,",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Thêm một lý do thứ 2 khi nói",
+    "example": "On top of that, / Plus,",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ nối nào nghe tự nhiên trong Speaking để thêm ý thứ 2?",
+      "sentence": "Trọng tâm: Thêm một lý do thứ 2 khi nói",
+      "options": [
+        "On top of that, / Plus,",
+        "Furthermore, as aforementioned,",
+        "In conclusion,",
+        "Notwithstanding that,"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"On top of that,\" hoặc \"Besides,\" rất hợp ngữ điệu nói tự nhiên (không quá cứng như văn viết)."
+    }
+  },
+  {
+    "id": "s2_187",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Nói về sở thích đọc",
+    "word": "Speaking Part 1: Nói về sở thích đọc",
+    "ipa": "help me unwind",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Unwind = thư giãn sau giờ học/làm",
+    "example": "unwind / recharge my batteries",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ nào đồng nghĩa tự nhiên với \"relax\" khi nói về sở thích buổi tối?",
+      "sentence": "Trọng tâm: Unwind = thư giãn sau giờ học/làm",
+      "options": [
+        "unwind / recharge my batteries",
+        "exhaust myself",
+        "increase stress",
+        "waste electricity"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Help me unwind\" (thư giãn) rất được giám khảo Speaking yêu thích."
+    }
+  },
+  {
+    "id": "s2_188",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Nói về thời tiết",
+    "word": "Speaking Part 1: Nói về thời tiết",
+    "ipa": "chilly / scorching hot",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Thay từ \"cold\" và \"hot\" đơn giản",
+    "example": "boiling hot / scorching hot",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Từ nào mô tả thời tiết \"rất nóng\" tự nhiên trong giao tiếp?",
+      "sentence": "Trọng tâm: Thay từ \"cold\" và \"hot\" đơn giản",
+      "options": [
+        "boiling hot / scorching hot",
+        "very big hot",
+        "strong temperature",
+        "heavy sunny"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Boiling hot\" (nóng như đổ lửa) hoặc \"chilly\" (se lạnh) nâng điểm từ vựng ngay!"
+    }
+  },
+  {
+    "id": "s2_189",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Đưa câu trả lời phụ thuộc",
+    "word": "Speaking Part 1: Đưa câu trả lời phụ thuộc",
+    "ipa": "It depends on...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Trả lời linh hoạt khi gặp câu hỏi khó chọn 1 bên",
+    "example": "\"Well, it really depends on my mood and the weather.\"",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Khi hỏi \"Do you prefer staying home or going out?\", nếu bạn thích cả hai, mở đầu bằng gì?",
+      "sentence": "Trọng tâm: Trả lời linh hoạt khi gặp câu hỏi khó chọn 1 bên",
+      "options": [
+        "\"Well, it really depends on my mood and the weather.\"",
+        "\"Both are impossible.\"",
+        "\"I don’t know, ask another question.\"",
+        "\"Yes, I prefer.\""
+      ],
+      "correctIndex": 0,
+      "explanation": "\"It depends on...\" giúp bạn chia 2 trường hợp (If I’m tired... / On the other hand...), tự động đủ 3–4 câu!"
+    }
+  },
+  {
+    "id": "s2_190",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Dùng thì quá khứ khi hỏi về tuổi thơ",
+    "word": "Speaking Part 1: Dùng thì quá khứ khi hỏi về tuổi thơ",
+    "ipa": "used to + V0",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Lắng nghe thì của câu hỏi (Did you...?)",
+    "example": "Quá khứ đơn hoặc \"used to\" (\"I used to draw every day.\")",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu giám khảo hỏi \"Did you like drawing as a child?\", câu trả lời cần chia thì nào?",
+      "sentence": "Trọng tâm: Lắng nghe thì của câu hỏi (Did you...?)",
+      "options": [
+        "Quá khứ đơn hoặc \"used to\" (\"I used to draw every day.\")",
+        "Tương lai đơn (\"I will draw.\")",
+        "Hiện tại tiếp diễn",
+        "Chỉ trả lời Yes"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chú ý nghe câu hỏi bắt đầu bằng \"Did you...\" để phản xạ trả lời bằng Quá khứ đơn!"
+    }
+  },
+  {
+    "id": "s2_191",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Không học thuộc lòng",
+    "word": "Speaking Part 1: Không học thuộc lòng",
+    "ipa": "Sound natural",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Nói tự nhiên như trò chuyện",
+    "example": "Học vẹt câu trả lời mẫu như máy, không trả lời đúng câu hỏi",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Điều gì khiến thí sinh bị trừ điểm nặng ở Speaking Part 1?",
+      "sentence": "Trọng tâm: Nói tự nhiên như trò chuyện",
+      "options": [
+        "Học vẹt câu trả lời mẫu như máy, không trả lời đúng câu hỏi",
+        "Mỉm cười thân thiện",
+        "Dùng ví dụ về gia đình mình",
+        "Chia đúng thì quá khứ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giám khảo nhận ra ngay bài học vẹt; hãy nhớ ý chính & cụm từ hay thay vì học thuộc cả đoạn."
+    }
+  },
+  {
+    "id": "s2_192",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Xử lý khi chưa nghe rõ",
+    "word": "Speaking Part 1: Xử lý khi chưa nghe rõ",
+    "ipa": "Could you repeat that, please?",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Xin nhắc lại lịch sự không bị trừ điểm",
+    "example": "\"Sorry, could you repeat the question, please?\"",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu bạn không nghe kịp một câu hỏi ở Part 1, nên nói gì?",
+      "sentence": "Trọng tâm: Xin nhắc lại lịch sự không bị trừ điểm",
+      "options": [
+        "\"Sorry, could you repeat the question, please?\"",
+        "Im lặng nhìn xuống bàn 20 giây",
+        "Nói đại về một chủ đề hoàn toàn khác",
+        "Cười trừ rồi lắc đầu"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hỏi lại lịch sự 1–2 lần hoàn toàn bình thường và không bị trừ điểm!"
+    }
+  },
+  {
+    "id": "s2_193",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Câu kết đoạn nhẹ nhàng",
+    "word": "Writing: Câu kết đoạn nhẹ nhàng",
+    "ipa": "Overall / Thus",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Chốt lại ý nghĩa đoạn văn",
+    "example": "Liên kết hoặc chốt lại lợi ích/tác động của ý vừa phân tích",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Đoạn văn sẽ trọn vẹn hơn nếu câu cuối làm gì?",
+      "sentence": "Trọng tâm: Chốt lại ý nghĩa đoạn văn",
+      "options": [
+        "Liên kết hoặc chốt lại lợi ích/tác động của ý vừa phân tích",
+        "Bỏ dở giữa chừng khi đang kể ví dụ",
+        "Lặp lại y hệt chữ của câu mở đầu",
+        "Viết \"The End\""
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu cuối đoạn nên khép lại tác động rõ ràng để tăng mạch lạc (Coherence)."
+    }
+  },
+  {
+    "id": "s2_194",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Chủ ngữ giả It is + Adj + to V",
+    "word": "Writing: Chủ ngữ giả It is + Adj + to V",
+    "ipa": "It is important to...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Tránh dùng \"We/You\" quá nhiều trong Writing",
+    "example": "It is essential to protect trees.",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cách viết trang trọng hơn cho \"We must protect trees.\" là?",
+      "sentence": "Trọng tâm: Tránh dùng \"We/You\" quá nhiều trong Writing",
+      "options": [
+        "It is essential to protect trees.",
+        "You guys have to save trees.",
+        "Protect trees is very important.",
+        "Trees are must protect."
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc \"It is + adj + to V\" giúp văn phong khách quan, học thuật hơn hẳn!"
+    }
+  },
+  {
+    "id": "s2_195",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Thay thế \"a lot of\"",
+    "word": "Writing: Thay thế \"a lot of\"",
+    "ipa": "many / a large number of",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "A lot of hơi thân mật trong văn viết học thuật",
+    "example": "a large number of students",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm từ nào học thuật hơn thay cho \"a lot of students\"?",
+      "sentence": "Trọng tâm: A lot of hơi thân mật trong văn viết học thuật",
+      "options": [
+        "a large number of students",
+        "tons of students",
+        "so many lots of students",
+        "big students"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"A large number of + N đếm được\" và \"a great deal of + N không đếm được\" chuẩn Writing hơn \"a lot of\"."
+    }
+  },
+  {
+    "id": "s2_196",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Thay thế \"good\" và \"bad\"",
+    "word": "Writing: Thay thế \"good\" và \"bad\"",
+    "ipa": "beneficial / harmful",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Nâng cấp tính từ cơ bản trong đoạn văn",
+    "example": "beneficial / harmful",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cặp tính từ nào chuẩn mực hơn thay cho \"good\" và \"bad\" trong Writing?",
+      "sentence": "Trọng tâm: Nâng cấp tính từ cơ bản trong đoạn văn",
+      "options": [
+        "beneficial / harmful",
+        "nice / ugly",
+        "yummy / yucky",
+        "super / terrible"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Beneficial\" (có lợi) và \"harmful\" (có hại) là bước đệm hoàn hảo từ B1 lên B2!"
+    }
+  },
+  {
+    "id": "s2_197",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Kiểm tra hòa hợp Chủ - Vị",
+    "word": "Writing: Kiểm tra hòa hợp Chủ - Vị",
+    "ipa": "Subject-Verb Agreement",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Chủ ngữ số ít đi với động từ số ít",
+    "example": "\"help\" phải sửa thành \"helps\" (vì Online education số ít)",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Tìm lỗi sai trong câu: \"Online education help students save time.\"",
+      "sentence": "Trọng tâm: Chủ ngữ số ít đi với động từ số ít",
+      "options": [
+        "\"help\" phải sửa thành \"helps\" (vì Online education số ít)",
+        "\"students\" phải bỏ s",
+        "\"save\" phải thành \"saving\"",
+        "Không có lỗi nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "Danh từ không đếm được làm chủ ngữ (\"Online education\") luôn chia động từ số ít (\"helps\")."
+    }
+  },
+  {
+    "id": "s2_198",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Writing: Liên từ bổ sung đầu câu",
+    "word": "Writing: Liên từ bổ sung đầu câu",
+    "ipa": "In addition, / Furthermore,",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Thêm luận điểm mới trong đoạn văn",
+    "example": "In addition, / Furthermore,",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Liên từ nào đặt đầu câu để bổ sung thêm một ý hỗ trợ cùng chiều?",
+      "sentence": "Trọng tâm: Thêm luận điểm mới trong đoạn văn",
+      "options": [
+        "In addition, / Furthermore,",
+        "However, / Conversely,",
+        "Instead of,",
+        "Because of,"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"In addition,\" và \"Furthermore,\" bổ sung ý mới mạch lạc hơn \"And\" đứng đầu câu."
+    }
+  },
+  {
+    "id": "s2_199",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Tránh ngập ngừng im lặng",
+    "word": "Speaking Part 1: Tránh ngập ngừng im lặng",
+    "ipa": "Well, actually...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "Dùng filler tự nhiên mua thời gian suy nghĩ",
+    "example": "\"Well, to be honest...\" / \"Actually, I’d say...\"",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Cụm từ tự nhiên để mở đầu câu khi cần 1 giây suy nghĩ là?",
+      "sentence": "Trọng tâm: Dùng filler tự nhiên mua thời gian suy nghĩ",
+      "options": [
+        "\"Well, to be honest...\" / \"Actually, I’d say...\"",
+        "\"Umm... errr... uhh...\" kéo dài 5 giây",
+        "\"Wait a minute, let me think in Vietnamese.\"",
+        "Im lặng hoàn toàn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dùng \"Well, to be honest...\" giữ nhịp trôi chảy tự nhiên (Fluency)."
+    }
+  },
+  {
+    "id": "s2_200",
+    "stage": 2,
+    "tier": 2,
+    "band": "GĐ 2 · Band 4.5–5.5",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
+    "module": "Module 2.3: Writing & Speaking nhập môn",
+    "topic": "Speaking Part 1: Kéo dài ý bằng So sánh",
+    "word": "Speaking Part 1: Kéo dài ý bằng So sánh",
+    "ipa": "Compared to the past...",
+    "partOfSpeech": "writing/speaking",
+    "meaning": "So sánh ngày xưa với hiện tại để có thêm câu nói",
+    "example": "So sánh với quá khứ (\"Compared to 5 years ago, I now...\")",
+    "quizType": "phonetic_meaning",
+    "quiz": {
+      "prompt": "Nếu lỡ nói hết ý ở câu 2, mẹo nào giúp bạn nói thêm câu 3, 4 dễ dàng?",
+      "sentence": "Trọng tâm: So sánh ngày xưa với hiện tại để có thêm câu nói",
+      "options": [
+        "So sánh với quá khứ (\"Compared to 5 years ago, I now...\")",
+        "Lặp lại y nguyên câu 1 hai lần",
+        "Đếm từ 1 đến 10",
+        "Nói \"That is all, thank you.\""
+      ],
+      "correctIndex": 0,
+      "explanation": "Kỹ thuật so sánh Trước kia – Bây giờ giúp câu trả lời Part 1 tự nhiên dài ra 3–4 câu!"
+    }
+  }
+]

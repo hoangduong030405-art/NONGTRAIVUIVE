@@ -32,6 +32,7 @@ export function createGame(parent: HTMLElement): Phaser.Game {
     },
     input: {
       activePointers: 2,
+      windowEvents: false,
     },
     scene: [BootScene, FarmScene],
   });

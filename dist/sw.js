@@ -1,8 +1,21 @@
-const CACHE_NAME = 'lexifarm-ielts-v1';
+const CACHE_NAME = 'lexifarm-ielts-v2';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(['./', './index.html', './data/ielts_vocab.json', './icon.svg', './manifest.webmanifest']))
+    caches.open(CACHE_NAME).then((cache) =>
+      cache.addAll([
+        './',
+        './index.html',
+        './data/ielts_vocab.json',
+        './data/stage_1.json',
+        './data/stage_2.json',
+        './data/stage_3.json',
+        './data/stage_4.json',
+        './data/stage_5.json',
+        './icon.svg',
+        './manifest.webmanifest',
+      ]),
+    ),
   );
   self.skipWaiting();
 });
@@ -10,8 +23,8 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))
-    )
+      Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))),
+    ),
   );
   self.clients.claim();
 });
@@ -29,6 +42,6 @@ self.addEventListener('fetch', (event) => {
         caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
         return response;
       });
-    })
+    }),
   );
 });

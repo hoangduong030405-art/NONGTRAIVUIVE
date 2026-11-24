@@ -42,16 +42,29 @@ export function App() {
 
   // Bridge: Phaser intents → store actions
   useEffect(() => {
+    const isModalOpen = () => {
+      const s = useGameStore.getState();
+      return Boolean(s.activeQuiz || s.almanacOpen || s.marketOpen || s.kitchenOpen || s.questsOpen);
+    };
+
     const onReady = () => syncGameNow();
-    const onTap = ({ plotIndex }: { plotIndex: number }) => useGameStore.getState().handlePlotTap(plotIndex);
-    const onHarvest = ({ plotIndex, autoHarvested }: { plotIndex: number; autoHarvested: boolean }) =>
-      useGameStore.getState().harvestPlot(plotIndex, autoHarvested);
+    const onTap = ({ plotIndex }: { plotIndex: number }) => {
+      if (!isModalOpen()) useGameStore.getState().handlePlotTap(plotIndex);
+    };
+    const onHarvest = ({ plotIndex, autoHarvested }: { plotIndex: number; autoHarvested: boolean }) => {
+      if (!isModalOpen()) useGameStore.getState().harvestPlot(plotIndex, autoHarvested);
+    };
 
-    const onAnimalInteract = ({ animalType }: { animalType: 'sheep' | 'chicken' | 'cow' | 'dog' }) =>
-      useGameStore.getState().careAnimal(animalType);
-    const onPondFish = () => useGameStore.getState().fishAtPond();
+    const onAnimalInteract = ({ animalType }: { animalType: 'sheep' | 'chicken' | 'cow' | 'dog' }) => {
+      if (!isModalOpen()) useGameStore.getState().careAnimal(animalType);
+    };
+    const onPondFish = () => {
+      if (!isModalOpen()) useGameStore.getState().fishAtPond();
+    };
 
-    const onOpenKitchen = () => useGameStore.getState().setKitchenOpen(true);
+    const onOpenKitchen = () => {
+      if (!isModalOpen()) useGameStore.getState().setKitchenOpen(true);
+    };
 
     EventBus.on('game:ready', onReady);
     EventBus.on('game:plot-tap', onTap);

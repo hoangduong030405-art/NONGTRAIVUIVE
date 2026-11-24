@@ -9,6 +9,7 @@ export type WateringCanTier = 'basic' | 'copper' | 'silver' | 'gold' | 'diamond'
 export type CropStage = 'EMPTY' | 'SEED' | 'SPROUT' | 'MATURE' | 'GOLDEN_RIPE';
 
 export type QuizType =
+  | 'simple_translation'
   | 'phonetic_meaning'
   | 'collocation_match'
   | 'paraphrase_upgrade'
@@ -61,9 +62,18 @@ export interface VocabItem {
   tipCard?: VocabTipCardData;
 }
 
+export type CurriculumStage = 1 | 2 | 3 | 4 | 5;
+
+export interface CurriculumQuestion extends VocabItem {
+  stage: CurriculumStage;
+  module: string;
+  topic: string;
+}
+
 export interface PlotState {
   index: number;
   vocabId: string | null;
+  assignedQuestionId?: string | null;
   tier: VocabTier | null;
   plantedAt: number | null;
   baseDurationMs: number;
@@ -173,6 +183,8 @@ export interface PlayerProgress {
   upgrades: FarmUpgrades;
   dailyQuests: DailyQuest[];
   activeWeather: WeatherType;
+  stageOverride: CurriculumStage | 'auto';
+  completedQuestionIds: string[];
   updatedAt: number;
 }
 

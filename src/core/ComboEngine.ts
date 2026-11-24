@@ -68,10 +68,11 @@ export class ComboEngine {
     progressRatio: number;
   } {
     const safeXp = Math.max(0, Math.floor(totalXp));
-    const level = Math.floor(safeXp / 200) + 1;
-    const levelFloor = (level - 1) * 200;
+    const xpPerLevel = 100;
+    const level = Math.floor(safeXp / xpPerLevel) + 1;
+    const levelFloor = (level - 1) * xpPerLevel;
     const currentLevelXp = safeXp - levelFloor;
-    const nextLevelXp = 200;
+    const nextLevelXp = xpPerLevel;
     return {
       level,
       currentLevelXp,

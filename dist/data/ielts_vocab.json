@@ -1,152 +1,452 @@
 [
   {
-    "id": "t1_sustainable",
+    "id": "t1_apple",
     "tier": 1,
-    "band": "Band 4.5–5.5",
+    "band": "Cơ bản (Lv.1)",
+    "word": "Apple",
+    "ipa": "/ˈæp.əl/",
+    "partOfSpeech": "danh từ (noun)",
+    "meaning": "Quả táo — loại trái cây ngọt giòn rất phổ biến.",
+    "example": "I eat a fresh red apple every morning.",
+    "growthDurationMs": 10000,
+    "xpReward": 30,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của từ 'Apple' là gì?",
+      "sentence": "I eat a fresh red apple every morning.",
+      "options": [
+        "Quả táo",
+        "Quả chuối",
+        "Bánh mì",
+        "Con mèo"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Apple' nghĩa là Quả táo. Ví dụ: 'red apple' = quả táo đỏ."
+    }
+  },
+  {
+    "id": "t1_water",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Water",
+    "ipa": "/ˈwɔː.tər/",
+    "partOfSpeech": "danh từ / động từ",
+    "meaning": "Nước (hoặc: tưới nước cho cây).",
+    "example": "Plants need clean water and sunlight to grow.",
+    "growthDurationMs": 10000,
+    "xpReward": 30,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Từ 'Water' có nghĩa tiếng Việt là gì?",
+      "sentence": "Plants need clean water and sunlight to grow.",
+      "options": [
+        "Nước / Tưới nước",
+        "Ngọn lửa",
+        "Cơn gió",
+        "Đám mây"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Water' vừa là danh từ (Nước) vừa là động từ (Tưới nước cho cây)."
+    }
+  },
+  {
+    "id": "t1_sun",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Sun",
+    "ipa": "/sʌn/",
+    "partOfSpeech": "danh từ (noun)",
+    "meaning": "Mặt trời — nguồn ánh sáng và hơi ấm ban ngày.",
+    "example": "The sun shines brightly over our farm.",
+    "growthDurationMs": 10000,
+    "xpReward": 30,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa tiếng Việt đúng của 'Sun':",
+      "sentence": "The sun shines brightly over our farm.",
+      "options": [
+        "Mặt trời",
+        "Mặt trăng",
+        "Ngôi sao",
+        "Cơn mưa"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Sun' = Mặt trời (tính từ là 'sunny' = trời nắng)."
+    }
+  },
+  {
+    "id": "t1_garden",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Garden",
+    "ipa": "/ˈɡɑː.dən/",
+    "partOfSpeech": "danh từ (noun)",
+    "meaning": "Khu vườn — nơi trồng hoa, rau củ và cây ăn quả.",
+    "example": "There are many colourful flowers in our garden.",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Dịch từ 'Garden' sang tiếng Việt:",
+      "sentence": "There are many colourful flowers in our garden.",
+      "options": [
+        "Khu vườn",
+        "Nhà bếp",
+        "Trường học",
+        "Con đường"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Garden' nghĩa là Khu vườn; người làm vườn là 'gardener'."
+    }
+  },
+  {
+    "id": "t1_farmer",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Farmer",
+    "ipa": "/ˈfɑː.mər/",
+    "partOfSpeech": "danh từ (noun)",
+    "meaning": "Người nông dân — người trồng trọt và chăm sóc vật nuôi.",
+    "example": "The farmer wakes up early to feed the cows.",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "'Farmer' có nghĩa là ai?",
+      "sentence": "The farmer wakes up early to feed the cows.",
+      "options": [
+        "Người nông dân",
+        "Bác sĩ",
+        "Giáo viên",
+        "Phi công"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Farm' là nông trại, thêm đuôi '-er' thành 'Farmer' = Người nông dân."
+    }
+  },
+  {
+    "id": "t1_bread",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Bread",
+    "ipa": "/bred/",
+    "partOfSpeech": "danh từ (noun)",
+    "meaning": "Bánh mì — món ăn làm từ bột mì nướng.",
+    "example": "We bake warm bread in the farm kitchen.",
+    "growthDurationMs": 11000,
+    "xpReward": 30,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của 'Bread' là gì?",
+      "sentence": "We bake warm bread in the farm kitchen.",
+      "options": [
+        "Bánh mì",
+        "Trứng gà",
+        "Sữa tươi",
+        "Cá rán"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Bread' là Bánh mì (danh từ không đếm được trong tiếng Anh)."
+    }
+  },
+  {
+    "id": "t1_happy",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Happy",
+    "ipa": "/ˈhæp.i/",
+    "partOfSpeech": "tính từ (adjective)",
+    "meaning": "Vui vẻ, hạnh phúc.",
+    "example": "The sheep look happy when they eat fresh grass.",
+    "growthDurationMs": 12000,
+    "xpReward": 35,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Chọn nghĩa đúng của tính từ 'Happy':",
+      "sentence": "The sheep look happy when they eat fresh grass.",
+      "options": [
+        "Vui vẻ, hạnh phúc",
+        "Buồn bã, mệt mỏi",
+        "Tức giận, cáu gắt",
+        "Sợ hãi, lo lắng"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Happy' = Vui vẻ / hạnh phúc. Danh từ của nó là 'happiness' (niềm hạnh phúc)."
+    }
+  },
+  {
+    "id": "t1_grow",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Grow",
+    "ipa": "/ɡrəʊ/",
+    "partOfSpeech": "động từ (verb)",
+    "meaning": "Lớn lên, phát triển hoặc trồng cây.",
+    "example": "Carrots grow very fast after the rain.",
+    "growthDurationMs": 12000,
+    "xpReward": 35,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Động từ 'Grow' có nghĩa là gì?",
+      "sentence": "Carrots grow very fast after the rain.",
+      "options": [
+        "Lớn lên / Trồng trọt",
+        "Ngủ say",
+        "Bơi lội",
+        "Quên mất"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Grow' nghĩa là lớn lên, mọc lên hoặc trồng trọt (ví dụ: 'grow vegetables' = trồng rau)."
+    }
+  },
+  {
+    "id": "t1_harvest",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Harvest",
+    "ipa": "/ˈhɑː.vɪst/",
+    "partOfSpeech": "động từ / danh từ",
+    "meaning": "Thu hoạch, gặt hái mùa màng.",
+    "example": "In autumn, farmers harvest ripe golden crops.",
+    "growthDurationMs": 12000,
+    "xpReward": 35,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Nghĩa tiếng Việt của 'Harvest' là gì?",
+      "sentence": "In autumn, farmers harvest ripe golden crops.",
+      "options": [
+        "Thu hoạch mùa màng",
+        "Đi mua sắm",
+        "Đọc sách báo",
+        "Sửa mái nhà"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Harvest' là Thu hoạch / Vụ mùa thu hoạch."
+    }
+  },
+  {
+    "id": "t1_healthy",
+    "tier": 1,
+    "band": "Cơ bản (Lv.1)",
+    "word": "Healthy",
+    "ipa": "/ˈhel.θi/",
+    "partOfSpeech": "tính từ (adjective)",
+    "meaning": "Khỏe mạnh, tốt cho sức khỏe.",
+    "example": "Fresh milk and vegetables keep us healthy.",
+    "growthDurationMs": 12000,
+    "xpReward": 35,
+    "quizType": "simple_translation",
+    "quiz": {
+      "prompt": "Dịch tính từ 'Healthy' sang tiếng Việt:",
+      "sentence": "Fresh milk and vegetables keep us healthy.",
+      "options": [
+        "Khỏe mạnh / Tốt cho sức khỏe",
+        "Đắt đỏ / Xa xỉ",
+        "Ồn ào / Đông đúc",
+        "Chậm chạp / Cũ kỹ"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Health' = Sức khỏe, 'Healthy' = Khỏe mạnh, lành mạnh."
+    }
+  },
+  {
+    "id": "t1_sustainable",
+    "tier": 2,
+    "band": "Band 5.0–6.0",
     "word": "Sustainable",
     "ipa": "/səˈsteɪ.nə.bəl/",
     "partOfSpeech": "adjective",
-    "meaning": "Able to continue over a long period without harming the environment or exhausting natural resources.",
+    "meaning": "Bền vững — có thể duy trì lâu dài mà không làm cạn kiệt tài nguyên.",
     "example": "Investing in solar power is essential for sustainable urban growth.",
-    "growthDurationMs": 14000,
-    "xpReward": 25,
+    "growthDurationMs": 18000,
+    "xpReward": 45,
     "quizType": "phonetic_meaning",
     "quiz": {
-      "prompt": "Select the accurate IELTS academic meaning of 'Sustainable':",
+      "prompt": "Chọn nghĩa đúng của từ 'Sustainable':",
       "sentence": "Cities need _____ transport systems to reduce long-term pollution.",
       "options": [
-        "Able to continue long-term without depleting resources",
-        "Happening suddenly without prior planning",
-        "Extremely expensive for local governments",
-        "Only useful during short seasonal events"
+        "Bền vững (duy trì lâu dài không hại môi trường)",
+        "Xảy ra bất ngờ không báo trước",
+        "Cực kỳ đắt đỏ với chính quyền",
+        "Chỉ dùng được trong vài ngày ngắn"
       ],
       "correctIndex": 0,
-      "explanation": "'Sustainable' describes practices that meet present needs without compromising future resources — a core Band 5.5+ Task 2 term."
+      "explanation": "'Sustainable' = Bền vững. Cụm rất hay dùng trong IELTS: 'sustainable development' (phát triển bền vững)."
     }
   },
   {
     "id": "t1_infrastructure",
-    "tier": 1,
-    "band": "Band 4.5–5.5",
+    "tier": 2,
+    "band": "Band 5.0–6.0",
     "word": "Infrastructure",
     "ipa": "/ˈɪn.frəˌstrʌk.tʃər/",
     "partOfSpeech": "noun",
-    "meaning": "The basic physical systems and facilities of a country, such as roads, railways, and power grids.",
-    "example": "Rural areas often lack modern transport infrastructure compared to megacities.",
-    "growthDurationMs": 14000,
-    "xpReward": 25,
+    "meaning": "Cơ sở hạ tầng — hệ thống đường sá, cầu cống, điện, nước.",
+    "example": "Rural areas often lack modern transport infrastructure.",
+    "growthDurationMs": 18000,
+    "xpReward": 45,
     "quizType": "phonetic_meaning",
     "quiz": {
-      "prompt": "Which definition matches 'Infrastructure'?",
-      "sentence": "Public _____ such as bridges and broadband networks boosts productivity.",
+      "prompt": "'Infrastructure' có nghĩa là gì?",
+      "sentence": "Public _____ such as bridges and roads boosts productivity.",
       "options": [
-        "Basic physical systems like roads, water, and power networks",
-        "Personal hobbies practiced after working hours",
-        "Temporary advertising posters placed in shopping malls",
-        "Laws governing international tourist visas"
+        "Cơ sở hạ tầng (đường sá, cầu, lưới điện)",
+        "Sở thích cá nhân sau giờ làm",
+        "Áp phích quảng cáo tạm thời",
+        "Quy định xin thị thực du lịch"
       ],
       "correctIndex": 0,
-      "explanation": "Note that 'infrastructure' is uncountable in English — avoid writing 'infrastructures' in IELTS Writing."
+      "explanation": "'Infrastructure' = Cơ sở hạ tầng (luôn dùng ở dạng danh từ không đếm được, không thêm 's')."
     }
   },
   {
     "id": "t1_fluctuate",
-    "tier": 1,
-    "band": "Band 4.5–5.5",
+    "tier": 2,
+    "band": "Band 5.0–6.0",
     "word": "Fluctuate",
     "ipa": "/ˈflʌk.tʃu.eɪt/",
     "partOfSpeech": "verb",
-    "meaning": "To rise and fall irregularly in number, level, or amount over time.",
+    "meaning": "Dao động — tăng giảm thất thường theo thời gian.",
     "example": "Global wheat prices fluctuated noticeably between 2015 and 2020.",
-    "growthDurationMs": 15000,
-    "xpReward": 25,
+    "growthDurationMs": 18000,
+    "xpReward": 45,
     "quizType": "phonetic_meaning",
     "quiz": {
-      "prompt": "Essential for IELTS Writing Task 1 charts — what does 'Fluctuate' mean?",
+      "prompt": "Trong biểu đồ IELTS Task 1, động từ 'Fluctuate' nghĩa là gì?",
       "sentence": "Between June and December, ticket sales tended to _____ around 400 units.",
       "options": [
-        "Rise and fall irregularly over time",
-        "Remain completely flat with zero change",
-        "Disappear permanently from the chart",
-        "Double every single day at an exact rate"
+        "Dao động, lên xuống thất thường",
+        "Giữ nguyên hoàn toàn không đổi",
+        "Biến mất vĩnh viễn khỏi biểu đồ",
+        "Tăng gấp đôi đều đặn mỗi ngày"
       ],
       "correctIndex": 0,
-      "explanation": "'Fluctuate' (noun: fluctuation) is one of the highest-utility verbs for describing unstable trends in Writing Task 1 line graphs."
+      "explanation": "'Fluctuate' = Dao động lên xuống (danh từ: fluctuation). Rất hữu ích khi tả biểu đồ đường."
     }
   },
   {
     "id": "t1_urbanization",
-    "tier": 1,
-    "band": "Band 4.5–5.5",
+    "tier": 2,
+    "band": "Band 5.0–6.0",
     "word": "Urbanization",
     "ipa": "/ˌɜː.bə.naɪˈzeɪ.ʃən/",
     "partOfSpeech": "noun",
-    "meaning": "The process by which more people move from rural countryside areas to live and work in cities.",
+    "meaning": "Đô thị hóa — quá trình người dân chuyển từ nông thôn ra thành phố sinh sống.",
     "example": "Rapid urbanization has increased demand for affordable city housing.",
-    "growthDurationMs": 15000,
-    "xpReward": 25,
+    "growthDurationMs": 19000,
+    "xpReward": 45,
     "quizType": "phonetic_meaning",
     "quiz": {
-      "prompt": "Identify the true meaning of 'Urbanization':",
+      "prompt": "Nghĩa đúng của 'Urbanization' là gì?",
       "sentence": "Unchecked _____ places heavy pressure on municipal water supplies.",
       "options": [
-        "Population shift from countryside areas into growing cities",
-        "Protecting wild forests by banning construction",
-        "Teaching agricultural techniques to university students",
-        "Reducing city populations through rural subsidies"
+        "Đô thị hóa (dân cư dịch chuyển ra thành thị)",
+        "Bảo vệ rừng tự nhiên bằng cách cấm xây dựng",
+        "Giảng dạy nông nghiệp tại đại học",
+        "Khuyến khích người dân về quê ở"
       ],
       "correctIndex": 0,
-      "explanation": "Both 'urbanization' (US) and 'urbanisation' (UK) are accepted in IELTS as long as your spelling remains consistent."
+      "explanation": "'Urbanization' = Đô thị hóa ('urban' = thành thị, 'rural' = nông thôn)."
     }
   },
   {
     "id": "t1_demographic",
-    "tier": 1,
-    "band": "Band 4.5–5.5",
+    "tier": 2,
+    "band": "Band 5.5–6.0",
     "word": "Demographic",
     "ipa": "/ˌdem.əˈɡræf.ɪk/",
     "partOfSpeech": "adjective / noun",
-    "meaning": "Relating to the structure of populations, such as age groups, income, or birth rates.",
+    "meaning": "Nhân khẩu học — thuộc về cơ cấu dân số (tuổi tác, thu nhập, tỷ lệ sinh).",
     "example": "An ageing demographic presents new challenges for healthcare budgets.",
-    "growthDurationMs": 16000,
-    "xpReward": 30,
+    "growthDurationMs": 20000,
+    "xpReward": 50,
     "quizType": "phonetic_meaning",
     "quiz": {
-      "prompt": "What does 'Demographic' refer to in IELTS essays?",
+      "prompt": "'Demographic' liên quan đến chủ đề nào?",
       "sentence": "The largest _____ shift in the survey occurred among adults aged 65+.",
       "options": [
-        "Characteristics and structure of a human population",
-        "Detailed maps of coastal mountain ranges",
-        "Software tools used to edit digital photographs",
-        "Geological layers beneath ancient volcanoes"
+        "Cơ cấu và đặc điểm dân số (nhân khẩu học)",
+        "Bản đồ chi tiết vùng núi ven biển",
+        "Phần mềm chỉnh sửa ảnh kỹ thuật số",
+        "Các tầng địa chất dưới núi lửa cổ"
       ],
       "correctIndex": 0,
-      "explanation": "Use 'demographic changes' or 'this demographic' to refer smoothly to population segments in Task 1 and Task 2."
+      "explanation": "'Demographic' = Nhân khẩu học; 'demographic shift' = sự dịch chuyển cơ cấu dân số."
     }
   },
   {
     "id": "t1_phenomenon",
-    "tier": 1,
-    "band": "Band 4.5–5.5",
+    "tier": 2,
+    "band": "Band 5.5–6.0",
     "word": "Phenomenon",
     "ipa": "/fəˈnɒm.ɪ.nən/",
     "partOfSpeech": "noun",
-    "meaning": "A notable fact, trend, or event observed in society or nature.",
-    "example": "Remote working has become a global phenomenon in the knowledge economy.",
-    "growthDurationMs": 16000,
-    "xpReward": 30,
+    "meaning": "Hiện tượng — một sự việc, xu hướng đáng chú ý trong xã hội hoặc tự nhiên.",
+    "example": "Remote working has become a global phenomenon.",
+    "growthDurationMs": 20000,
+    "xpReward": 50,
     "quizType": "phonetic_meaning",
     "quiz": {
-      "prompt": "Select the correct meaning of 'Phenomenon':",
+      "prompt": "Chọn nghĩa của danh từ 'Phenomenon':",
       "sentence": "Social media addiction is a widespread modern _____ among teenagers.",
       "options": [
-        "An observable trend, occurrence, or fact in society or nature",
-        "A strict government tax on imported vehicles",
-        "A private disagreement between two business partners",
-        "An outdated medical instrument from the 19th century"
+        "Hiện tượng đáng chú ý trong xã hội/tự nhiên",
+        "Thuế nghiêm ngặt đánh vào xe nhập khẩu",
+        "Bất đồng riêng tư giữa hai đối tác",
+        "Dụng cụ y tế lỗi thời từ thế kỷ 19"
       ],
       "correctIndex": 0,
-      "explanation": "Watch the irregular plural: one 'phenomenon', many 'phenomena'!"
+      "explanation": "'Phenomenon' = Hiện tượng (số nhiều bất quy tắc là 'phenomena')."
+    }
+  },
+  {
+    "id": "t1_biodiversity",
+    "tier": 2,
+    "band": "Band 5.5–6.0",
+    "word": "Biodiversity",
+    "ipa": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
+    "partOfSpeech": "noun",
+    "meaning": "Đa dạng sinh học — sự phong phú của các loài động thực vật trong tự nhiên.",
+    "example": "Protecting coral reefs is crucial for preserving marine biodiversity.",
+    "growthDurationMs": 20000,
+    "xpReward": 50,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe phát âm tiếng Anh và chọn đúng từ bạn nghe được:",
+      "sentence": "National parks play a vital role in safeguarding local _____.",
+      "options": [
+        "Biodiversity",
+        "Biochemistry",
+        "Biography",
+        "Biotechnology"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Biodiversity' = Đa dạng sinh học. Từ khóa cực kỳ hay gặp trong bài Nghe và Đọc chủ đề sinh thái."
+    }
+  },
+  {
+    "id": "t1_subsidize",
+    "tier": 2,
+    "band": "Band 5.5–6.0",
+    "word": "Subsidize",
+    "ipa": "/ˈsʌb.sɪ.daɪz/",
+    "partOfSpeech": "verb",
+    "meaning": "Trợ cấp, hỗ trợ tài chính (để giảm giá thành sản phẩm/dịch vụ).",
+    "example": "Many governments subsidize public rail networks to encourage green commuting.",
+    "growthDurationMs": 20000,
+    "xpReward": 50,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Nghe âm thanh và chọn đúng động từ được đọc:",
+      "sentence": "Authorities should _____ organic farming to lower grocery prices.",
+      "options": [
+        "Subsidize",
+        "Summarize",
+        "Supervise",
+        "Stabilize"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Subsidize' = Trợ cấp tài chính (trọng âm rơi vào âm tiết đầu: /ˈsʌb.sɪ.daɪz/)."
     }
   },
   {
@@ -156,27 +456,27 @@
     "word": "Exacerbate climate change",
     "ipa": "/ɪɡˈzæs.ə.beɪt/",
     "partOfSpeech": "collocation",
-    "meaning": "To make climate change or an existing negative problem significantly worse.",
-    "example": "Unregulated deforestation continues to exacerbate climate change across tropical basins.",
+    "meaning": "Làm trầm trọng thêm tình trạng biến đổi khí hậu (khiến vấn đề tệ hơn).",
+    "example": "Unregulated deforestation continues to exacerbate climate change.",
     "growthDurationMs": 24000,
-    "xpReward": 50,
+    "xpReward": 55,
     "quizType": "collocation_match",
     "quiz": {
-      "prompt": "Complete the Band 6.5 collocation: match the verb to 'climate change'.",
+      "prompt": "Kéo hoặc chạm vào động từ đi cùng 'climate change' (nghĩa: làm trầm trọng thêm):",
       "sentence": "Heavy reliance on coal will further _____ climate change over coming decades.",
       "collocationTarget": "climate change",
       "options": ["Exacerbate", "Celebrate", "Decorate", "Whisper"],
       "correctIndex": 0,
-      "explanation": "'Exacerbate' naturally collocates with negative nouns like 'climate change', 'inequality', or 'the crisis' (meaning 'make worse')."
+      "explanation": "'Exacerbate' = Làm trầm trọng thêm, rất tự nhiên khi ghép với các vấn đề tiêu cực như 'climate change'."
     },
     "tipCard": {
       "id": "tip_exacerbate",
-      "title": "Precise Verbs for Problem Essays",
+      "title": "Động từ nâng cao cho bài Problem Essays",
       "skill": "Writing Task 2",
       "bandTarget": "Band 6.5+",
       "upgradeFrom": "make climate change worse",
       "upgradeTo": "exacerbate climate change",
-      "tip": "Replace 'make [problem] worse' with 'exacerbate' or 'aggravate' to lift Lexical Resource immediately."
+      "tip": "Thay cụm đơn giản 'make [problem] worse' bằng 'exacerbate' để nâng điểm từ vựng ngay lập tức."
     }
   },
   {
@@ -186,27 +486,27 @@
     "word": "Foster innovation",
     "ipa": "/ˈfɒs.tər ˌɪn.əˈveɪ.ʃən/",
     "partOfSpeech": "collocation",
-    "meaning": "To encourage the development of new ideas, creative technologies, and breakthroughs.",
+    "meaning": "Thúc đẩy / nuôi dưỡng sự đổi mới sáng tạo.",
     "example": "Collaborative university labs help foster innovation in clean energy.",
     "growthDurationMs": 24000,
-    "xpReward": 50,
+    "xpReward": 55,
     "quizType": "collocation_match",
     "quiz": {
-      "prompt": "Drag or tap the academic verb that naturally pairs with 'innovation':",
+      "prompt": "Ghép động từ học thuật đi với 'innovation' (thúc đẩy đổi mới):",
       "sentence": "Flexible regulations and research grants can _____ innovation in biotech.",
       "collocationTarget": "innovation",
       "options": ["Foster", "Quarrel", "Shrink", "Imprison"],
       "correctIndex": 0,
-      "explanation": "'Foster innovation' is a classic Band 6.5–7.0 collocation; 'foster' also pairs well with 'creativity', 'trust', and 'cooperation'."
+      "explanation": "'Foster innovation' = Thúc đẩy đổi mới sáng tạo ('foster' còn đi tốt với 'creativity', 'trust')."
     },
     "tipCard": {
       "id": "tip_foster_innovation",
-      "title": "Natural Verb + Abstract Noun Pairing",
+      "title": "Kết hợp Động từ + Danh từ trừu tượng",
       "skill": "Writing & Speaking",
       "bandTarget": "Band 6.5+",
       "upgradeFrom": "help new ideas grow",
       "upgradeTo": "foster innovation",
-      "tip": "Examiners score collocation accuracy directly. Pair 'foster' with positive abstract nouns such as 'innovation' or 'social cohesion'."
+      "tip": "Dùng 'foster' với các danh từ tích cực như 'innovation' hay 'social cohesion'."
     }
   },
   {
@@ -216,27 +516,27 @@
     "word": "Allocate resources",
     "ipa": "/ˈæl.ə.keɪt rɪˈzɔː.sɪz/",
     "partOfSpeech": "collocation",
-    "meaning": "To distribute money, time, staff, or materials officially for a specific purpose.",
+    "meaning": "Phân bổ nguồn lực (tiền bạc, nhân sự, tài nguyên) cho mục đích cụ thể.",
     "example": "Governments should allocate resources equitably between healthcare and education.",
     "growthDurationMs": 25000,
-    "xpReward": 50,
+    "xpReward": 55,
     "quizType": "collocation_match",
     "quiz": {
-      "prompt": "Match the formal policy verb that collocates with 'resources':",
+      "prompt": "Chọn động từ mang nghĩa 'phân bổ' đi với 'resources':",
       "sentence": "City planners must _____ resources toward preventive healthcare.",
       "collocationTarget": "resources",
       "options": ["Allocate", "Evaporate", "Confuse", "Borrow"],
       "correctIndex": 0,
-      "explanation": "'Allocate resources / funds / budgets' is far more precise than 'give money to' in government spending essays."
+      "explanation": "'Allocate resources / funds' = Phân bổ nguồn lực/ngân sách, chuẩn xác hơn hẳn 'give money to'."
     },
     "tipCard": {
       "id": "tip_allocate_resources",
-      "title": "Government Spending Vocabulary",
+      "title": "Từ vựng chủ đề Ngân sách Chính phủ",
       "skill": "Writing Task 2",
       "bandTarget": "Band 6.5+",
       "upgradeFrom": "give money to",
       "upgradeTo": "allocate resources toward",
-      "tip": "Whenever a Task 2 prompt asks what governments should fund, deploy 'allocate public resources' or 'earmark funds'."
+      "tip": "Khi đề bài hỏi chính phủ nên đầu tư vào đâu, hãy dùng 'allocate public resources'."
     }
   },
   {
@@ -246,27 +546,27 @@
     "word": "Alleviate poverty",
     "ipa": "/əˈliː.vi.eɪt ˈpɒv.ə.ti/",
     "partOfSpeech": "collocation",
-    "meaning": "To reduce the severity or suffering of poverty and financial hardship.",
-    "example": "Vocational training programs can sustainably alleviate poverty in remote provinces.",
+    "meaning": "Giảm nhẹ / xóa đói giảm nghèo.",
+    "example": "Vocational training programs can sustainably alleviate poverty.",
     "growthDurationMs": 25000,
     "xpReward": 55,
     "quizType": "collocation_match",
     "quiz": {
-      "prompt": "Pair the right academic verb with 'poverty':",
+      "prompt": "Chọn động từ nghĩa 'làm giảm nhẹ' ghép với 'poverty':",
       "sentence": "Microfinance initiatives aim to _____ poverty among rural entrepreneurs.",
       "collocationTarget": "poverty",
       "options": ["Alleviate", "Multiply", "Invent", "Postpone"],
       "correctIndex": 0,
-      "explanation": "'Alleviate' means to ease pain or hardship — it collocates tightly with 'poverty', 'traffic congestion', and 'stress'."
+      "explanation": "'Alleviate' = Làm giảm bớt nỗi khổ/khó khăn ('alleviate poverty', 'alleviate traffic congestion')."
     },
     "tipCard": {
       "id": "tip_alleviate_poverty",
-      "title": "Precision Over 'Solve'",
+      "title": "Chính xác hơn động từ 'Solve'",
       "skill": "Writing Task 2",
       "bandTarget": "Band 6.5+",
       "upgradeFrom": "make poverty less",
       "upgradeTo": "alleviate poverty",
-      "tip": "Avoid claiming a single policy will 'completely solve' complex issues; 'alleviate' sounds realistic and academic."
+      "tip": "Tránh khẳng định một chính sách sẽ 'solve completely'; dùng 'alleviate' vừa thực tế vừa học thuật."
     }
   },
   {
@@ -276,27 +576,27 @@
     "word": "Curb emissions",
     "ipa": "/kɜːb ɪˈmɪʃ.ənz/",
     "partOfSpeech": "collocation",
-    "meaning": "To control, restrain, or limit the release of greenhouse gases and pollutants.",
+    "meaning": "Kiểm soát / cắt giảm lượng khí thải độc hại.",
     "example": "Carbon pricing provides factories with a strong incentive to curb emissions.",
     "growthDurationMs": 26000,
     "xpReward": 55,
     "quizType": "collocation_match",
     "quiz": {
-      "prompt": "Complete the environmental policy collocation with 'emissions':",
+      "prompt": "Hoàn thành cụm từ môi trường với 'emissions' (khí thải):",
       "sentence": "Electrifying bus fleets is an effective way to _____ emissions in dense cities.",
       "collocationTarget": "emissions",
       "options": ["Curb", "Applaud", "Cook", "Advertise"],
       "correctIndex": 0,
-      "explanation": "'Curb' (limit or restrain) pairs forcefully with 'emissions', 'inflation', 'crime', and 'uncontrolled growth'."
+      "explanation": "'Curb emissions' = Hạn chế / kiềm chế lượng khí thải."
     },
     "tipCard": {
       "id": "tip_curb_emissions",
-      "title": "Concise Environmental Collocations",
+      "title": "Collocation ngắn gọn về Môi trường",
       "skill": "Writing & Speaking",
       "bandTarget": "Band 6.5+",
       "upgradeFrom": "stop gas coming out",
       "upgradeTo": "curb carbon emissions",
-      "tip": "Short strong verbs like 'curb', 'slash', and 'cap' elevate environmental essays without sounding wordy."
+      "tip": "Các động từ mạnh và ngắn như 'curb', 'slash', 'cap' giúp câu văn súc tích."
     }
   },
   {
@@ -306,27 +606,27 @@
     "word": "Bridge the gap",
     "ipa": "/brɪdʒ ðə ɡæp/",
     "partOfSpeech": "phrasal expression",
-    "meaning": "To reduce or connect a significant difference between two groups, regions, or skill levels.",
-    "example": "Free digital literacy courses help bridge the gap between older and younger workers.",
+    "meaning": "Thu hẹp khoảng cách (giữa hai nhóm người, vùng miền hoặc trình độ).",
+    "example": "Free digital courses help bridge the gap between older and younger workers.",
     "growthDurationMs": 26000,
     "xpReward": 55,
     "quizType": "collocation_match",
     "quiz": {
-      "prompt": "Choose the verb that forms the idiom/collocation with 'the gap':",
+      "prompt": "Chọn động từ ghép với 'the gap' để thành cụm 'thu hẹp khoảng cách':",
       "sentence": "Scholarships for rural students can _____ the gap in university access.",
       "collocationTarget": "the gap",
       "options": ["Bridge", "Paint", "Swallow", "Freeze"],
       "correctIndex": 0,
-      "explanation": "'Bridge the gap' (or 'narrow the disparity') is natural in both IELTS Speaking Part 3 and Writing Task 2."
+      "explanation": "'Bridge the gap' = Bắc cầu / thu hẹp khoảng cách chênh lệch."
     },
     "tipCard": {
       "id": "tip_bridge_gap",
-      "title": "Discussing Social Inequality",
+      "title": "Thảo luận về Bất bình đẳng Xã hội",
       "skill": "Speaking Part 3",
       "bandTarget": "Band 6.5+",
       "upgradeFrom": "make two groups closer",
       "upgradeTo": "bridge the socioeconomic gap",
-      "tip": "Using 'bridge the gap between X and Y' sounds idiomatic yet completely appropriate for academic discussion."
+      "tip": "'Bridge the gap between X and Y' nghe rất tự nhiên trong cả Speaking và Writing."
     }
   },
   {
@@ -336,27 +636,27 @@
     "word": "Mitigate the impact",
     "ipa": "/ˈmɪt.ɪ.ɡeɪt ði ˈɪm.pækt/",
     "partOfSpeech": "collocation",
-    "meaning": "To make the harmful effects of an event or change less severe or painful.",
+    "meaning": "Giảm thiểu tác động xấu của một sự kiện hoặc biến cố.",
     "example": "Coastal wetlands naturally mitigate the impact of seasonal storm surges.",
     "growthDurationMs": 27000,
     "xpReward": 60,
     "quizType": "collocation_match",
     "quiz": {
-      "prompt": "Select the formal verb that pairs with 'the impact':",
+      "prompt": "Chọn động từ mang nghĩa 'giảm nhẹ tác động' đi với 'the impact':",
       "sentence": "Early warning systems can significantly _____ the impact of natural disasters.",
       "collocationTarget": "the impact",
       "options": ["Mitigate", "Complicate", "Celebrate", "Fabricate"],
       "correctIndex": 0,
-      "explanation": "'Mitigate the impact / effects / risks' is one of the highest-frequency Band 6.5–7.5 collocations."
+      "explanation": "'Mitigate the impact / risks' = Giảm thiểu tác động / rủi ro."
     },
     "tipCard": {
       "id": "tip_mitigate_impact",
-      "title": "Balancing Risk & Solutions",
+      "title": "Cân bằng Rủi ro & Giải pháp",
       "skill": "Writing Task 2",
       "bandTarget": "Band 7.0",
       "upgradeFrom": "reduce the bad hit",
       "upgradeTo": "mitigate the adverse impact",
-      "tip": "Pair 'mitigate' with 'impact', 'risk', or 'consequences' whenever proposing practical policy compromises."
+      "tip": "Ghép 'mitigate' với 'impact', 'risk', hoặc 'consequences'."
     }
   },
   {
@@ -366,357 +666,27 @@
     "word": "Stem from",
     "ipa": "/stem frɒm/",
     "partOfSpeech": "phrasal verb",
-    "meaning": "To originate from or be caused directly by an underlying factor.",
-    "example": "Many chronic lifestyle illnesses stem from prolonged sedentary habits.",
+    "meaning": "Bắt nguồn từ / do nguyên nhân gốc rễ nào đó gây ra.",
+    "example": "Many chronic illnesses stem from prolonged sedentary habits.",
     "growthDurationMs": 27000,
     "xpReward": 60,
     "quizType": "collocation_match",
     "quiz": {
-      "prompt": "Match the academic phrasal verb with 'from' meaning 'be caused by':",
+      "prompt": "Ghép cụm động từ với 'from' có nghĩa 'bắt nguồn từ':",
       "sentence": "Urban housing shortages largely _____ from rapid population inflow.",
       "collocationTarget": "from",
       "options": ["Stem", "Swim", "Laugh", "Bounce"],
       "correctIndex": 0,
-      "explanation": "'Stem from' is an academic phrasal verb ideal for cause-and-effect paragraphs instead of repeating 'because of'."
+      "explanation": "'Stem from' = Bắt nguồn từ, giúp tránh lặp lại từ 'because of'."
     },
     "tipCard": {
       "id": "tip_stem_from",
-      "title": "Academic Phrasal Verbs",
+      "title": "Cụm động từ học thuật (Academic Phrasal Verbs)",
       "skill": "Writing & Speaking",
       "bandTarget": "Band 6.5+",
       "upgradeFrom": "happen because of",
       "upgradeTo": "stem from",
-      "tip": "Contrary to myth, formal phrasal verbs like 'stem from', 'bring about', and 'phase out' boost naturalness in IELTS."
-    }
-  },
-  {
-    "id": "t3_detrimental_repercussions",
-    "tier": 3,
-    "band": "Band 7.0–8.0+",
-    "word": "Detrimental repercussions",
-    "ipa": "/ˌdet.rɪˈmen.təl ˌriː.pəˈkʌʃ.ənz/",
-    "partOfSpeech": "collocation",
-    "meaning": "Serious, unintended negative consequences that unfold after an action or policy.",
-    "example": "Cutting school arts budgets can have detrimental repercussions for student creativity.",
-    "growthDurationMs": 36000,
-    "xpReward": 100,
-    "quizType": "paraphrase_upgrade",
-    "quiz": {
-      "prompt": "Upgrade the informal phrase 'bad effects' to Band 8.0 academic phrasing:",
-      "sentence": "Overusing plastics leads to [bad effects] on marine ecosystems.",
-      "basicPhrase": "bad effects",
-      "options": [
-        "Detrimental repercussions",
-        "Unlucky happenings",
-        "Negative stuff",
-        "Worse moments"
-      ],
-      "correctIndex": 0,
-      "explanation": "'Detrimental repercussions' replaces repetitive 'bad effects' with precise C1/C2 academic register."
-    },
-    "tipCard": {
-      "id": "tip_detrimental_repercussions",
-      "title": "Upgrading Cause & Effect Vocabulary",
-      "skill": "Writing Task 2",
-      "bandTarget": "Band 8.0+",
-      "upgradeFrom": "bad effects",
-      "upgradeTo": "detrimental repercussions",
-      "tip": "Instead of repeating 'bad effects' or 'negative impacts', deploy 'detrimental repercussions' or 'adverse ramifications'."
-    }
-  },
-  {
-    "id": "t3_ubiquitous_presence",
-    "tier": 3,
-    "band": "Band 7.0–8.0+",
-    "word": "Ubiquitous presence",
-    "ipa": "/juːˈbɪk.wɪ.təs ˈprez.əns/",
-    "partOfSpeech": "collocation",
-    "meaning": "The state of seeming to be found everywhere at the same time.",
-    "example": "The ubiquitous presence of smartphones has transformed face-to-face etiquette.",
-    "growthDurationMs": 36000,
-    "xpReward": 100,
-    "quizType": "paraphrase_upgrade",
-    "quiz": {
-      "prompt": "Upgrade 'everywhere' in this IELTS Technology essay sentence:",
-      "sentence": "The [everywhere] of algorithmic feeds shapes how citizens consume news.",
-      "basicPhrase": "everywhere",
-      "options": [
-        "Ubiquitous presence",
-        "Always location",
-        "Commonly sitting",
-        "Frequent neighborhood"
-      ],
-      "correctIndex": 0,
-      "explanation": "'Ubiquitous presence' (or 'omnipresence') concisely captures 'found everywhere' at a Band 8.0 lexical level."
-    },
-    "tipCard": {
-      "id": "tip_ubiquitous_presence",
-      "title": "Technology & Globalization Register",
-      "skill": "Writing & Speaking",
-      "bandTarget": "Band 8.0+",
-      "upgradeFrom": "seen everywhere",
-      "upgradeTo": "ubiquitous presence",
-      "tip": "In technology and media prompts, 'the ubiquitous presence of X' cleanly nominalizes your subject."
-    }
-  },
-  {
-    "id": "t3_double_edged_sword",
-    "tier": 3,
-    "band": "Band 7.0–8.0+",
-    "word": "A double-edged sword",
-    "ipa": "/ə ˌdʌb.əl.edʒd ˈsɔːd/",
-    "partOfSpeech": "idiom / phrase",
-    "meaning": "A situation or innovation that carries both major advantages and serious drawbacks.",
-    "example": "Generative AI acts as a double-edged sword for creative industries.",
-    "growthDurationMs": 38000,
-    "xpReward": 105,
-    "quizType": "paraphrase_upgrade",
-    "quiz": {
-      "prompt": "Upgrade 'both helpful and harmful at the same time' for Speaking Part 3:",
-      "sentence": "Global tourism is [both helpful and harmful] for heritage towns.",
-      "basicPhrase": "both helpful and harmful",
-      "options": [
-        "A double-edged sword",
-        "A broken umbrella",
-        "A silver bicycle",
-        "A two-hour meeting"
-      ],
-      "correctIndex": 0,
-      "explanation": "'A double-edged sword' is one of the rare idioms natural enough for both Speaking Part 3 and balanced Task 2 introductions."
-    },
-    "tipCard": {
-      "id": "tip_double_edged_sword",
-      "title": "Natural Idioms for Balanced Arguments",
-      "skill": "Speaking Part 3",
-      "bandTarget": "Band 7.5+",
-      "upgradeFrom": "has both good and bad sides",
-      "upgradeTo": "proves to be a double-edged sword",
-      "tip": "Use idioms sparingly in Writing; 'a double-edged sword' works well once in an intro or Speaking Part 3 evaluation."
-    }
-  },
-  {
-    "id": "t3_exorbitant_expenditure",
-    "tier": 3,
-    "band": "Band 7.0–8.0+",
-    "word": "Exorbitant expenditure",
-    "ipa": "/ɪɡˈzɔː.bɪ.tənt ɪkˈspen.dɪ.tʃər/",
-    "partOfSpeech": "collocation",
-    "meaning": "Unreasonably high or excessive spending on a project, service, or lifestyle.",
-    "example": "Critics argue that space exploration demands exorbitant expenditure while poverty persists.",
-    "growthDurationMs": 38000,
-    "xpReward": 105,
-    "quizType": "paraphrase_upgrade",
-    "quiz": {
-      "prompt": "Upgrade 'too much expensive spending' to Band 8.0 academic prose:",
-      "sentence": "Hosting mega-events often entails [too much expensive spending] by host cities.",
-      "basicPhrase": "too much expensive spending",
-      "options": [
-        "Exorbitant expenditure",
-        "Heavy shopping",
-        "Giant pocket money",
-        "Loud buying"
-      ],
-      "correctIndex": 0,
-      "explanation": "'Exorbitant expenditure' demonstrates sophisticated adjective-noun collocation in economics and public policy topics."
-    },
-    "tipCard": {
-      "id": "tip_exorbitant_expenditure",
-      "title": "Economic & Cost Paraphrasing",
-      "skill": "Writing Task 2",
-      "bandTarget": "Band 8.0+",
-      "upgradeFrom": "very high spending",
-      "upgradeTo": "exorbitant expenditure",
-      "tip": "Combine 'exorbitant' (excessively expensive) with 'expenditure' or 'living costs' to avoid repeating 'very expensive'."
-    }
-  },
-  {
-    "id": "t3_indispensable_catalyst",
-    "tier": 3,
-    "band": "Band 7.0–8.0+",
-    "word": "Indispensable catalyst",
-    "ipa": "/ˌɪn.dɪˈspen.sə.bəl ˈkæt.əl.ɪst/",
-    "partOfSpeech": "collocation",
-    "meaning": "An absolutely essential person, tool, or policy that accelerates positive change.",
-    "example": "Accessible public libraries remain an indispensable catalyst for lifelong learning.",
-    "growthDurationMs": 40000,
-    "xpReward": 110,
-    "quizType": "paraphrase_upgrade",
-    "quiz": {
-      "prompt": "Upgrade 'very important helper for change' to Band 8.0 academic style:",
-      "sentence": "Universal broadband is an [important helper for change] in rural commerce.",
-      "basicPhrase": "important helper for change",
-      "options": [
-        "Indispensable catalyst",
-        "Helpful machine",
-        "Popular passenger",
-        "Casual starter"
-      ],
-      "correctIndex": 0,
-      "explanation": "'Indispensable catalyst' elevates 'very important thing that causes change' into crisp academic phrasing."
-    },
-    "tipCard": {
-      "id": "tip_indispensable_catalyst",
-      "title": "Elevating 'Very Important'",
-      "skill": "Writing & Speaking",
-      "bandTarget": "Band 8.0+",
-      "upgradeFrom": "very important driver",
-      "upgradeTo": "an indispensable catalyst",
-      "tip": "Replace tired intensifiers ('very important') with single-word precision: 'indispensable', 'pivotal', or 'paramount'."
-    }
-  },
-  {
-    "id": "t3_staggering_disparity",
-    "tier": 3,
-    "band": "Band 7.0–8.0+",
-    "word": "Staggering disparity",
-    "ipa": "/ˈstæɡ.ər.ɪŋ dɪˈspær.ə.ti/",
-    "partOfSpeech": "collocation",
-    "meaning": "An astonishingly large inequality or unfair gap between two groups or datasets.",
-    "example": "The chart reveals a staggering disparity between urban and rural internet speeds.",
-    "growthDurationMs": 40000,
-    "xpReward": 110,
-    "quizType": "paraphrase_upgrade",
-    "quiz": {
-      "prompt": "Upgrade 'huge unfair difference' for Task 1 & Task 2:",
-      "sentence": "Census figures highlight a [huge unfair difference] in average household income.",
-      "basicPhrase": "huge unfair difference",
-      "options": [
-        "Staggering disparity",
-        "Big weird shape",
-        "Tall distance",
-        "Surprising mixture"
-      ],
-      "correctIndex": 0,
-      "explanation": "'Disparity' implies unfair inequality, and 'staggering' highlights dramatic scale in Task 1 data comparisons and Task 2."
-    },
-    "tipCard": {
-      "id": "tip_staggering_disparity",
-      "title": "Describing Extreme Gaps & Inequalities",
-      "skill": "Writing Task 2",
-      "bandTarget": "Band 8.0+",
-      "upgradeFrom": "very big difference",
-      "upgradeTo": "a staggering disparity",
-      "tip": "Use 'disparity' when differences represent inequality, and 'divergence' when two trends move in opposite directions."
-    }
-  },
-  {
-    "id": "t3_proliferate_exponentially",
-    "tier": 3,
-    "band": "Band 7.0–8.0+",
-    "word": "Proliferate exponentially",
-    "ipa": "/prəˈlɪf.ər.eɪt ˌek.spəˈnen.ʃəl.i/",
-    "partOfSpeech": "verb phrase",
-    "meaning": "To multiply and spread rapidly in number at an accelerating pace.",
-    "example": "Co-working hubs have proliferated exponentially across major Asian capitals.",
-    "growthDurationMs": 42000,
-    "xpReward": 115,
-    "quizType": "paraphrase_upgrade",
-    "quiz": {
-      "prompt": "Upgrade 'grow super fast everywhere' into Band 8.0+ phrasing:",
-      "sentence": "On-demand delivery platforms have [grown super fast] over the past decade.",
-      "basicPhrase": "grown super fast",
-      "options": [
-        "Proliferated exponentially",
-        "Walked hurriedly",
-        "Expanded loudly",
-        "Multiplied lazily"
-      ],
-      "correctIndex": 0,
-      "explanation": "'Proliferate exponentially' captures both rapid multiplication and widespread expansion in one crisp verb phrase."
-    },
-    "tipCard": {
-      "id": "tip_proliferate_exponentially",
-      "title": "Dynamic Growth Verbs",
-      "skill": "Writing & Speaking",
-      "bandTarget": "Band 8.0+",
-      "upgradeFrom": "increase very fast",
-      "upgradeTo": "proliferate exponentially",
-      "tip": "Keep 'exponentially' for truly rapid surges so your adverb choice stays accurate rather than exaggerated."
-    }
-  },
-  {
-    "id": "t3_eradicate_systemic_barriers",
-    "tier": 3,
-    "band": "Band 7.0–8.0+",
-    "word": "Eradicate systemic barriers",
-    "ipa": "/ɪˈræd.ɪ.keɪt sɪˈstem.ɪk ˈbær.i.ərz/",
-    "partOfSpeech": "collocation",
-    "meaning": "To eliminate deep-rooted institutional obstacles that hold back certain groups.",
-    "example": "Inclusive hiring reforms are vital to eradicate systemic barriers to career advancement.",
-    "growthDurationMs": 42000,
-    "xpReward": 115,
-    "quizType": "paraphrase_upgrade",
-    "quiz": {
-      "prompt": "Upgrade 'remove deep system problems' for an Equality essay:",
-      "sentence": "Long-term education reform must [remove deep system problems] facing minority youth.",
-      "basicPhrase": "remove deep system problems",
-      "options": [
-        "Eradicate systemic barriers",
-        "Delete normal walls",
-        "Erase daily homework",
-        "Cancel local rules"
-      ],
-      "correctIndex": 0,
-      "explanation": "'Eradicate' means to uproot completely, and 'systemic barriers' identifies structural rather than accidental obstacles."
-    },
-    "tipCard": {
-      "id": "tip_eradicate_barriers",
-      "title": "Structural Policy Solutions",
-      "skill": "Writing Task 2",
-      "bandTarget": "Band 8.0+",
-      "upgradeFrom": "stop unfair system rules",
-      "upgradeTo": "eradicate systemic barriers",
-      "tip": "Referring to 'systemic barriers' shows mature analytical depth in education, gender, and employment Task 2 essays."
-    }
-  },
-  {
-    "id": "t1_biodiversity",
-    "tier": 1,
-    "band": "Band 5.0–5.5",
-    "word": "Biodiversity",
-    "ipa": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
-    "partOfSpeech": "noun",
-    "meaning": "The variety of plant and animal life in the world or in a particular habitat.",
-    "example": "Protecting coral reefs is crucial for preserving marine biodiversity.",
-    "growthDurationMs": 15000,
-    "xpReward": 30,
-    "quizType": "listening_challenge",
-    "quiz": {
-      "prompt": "🎧 Listen to the IELTS audio and select the exact word you hear:",
-      "sentence": "National parks play a vital role in safeguarding local _____.",
-      "options": [
-        "Biodiversity",
-        "Biochemistry",
-        "Biography",
-        "Biotechnology"
-      ],
-      "correctIndex": 0,
-      "explanation": "'Biodiversity' appears frequently in IELTS Listening Section 4 ecology lectures and Reading passages."
-    }
-  },
-  {
-    "id": "t1_subsidize",
-    "tier": 1,
-    "band": "Band 5.0–5.5",
-    "word": "Subsidize",
-    "ipa": "/ˈsʌb.sɪ.daɪz/",
-    "partOfSpeech": "verb",
-    "meaning": "To pay part of the cost of something so that it can be sold at a lower price.",
-    "example": "Many governments subsidize public rail networks to encourage green commuting.",
-    "growthDurationMs": 15000,
-    "xpReward": 30,
-    "quizType": "listening_challenge",
-    "quiz": {
-      "prompt": "🎧 Listen to the IELTS audio and identify the spoken verb:",
-      "sentence": "Authorities should _____ organic farming to lower grocery prices.",
-      "options": [
-        "Subsidize",
-        "Summarize",
-        "Supervise",
-        "Stabilize"
-      ],
-      "correctIndex": 0,
-      "explanation": "Notice the stress on the first syllable: /ˈsʌb.sɪ.daɪz/ (noun: subsidy)."
+      "tip": "Các cụm như 'stem from', 'bring about' làm bài viết tự nhiên và mạch lạc hơn."
     }
   },
   {
@@ -726,13 +696,13 @@
     "word": "Entrepreneurship",
     "ipa": "/ˌɒn.trə.prəˈnɜː.ʃɪp/",
     "partOfSpeech": "noun",
-    "meaning": "The activity of setting up businesses and taking on financial risks in the hope of profit.",
+    "meaning": "Tinh thần khởi nghiệp / hoạt động tự lập doanh nghiệp kinh doanh.",
     "example": "University incubators foster youth entrepreneurship in emerging economies.",
     "growthDurationMs": 26000,
     "xpReward": 60,
     "quizType": "listening_challenge",
     "quiz": {
-      "prompt": "🎧 Listen carefully to the pronunciation and pick the matching word:",
+      "prompt": "🎧 Nghe phát âm và chọn đúng từ mang nghĩa 'tinh thần khởi nghiệp':",
       "sentence": "Low-interest loans can stimulate local _____ and job creation.",
       "options": [
         "Entrepreneurship",
@@ -741,16 +711,16 @@
         "Partnership"
       ],
       "correctIndex": 0,
-      "explanation": "Watch the silent-like French origin spelling: en-tre-pre-neur-ship — a classic IELTS Listening Section 3 spelling trap!"
+      "explanation": "'Entrepreneurship' = Khởi nghiệp. Chú ý cách viết 'en-tre-pre-neur-ship' thường bị bẫy chính tả trong IELTS Listening."
     },
     "tipCard": {
       "id": "tip_entrepreneurship",
-      "title": "High-Risk Spelling in Listening",
+      "title": "Từ dễ sai chính tả khi Nghe",
       "skill": "Writing & Speaking",
       "bandTarget": "Band 6.5+",
       "upgradeFrom": "starting small shops",
       "upgradeTo": "fostering entrepreneurship",
-      "tip": "Practise pronouncing and spelling 'entrepreneurship' accurately — misspellings cost marks in IELTS Listening."
+      "tip": "Luyện nghe và viết đúng chính tả 'entrepreneurship' giúp tránh mất điểm oan ở Listening."
     }
   },
   {
@@ -760,13 +730,13 @@
     "word": "Cognitive development",
     "ipa": "/ˈkɒɡ.nə.tɪv dɪˈvel.əp.mənt/",
     "partOfSpeech": "collocation",
-    "meaning": "The growth of thinking, problem-solving, memory, and reasoning abilities.",
+    "meaning": "Sự phát triển nhận thức (tư duy, trí nhớ, giải quyết vấn đề).",
     "example": "Early musical training accelerates children's cognitive development.",
     "growthDurationMs": 26000,
     "xpReward": 60,
     "quizType": "listening_challenge",
     "quiz": {
-      "prompt": "🎧 Listen to the IELTS phrase and match what you hear:",
+      "prompt": "🎧 Nghe cụm từ tiếng Anh và chọn đáp án khớp với âm thanh:",
       "sentence": "Interactive play supports healthy _____ in early childhood.",
       "options": [
         "Cognitive development",
@@ -775,16 +745,16 @@
         "Collective commitment"
       ],
       "correctIndex": 0,
-      "explanation": "'Cognitive development' is a staple collocation in IELTS Education and Psychology topics."
+      "explanation": "'Cognitive development' = Sự phát triển nhận thức (rất hay gặp ở chủ đề Giáo dục & Trẻ em)."
     },
     "tipCard": {
       "id": "tip_cognitive_dev",
-      "title": "Education & Child Psychology Register",
+      "title": "Từ vựng chủ đề Giáo dục & Tâm lý trẻ em",
       "skill": "Writing Task 2",
       "bandTarget": "Band 7.0",
       "upgradeFrom": "making children's brains smarter",
       "upgradeTo": "enhancing cognitive development",
-      "tip": "Use 'cognitive' for thinking/memory skills and 'emotional well-being' for feelings in school essays."
+      "tip": "Dùng 'cognitive' khi nói về trí tuệ/tư duy và 'emotional well-being' khi nói về cảm xúc."
     }
   },
   {
@@ -794,13 +764,13 @@
     "word": "Mitigation strategy",
     "ipa": "/ˌmɪt.ɪˈɡeɪ.ʃən ˈstræt.ə.dʒi/",
     "partOfSpeech": "collocation",
-    "meaning": "A planned set of actions designed to reduce the severity of a risk or crisis.",
+    "meaning": "Chiến lược giảm thiểu rủi ro hoặc thiệt hại.",
     "example": "Flood barriers form a key part of the coastal mitigation strategy.",
     "growthDurationMs": 27000,
     "xpReward": 60,
     "quizType": "listening_challenge",
     "quiz": {
-      "prompt": "🎧 Listen and choose the exact academic collocation spoken:",
+      "prompt": "🎧 Nghe phát âm và chọn cụm danh từ đúng:",
       "sentence": "Urban planners unveiled a new heatwave _____ for the summer.",
       "options": [
         "Mitigation strategy",
@@ -809,16 +779,296 @@
         "Motivation energy"
       ],
       "correctIndex": 0,
-      "explanation": "Listening Section 4 lectures often contrast 'mitigation strategy' (preventing harm) with 'adaptation' (adjusting to change)."
+      "explanation": "'Mitigation strategy' = Chiến lược giảm nhẹ thiệt hại (khác với 'adaptation' = thích nghi)."
     },
     "tipCard": {
       "id": "tip_mitigation_strategy",
-      "title": "Distinguishing Mitigation vs. Adaptation",
+      "title": "Phân biệt Mitigation và Adaptation",
       "skill": "Writing Task 2",
       "bandTarget": "Band 7.0",
       "upgradeFrom": "plan to stop damage",
       "upgradeTo": "comprehensive mitigation strategy",
-      "tip": "Using 'mitigation strategy' signals policy precision in climate, traffic, and public health essays."
+      "tip": "Dùng 'mitigation strategy' trong các bài về biến đổi khí hậu, giao thông, y tế."
+    }
+  },
+  {
+    "id": "t3_detrimental_repercussions",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Detrimental repercussions",
+    "ipa": "/ˌdet.rɪˈmen.təl ˌriː.pəˈkʌʃ.ənz/",
+    "partOfSpeech": "collocation",
+    "meaning": "Những hậu quả bất lợi nghiêm trọng kéo theo sau một hành động/chính sách.",
+    "example": "Cutting school arts budgets can have detrimental repercussions for student creativity.",
+    "growthDurationMs": 36000,
+    "xpReward": 100,
+    "quizType": "paraphrase_upgrade",
+    "quiz": {
+      "prompt": "Nâng cấp cụm đơn giản 'bad effects' (tác hại xấu) lên mức học thuật Band 8.0:",
+      "sentence": "Overusing plastics leads to [bad effects] on marine ecosystems.",
+      "basicPhrase": "bad effects",
+      "options": [
+        "Detrimental repercussions",
+        "Unlucky happenings",
+        "Negative stuff",
+        "Worse moments"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Detrimental repercussions' = Những hệ lụy tai hại / hậu quả bất lợi nghiêm trọng."
+    },
+    "tipCard": {
+      "id": "tip_detrimental_repercussions",
+      "title": "Nâng cấp từ vựng Nguyên nhân – Hệ quả",
+      "skill": "Writing Task 2",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "bad effects",
+      "upgradeTo": "detrimental repercussions",
+      "tip": "Thay vì lặp đi lặp lại 'bad effects', hãy dùng 'detrimental repercussions' hoặc 'adverse ramifications'."
+    }
+  },
+  {
+    "id": "t3_ubiquitous_presence",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Ubiquitous presence",
+    "ipa": "/juːˈbɪk.wɪ.təs ˈprez.əns/",
+    "partOfSpeech": "collocation",
+    "meaning": "Sự hiện diện phổ biến ở khắp mọi nơi cùng lúc.",
+    "example": "The ubiquitous presence of smartphones has transformed face-to-face etiquette.",
+    "growthDurationMs": 36000,
+    "xpReward": 100,
+    "quizType": "paraphrase_upgrade",
+    "quiz": {
+      "prompt": "Nâng cấp từ 'everywhere' (khắp mọi nơi) trong câu IELTS Công nghệ:",
+      "sentence": "The [everywhere] of algorithmic feeds shapes how citizens consume news.",
+      "basicPhrase": "everywhere",
+      "options": [
+        "Ubiquitous presence",
+        "Always location",
+        "Commonly sitting",
+        "Frequent neighborhood"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Ubiquitous presence' = Sự có mặt ở khắp nơi (mức từ vựng Band 8.0)."
+    },
+    "tipCard": {
+      "id": "tip_ubiquitous_presence",
+      "title": "Từ vựng chủ đề Công nghệ & Toàn cầu hóa",
+      "skill": "Writing & Speaking",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "seen everywhere",
+      "upgradeTo": "ubiquitous presence",
+      "tip": "Trong các bài về công nghệ/mạng xã hội, cấu trúc 'the ubiquitous presence of X' rất tự nhiên và súc tích."
+    }
+  },
+  {
+    "id": "t3_double_edged_sword",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "A double-edged sword",
+    "ipa": "/ə ˌdʌb.əl.edʒd ˈsɔːd/",
+    "partOfSpeech": "idiom / phrase",
+    "meaning": "Con dao hai lưỡi — vừa mang lại lợi ích lớn vừa tiềm ẩn tác hại.",
+    "example": "Generative AI acts as a double-edged sword for creative industries.",
+    "growthDurationMs": 38000,
+    "xpReward": 105,
+    "quizType": "paraphrase_upgrade",
+    "quiz": {
+      "prompt": "Nâng cấp cụm 'both helpful and harmful' (vừa lợi vừa hại) cho Speaking Part 3:",
+      "sentence": "Global tourism is [both helpful and harmful] for heritage towns.",
+      "basicPhrase": "both helpful and harmful",
+      "options": [
+        "A double-edged sword",
+        "A broken umbrella",
+        "A silver bicycle",
+        "A two-hour meeting"
+      ],
+      "correctIndex": 0,
+      "explanation": "'A double-edged sword' = Con dao hai lưỡi, cực kỳ tự nhiên khi nêu quan điểm cân bằng hai mặt."
+    },
+    "tipCard": {
+      "id": "tip_double_edged_sword",
+      "title": "Thành ngữ tự nhiên cho Quan điểm Cân bằng",
+      "skill": "Speaking Part 3",
+      "bandTarget": "Band 7.5+",
+      "upgradeFrom": "has both good and bad sides",
+      "upgradeTo": "proves to be a double-edged sword",
+      "tip": "Dùng thành ngữ tiết chế trong Writing; 'a double-edged sword' phù hợp ở mở bài hoặc Speaking Part 3."
+    }
+  },
+  {
+    "id": "t3_exorbitant_expenditure",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Exorbitant expenditure",
+    "ipa": "/ɪɡˈzɔː.bɪ.tənt ɪkˈspen.dɪ.tʃər/",
+    "partOfSpeech": "collocation",
+    "meaning": "Khoản chi tiêu đắt đỏ quá mức / tốn kém khổng lồ.",
+    "example": "Critics argue that space exploration demands exorbitant expenditure.",
+    "growthDurationMs": 38000,
+    "xpReward": 105,
+    "quizType": "paraphrase_upgrade",
+    "quiz": {
+      "prompt": "Nâng cấp 'too much expensive spending' (chi tiêu quá đắt) lên Band 8.0:",
+      "sentence": "Hosting mega-events often entails [too much expensive spending] by host cities.",
+      "basicPhrase": "too much expensive spending",
+      "options": [
+        "Exorbitant expenditure",
+        "Heavy shopping",
+        "Giant pocket money",
+        "Loud buying"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Exorbitant expenditure' = Chi phí/chi tiêu cao cắt cổ, tốn kém quá mức."
+    },
+    "tipCard": {
+      "id": "tip_exorbitant_expenditure",
+      "title": "Paraphrase chủ đề Kinh tế & Chi phí",
+      "skill": "Writing Task 2",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "very high spending",
+      "upgradeTo": "exorbitant expenditure",
+      "tip": "Kết hợp 'exorbitant' (đắt đỏ quá mức) với 'expenditure' hoặc 'living costs'."
+    }
+  },
+  {
+    "id": "t3_indispensable_catalyst",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Indispensable catalyst",
+    "ipa": "/ˌɪn.dɪˈspen.sə.bəl ˈkæt.əl.ɪst/",
+    "partOfSpeech": "collocation",
+    "meaning": "Chất xúc tác không thể thiếu (yếu tố then chốt thúc đẩy đổi mới).",
+    "example": "Accessible public libraries remain an indispensable catalyst for lifelong learning.",
+    "growthDurationMs": 40000,
+    "xpReward": 110,
+    "quizType": "paraphrase_upgrade",
+    "quiz": {
+      "prompt": "Nâng cấp cụm 'important helper for change' lên phong cách học thuật Band 8.0:",
+      "sentence": "Universal broadband is an [important helper for change] in rural commerce.",
+      "basicPhrase": "important helper for change",
+      "options": [
+        "Indispensable catalyst",
+        "Helpful machine",
+        "Popular passenger",
+        "Casual starter"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Indispensable catalyst' = Chất xúc tác không thể thiếu giúp thúc đẩy thay đổi tích cực."
+    },
+    "tipCard": {
+      "id": "tip_indispensable_catalyst",
+      "title": "Nâng cấp cụm 'Very Important'",
+      "skill": "Writing & Speaking",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "very important driver",
+      "upgradeTo": "an indispensable catalyst",
+      "tip": "Thay các cụm sáo rỗng 'very important' bằng 'indispensable', 'pivotal', hoặc 'paramount'."
+    }
+  },
+  {
+    "id": "t3_staggering_disparity",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Staggering disparity",
+    "ipa": "/ˈstæɡ.ər.ɪŋ dɪˈspær.ə.ti/",
+    "partOfSpeech": "collocation",
+    "meaning": "Sự chênh lệch / bất bình đẳng lớn đến mức đáng kinh ngạc.",
+    "example": "The chart reveals a staggering disparity between urban and rural internet speeds.",
+    "growthDurationMs": 40000,
+    "xpReward": 110,
+    "quizType": "paraphrase_upgrade",
+    "quiz": {
+      "prompt": "Nâng cấp 'huge unfair difference' (sự khác biệt bất công rất lớn):",
+      "sentence": "Census figures highlight a [huge unfair difference] in average household income.",
+      "basicPhrase": "huge unfair difference",
+      "options": [
+        "Staggering disparity",
+        "Big weird shape",
+        "Tall distance",
+        "Surprising mixture"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Staggering disparity' = Khoảng cách chênh lệch bất bình đẳng đáng kinh ngạc."
+    },
+    "tipCard": {
+      "id": "tip_staggering_disparity",
+      "title": "Mô tả Chênh lệch & Bất bình đẳng lớn",
+      "skill": "Writing Task 2",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "very big difference",
+      "upgradeTo": "a staggering disparity",
+      "tip": "Dùng 'disparity' khi sự khác biệt mang tính bất công xã hội/kinh tế."
+    }
+  },
+  {
+    "id": "t3_proliferate_exponentially",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Proliferate exponentially",
+    "ipa": "/prəˈlɪf.ər.eɪt ˌek.spəˈnen.ʃəl.i/",
+    "partOfSpeech": "verb phrase",
+    "meaning": "Gia tăng và lan rộng nhanh chóng theo cấp số nhân.",
+    "example": "Co-working hubs have proliferated exponentially across major Asian capitals.",
+    "growthDurationMs": 42000,
+    "xpReward": 115,
+    "quizType": "paraphrase_upgrade",
+    "quiz": {
+      "prompt": "Nâng cấp 'grown super fast' (tăng trưởng cực nhanh) lên Band 8.0+:",
+      "sentence": "On-demand delivery platforms have [grown super fast] over the past decade.",
+      "basicPhrase": "grown super fast",
+      "options": [
+        "Proliferated exponentially",
+        "Walked hurriedly",
+        "Expanded loudly",
+        "Multiplied lazily"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Proliferate exponentially' = Sinh sôi/tăng trưởng bùng nổ theo cấp số nhân."
+    },
+    "tipCard": {
+      "id": "tip_proliferate_exponentially",
+      "title": "Động từ mô tả Tăng trưởng bùng nổ",
+      "skill": "Writing & Speaking",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "increase very fast",
+      "upgradeTo": "proliferate exponentially",
+      "tip": "Chỉ dùng 'exponentially' cho các xu hướng tăng vọt thực sự nhanh."
+    }
+  },
+  {
+    "id": "t3_eradicate_systemic_barriers",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Eradicate systemic barriers",
+    "ipa": "/ɪˈræd.ɪ.keɪt sɪˈstem.ɪk ˈbær.i.ərz/",
+    "partOfSpeech": "collocation",
+    "meaning": "Xóa bỏ triệt để các rào cản mang tính hệ thống.",
+    "example": "Inclusive hiring reforms are vital to eradicate systemic barriers.",
+    "growthDurationMs": 42000,
+    "xpReward": 115,
+    "quizType": "paraphrase_upgrade",
+    "quiz": {
+      "prompt": "Nâng cấp 'remove deep system problems' (xóa bỏ vấn đề hệ thống lâu đời):",
+      "sentence": "Long-term education reform must [remove deep system problems] facing minority youth.",
+      "basicPhrase": "remove deep system problems",
+      "options": [
+        "Eradicate systemic barriers",
+        "Delete normal walls",
+        "Erase daily homework",
+        "Cancel local rules"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Eradicate systemic barriers' = Nhổ tận gốc các rào cản thuộc về cấu trúc hệ thống."
+    },
+    "tipCard": {
+      "id": "tip_eradicate_barriers",
+      "title": "Giải pháp Chính sách Cấu trúc",
+      "skill": "Writing Task 2",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "stop unfair system rules",
+      "upgradeTo": "eradicate systemic barriers",
+      "tip": "Nhắc tới 'systemic barriers' thể hiện tư duy phân tích chiều sâu trong các bài Giáo dục/Bình đẳng."
     }
   },
   {
@@ -828,13 +1078,13 @@
     "word": "Unprecedented scale",
     "ipa": "/ʌnˈpres.ɪ.den.tɪd skeɪl/",
     "partOfSpeech": "collocation",
-    "meaning": "A size, speed, or degree never seen or experienced before in history.",
+    "meaning": "Quy mô lớn chưa từng có tiền lệ trong lịch sử.",
     "example": "Digital archives now preserve cultural heritage on an unprecedented scale.",
     "growthDurationMs": 38000,
     "xpReward": 110,
     "quizType": "listening_challenge",
     "quiz": {
-      "prompt": "🎧 Listen to the Band 8.0 phrase and select the matching option:",
+      "prompt": "🎧 Nghe cụm từ Band 8.0 và chọn đáp án khớp với phát âm:",
       "sentence": "Clean energy adoption is expanding on an _____ worldwide.",
       "options": [
         "Unprecedented scale",
@@ -843,16 +1093,16 @@
         "Unpleasant style"
       ],
       "correctIndex": 0,
-      "explanation": "Note the pronunciation: /ʌnˈpres.ɪ.den.tɪd/ — 'pre' rhymes with 'press', not 'please'."
+      "explanation": "'Unprecedented scale' = Quy mô chưa từng có trong tiền lệ (chú ý âm 'pre' đọc là /pres/)."
     },
     "tipCard": {
       "id": "tip_unprecedented_scale",
-      "title": "Emphasizing Historic Change",
+      "title": "Nhấn mạnh Thay đổi Lịch sử",
       "skill": "Writing & Speaking",
       "bandTarget": "Band 8.0+",
       "upgradeFrom": "bigger than ever before",
       "upgradeTo": "on an unprecedented scale",
-      "tip": "'On an unprecedented scale' is an effortless way to frame global trends in Task 2 introductions."
+      "tip": "Dùng 'on an unprecedented scale' rất mượt ở câu mở đầu đề cập xu hướng toàn cầu."
     }
   },
   {
@@ -862,13 +1112,13 @@
     "word": "Prohibitively expensive",
     "ipa": "/prəˈhɪb.ɪ.tɪv.li ɪkˈspen.sɪv/",
     "partOfSpeech": "collocation",
-    "meaning": "So high in price that most ordinary people or institutions cannot afford it.",
+    "meaning": "Đắt đỏ đến mức người bình thường không thể chi trả nổi.",
     "example": "Rent in central districts has become prohibitively expensive for young graduates.",
     "growthDurationMs": 39000,
     "xpReward": 115,
     "quizType": "listening_challenge",
     "quiz": {
-      "prompt": "🎧 Listen to the spoken C1/C2 collocation and identify it:",
+      "prompt": "🎧 Nghe phát âm cụm tính từ C1/C2 và chọn đúng đáp án:",
       "sentence": "Without subsidies, electric aviation remains _____ for regional airlines.",
       "options": [
         "Prohibitively expensive",
@@ -877,16 +1127,16 @@
         "Passively defensive"
       ],
       "correctIndex": 0,
-      "explanation": "'Prohibitively expensive' means the price itself acts like a barrier preventing people from buying."
+      "explanation": "'Prohibitively expensive' = Đắt đỏ tới mức ngăn cản không mua nổi."
     },
     "tipCard": {
       "id": "tip_prohibitively_expensive",
-      "title": "Adverb + Adjective Collocations",
+      "title": "Cụm Trạng từ + Tính từ C1",
       "skill": "Writing & Speaking",
       "bandTarget": "Band 8.0+",
       "upgradeFrom": "way too expensive to buy",
       "upgradeTo": "prohibitively expensive",
-      "tip": "C1 adverb-adjective pairs ('prohibitively expensive', 'vitally important') boost Lexical Resource naturally."
+      "tip": "Các cặp trạng từ–tính từ như 'prohibitively expensive' giúp tăng mạnh điểm Lexical Resource."
     }
   },
   {
@@ -896,13 +1146,13 @@
     "word": "Camaraderie",
     "ipa": "/ˌkæm.əˈrɑː.də.ri/",
     "partOfSpeech": "noun",
-    "meaning": "A feeling of warm mutual trust and friendship among people who spend time together.",
+    "meaning": "Tình đồng đội, tinh thần gắn bó thân thiết và tin tưởng lẫn nhau.",
     "example": "Team sports cultivate lifelong camaraderie alongside physical resilience.",
     "growthDurationMs": 40000,
     "xpReward": 120,
     "quizType": "listening_challenge",
     "quiz": {
-      "prompt": "🎧 Listen to the Band 8.0+ Speaking Part 2/3 noun:",
+      "prompt": "🎧 Nghe danh từ Band 8.0+ và chọn đáp án đúng:",
       "sentence": "Volunteering builds genuine _____ across different generations.",
       "options": [
         "Camaraderie",
@@ -911,16 +1161,16 @@
         "Competency"
       ],
       "correctIndex": 0,
-      "explanation": "'Camaraderie' shines in IELTS Speaking topics about teamwork, colleagues, neighbours, or community events."
+      "explanation": "'Camaraderie' = Tình bằng hữu / tình đồng đội gắn kết (cực hay cho Speaking chủ đề đồng nghiệp/nhóm)."
     },
     "tipCard": {
       "id": "tip_camaraderie",
-      "title": "Natural Speaking Vocabulary for Relationships",
+      "title": "Từ vựng Speaking về Quan hệ Đội nhóm",
       "skill": "Speaking Part 3",
       "bandTarget": "Band 8.0+",
       "upgradeFrom": "good friendship in a team",
       "upgradeTo": "a strong sense of camaraderie",
-      "tip": "In Speaking Part 2/3, 'a strong sense of camaraderie' sounds vivid, authentic, and idiomatic."
+      "tip": "Trong Speaking Part 2/3, cụm 'a strong sense of camaraderie' nghe tự nhiên và ấn tượng."
     }
   }
 ]
