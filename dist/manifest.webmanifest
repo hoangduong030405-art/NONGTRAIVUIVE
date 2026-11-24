@@ -1,0 +1,17 @@
+{
+  "name": "LexiFarm IELTS",
+  "short_name": "LexiFarm",
+  "description": "Internal Edutainment 2D Farm Simulation & IELTS Vocabulary Training Game",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4e4c1",
+  "theme_color": "#5c3a21",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
