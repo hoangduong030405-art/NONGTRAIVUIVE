@@ -14,6 +14,7 @@ import type {
   DailyQuest,
   FarmStock,
   FarmToolMode,
+  FarmUpgrades,
   IeltsTipCard,
   MarketOrder,
   PlayerProgress,
@@ -102,6 +103,8 @@ interface GameState {
   claimQuest: (questId: string) => void;
   updateQuestProgress: (type: DailyQuest['type'], amount?: number) => void;
   buySeedFromMarket: (vocabId: string, costCoins: number, amount?: number) => boolean;
+  buyFarmUpgrade: (upgradeKey: keyof FarmUpgrades, costCoins: number, label: string) => boolean;
+  awardPronunciationBonus: (word: string) => void;
   markQuizVisible: () => void;
   submitQuizAnswer: (optionIndex: number) => QuizOutcome | null;
   closeQuiz: () => void;
@@ -140,8 +143,11 @@ function pickRandom<T>(items: readonly T[]): T | undefined {
 export const useGameStore = create<GameState>()((set, get) => {
   // --- internal helpers ------------------------------------------------------
 
-  const speedOf = (profile: PlayerProgress | null): number =>
-    profile ? WATERING_CAN_MULTIPLIERS[profile.wateringCanTier] : 1;
+  const speedOf = (profile: PlayerProgress | null): number => {
+    if (!profile) return 1;
+    const base = WATERING_CAN_MULTIPLIERS[profile.wateringCanTier];
+    return profile.upgrades?.scarecrow ? base + 0.15 : base;
+  };
 
   const emitSync = (): void => {
     const { plots, vocabMeta, profile, status, activeToolMode } = get();
@@ -153,6 +159,7 @@ export const useGameStore = create<GameState>()((set, get) => {
       feverEndsAt: profile.feverEndsAt,
       activeToolMode,
       weather: profile.activeWeather ?? 'sunny',
+      upgrades: profile.upgrades ?? { scarecrow: false, beehive: false, well: false, flowerArch: false },
     });
   };
 
@@ -347,7 +354,8 @@ export const useGameStore = create<GameState>()((set, get) => {
 
       const now = Date.now();
       const speed = speedOf(profile);
-      const reduced = FarmEngine.applyWaitReduction(plot, 0.25, now, speed);
+      const ratio = profile.upgrades?.well ? 0.4 : 0.25;
+      const reduced = FarmEngine.applyWaitReduction(plot, ratio, now, speed);
       const nextPlots = plots.slice();
       nextPlots[plotIndex] = reduced;
 
@@ -358,7 +366,7 @@ export const useGameStore = create<GameState>()((set, get) => {
       pushToast({
         variant: 'water',
         title: 'Watered crop!',
-        subtitle: 'Growth time reduced by 25%',
+        subtitle: `Growth time reduced by ${Math.round(ratio * 100)}%`,
       });
     },
 
@@ -531,7 +539,8 @@ export const useGameStore = create<GameState>()((set, get) => {
 
       const isGolden = plot.isGoldenFertilized;
       const feverActive = now < profile.feverEndsAt;
-      const xp = Math.round(vocab.xpReward * (isGolden ? 1.5 : 1) * (feverActive ? 2 : 1));
+      const beehiveBonus = profile.upgrades?.beehive ? 15 : 0;
+      const xp = Math.round(vocab.xpReward * (isGolden ? 1.5 : 1) * (feverActive ? 2 : 1)) + beehiveBonus;
       const stars = isGolden ? 3 : plot.quizzed ? 2 : 1;
 
       // Seeds come back from the harvest; golden crops yield an extra one.
@@ -902,7 +911,9 @@ export const useGameStore = create<GameState>()((set, get) => {
       }
 
       stock[order.reqItem] = available - order.reqAmount;
-      const nextCoins = (profile.coins ?? 0) + order.rewardCoins;
+      const coinMultiplier = profile.upgrades?.flowerArch ? 1.15 : 1;
+      const coinsEarned = Math.round(order.rewardCoins * coinMultiplier);
+      const nextCoins = (profile.coins ?? 0) + coinsEarned;
       const nextXp = profile.xp + order.rewardXp;
 
       // Replace or refresh order
@@ -1025,6 +1036,57 @@ export const useGameStore = create<GameState>()((set, get) => {
       return true;
     },
 
+    buyFarmUpgrade: (upgradeKey, costCoins, label) => {
+      const { profile, pushToast } = get();
+      if (!profile) return false;
+      const currentUpgrades = profile.upgrades ?? { scarecrow: false, beehive: false, well: false, flowerArch: false };
+      if (currentUpgrades[upgradeKey]) return false;
+
+      const curCoins = profile.coins ?? 0;
+      if (curCoins < costCoins) {
+        pushToast({
+          variant: 'info',
+          title: 'Không đủ Xu vàng 🪙',
+          subtitle: 'Giao đơn hàng hoặc hoàn thành nhiệm vụ để kiếm thêm Xu!',
+        });
+        return false;
+      }
+
+      const nextUpgrades: FarmUpgrades = { ...currentUpgrades, [upgradeKey]: true };
+      commitProfile({
+        ...profile,
+        coins: curCoins - costCoins,
+        upgrades: nextUpgrades,
+      });
+
+      EventBus.emit('ui:upgrades-changed', { upgrades: nextUpgrades });
+      emitSync();
+      AudioEngine.playChest();
+      pushToast({
+        variant: 'golden',
+        title: `Đã nâng cấp: ${label}! ✨`,
+        subtitle: `Công trình mới đã xuất hiện trên nông trại!`,
+      });
+      return true;
+    },
+
+    awardPronunciationBonus: (word) => {
+      const { profile, pushToast } = get();
+      if (!profile) return;
+      const nextXp = profile.xp + 25;
+      commitProfile({
+        ...profile,
+        xp: nextXp,
+        level: ComboEngine.calculateLevel(nextXp).level,
+      });
+      AudioEngine.playCorrect(true);
+      pushToast({
+        variant: 'critical',
+        title: `Phát âm chuẩn: "${word}"! 🎙️`,
+        subtitle: '+25 XP Speaking Bonus',
+      });
+    },
+
     setMarketOpen: (open) => set({ marketOpen: open }),
     setKitchenOpen: (open) => set({ kitchenOpen: open }),
     setQuestsOpen: (open) => set({ questsOpen: open }),
@@ -1085,13 +1147,16 @@ export const useGameStore = create<GameState>()((set, get) => {
 export function syncGameNow(): void {
   const { plots, vocabMeta, profile, status, activeToolMode } = useGameStore.getState();
   if (status !== 'ready' || !profile) return;
+  const base = WATERING_CAN_MULTIPLIERS[profile.wateringCanTier];
+  const speedMultiplier = profile.upgrades?.scarecrow ? base + 0.15 : base;
   EventBus.emit('ui:sync', {
     plots,
     vocabMeta,
-    speedMultiplier: WATERING_CAN_MULTIPLIERS[profile.wateringCanTier],
+    speedMultiplier,
     feverEndsAt: profile.feverEndsAt,
     activeToolMode,
     weather: profile.activeWeather ?? 'sunny',
+    upgrades: profile.upgrades ?? { scarecrow: false, beehive: false, well: false, flowerArch: false },
   });
   EventBus.emit('ui:theme-changed', { theme: profile.theme });
 }

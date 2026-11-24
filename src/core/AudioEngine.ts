@@ -179,6 +179,87 @@ class AudioEngineService {
       return false;
     }
   }
+
+  isSpeechRecognitionSupported(): boolean {
+    if (typeof window === 'undefined') return false;
+    const win = window as unknown as {
+      SpeechRecognition?: unknown;
+      webkitSpeechRecognition?: unknown;
+    };
+    return Boolean(win.SpeechRecognition || win.webkitSpeechRecognition);
+  }
+
+  listenForSpeech(
+    accent: AccentPreference,
+    onResult: (transcript: string) => void,
+    onError: (reason: string) => void,
+  ): (() => void) | null {
+    if (typeof window === 'undefined') {
+      onError('Speech recognition unavailable');
+      return null;
+    }
+
+    type SpeechRecognitionInstance = {
+      lang: string;
+      interimResults: boolean;
+      maxAlternatives: number;
+      onresult: ((ev: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null;
+      onerror: ((ev: { error?: string }) => void) | null;
+      onend: (() => void) | null;
+      start: () => void;
+      stop: () => void;
+    };
+
+    const win = window as unknown as {
+      SpeechRecognition?: new () => SpeechRecognitionInstance;
+      webkitSpeechRecognition?: new () => SpeechRecognitionInstance;
+    };
+    const RecognitionCtor = win.SpeechRecognition || win.webkitSpeechRecognition;
+    if (!RecognitionCtor) {
+      onError('Trình duyệt chưa hỗ trợ nhận diện giọng nói.');
+      return null;
+    }
+
+    try {
+      const recognition = new RecognitionCtor();
+      recognition.lang = accent;
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 3;
+
+      let settled = false;
+      recognition.onresult = (event) => {
+        if (settled) return;
+        settled = true;
+        const firstAlt = event.results?.[0]?.[0]?.transcript ?? '';
+        onResult(firstAlt.trim());
+      };
+
+      recognition.onerror = (event) => {
+        if (settled) return;
+        settled = true;
+        onError(event.error ?? 'mic-error');
+      };
+
+      recognition.onend = () => {
+        if (!settled) {
+          settled = true;
+          onError('no-speech');
+        }
+      };
+
+      recognition.start();
+      return () => {
+        try {
+          recognition.stop();
+        } catch {
+          // ignore
+        }
+      };
+    } catch {
+      onError('Không thể kích hoạt micro.');
+      return null;
+    }
+  }
 }
 
 export const AudioEngine = new AudioEngineService();

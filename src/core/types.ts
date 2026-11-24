@@ -145,6 +145,13 @@ export interface MarketOrder {
   ieltsTopic: string;
 }
 
+export interface FarmUpgrades {
+  scarecrow: boolean;   // +15% all crop growth speed
+  beehive: boolean;     // +15 bonus XP per harvest
+  well: boolean;        // Manual watering cuts 40% wait time instead of 25%
+  flowerArch: boolean;  // +15% Coins on Market Orders
+}
+
 export interface PlayerProgress {
   id: 'player';
   xp: number;
@@ -163,6 +170,7 @@ export interface PlayerProgress {
   unlockedTipCardIds: string[];
   seedInventory: Record<string, number>;
   stock: FarmStock;
+  upgrades: FarmUpgrades;
   dailyQuests: DailyQuest[];
   activeWeather: WeatherType;
   updatedAt: number;

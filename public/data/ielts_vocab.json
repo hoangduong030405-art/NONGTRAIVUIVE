@@ -668,5 +668,259 @@
       "upgradeTo": "eradicate systemic barriers",
       "tip": "Referring to 'systemic barriers' shows mature analytical depth in education, gender, and employment Task 2 essays."
     }
+  },
+  {
+    "id": "t1_biodiversity",
+    "tier": 1,
+    "band": "Band 5.0–5.5",
+    "word": "Biodiversity",
+    "ipa": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
+    "partOfSpeech": "noun",
+    "meaning": "The variety of plant and animal life in the world or in a particular habitat.",
+    "example": "Protecting coral reefs is crucial for preserving marine biodiversity.",
+    "growthDurationMs": 15000,
+    "xpReward": 30,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Listen to the IELTS audio and select the exact word you hear:",
+      "sentence": "National parks play a vital role in safeguarding local _____.",
+      "options": [
+        "Biodiversity",
+        "Biochemistry",
+        "Biography",
+        "Biotechnology"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Biodiversity' appears frequently in IELTS Listening Section 4 ecology lectures and Reading passages."
+    }
+  },
+  {
+    "id": "t1_subsidize",
+    "tier": 1,
+    "band": "Band 5.0–5.5",
+    "word": "Subsidize",
+    "ipa": "/ˈsʌb.sɪ.daɪz/",
+    "partOfSpeech": "verb",
+    "meaning": "To pay part of the cost of something so that it can be sold at a lower price.",
+    "example": "Many governments subsidize public rail networks to encourage green commuting.",
+    "growthDurationMs": 15000,
+    "xpReward": 30,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Listen to the IELTS audio and identify the spoken verb:",
+      "sentence": "Authorities should _____ organic farming to lower grocery prices.",
+      "options": [
+        "Subsidize",
+        "Summarize",
+        "Supervise",
+        "Stabilize"
+      ],
+      "correctIndex": 0,
+      "explanation": "Notice the stress on the first syllable: /ˈsʌb.sɪ.daɪz/ (noun: subsidy)."
+    }
+  },
+  {
+    "id": "t2_entrepreneurship",
+    "tier": 2,
+    "band": "Band 6.0–6.5",
+    "word": "Entrepreneurship",
+    "ipa": "/ˌɒn.trə.prəˈnɜː.ʃɪp/",
+    "partOfSpeech": "noun",
+    "meaning": "The activity of setting up businesses and taking on financial risks in the hope of profit.",
+    "example": "University incubators foster youth entrepreneurship in emerging economies.",
+    "growthDurationMs": 26000,
+    "xpReward": 60,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Listen carefully to the pronunciation and pick the matching word:",
+      "sentence": "Low-interest loans can stimulate local _____ and job creation.",
+      "options": [
+        "Entrepreneurship",
+        "Apprenticeship",
+        "Championship",
+        "Partnership"
+      ],
+      "correctIndex": 0,
+      "explanation": "Watch the silent-like French origin spelling: en-tre-pre-neur-ship — a classic IELTS Listening Section 3 spelling trap!"
+    },
+    "tipCard": {
+      "id": "tip_entrepreneurship",
+      "title": "High-Risk Spelling in Listening",
+      "skill": "Writing & Speaking",
+      "bandTarget": "Band 6.5+",
+      "upgradeFrom": "starting small shops",
+      "upgradeTo": "fostering entrepreneurship",
+      "tip": "Practise pronouncing and spelling 'entrepreneurship' accurately — misspellings cost marks in IELTS Listening."
+    }
+  },
+  {
+    "id": "t2_cognitive_development",
+    "tier": 2,
+    "band": "Band 6.0–6.5",
+    "word": "Cognitive development",
+    "ipa": "/ˈkɒɡ.nə.tɪv dɪˈvel.əp.mənt/",
+    "partOfSpeech": "collocation",
+    "meaning": "The growth of thinking, problem-solving, memory, and reasoning abilities.",
+    "example": "Early musical training accelerates children's cognitive development.",
+    "growthDurationMs": 26000,
+    "xpReward": 60,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Listen to the IELTS phrase and match what you hear:",
+      "sentence": "Interactive play supports healthy _____ in early childhood.",
+      "options": [
+        "Cognitive development",
+        "Economic investment",
+        "Competitive environment",
+        "Collective commitment"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Cognitive development' is a staple collocation in IELTS Education and Psychology topics."
+    },
+    "tipCard": {
+      "id": "tip_cognitive_dev",
+      "title": "Education & Child Psychology Register",
+      "skill": "Writing Task 2",
+      "bandTarget": "Band 7.0",
+      "upgradeFrom": "making children's brains smarter",
+      "upgradeTo": "enhancing cognitive development",
+      "tip": "Use 'cognitive' for thinking/memory skills and 'emotional well-being' for feelings in school essays."
+    }
+  },
+  {
+    "id": "t2_infrastructure_bottleneck",
+    "tier": 2,
+    "band": "Band 6.0–6.5",
+    "word": "Mitigation strategy",
+    "ipa": "/ˌmɪt.ɪˈɡeɪ.ʃən ˈstræt.ə.dʒi/",
+    "partOfSpeech": "collocation",
+    "meaning": "A planned set of actions designed to reduce the severity of a risk or crisis.",
+    "example": "Flood barriers form a key part of the coastal mitigation strategy.",
+    "growthDurationMs": 27000,
+    "xpReward": 60,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Listen and choose the exact academic collocation spoken:",
+      "sentence": "Urban planners unveiled a new heatwave _____ for the summer.",
+      "options": [
+        "Mitigation strategy",
+        "Migration tendency",
+        "Meditation therapy",
+        "Motivation energy"
+      ],
+      "correctIndex": 0,
+      "explanation": "Listening Section 4 lectures often contrast 'mitigation strategy' (preventing harm) with 'adaptation' (adjusting to change)."
+    },
+    "tipCard": {
+      "id": "tip_mitigation_strategy",
+      "title": "Distinguishing Mitigation vs. Adaptation",
+      "skill": "Writing Task 2",
+      "bandTarget": "Band 7.0",
+      "upgradeFrom": "plan to stop damage",
+      "upgradeTo": "comprehensive mitigation strategy",
+      "tip": "Using 'mitigation strategy' signals policy precision in climate, traffic, and public health essays."
+    }
+  },
+  {
+    "id": "t3_unprecedented_scale",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Unprecedented scale",
+    "ipa": "/ʌnˈpres.ɪ.den.tɪd skeɪl/",
+    "partOfSpeech": "collocation",
+    "meaning": "A size, speed, or degree never seen or experienced before in history.",
+    "example": "Digital archives now preserve cultural heritage on an unprecedented scale.",
+    "growthDurationMs": 38000,
+    "xpReward": 110,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Listen to the Band 8.0 phrase and select the matching option:",
+      "sentence": "Clean energy adoption is expanding on an _____ worldwide.",
+      "options": [
+        "Unprecedented scale",
+        "Unpredictable schedule",
+        "Unproductive sale",
+        "Unpleasant style"
+      ],
+      "correctIndex": 0,
+      "explanation": "Note the pronunciation: /ʌnˈpres.ɪ.den.tɪd/ — 'pre' rhymes with 'press', not 'please'."
+    },
+    "tipCard": {
+      "id": "tip_unprecedented_scale",
+      "title": "Emphasizing Historic Change",
+      "skill": "Writing & Speaking",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "bigger than ever before",
+      "upgradeTo": "on an unprecedented scale",
+      "tip": "'On an unprecedented scale' is an effortless way to frame global trends in Task 2 introductions."
+    }
+  },
+  {
+    "id": "t3_prohibitively_expensive",
+    "tier": 3,
+    "band": "Band 7.0–8.0+",
+    "word": "Prohibitively expensive",
+    "ipa": "/prəˈhɪb.ɪ.tɪv.li ɪkˈspen.sɪv/",
+    "partOfSpeech": "collocation",
+    "meaning": "So high in price that most ordinary people or institutions cannot afford it.",
+    "example": "Rent in central districts has become prohibitively expensive for young graduates.",
+    "growthDurationMs": 39000,
+    "xpReward": 115,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Listen to the spoken C1/C2 collocation and identify it:",
+      "sentence": "Without subsidies, electric aviation remains _____ for regional airlines.",
+      "options": [
+        "Prohibitively expensive",
+        "Predictably extensive",
+        "Progressively expressive",
+        "Passively defensive"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Prohibitively expensive' means the price itself acts like a barrier preventing people from buying."
+    },
+    "tipCard": {
+      "id": "tip_prohibitively_expensive",
+      "title": "Adverb + Adjective Collocations",
+      "skill": "Writing & Speaking",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "way too expensive to buy",
+      "upgradeTo": "prohibitively expensive",
+      "tip": "C1 adverb-adjective pairs ('prohibitively expensive', 'vitally important') boost Lexical Resource naturally."
+    }
+  },
+  {
+    "id": "t3_camaraderie",
+    "tier": 3,
+    "band": "Band 7.5–8.5",
+    "word": "Camaraderie",
+    "ipa": "/ˌkæm.əˈrɑː.də.ri/",
+    "partOfSpeech": "noun",
+    "meaning": "A feeling of warm mutual trust and friendship among people who spend time together.",
+    "example": "Team sports cultivate lifelong camaraderie alongside physical resilience.",
+    "growthDurationMs": 40000,
+    "xpReward": 120,
+    "quizType": "listening_challenge",
+    "quiz": {
+      "prompt": "🎧 Listen to the Band 8.0+ Speaking Part 2/3 noun:",
+      "sentence": "Volunteering builds genuine _____ across different generations.",
+      "options": [
+        "Camaraderie",
+        "Bureaucracy",
+        "Diplomacy",
+        "Competency"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Camaraderie' shines in IELTS Speaking topics about teamwork, colleagues, neighbours, or community events."
+    },
+    "tipCard": {
+      "id": "tip_camaraderie",
+      "title": "Natural Speaking Vocabulary for Relationships",
+      "skill": "Speaking Part 3",
+      "bandTarget": "Band 8.0+",
+      "upgradeFrom": "good friendship in a team",
+      "upgradeTo": "a strong sense of camaraderie",
+      "tip": "In Speaking Part 2/3, 'a strong sense of camaraderie' sounds vivid, authentic, and idiomatic."
+    }
   }
 ]

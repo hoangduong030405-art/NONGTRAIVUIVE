@@ -140,6 +140,11 @@ export function computeWorldLayout(
     natureProps.push({ key: 'flower-red', x: fx + fw - 20, y: fy - 6, scale: 0.8 });
   }
 
+  const scarecrowPos = { x: fx + fw + 22, y: fy + 90, scale: isPortrait ? 0.68 : 0.85 };
+  const beehivePos = { x: fx - 22, y: fy + 100, scale: isPortrait ? 0.65 : 0.8 };
+  const wellPos = { x: isPortrait ? width - 48 : fx - 40, y: isPortrait ? fy + 45 : fy + fh - 10, scale: isPortrait ? 0.6 : 0.8 };
+  const archPos = { x: centerX, y: fy + 16, scale: isPortrait ? 0.72 : 0.9 };
+
   return {
     isMobile,
     isPortrait,
@@ -147,6 +152,10 @@ export function computeWorldLayout(
     bakeryPos,
     windmillPos,
     pondPos,
+    scarecrowPos,
+    beehivePos,
+    wellPos,
+    archPos,
     pastureBounds,
     fenceSegments,
     cobblePaths,

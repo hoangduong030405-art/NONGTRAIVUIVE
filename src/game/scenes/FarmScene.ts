@@ -5,7 +5,7 @@ import {
   type VocabMetaSnapshot,
 } from '../../bridge/EventBus';
 import { FarmEngine, FARM_PLOT_COUNT } from '../../core/FarmEngine';
-import type { CropStage, PlotState, ThemeName } from '../../core/types';
+import type { CropStage, FarmUpgrades, PlotState, ThemeName } from '../../core/types';
 import { AnimalActor } from '../entities/AnimalActor';
 import { FarmerActor } from '../entities/FarmerActor';
 import { ParticlePool } from '../pools/ParticlePool';
@@ -114,6 +114,9 @@ export class FarmScene extends Phaser.Scene {
     EventBus.on('ui:theme-changed', this.onThemeChanged);
     EventBus.on('ui:weather-changed', (p) => {
       this.scenery.setWeather(p.weather);
+    });
+    EventBus.on('ui:upgrades-changed', (p) => {
+      this.scenery.setUpgrades(p.upgrades);
     });
 
     EventBus.on('game:pond-fish', () => {
@@ -299,6 +302,7 @@ export class FarmScene extends Phaser.Scene {
     speedMultiplier: number;
     feverEndsAt: number;
     weather?: 'sunny' | 'rain' | 'rainbow' | 'night';
+    upgrades?: FarmUpgrades;
   }): void => {
     this.plots = payload.plots;
     this.vocabMeta = payload.vocabMeta;
@@ -306,6 +310,9 @@ export class FarmScene extends Phaser.Scene {
     this.feverEndsAt = payload.feverEndsAt;
     if (payload.weather) {
       this.scenery.setWeather(payload.weather);
+    }
+    if (payload.upgrades) {
+      this.scenery.setUpgrades(payload.upgrades);
     }
 
     for (let i = 0; i < this.views.length; i += 1) {

@@ -1,7 +1,45 @@
 import { useState } from 'react';
-import { Coins, PackageCheck, ShoppingBag, Sprout, Truck, Volume2, X } from 'lucide-react';
+import { CheckCircle2, Coins, PackageCheck, ShoppingBag, Sparkles, Sprout, Truck, Volume2, X } from 'lucide-react';
 import { AudioEngine } from '../../core/AudioEngine';
+import type { FarmUpgrades } from '../../core/types';
 import { useGameStore } from '../store/useGameStore';
+
+const FARM_UPGRADES_CATALOG: Array<{
+  key: keyof FarmUpgrades;
+  emoji: string;
+  name: string;
+  bonus: string;
+  cost: number;
+}> = [
+  {
+    key: 'scarecrow',
+    emoji: '🎃',
+    name: 'Bù Nhìn Rơm Vàng',
+    bonus: 'Tăng +15% tốc độ phát triển cho toàn bộ cây trồng',
+    cost: 150,
+  },
+  {
+    key: 'beehive',
+    emoji: '🐝',
+    name: 'Tổ Ong Mật Thiên Nhiên',
+    bonus: 'Cộng thêm +15 XP mỗi lần thu hoạch hoa màu',
+    cost: 180,
+  },
+  {
+    key: 'well',
+    emoji: '⛲',
+    name: 'Giếng Nước Đá Cổ',
+    bonus: 'Tưới nước thủ công giảm tới 40% thời gian chờ (thay vì 25%)',
+    cost: 200,
+  },
+  {
+    key: 'flowerArch',
+    emoji: '🌺',
+    name: 'Cổng Hoa Gỗ Đón Khách',
+    bonus: 'Tăng +15% Xu vàng khi giao các đơn hàng tại Chợ',
+    cost: 220,
+  },
+];
 
 export function MarketModal() {
   const open = useGameStore((s) => s.marketOpen);
@@ -10,9 +48,10 @@ export function MarketModal() {
   const marketOrders = useGameStore((s) => s.marketOrders);
   const fulfillOrder = useGameStore((s) => s.fulfillOrder);
   const buySeedFromMarket = useGameStore((s) => s.buySeedFromMarket);
+  const buyFarmUpgrade = useGameStore((s) => s.buyFarmUpgrade);
   const vocabList = useGameStore((s) => s.vocabList);
 
-  const [activeTab, setActiveTab] = useState<'orders' | 'seeds'>('orders');
+  const [activeTab, setActiveTab] = useState<'orders' | 'seeds' | 'upgrades'>('orders');
 
   if (!open || !profile) return null;
 
@@ -71,7 +110,7 @@ export function MarketModal() {
         </div>
 
         {/* Tab switcher */}
-        <div className="flex border-b border-line bg-surface-2 px-5 py-2 gap-2">
+        <div className="flex flex-wrap border-b border-line bg-surface-2 px-5 py-2 gap-2">
           <button
             type="button"
             onClick={() => setActiveTab('orders')}
@@ -88,7 +127,16 @@ export function MarketModal() {
               activeTab === 'seeds' ? 'btn-primary' : 'btn-ghost'
             }`}
           >
-            <Sprout size={14} /> Mua giống cây Band 6.5 - 8.0+
+            <Sprout size={14} /> Giống cây (6.5–8.0+)
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab('upgrades')}
+            className={`btn text-xs font-bold px-4 min-h-[34px] ${
+              activeTab === 'upgrades' ? 'btn-primary' : 'btn-ghost'
+            }`}
+          >
+            <Sparkles size={14} /> Nâng cấp Nông trại
           </button>
         </div>
 
@@ -202,6 +250,55 @@ export function MarketModal() {
                       >
                         <Coins size={14} /> Mua ({seedCost} Xu)
                       </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+          {activeTab === 'upgrades' && (
+            <div className="grid gap-3 sm:grid-cols-2">
+              {FARM_UPGRADES_CATALOG.map((upg) => {
+                const owned = Boolean(profile.upgrades?.[upg.key]);
+                const canAfford = (profile.coins ?? 0) >= upg.cost;
+
+                return (
+                  <div
+                    key={upg.key}
+                    className={`flex flex-col justify-between rounded-2xl border-2 p-4 shadow-sm transition-all ${
+                      owned
+                        ? 'border-emerald-500 bg-emerald-500/5'
+                        : 'border-line bg-surface hover:border-amber-500/50'
+                    }`}
+                  >
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <span className="text-3xl">{upg.emoji}</span>
+                        <div>
+                          <h3 className="font-black text-sm text-ink">{upg.name}</h3>
+                          <p className="text-xs font-semibold text-muted">{upg.bonus}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 flex items-center justify-between border-t border-line/60 pt-3">
+                      <span className="text-xs font-bold text-amber-600">
+                        {owned ? 'Đang hoạt động' : `Giá: ${upg.cost} Xu`}
+                      </span>
+                      {owned ? (
+                        <span className="flex items-center gap-1 text-xs font-bold text-emerald-600">
+                          <CheckCircle2 size={16} /> Đã sở hữu
+                        </span>
+                      ) : (
+                        <button
+                          type="button"
+                          disabled={!canAfford}
+                          onClick={() => buyFarmUpgrade(upg.key, upg.cost, upg.name)}
+                          className="btn btn-primary px-3 py-1.5 text-xs font-bold min-h-[32px] disabled:opacity-40"
+                        >
+                          <Coins size={14} /> Xây dựng
+                        </button>
+                      )}
                     </div>
                   </div>
                 );

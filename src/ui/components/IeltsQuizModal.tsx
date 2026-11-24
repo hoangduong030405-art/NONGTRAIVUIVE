@@ -9,6 +9,8 @@ import {
   Droplets,
   Flame,
   Gift,
+  Headphones,
+  Mic,
   Sparkles,
   Volume2,
   X,
@@ -104,6 +106,7 @@ export function IeltsQuizModal() {
   const submitQuizAnswer = useGameStore((s) => s.submitQuizAnswer);
   const closeQuiz = useGameStore((s) => s.closeQuiz);
   const markQuizVisible = useGameStore((s) => s.markQuizVisible);
+  const awardPronunciationBonus = useGameStore((s) => s.awardPronunciationBonus);
 
   if (!activeQuiz || !vocab) return null;
 
@@ -117,6 +120,7 @@ export function IeltsQuizModal() {
       onSubmit={submitQuizAnswer}
       onClose={closeQuiz}
       onVisible={markQuizVisible}
+      onPronounceSuccess={awardPronunciationBonus}
     />
   );
 }
@@ -129,6 +133,7 @@ function QuizBody({
   onSubmit,
   onClose,
   onVisible,
+  onPronounceSuccess,
 }: {
   vocab: VocabItem;
   outcome: QuizOutcome | null;
@@ -137,10 +142,14 @@ function QuizBody({
   onSubmit: (optionIndex: number) => QuizOutcome | null;
   onClose: () => void;
   onVisible: () => void;
+  onPronounceSuccess: (word: string) => void;
 }) {
   const order = useMemo(() => shuffledOrder(vocab.quiz.options.length), [vocab]);
   const [tipOpen, setTipOpen] = useState(false);
   const [dragOver, setDragOver] = useState(false);
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [micState, setMicState] = useState<'idle' | 'listening' | 'matched' | 'retry'>('idle');
+  const [micHeard, setMicHeard] = useState<string>('');
   const slotRef = useRef<HTMLSpanElement>(null);
   const ghostRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<{ optionIndex: number; startX: number; startY: number; dragging: boolean } | null>(null);
@@ -150,7 +159,9 @@ function QuizBody({
   const correctIdx = vocab.quiz.correctIndex;
   const correctText = vocab.quiz.options[correctIdx] ?? '';
   const isCollocation = vocab.quizType === 'collocation_match';
+  const isListening = vocab.quizType === 'listening_challenge';
   const revealWord = answered || vocab.quizType === 'phonetic_meaning';
+  const speechSupported = useMemo(() => AudioEngine.isSpeechRecognitionSupported(), []);
   const tier = TIER_STYLE[vocab.tier] ?? TIER_STYLE[1]!;
 
   // Start the 4s critical-speed clock only once the modal is actually painted.
@@ -158,6 +169,14 @@ function QuizBody({
     const id = requestAnimationFrame(() => onVisible());
     return () => cancelAnimationFrame(id);
   }, [onVisible]);
+
+  // Auto-play audio for listening_challenge on modal open
+  useEffect(() => {
+    if (isListening) {
+      setIsPlayingAudio(true);
+      AudioEngine.speakWord(vocab.word, accent, () => setIsPlayingAudio(false));
+    }
+  }, [isListening, vocab.word, accent]);
 
   useEffect(() => {
     if (answered) continueRef.current?.focus();
@@ -193,7 +212,37 @@ function QuizBody({
     return () => window.removeEventListener('keydown', onKey);
   }, [answered, order, submit, onClose]);
 
-  const speak = () => AudioEngine.speakWord(vocab.word, accent);
+  const speak = () => {
+    setIsPlayingAudio(true);
+    AudioEngine.speakWord(vocab.word, accent, () => setIsPlayingAudio(false));
+  };
+
+  const startSpeakingPractice = () => {
+    if (micState === 'listening' || micState === 'matched') return;
+    setMicState('listening');
+    setMicHeard('');
+    AudioEngine.listenForSpeech(
+      accent,
+      (transcript) => {
+        setMicHeard(transcript);
+        const normalizedSpoken = transcript.toLowerCase().replace(/[^a-z\s]/g, '');
+        const normalizedTarget = vocab.word.toLowerCase().replace(/[^a-z\s]/g, '');
+        const firstTargetWord = normalizedTarget.split(' ')[0] ?? normalizedTarget;
+        if (
+          normalizedSpoken.includes(normalizedTarget) ||
+          (firstTargetWord.length >= 4 && normalizedSpoken.includes(firstTargetWord))
+        ) {
+          setMicState('matched');
+          onPronounceSuccess(vocab.word);
+        } else {
+          setMicState('retry');
+        }
+      },
+      () => {
+        setMicState('retry');
+      },
+    );
+  };
 
   // ---- Pointer-based drag & drop (mouse + touch + pen); tap also places ----
   const overSlot = (x: number, y: number): boolean => {
@@ -308,18 +357,44 @@ function QuizBody({
               </h2>
               <div className="mt-2 flex items-center gap-2">
                 <span className="font-mono text-sm opacity-90">{revealWord ? vocab.ipa : '/ ? /'}</span>
-                {revealWord && (
+                {(revealWord || isListening) && (
                   <button
                     type="button"
                     onClick={speak}
-                    className="focus-ring ml-auto flex h-10 items-center gap-1 rounded-lg bg-white/15 px-3 text-xs font-bold hover:bg-white/25"
+                    className={`focus-ring ml-auto flex h-10 items-center gap-1.5 rounded-lg px-3 text-xs font-bold transition-colors ${
+                      isPlayingAudio ? 'bg-gold text-black animate-pulse' : 'bg-white/15 hover:bg-white/25'
+                    }`}
                     aria-label={`Pronounce ${vocab.word} (${accent === 'en-GB' ? 'UK' : 'US'})`}
                   >
-                    <Volume2 size={16} /> {accent === 'en-GB' ? 'UK' : 'US'}
+                    {isListening ? <Headphones size={16} /> : <Volume2 size={16} />}
+                    {isListening ? 'Play Audio' : accent === 'en-GB' ? 'UK' : 'US'}
                   </button>
                 )}
               </div>
             </div>
+            {revealWord && speechSupported && (
+              <button
+                type="button"
+                onClick={startSpeakingPractice}
+                disabled={micState === 'matched'}
+                className={`btn min-h-[38px] text-xs font-bold ${
+                  micState === 'matched'
+                    ? 'bg-success text-white'
+                    : micState === 'listening'
+                      ? 'bg-rose-600 text-white animate-pulse'
+                      : 'btn-ghost border-accent/40 text-accent'
+                }`}
+              >
+                <Mic size={15} />
+                {micState === 'matched'
+                  ? '✓ Phát âm chuẩn (+25 XP)'
+                  : micState === 'listening'
+                    ? 'Đang nghe bạn đọc…'
+                    : micState === 'retry'
+                      ? `Nghe thấy "${micHeard || '...'}" — Thử lại`
+                      : '🎙️ Đọc to từ này (+25 XP)'}
+              </button>
+            )}
             <p className="text-sm text-muted">
               <span className="font-bold text-ink">Meaning: </span>
               {vocab.meaning}

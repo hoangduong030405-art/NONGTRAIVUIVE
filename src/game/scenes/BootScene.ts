@@ -777,6 +777,78 @@ export class BootScene extends Phaser.Scene {
       circle(ctx, 0, 0, 9, '#7c4a22', 3);
       circle(ctx, 0, 0, 3.5, '#fcd34d', 0);
     });
+
+    // Golden Scarecrow
+    this.tex('scarecrow', 96, 120, (ctx) => {
+      ellipse(ctx, 48, 112, 24, 6, 'rgba(0,0,0,0.2)', 0);
+      limb(ctx, 48, 110, 48, 42, '#78350f', 6);
+      limb(ctx, 18, 56, 78, 56, '#78350f', 5);
+      // Shirt
+      rrect(ctx, 34, 48, 28, 30, 5, '#ea580c', 2.5);
+      // Straw cuffs
+      for (const sx of [16, 80]) {
+        line(ctx, sx, 54, sx - 4, 62, '#facc15', 2);
+        line(ctx, sx, 56, sx + 4, 62, '#facc15', 2);
+      }
+      // Pumpkin/Burlap head
+      circle(ctx, 48, 36, 13, '#fde047', 2.5);
+      circle(ctx, 43, 35, 2, '#292524', 0);
+      circle(ctx, 53, 35, 2, '#292524', 0);
+      // Straw hat
+      ellipse(ctx, 48, 25, 22, 6, '#eab308', 2.5);
+      rrect(ctx, 37, 12, 22, 13, 4, '#ca8a04', 2.5);
+    });
+
+    // Beehive
+    this.tex('beehive', 80, 96, (ctx) => {
+      ellipse(ctx, 40, 88, 22, 6, 'rgba(0,0,0,0.2)', 0);
+      rrect(ctx, 24, 66, 32, 22, 3, '#78350f', 2.5);
+      ellipse(ctx, 40, 56, 22, 12, '#f59e0b', 2.5);
+      ellipse(ctx, 40, 42, 19, 10, '#fbbf24', 2.5);
+      ellipse(ctx, 40, 29, 14, 9, '#fcd34d', 2.5);
+      circle(ctx, 40, 54, 4, '#451a03', 0);
+      // Tiny bees
+      circle(ctx, 16, 30, 3, '#facc15', 1.5);
+      circle(ctx, 64, 24, 3, '#facc15', 1.5);
+    });
+
+    // Stone Water Well
+    this.tex('well', 100, 110, (ctx) => {
+      ellipse(ctx, 50, 100, 34, 8, 'rgba(0,0,0,0.2)', 0);
+      // Stone base
+      rrect(ctx, 22, 66, 56, 32, 8, '#94a3b8', 2.5);
+      ellipse(ctx, 50, 66, 28, 9, '#38bdf8', 2.5);
+      // Posts
+      limb(ctx, 28, 66, 28, 28, '#78350f', 5);
+      limb(ctx, 72, 66, 72, 28, '#78350f', 5);
+      // Roof
+      poly(ctx, [16, 30, 50, 10, 84, 30], '#b45309', 2.5);
+      // Bucket
+      rrect(ctx, 44, 42, 12, 12, 2, '#92400e', 2);
+      line(ctx, 50, 30, 50, 42, '#475569', 2);
+    });
+
+    // Flower Arch
+    this.tex('flower-arch', 110, 90, (ctx) => {
+      ctx.beginPath();
+      ctx.arc(55, 76, 40, Math.PI, 0);
+      stroke(ctx, 11, '#3f6212');
+      ctx.beginPath();
+      ctx.arc(55, 76, 40, Math.PI, 0);
+      stroke(ctx, 7, '#22c55e');
+      const blooms = [
+        [20, 62, '#f43f5e'],
+        [28, 44, '#facc15'],
+        [44, 36, '#a78bfa'],
+        [66, 36, '#f43f5e'],
+        [82, 44, '#facc15'],
+        [90, 62, '#60a5fa'],
+      ] as const;
+      for (const [bx, by, col] of blooms) {
+        circle(ctx, bx, by, 6, col, 1.5);
+        circle(ctx, bx, by, 2, '#fef08a', 0);
+      }
+    });
   }
 
   // ---------------------------------------------------------------------------

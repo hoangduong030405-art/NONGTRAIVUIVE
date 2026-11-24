@@ -74,6 +74,12 @@ export function createDefaultPlayerProgress(
       cheese: 0,
       sweater: 0,
     },
+    upgrades: {
+      scarecrow: false,
+      beehive: false,
+      well: false,
+      flowerArch: false,
+    },
     dailyQuests: INITIAL_DAILY_QUESTS,
     activeWeather: 'sunny',
     updatedAt: Date.now(),
@@ -106,6 +112,10 @@ export class StorageService {
             stock: {
               ...defaultProfile.stock,
               ...(storedProfile.stock ?? {}),
+            },
+            upgrades: {
+              ...defaultProfile.upgrades,
+              ...(storedProfile.upgrades ?? {}),
             },
             dailyQuests: storedProfile.dailyQuests && storedProfile.dailyQuests.length > 0
               ? storedProfile.dailyQuests

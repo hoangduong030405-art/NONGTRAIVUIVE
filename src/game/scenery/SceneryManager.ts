@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { EventBus } from '../../bridge/EventBus';
+import type { FarmUpgrades } from '../../core/types';
 import {
   HOUSE_CHIMNEY,
   HOUSE_WINDOWS,
@@ -14,6 +15,10 @@ export interface SceneryLayout {
   bakeryPos: { x: number; y: number; scale: number; visible: boolean };
   windmillPos: { x: number; y: number; scale: number; visible: boolean };
   pondPos: { x: number; y: number; scale: number; visible: boolean };
+  scarecrowPos: { x: number; y: number; scale: number };
+  beehivePos: { x: number; y: number; scale: number };
+  wellPos: { x: number; y: number; scale: number };
+  archPos: { x: number; y: number; scale: number };
   pastureBounds: Phaser.Geom.Rectangle;
   fenceSegments: Array<{ x: number; y: number; w: number; h: number }>;
   cobblePaths: Array<{ x: number; y: number }>;
@@ -35,6 +40,12 @@ export class SceneryManager {
 
   private pondSprite!: Phaser.GameObjects.Image;
   private pondRipple!: Phaser.GameObjects.Image;
+
+  private scarecrowSprite!: Phaser.GameObjects.Image;
+  private beehiveSprite!: Phaser.GameObjects.Image;
+  private wellSprite!: Phaser.GameObjects.Image;
+  private archSprite!: Phaser.GameObjects.Image;
+  private activeUpgrades: FarmUpgrades = { scarecrow: false, beehive: false, well: false, flowerArch: false };
 
   private natureContainer!: Phaser.GameObjects.Container;
   private pathContainer!: Phaser.GameObjects.Container;
@@ -93,6 +104,12 @@ export class SceneryManager {
       b.setTint(i % 2 === 0 ? 0xffffff : 0xfef08a);
       this.butterflies.push({ sprite: b, baseX: 0, baseY: 0, offset: i * 1.5 });
     }
+
+    // Unlockable Farm Upgrades
+    this.scarecrowSprite = this.scene.add.image(-500, -500, 'scarecrow').setOrigin(0.5, 0.92).setDepth(16).setVisible(false);
+    this.beehiveSprite = this.scene.add.image(-500, -500, 'beehive').setOrigin(0.5, 0.92).setDepth(16).setVisible(false);
+    this.wellSprite = this.scene.add.image(-500, -500, 'well').setOrigin(0.5, 0.92).setDepth(16).setVisible(false);
+    this.archSprite = this.scene.add.image(-500, -500, 'flower-arch').setOrigin(0.5, 0.92).setDepth(14).setVisible(false);
   }
 
   public setDarkTheme(isDark: boolean): void {
@@ -104,6 +121,14 @@ export class SceneryManager {
 
   public setWeather(weather: 'sunny' | 'rain' | 'rainbow' | 'night'): void {
     this.currentWeather = weather;
+  }
+
+  public setUpgrades(upgrades: FarmUpgrades): void {
+    this.activeUpgrades = upgrades;
+    this.scarecrowSprite.setVisible(upgrades.scarecrow);
+    this.beehiveSprite.setVisible(upgrades.beehive);
+    this.wellSprite.setVisible(upgrades.well);
+    this.archSprite.setVisible(upgrades.flowerArch);
   }
 
   public applyLayout(layout: SceneryLayout): void {
@@ -159,6 +184,13 @@ export class SceneryManager {
       this.pondSprite.setVisible(false);
       this.pondRipple.setVisible(false);
     }
+
+    // Upgrades placement
+    this.scarecrowSprite.setPosition(layout.scarecrowPos.x, layout.scarecrowPos.y).setScale(layout.scarecrowPos.scale);
+    this.beehiveSprite.setPosition(layout.beehivePos.x, layout.beehivePos.y).setScale(layout.beehivePos.scale);
+    this.wellSprite.setPosition(layout.wellPos.x, layout.wellPos.y).setScale(layout.wellPos.scale);
+    this.archSprite.setPosition(layout.archPos.x, layout.archPos.y).setScale(layout.archPos.scale);
+    this.setUpgrades(this.activeUpgrades);
 
     // 4. Cobble paths
     this.pathContainer.removeAll(true);
