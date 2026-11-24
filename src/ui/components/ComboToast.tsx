@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Droplets, Fish, Flame, Gift, Heart, Info, Sparkles, Sprout, Zap } from 'lucide-react';
+import { Droplets, Fish, Flame, Gift, Heart, Info, ShoppingBag, Sparkles, Sprout, Trophy, Zap } from 'lucide-react';
 import type { ToastNotification } from '../../core/types';
 import { useGameStore } from '../store/useGameStore';
 
@@ -13,6 +13,8 @@ const VARIANT: Record<ToastNotification['variant'], { Icon: typeof Info; cls: st
   info: { Icon: Info, cls: 'bg-surface-strong text-on-strong' },
   animal: { Icon: Heart, cls: 'bg-pink-600 text-white' },
   fish: { Icon: Fish, cls: 'bg-sky-600 text-white' },
+  market: { Icon: ShoppingBag, cls: 'bg-emerald-600 text-white' },
+  quest: { Icon: Trophy, cls: 'bg-indigo-600 text-white' },
 };
 
 const ToastItem = memo(function ToastItem({ toast }: { toast: ToastNotification }) {

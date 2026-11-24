@@ -736,6 +736,33 @@ export class BootScene extends Phaser.Scene {
       poly(ctx, [36, 60, 60, 24, 84, 60], '#c2453d', 3);
     });
 
+    // Kitchen / Bakery / Processing Workshop Building
+    this.tex('bakery', 160, 160, (ctx) => {
+      ellipse(ctx, 80, 150, 70, 8, 'rgba(0,0,0,0.22)', 0);
+      // walls
+      rrect(ctx, 20, 70, 120, 80, 4, '#fef08a', 3);
+      // awning (striped canopy)
+      for (let i = 0; i < 6; i += 1) {
+        poly(ctx, [20 + i * 20, 60, 40 + i * 20, 60, 36 + i * 20, 78, 16 + i * 20, 78], i % 2 === 0 ? '#ef4444' : '#ffffff', 2);
+      }
+      // roof
+      poly(ctx, [10, 60, 80, 15, 150, 60], '#b91c1c', 3);
+      // chimney & mini oven smoke
+      rrect(ctx, 115, 20, 16, 30, 2, '#78350f', 2.5);
+      // door
+      rrect(ctx, 62, 95, 36, 55, 10, '#854d0e', 3);
+      circle(ctx, 90, 125, 2.5, '#fef08a', 1.5);
+      // window with display bread & cheese
+      rrect(ctx, 26, 95, 28, 28, 4, '#bae6fd', 2);
+      rrect(ctx, 106, 95, 28, 28, 4, '#bae6fd', 2);
+      // Signboard
+      rrect(ctx, 50, 42, 60, 18, 4, '#fffbeb', 2);
+      ctx.fillStyle = '#b45309';
+      ctx.font = 'bold 9px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('🥖 BAKERY', 80, 54);
+    });
+
     this.tex('windmill-blades', 180, 180, (ctx) => {
       ctx.translate(90, 90);
       for (let i = 0; i < 4; i += 1) {

@@ -1,5 +1,5 @@
 import mitt from 'mitt';
-import type { FarmToolMode, PlotState, ThemeName, VocabTier } from '../core/types';
+import type { FarmToolMode, PlotState, ThemeName, VocabTier, WeatherType } from '../core/types';
 
 /** Lightweight vocab snapshot shared with the Phaser layer (no quiz payload). */
 export interface VocabMetaSnapshot {
@@ -23,6 +23,8 @@ export type GameToUiEvents = {
   'game:pond-fish': undefined;
   /** Manure / cleaning interaction */
   'game:clean-pasture': undefined;
+  /** Bakery / Kitchen clicked */
+  'game:open-kitchen': undefined;
 };
 
 /** Events emitted by React (Layer 2) and consumed by the Phaser canvas (Layer 1). */
@@ -34,10 +36,12 @@ export type UiToGameEvents = {
     speedMultiplier: number;
     feverEndsAt: number;
     activeToolMode: FarmToolMode;
+    weather: WeatherType;
   };
   'ui:plot-fx': { plotIndex: number; kind: PlotFxKind };
   'ui:theme-changed': { theme: ThemeName };
   'ui:tool-mode-changed': { mode: FarmToolMode };
+  'ui:weather-changed': { weather: WeatherType };
 };
 
 export type AppEvents = GameToUiEvents & UiToGameEvents;

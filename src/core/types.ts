@@ -11,12 +11,15 @@ export type CropStage = 'EMPTY' | 'SEED' | 'SPROUT' | 'MATURE' | 'GOLDEN_RIPE';
 export type QuizType =
   | 'phonetic_meaning'
   | 'collocation_match'
-  | 'paraphrase_upgrade';
+  | 'paraphrase_upgrade'
+  | 'listening_challenge';
 
 export type MilestoneType =
   | 'FAST_GROW_WATER'
   | 'GOLDEN_FERTILIZER'
   | 'FEVER_TIME';
+
+export type WeatherType = 'sunny' | 'rain' | 'rainbow' | 'night';
 
 export interface VocabTipCardData {
   id: string;
@@ -109,17 +112,43 @@ export interface VocabMasteryRecord {
 export type FarmToolMode = 'seeds' | 'water' | 'feed' | 'care' | 'fish';
 
 export interface FarmStock {
-  cropFodder: number;    // Harvested crops for animal feed
-  eggs: number;          // From chickens
-  milk: number;          // From cows
-  wool: number;          // From sheep
-  fertilizerBags: number;// From animal manure cleaning
-  fish: number;          // From pond fishing
+  cropFodder: number;    // Thu hoạch cây trồng
+  eggs: number;          // Trứng gà
+  milk: number;          // Sữa bò
+  wool: number;          // Lông cừu
+  fertilizerBags: number;// Phân bón hữu cơ
+  fish: number;          // Cá bắt được
+  bread: number;         // Chế biến từ lúa mì / fodder
+  cheese: number;        // Chế biến từ sữa
+  sweater: number;       // Dệt từ len cừu
+}
+
+export interface DailyQuest {
+  id: string;
+  title: string;
+  targetCount: number;
+  currentCount: number;
+  rewardCoins: number;
+  rewardXp: number;
+  type: 'harvest' | 'quiz' | 'feed' | 'fish' | 'care' | 'craft';
+  completed: boolean;
+  claimed: boolean;
+}
+
+export interface MarketOrder {
+  id: string;
+  customerName: string;
+  reqItem: keyof FarmStock;
+  reqAmount: number;
+  rewardCoins: number;
+  rewardXp: number;
+  ieltsTopic: string;
 }
 
 export interface PlayerProgress {
   id: 'player';
   xp: number;
+  coins: number;
   level: number;
   streak: number;
   bestStreak: number;
@@ -134,12 +163,14 @@ export interface PlayerProgress {
   unlockedTipCardIds: string[];
   seedInventory: Record<string, number>;
   stock: FarmStock;
+  dailyQuests: DailyQuest[];
+  activeWeather: WeatherType;
   updatedAt: number;
 }
 
 export interface ToastNotification {
   id: string;
-  variant: 'critical' | 'water' | 'golden' | 'fever' | 'chest' | 'harvest' | 'info' | 'animal' | 'fish';
+  variant: 'critical' | 'water' | 'golden' | 'fever' | 'chest' | 'harvest' | 'info' | 'animal' | 'fish' | 'market' | 'quest';
   title: string;
   subtitle: string;
   createdAt: number;

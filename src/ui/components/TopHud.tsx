@@ -1,16 +1,21 @@
 import { useEffect, useState } from 'react';
 import {
   BookOpen,
+  ChefHat,
+  CloudRain,
   Droplets,
   Flame,
   Moon,
+  ShoppingBag,
   Sparkles,
   Square,
+  Sun,
   Trees,
+  Trophy,
   Zap,
 } from 'lucide-react';
 import { ComboEngine, WATERING_CAN_LABELS } from '../../core/ComboEngine';
-import type { ThemeName } from '../../core/types';
+import type { ThemeName, WeatherType } from '../../core/types';
 import { useGameStore } from '../store/useGameStore';
 
 const THEMES: Array<{ id: ThemeName; label: string; Icon: typeof Trees }> = [
@@ -48,6 +53,10 @@ export function TopHud() {
   const profile = useGameStore((s) => s.profile);
   const setTheme = useGameStore((s) => s.setTheme);
   const setAlmanacOpen = useGameStore((s) => s.setAlmanacOpen);
+  const setMarketOpen = useGameStore((s) => s.setMarketOpen);
+  const setKitchenOpen = useGameStore((s) => s.setKitchenOpen);
+  const setQuestsOpen = useGameStore((s) => s.setQuestsOpen);
+  const setWeather = useGameStore((s) => s.setWeather);
   const feverLeft = useFeverRemaining(profile?.feverEndsAt ?? 0);
 
   if (!profile) return null;
@@ -61,6 +70,13 @@ export function TopHud() {
   const cycleTheme = () => {
     const next = THEMES[(currentThemeIdx + 1) % THEMES.length];
     if (next) setTheme(next.id);
+  };
+
+  const cycleWeather = () => {
+    const weathers: WeatherType[] = ['sunny', 'rain', 'rainbow', 'night'];
+    const curIdx = weathers.indexOf(profile.activeWeather ?? 'sunny');
+    const nextW = weathers[(curIdx + 1) % weathers.length] ?? 'sunny';
+    setWeather(nextW);
   };
 
   return (
@@ -101,22 +117,54 @@ export function TopHud() {
           <div className="flex shrink-0 items-center gap-1 md:hidden">
             <button
               type="button"
+              onClick={cycleWeather}
+              className="btn btn-ghost h-10 w-10 !min-h-0 p-0 text-amber-500"
+              title="Đổi thời tiết (Nắng / Mưa / Cầu vồng / Đêm)"
+            >
+              {profile.activeWeather === 'rain' ? <CloudRain size={16} /> : <Sun size={16} />}
+            </button>
+            <button
+              type="button"
+              onClick={() => setMarketOpen(true)}
+              className="btn btn-ghost h-10 w-10 !min-h-0 p-0 text-emerald-600"
+              title="Chợ nông sản"
+            >
+              <ShoppingBag size={16} />
+            </button>
+            <button
+              type="button"
+              onClick={() => setKitchenOpen(true)}
+              className="btn btn-ghost h-10 w-10 !min-h-0 p-0 text-amber-600"
+              title="Xưởng Bếp"
+            >
+              <ChefHat size={16} />
+            </button>
+            <button
+              type="button"
+              onClick={() => setQuestsOpen(true)}
+              className="btn btn-ghost h-10 w-10 !min-h-0 p-0 text-indigo-600"
+              title="Nhiệm vụ"
+            >
+              <Trophy size={16} />
+            </button>
+            <button
+              type="button"
               onClick={cycleTheme}
-              className="btn btn-ghost h-11 w-11 !min-h-0 p-0"
+              className="btn btn-ghost h-10 w-10 !min-h-0 p-0"
               aria-label={`Theme: ${THEMES[currentThemeIdx]?.label ?? ''}. Tap to switch`}
             >
               {(() => {
                 const Icon = THEMES[currentThemeIdx]?.Icon ?? Trees;
-                return <Icon size={18} />;
+                return <Icon size={16} />;
               })()}
             </button>
             <button
               type="button"
               onClick={() => setAlmanacOpen(true)}
-              className="btn btn-primary h-11 w-11 !min-h-0 p-0"
+              className="btn btn-primary h-10 w-10 !min-h-0 p-0"
               aria-label="Open Vocabulary Almanac"
             >
-              <BookOpen size={18} />
+              <BookOpen size={16} />
             </button>
           </div>
         </div>
@@ -182,6 +230,50 @@ export function TopHud() {
 
         {/* Desktop: theme switcher + almanac */}
         <div className="hidden items-center gap-2 md:flex">
+          {/* Weather button */}
+          <button
+            type="button"
+            onClick={cycleWeather}
+            className="btn btn-ghost px-2.5 py-1 text-xs font-bold gap-1 text-amber-500"
+            title="Đổi thời tiết (Nắng ☀️, Mưa 🌧️ tự tưới nước, Cầu vồng 🌈, Đêm 🌙)"
+          >
+            {profile.activeWeather === 'rain' ? <CloudRain size={16} /> : profile.activeWeather === 'night' ? <Moon size={16} /> : <Sun size={16} />}
+            <span className="capitalize">{profile.activeWeather ?? 'sunny'}</span>
+          </button>
+
+          {/* Quests button */}
+          <button
+            type="button"
+            onClick={() => setQuestsOpen(true)}
+            className="btn btn-ghost px-2.5 py-1 text-xs font-bold gap-1 text-indigo-600"
+            title="Nhiệm vụ hàng ngày & Thành tựu"
+          >
+            <Trophy size={16} />
+            Nhiệm vụ
+          </button>
+
+          {/* Kitchen Bakery button */}
+          <button
+            type="button"
+            onClick={() => setKitchenOpen(true)}
+            className="btn btn-ghost px-2.5 py-1 text-xs font-bold gap-1 text-amber-600"
+            title="Xưởng Bếp & Chế biến nông sản"
+          >
+            <ChefHat size={16} />
+            Xưởng Bếp
+          </button>
+
+          {/* Market button */}
+          <button
+            type="button"
+            onClick={() => setMarketOpen(true)}
+            className="btn btn-ghost px-2.5 py-1 text-xs font-bold gap-1 text-emerald-600"
+            title="Chợ nông sản & Mua hạt giống"
+          >
+            <ShoppingBag size={16} />
+            Chợ ({profile.coins ?? 0} Xu)
+          </button>
+
           <div className="flex rounded-xl bg-surface-2 p-1" role="radiogroup" aria-label="Theme">
             {THEMES.map(({ id, label, Icon }) => (
               <button
@@ -200,8 +292,8 @@ export function TopHud() {
               </button>
             ))}
           </div>
-          <button type="button" onClick={() => setAlmanacOpen(true)} className="btn btn-primary px-4">
-            <BookOpen size={18} />
+          <button type="button" onClick={() => setAlmanacOpen(true)} className="btn btn-primary px-3 text-xs">
+            <BookOpen size={16} />
             Almanac
           </button>
         </div>

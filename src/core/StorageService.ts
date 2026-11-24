@@ -1,5 +1,6 @@
 import Dexie, { type Table } from 'dexie';
 import { FarmEngine } from './FarmEngine';
+import { INITIAL_DAILY_QUESTS } from './questData';
 import type {
   BackupPayload,
   PlayerProgress,
@@ -48,13 +49,14 @@ export function createDefaultPlayerProgress(
   return {
     id: 'player',
     xp: 0,
+    coins: 100,
     level: 1,
     streak: 0,
     bestStreak: 0,
     totalHarvested: 0,
     criticalAnswers: 0,
     wateringCanTier: 'basic',
-    goldenFertilizerCharges: 0,
+    goldenFertilizerCharges: 1,
     feverEndsAt: 0,
     theme: 'wood',
     accent: 'en-GB',
@@ -63,12 +65,17 @@ export function createDefaultPlayerProgress(
     seedInventory: createDefaultSeedInventory(vocabList),
     stock: {
       cropFodder: 8,
-      eggs: 0,
-      milk: 0,
-      wool: 0,
+      eggs: 2,
+      milk: 2,
+      wool: 1,
       fertilizerBags: 1,
-      fish: 0,
+      fish: 1,
+      bread: 0,
+      cheese: 0,
+      sweater: 0,
     },
+    dailyQuests: INITIAL_DAILY_QUESTS,
+    activeWeather: 'sunny',
     updatedAt: Date.now(),
   };
 }
@@ -100,6 +107,11 @@ export class StorageService {
               ...defaultProfile.stock,
               ...(storedProfile.stock ?? {}),
             },
+            dailyQuests: storedProfile.dailyQuests && storedProfile.dailyQuests.length > 0
+              ? storedProfile.dailyQuests
+              : defaultProfile.dailyQuests,
+            coins: storedProfile.coins ?? defaultProfile.coins,
+            activeWeather: storedProfile.activeWeather ?? 'sunny',
           }
         : defaultProfile;
 

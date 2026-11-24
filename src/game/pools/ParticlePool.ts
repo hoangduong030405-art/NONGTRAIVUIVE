@@ -247,6 +247,42 @@ export class ParticlePool {
     );
   }
 
+  emitRainDrop(x: number, y: number): void {
+    this.spawn(
+      x,
+      y,
+      'water',
+      -35 - Math.random() * 20,
+      380 + Math.random() * 120,
+      120,
+      600 + Math.random() * 200,
+      0.65,
+      0.2,
+      0x38bdf8,
+      0,
+      50,
+    );
+  }
+
+  emitRainbowMote(x: number, y: number): void {
+    const rainbowColors = [0xef4444, 0xf97316, 0xfacc15, 0x22c55e, 0x06b6d4, 0x8b5cf6];
+    const color = rainbowColors[Math.floor(Math.random() * rainbowColors.length)] ?? 0xfacc15;
+    this.spawn(
+      x,
+      y,
+      'star',
+      (Math.random() - 0.5) * 30,
+      -25 - Math.random() * 20,
+      0,
+      1800 + Math.random() * 600,
+      0.8,
+      0.1,
+      color,
+      (Math.random() - 0.5) * 2,
+      45,
+    );
+  }
+
   emitSwipeTrail(x: number, y: number): void {
     this.spawn(
       x,

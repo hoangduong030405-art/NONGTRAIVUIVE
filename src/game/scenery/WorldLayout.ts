@@ -49,6 +49,7 @@ export function computeWorldLayout(
 
   // 3. House & Windmill Positioning
   let housePos = { x: 0, y: 0, scale: 0.85, visible: true };
+  let bakeryPos = { x: 0, y: 0, scale: 0.8, visible: true };
   let windmillPos = { x: 0, y: 0, scale: 0.8, visible: true };
   let pondPos = { x: 0, y: 0, scale: 0.85, visible: true };
   let pastureBounds = new Phaser.Geom.Rectangle(0, 0, 100, 100);
@@ -59,6 +60,11 @@ export function computeWorldLayout(
     const houseX = Math.max(140, gridX - 160);
     const houseY = Math.max(120, gridY + 20);
     housePos = { x: houseX, y: houseY, scale: 0.85, visible: true };
+
+    // Next to Farmhouse: Bakery Kitchen
+    const bakeryX = houseX + 115;
+    const bakeryY = houseY + 35;
+    bakeryPos = { x: bakeryX, y: bakeryY, scale: 0.75, visible: true };
 
     // Top-right: Windmill
     const windX = Math.min(width - 120, gridX + gridW + 140);
@@ -104,9 +110,11 @@ export function computeWorldLayout(
     if (topSpace > 90) {
       const scale = Math.min(0.65, topSpace / 200);
       housePos = { x: width * 0.32, y: gridY - 20, scale, visible: true };
-      windmillPos = { x: width * 0.78, y: gridY - 15, scale: scale * 0.95, visible: true };
+      bakeryPos = { x: width * 0.55, y: gridY - 15, scale: scale * 0.85, visible: true };
+      windmillPos = { x: width * 0.82, y: gridY - 15, scale: scale * 0.95, visible: true };
     } else {
-      housePos = { x: width * 0.5, y: gridY - 15, scale: 0.55, visible: true };
+      housePos = { x: width * 0.35, y: gridY - 15, scale: 0.55, visible: true };
+      bakeryPos = { x: width * 0.75, y: gridY - 15, scale: 0.5, visible: true };
       windmillPos = { x: 0, y: 0, scale: 0, visible: false };
     }
 
@@ -136,6 +144,7 @@ export function computeWorldLayout(
     isMobile,
     isPortrait,
     housePos,
+    bakeryPos,
     windmillPos,
     pondPos,
     pastureBounds,

@@ -5,7 +5,10 @@ import { EventBus } from '../bridge/EventBus';
 import { createGame } from '../game/main';
 import { AlmanacModal } from './components/AlmanacModal';
 import { ComboToast } from './components/ComboToast';
+import { DailyQuestsModal } from './components/DailyQuestsModal';
 import { IeltsQuizModal } from './components/IeltsQuizModal';
+import { KitchenModal } from './components/KitchenModal';
+import { MarketModal } from './components/MarketModal';
 import { SeedDock } from './components/SeedDock';
 import { TopHud } from './components/TopHud';
 import { syncGameNow, useGameStore } from './store/useGameStore';
@@ -48,17 +51,21 @@ export function App() {
       useGameStore.getState().careAnimal(animalType);
     const onPondFish = () => useGameStore.getState().fishAtPond();
 
+    const onOpenKitchen = () => useGameStore.getState().setKitchenOpen(true);
+
     EventBus.on('game:ready', onReady);
     EventBus.on('game:plot-tap', onTap);
     EventBus.on('game:harvest', onHarvest);
     EventBus.on('game:animal-interact', onAnimalInteract);
     EventBus.on('game:pond-fish', onPondFish);
+    EventBus.on('game:open-kitchen', onOpenKitchen);
     return () => {
       EventBus.off('game:ready', onReady);
       EventBus.off('game:plot-tap', onTap);
       EventBus.off('game:harvest', onHarvest);
       EventBus.off('game:animal-interact', onAnimalInteract);
       EventBus.off('game:pond-fish', onPondFish);
+      EventBus.off('game:open-kitchen', onOpenKitchen);
     };
   }, []);
 
@@ -84,6 +91,9 @@ export function App() {
           <SeedDock />
           <IeltsQuizModal />
           <AlmanacModal />
+          <MarketModal />
+          <KitchenModal />
+          <DailyQuestsModal />
         </>
       )}
       <ComboToast />

@@ -11,6 +11,7 @@ export interface SceneryLayout {
   isMobile: boolean;
   isPortrait: boolean;
   housePos: { x: number; y: number; scale: number; visible: boolean };
+  bakeryPos: { x: number; y: number; scale: number; visible: boolean };
   windmillPos: { x: number; y: number; scale: number; visible: boolean };
   pondPos: { x: number; y: number; scale: number; visible: boolean };
   pastureBounds: Phaser.Geom.Rectangle;
@@ -26,6 +27,8 @@ export class SceneryManager {
   private houseSprite!: Phaser.GameObjects.Image;
   private chimneyEmitterPos = { x: 0, y: 0 };
   private windowGlows: Phaser.GameObjects.Image[] = [];
+
+  private bakerySprite!: Phaser.GameObjects.Image;
 
   private windmillBase!: Phaser.GameObjects.Image;
   private windmillBlades!: Phaser.GameObjects.Image;
@@ -43,6 +46,7 @@ export class SceneryManager {
   private rippleTimer = 0;
   private moteTimer = 0;
   private isDarkTheme = false;
+  private currentWeather: 'sunny' | 'rain' | 'rainbow' | 'night' = 'sunny';
 
   constructor(scene: Phaser.Scene, particles: ParticlePool) {
     this.scene = scene;
@@ -65,6 +69,13 @@ export class SceneryManager {
     // Windmill
     this.windmillBase = this.scene.add.image(-500, -500, 'windmill-base').setOrigin(0.5, 0.95).setDepth(14);
     this.windmillBlades = this.scene.add.image(-500, -500, 'windmill-blades').setOrigin(0.5, 0.5).setDepth(15);
+
+    // Bakery / Processing Kitchen
+    this.bakerySprite = this.scene.add.image(-500, -500, 'bakery').setOrigin(0.5, 0.95).setDepth(14);
+    this.bakerySprite.setInteractive({ useHandCursor: true });
+    this.bakerySprite.on(Phaser.Input.Events.POINTER_DOWN, () => {
+      EventBus.emit('game:open-kitchen');
+    });
 
     // Pond
     this.pondSprite = this.scene.add.image(-500, -500, 'pond').setOrigin(0.5, 0.5).setDepth(3);
@@ -89,6 +100,10 @@ export class SceneryManager {
     for (const glow of this.windowGlows) {
       glow.setAlpha(isDark ? 0.85 : 0);
     }
+  }
+
+  public setWeather(weather: 'sunny' | 'rain' | 'rainbow' | 'night'): void {
+    this.currentWeather = weather;
   }
 
   public applyLayout(layout: SceneryLayout): void {
@@ -127,6 +142,13 @@ export class SceneryManager {
     } else {
       this.windmillBase.setVisible(false);
       this.windmillBlades.setVisible(false);
+    }
+
+    // Bakery
+    if (layout.bakeryPos.visible) {
+      this.bakerySprite.setVisible(true).setPosition(layout.bakeryPos.x, layout.bakeryPos.y).setScale(layout.bakeryPos.scale);
+    } else {
+      this.bakerySprite.setVisible(false);
     }
 
     // 3. Pond
@@ -256,13 +278,29 @@ export class SceneryManager {
       b.sprite.scaleX = Math.cos(t * 6) > 0 ? 0.75 : -0.75;
     }
 
-    // 5. Ambient sunlight motes / fireflies
+    // 5. Ambient sunlight motes / fireflies / weather particles
     this.moteTimer += delta;
-    if (this.moteTimer > 500) {
-      this.moteTimer = 0;
-      const rx = Math.random() * this.scene.scale.width;
-      const ry = 100 + Math.random() * (this.scene.scale.height - 200);
-      this.particles.emitAmbientMote(rx, ry, this.isDarkTheme);
+    if (this.currentWeather === 'rain') {
+      // Frequent raindrops across the sky
+      for (let i = 0; i < 3; i += 1) {
+        const rx = Math.random() * (this.scene.scale.width + 100);
+        const ry = Math.random() * (this.scene.scale.height * 0.4);
+        this.particles.emitRainDrop(rx, ry);
+      }
+    } else if (this.currentWeather === 'rainbow') {
+      if (this.moteTimer > 280) {
+        this.moteTimer = 0;
+        const rx = Math.random() * this.scene.scale.width;
+        const ry = 100 + Math.random() * (this.scene.scale.height - 220);
+        this.particles.emitRainbowMote(rx, ry);
+      }
+    } else {
+      if (this.moteTimer > 500) {
+        this.moteTimer = 0;
+        const rx = Math.random() * this.scene.scale.width;
+        const ry = 100 + Math.random() * (this.scene.scale.height - 200);
+        this.particles.emitAmbientMote(rx, ry, this.isDarkTheme || this.currentWeather === 'night');
+      }
     }
   }
 }

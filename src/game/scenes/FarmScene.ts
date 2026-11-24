@@ -112,6 +112,9 @@ export class FarmScene extends Phaser.Scene {
     EventBus.on('ui:sync', this.onSync);
     EventBus.on('ui:plot-fx', this.onPlotFx);
     EventBus.on('ui:theme-changed', this.onThemeChanged);
+    EventBus.on('ui:weather-changed', (p) => {
+      this.scenery.setWeather(p.weather);
+    });
 
     EventBus.on('game:pond-fish', () => {
       if (this.farmer) {
@@ -295,11 +298,15 @@ export class FarmScene extends Phaser.Scene {
     vocabMeta: Readonly<Record<string, VocabMetaSnapshot>>;
     speedMultiplier: number;
     feverEndsAt: number;
+    weather?: 'sunny' | 'rain' | 'rainbow' | 'night';
   }): void => {
     this.plots = payload.plots;
     this.vocabMeta = payload.vocabMeta;
     this.speedMultiplier = payload.speedMultiplier;
     this.feverEndsAt = payload.feverEndsAt;
+    if (payload.weather) {
+      this.scenery.setWeather(payload.weather);
+    }
 
     for (let i = 0; i < this.views.length; i += 1) {
       const v = this.views[i];
